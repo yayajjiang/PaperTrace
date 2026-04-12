@@ -17,6 +17,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-12",
+    title: "SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions",
+    titleZh: "SUPERNOVA：基于自然指令强化学习提升LLM通用推理能力",
+    authors: "Ashima Suvarna et al.",
+    arxivId: "2604.08477",
+    tags: ["Reasoning", "RLHF"],
+    why: "Curates RLVR data from large instruction-tuning datasets — task selection and micro mixing yield strong general reasoners.",
+    whyZh: "从指令微调数据筛选RLVR样本，任务选择与微混合策略显著提升LLM通用推理能力。",
+    pick: true,
+  },
+  {
+    date: "2026-04-12",
+    title: "TriAttention: Efficient Long Reasoning with Trigonometric KV Compression",
+    titleZh: "TriAttention：基于三角函数KV压缩的高效长推理",
+    authors: "Weian Mao et al.",
+    arxivId: "2604.04921",
+    tags: ["Efficient Inference", "Reasoning"],
+    why: "Trigonometric KV compression exploits Q/K vector concentration — 2.5x throughput or 10.7x KV memory reduction on long reasoning.",
+    whyZh: "三角级数KV压缩利用Q/K向量集中性，长推理吞吐提升2.5倍或内存减少10.7倍。",
+  },
+  {
+    date: "2026-04-12",
+    title: "Multi-objective Evolutionary Merging Enables Efficient Reasoning Models",
+    titleZh: "多目标进化模型合并实现高效推理",
+    authors: "Mario Iacobelli et al.",
+    arxivId: "2604.06465",
+    tags: ["Reasoning", "Efficient Inference"],
+    why: "Evolutionary merging of reasoning and base models eliminates overthinking — cuts inference cost on easy problems without sacrificing accuracy.",
+    whyZh: "进化合并推理模型与基础模型，消除过度思考，简单问题推理开销显著降低。",
+  },
+  {
     date: "2026-04-10",
     title: "SHAPE: Stage-aware Hierarchical Advantage via Potential Estimation for LLM Reasoning",
     titleZh: "SHAPE：面向LLM推理的阶段感知层级优势估计",
