@@ -17,6 +17,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-13",
+    title: "TriAttention: Efficient Long Reasoning with Trigonometric KV Compression",
+    titleZh: "TriAttention：基于三角函数KV压缩的高效长推理",
+    authors: "Weian Mao et al.",
+    arxivId: "2604.04921",
+    tags: ["Efficient Inference", "Reasoning"],
+    why: "Trigonometric KV compression matches full-attention accuracy at 2.5x throughput or 10.7x memory reduction — practical long-reasoning speedup from MIT/NVIDIA.",
+    whyZh: "三角函数KV压缩在保持全注意力精度的同时实现2.5倍吞吐或10.7倍内存压缩，大幅提升长推理效率。",
+    pick: true,
+  },
+  {
+    date: "2026-04-13",
+    title: "DFlash: Block Diffusion for Flash Speculative Decoding",
+    titleZh: "DFlash：用于闪速投机解码的块扩散模型",
+    authors: "Jian Chen et al.",
+    arxivId: "2602.06036",
+    tags: ["Diffusion LM", "Efficient Inference"],
+    why: "Block diffusion as speculative draft model achieves 6x LLM inference speedup — bridges diffusion language models and fast autoregressive deployment.",
+    whyZh: "以块扩散模型为投机解码草稿器实现6倍推理加速，将扩散LM与高速自回归部署相连接。",
+  },
+  {
+    date: "2026-04-13",
+    title: "Fast-dVLM: Efficient Block-Diffusion VLM via Direct Conversion from Autoregressive VLM",
+    titleZh: "Fast-dVLM：从自回归VLM直接转换的高效块扩散视觉语言模型",
+    authors: "Chengyue Wu et al.",
+    arxivId: "2604.06832",
+    tags: ["Diffusion LM", "Multimodal"],
+    why: "Direct AR-to-diffusion VLM conversion with KV-cache-compatible parallel decoding — matches AR quality across 11 multimodal benchmarks at lower inference cost.",
+    whyZh: "直接将自回归VLM转换为块扩散模型，支持KV缓存并行解码，在11项多模态基准上匹配AR质量。",
+  },
+  {
     date: "2026-04-10",
     title: "SHAPE: Stage-aware Hierarchical Advantage via Potential Estimation for LLM Reasoning",
     titleZh: "SHAPE：面向LLM推理的阶段感知层级优势估计",
