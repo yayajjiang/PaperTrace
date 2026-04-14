@@ -17,6 +17,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-14",
+    title: "SPPO: Sequence-Level PPO for Long-Horizon Reasoning Tasks",
+    titleZh: "SPPO：面向长时域推理任务的序列级PPO",
+    authors: "Tianyi Wang et al.",
+    arxivId: "2604.08865",
+    tags: ["Reasoning", "RLHF"],
+    why: "Reformulates PPO as sequence-level contextual bandit — no value model needed, matches GRPO-style methods with far lower memory cost.",
+    whyZh: "将PPO重构为序列级语境赌博机，无需价值模型，以更低内存成本匹配GRPO类方法性能。",
+    pick: true,
+  },
+  {
+    date: "2026-04-14",
+    title: "RAGEN-2: Reasoning Collapse in Agentic RL",
+    titleZh: "RAGEN-2：智能体强化学习中的推理坍塌",
+    authors: "Zihan Wang et al.",
+    arxivId: "2604.06268",
+    tags: ["Reasoning", "Agent"],
+    why: "Discovers template collapse — a failure mode invisible to entropy in agentic RL — fixed with SNR-aware prompt filtering.",
+    whyZh: "发现模板坍塌这一被熵指标忽视的推理失效模式，提出信噪比滤波策略有效缓解。",
+  },
+  {
+    date: "2026-04-14",
+    title: "DFlash: Block Diffusion for Flash Speculative Decoding",
+    titleZh: "DFlash：面向快速推测解码的块扩散方法",
+    authors: "Jian Chen et al.",
+    arxivId: "2602.06036",
+    tags: ["Diffusion LM", "Efficient Inference"],
+    why: "Block diffusion drafter achieves 6x lossless speedup over base LLM — 2.5x faster than EAGLE-3 with no quality loss.",
+    whyZh: "用块扩散模型作为推测解码草稿器，实现6倍无损加速，比EAGLE-3快2.5倍。",
+  },
+  {
     date: "2026-04-10",
     title: "SHAPE: Stage-aware Hierarchical Advantage via Potential Estimation for LLM Reasoning",
     titleZh: "SHAPE：面向LLM推理的阶段感知层级优势估计",
