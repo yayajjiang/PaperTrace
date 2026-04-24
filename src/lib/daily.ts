@@ -18,6 +18,27 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-24",
+    title: "TEMPO: Scaling Test-time Training for Large Reasoning Models",
+    titleZh: "TEMPO：大型推理模型的测试时训练扩展",
+    authors: "Qingyang Zhang et al.",
+    arxivId: "2604.19295",
+    tags: ["Reasoning", "Fine-tuning"],
+    why: "EM-style TTT alternates critic recalibration with policy refinement on unlabeled data — OLMO3-7B 33→51%, Qwen3-14B 42→66% on AIME 2024.",
+    whyZh: "EM框架交替校准评论者与优化策略，无需标签数据即可持续提升推理——OLMO3-7B在AIME 2024从33%提升至51%，Qwen3-14B从42%提升至66%。",
+    pick: true,
+  },
+  {
+    date: "2026-04-24",
+    title: "Language as a Latent Variable for Reasoning Optimization",
+    titleZh: "语言作为推理优化的潜变量",
+    authors: "Linjuan Wu et al.",
+    arxivId: "2604.21593",
+    tags: ["Reasoning", "Fine-tuning"],
+    why: "polyGRPO treats language as latent exploration signal — 18.1K math problems yield +6.72% English reasoning and +4.9% commonsense, no CoT.",
+    whyZh: "将语言选择作为潜在探索信号，仅用1.81万数学题训练，英文推理提升6.72%，常识推理提升4.9%，无需CoT标注。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
