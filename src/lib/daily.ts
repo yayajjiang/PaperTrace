@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-25",
+    title: "FastDiSS: Few-step Match Many-step Diffusion Language Model on Sequence-to-Sequence Generation",
+    titleZh: "FastDiSS：少步匹配多步扩散语言模型用于序列到序列生成",
+    authors: "Dat Nguyen-Cong et al.",
+    arxivId: "2604.05551",
+    tags: ["Diffusion LM", "Efficient Inference"],
+    why: "Noise-perturbed self-conditioning training closes the few-step quality gap in continuous diffusion LMs — up to 400× faster inference.",
+    whyZh: "噪声扰动自条件训练填补连续扩散LM少步推理的质量差距，推理速度最高提升400倍。",
+    pick: true,
+  },
+  {
+    date: "2026-04-25",
+    title: "Thinking Diffusion: Penalize and Guide Visual-Grounded Reasoning in Diffusion Multimodal Language Models",
+    titleZh: "思考扩散：引导扩散多模态大语言模型中的视觉基础推理",
+    authors: "Keuntae Kim et al.",
+    arxivId: "2604.05497",
+    tags: ["Diffusion LM", "Multimodal", "Reasoning"],
+    why: "PSP + VRG fix premature answer generation and weak visual grounding in dMLLMs — 7.5% higher accuracy with 3× fewer diffusion steps.",
+    whyZh: "PSP与VRG修复扩散多模态LM的早答和视觉依赖不足问题，准确率提升7.5%，推理步骤减少3倍。",
+  },
+  {
+    date: "2026-04-25",
+    title: "ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement",
+    titleZh: "ThinkTwice：联合优化大语言模型的推理与自我改进",
+    authors: "Difan Jiao et al.",
+    arxivId: "2604.01591",
+    tags: ["Reasoning", "RLHF"],
+    why: "GRPO-based two-phase training jointly optimizes solving and self-refining — +5pp AIME before refinement, +11.5pp after one self-refinement step on Qwen3-4B.",
+    whyZh: "GRPO双阶段联合训练推理与自我改进，Qwen3-4B的AIME得分提升5pp，单次自我改进后再提升11.5pp。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
