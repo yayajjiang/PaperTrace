@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-26",
+    title: "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model",
+    titleZh: "LLaDA2.0-Uni：用扩散大语言模型统一多模态理解与生成",
+    authors: "Tiwei Bie et al.",
+    arxivId: "2604.20796",
+    tags: ["Diffusion LM", "Multimodal"],
+    why: "First unified discrete diffusion LM for text and images — matches specialized VLMs in multimodal understanding while enabling generation and editing.",
+    whyZh: "首个统一扩散LLM，多模态理解媲美专业VLM，支持图像生成与编辑。",
+    pick: true,
+  },
+  {
+    date: "2026-04-26",
+    title: "Language as a Latent Variable for Reasoning Optimization",
+    titleZh: "将语言作为潜变量的推理优化",
+    authors: "Linjuan Wu et al.",
+    arxivId: "2604.21593",
+    tags: ["Reasoning", "RLHF"],
+    why: "polyGRPO treats language choice as RL exploration signal — +6.72% accuracy on English reasoning with only 18.1K multilingual math examples.",
+    whyZh: "polyGRPO以语言多样性为强化学习探索信号，仅18.1K数学样本训练，英文推理准确率提升6.72%。",
+  },
+  {
+    date: "2026-04-26",
+    title: "Self-Consistency from Only Two Samples: CoT-PoT Ensembling for Efficient LLM Reasoning",
+    titleZh: "仅需两个样本的自一致性：CoT-PoT集成方法实现高效LLM推理",
+    authors: "Raman Saparkhan et al.",
+    arxivId: "2604.17433",
+    tags: ["Reasoning", "Efficient Inference"],
+    why: "Hybrid CoT-PoT ensembling cuts self-consistency sampling 9.3x — 78.6% of tasks need only 2 samples.",
+    whyZh: "CoT-PoT混合集成将自一致性采样减少9.3倍，78.6%的任务仅需两个样本即可解决。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
