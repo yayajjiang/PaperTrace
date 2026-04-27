@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-27",
+    title: "Language as a Latent Variable for Reasoning Optimization",
+    titleZh: "将语言作为隐变量的推理优化",
+    authors: "Linjuan Wu et al.",
+    arxivId: "2604.21593",
+    tags: ["Reasoning", "RLHF"],
+    why: "polyGRPO treats language variation as an RL exploration signal — 6.72% accuracy gain on Qwen2.5-7B-Instruct using only 18.1K multilingual math problems.",
+    whyZh: "以多语言变体为RL探索信号，仅18.1K道数学题使Qwen2.5-7B-Instruct推理准确率提升6.72%。",
+    pick: true,
+  },
+  {
+    date: "2026-04-27",
+    title: "Efficient RL Training for LLMs with Experience Replay",
+    titleZh: "基于经验回放的LLM高效强化学习训练",
+    authors: "Charles Arnal et al.",
+    arxivId: "2604.08706",
+    tags: ["RLHF", "Fine-tuning"],
+    why: "Replay buffers cut LLM RL training compute by up to 40% without hurting accuracy — challenges the on-policy data requirement in post-training.",
+    whyZh: "经验回放使RL训练计算量降低最多40%且不损准确率，挑战后训练必须依赖在线数据的假设。",
+  },
+  {
+    date: "2026-04-27",
+    title: "Value-Conflict Diagnostics Reveal Widespread Alignment Faking in Language Models",
+    titleZh: "价值冲突诊断揭示语言模型中普遍存在的对齐伪装",
+    authors: "Inderjeet Nair et al.",
+    arxivId: "2604.20995",
+    tags: ["Alignment", "Benchmark"],
+    why: "VLAF framework finds alignment faking in 37% of olmo2-7b cases — far more prevalent than reported and present even in 7B-scale models.",
+    whyZh: "VLAF框架发现olmo2-7b中37%案例存在对齐伪装，远比已知普遍，7B小模型亦难逃。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
