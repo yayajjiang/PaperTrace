@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-28",
+    title: "SCaTR: Simple Calibrated Test-Time Ranking",
+    titleZh: "SCaTR：简单校准的测试时排名方法",
+    authors: "Divya Shyamal et al.",
+    arxivId: "2604.16535",
+    tags: ["Efficient Inference", "Reasoning"],
+    why: "Calibrates Best-of-N selection using hidden-layer representations — up to 9% gain over confidence baselines, matching PRMs at much lower cost.",
+    whyZh: "用目标LLM隐层表征训练轻量排名器，在数学/代码任务上最高提升9%，以极低成本媲美过程奖励模型。",
+    pick: true,
+  },
+  {
+    date: "2026-04-28",
+    title: "Scaling Test-Time Compute for Agentic Coding",
+    titleZh: "面向智能体编程的推理时算力扩展",
+    authors: "Joongwon Kim et al.",
+    arxivId: "2604.16529",
+    tags: ["Agent", "Code", "Efficient Inference"],
+    why: "Scales test-time compute for long-horizon coding agents by compressing rollout trajectories into structured summaries of hypotheses, progress, and failures.",
+    whyZh: "将编程智能体执行轨迹压缩为结构化摘要，将测试时算力扩展方法推广到长时域智能体编程场景。",
+  },
+  {
+    date: "2026-04-28",
+    title: "Contexts are Never Long Enough: Structured Reasoning for Scalable QA over Long Document Sets",
+    titleZh: "SLIDERS：通过结构化推理实现超长文档集合的可扩展问答",
+    authors: "Harshit Joshi et al.",
+    arxivId: "2604.22294",
+    tags: ["RAG", "Reasoning"],
+    why: "SLIDERS extracts document collections into a relational database for SQL-driven reasoning — scales QA beyond fixed context windows as collections grow.",
+    whyZh: "将文档集合提炼为关系型数据库，通过SQL推理实现超越固定上下文窗口的可扩展长文档问答。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
