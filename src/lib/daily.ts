@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-29",
+    title: "SFT-then-RL Outperforms Mixed-Policy Methods for LLM Reasoning",
+    titleZh: "SFT-then-RL优于混合策略LLM推理训练方法",
+    authors: "Alexis Limozin et al.",
+    arxivId: "2604.23747",
+    tags: ["Reasoning", "Fine-tuning"],
+    why: "DeepSpeed/OpenRLHF bugs inflated mixed-policy baselines — corrected SFT-then-RL surpasses all mixed methods by +3.8 on math with Qwen2.5-Math-7B.",
+    whyZh: "DeepSpeed/OpenRLHF存在隐性bug导致混合策略基准虚高，修复后SFT-then-RL在数学推理上超越所有混合方法+3.8分。",
+    pick: true,
+  },
+  {
+    date: "2026-04-29",
+    title: "Too Correct to Learn: Reinforcement Learning on Saturated Reasoning Data",
+    titleZh: "过于正确难以学习：饱和推理数据上的强化学习",
+    authors: "Zhenwen Liang et al.",
+    arxivId: "2604.18493",
+    tags: ["Reasoning", "RLHF"],
+    why: "Strong models saturate benchmarks, killing RL advantage signals — CUTS sampling boosts AIME25 Pass@1 by up to 15.1% over GRPO.",
+    whyZh: "强模型令基准饱和导致RL优势信号消失，CUTS采样策略在AIME25上比GRPO提升最高15.1%。",
+  },
+  {
+    date: "2026-04-29",
+    title: "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model",
+    titleZh: "LLaDA2.0-Uni：用扩散大语言模型统一多模态理解与生成",
+    authors: "Tiwei Bie et al.",
+    arxivId: "2604.20796",
+    tags: ["Diffusion LM", "Multimodal", "MoE"],
+    why: "First unified discrete diffusion LLM for multimodal understanding and generation — SigLIP-VQ + MoE backbone matches specialized VLMs across benchmarks.",
+    whyZh: "首个统一多模态理解与生成的离散扩散LLM，SigLIP-VQ与MoE骨干网络在多模态基准上匹配专用视觉语言模型。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
