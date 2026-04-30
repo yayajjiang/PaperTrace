@@ -18,6 +18,27 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-04-30",
+    title: "Too Correct to Learn: Reinforcement Learning on Saturated Reasoning Data",
+    titleZh: "过于正确反而无法学习：饱和推理数据上的强化学习",
+    authors: "Zhenwen Liang et al.",
+    arxivId: "2604.18493",
+    tags: ["Reasoning", "RLHF"],
+    why: "GRPO advantage vanishes when models saturate benchmarks; CUTS restores exploration via constrained top-K sampling — +15.1% AIME25 Pass@1 over standard GRPO.",
+    whyZh: "强模型使GRPO优势信号消失；CUTS约束均匀采样恢复探索，AIME25 Pass@1比标准GRPO提升15.1%。",
+    pick: true,
+  },
+  {
+    date: "2026-04-30",
+    title: "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+    titleZh: "TIDE：扩散大语言模型的跨架构知识蒸馏",
+    authors: "Gongbo Zhang et al.",
+    arxivId: "2604.26951",
+    tags: ["Diffusion LM", "Fine-tuning"],
+    why: "TIDE transfers AR LLM knowledge into diffusion models across tokenizer boundaries — SOTA diffusion LM quality without full retraining.",
+    whyZh: "TIDE通过三模块跨tokenizer边界将AR模型知识蒸馏至扩散LM，无需完整重训练即达扩散质量SOTA。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
