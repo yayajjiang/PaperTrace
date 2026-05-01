@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-01",
+    title: "Faster LLM Inference via Sequential Monte Carlo",
+    titleZh: "基于序列蒙特卡洛的LLM快速推理",
+    authors: "Yahya Emara et al.",
+    arxivId: "2604.15672",
+    tags: ["Efficient Inference", "Reasoning"],
+    why: "SMC-SD replaces token-level rejection with importance-weighted resampling — 2.36x faster than speculative decoding, 5.2x over autoregressive, within 3% accuracy.",
+    whyZh: "SMC-SD用重要性加权重采样替代逐token拒绝，比标准推测解码快2.36倍，比自回归快5.2倍，精度损失在3%以内。",
+    pick: true,
+  },
+  {
+    date: "2026-05-01",
+    title: "Too Correct to Learn: Reinforcement Learning on Saturated Reasoning Data",
+    titleZh: "过于正确反而无法学习：饱和推理数据上的强化学习",
+    authors: "Zhenwen Liang et al.",
+    arxivId: "2604.18493",
+    tags: ["Reasoning", "RLHF"],
+    why: "Strong models saturating benchmarks cause GRPO advantage collapse; CUTS enforces exploration, preventing mode collapse and boosting out-of-domain generalization.",
+    whyZh: "强模型在饱和基准上令GRPO优势信号归零，CUTS均匀采样防止模式坍塌并显著提升域外泛化能力。",
+  },
+  {
+    date: "2026-05-01",
+    title: "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+    titleZh: "TIDE：扩散大语言模型的跨架构知识蒸馏",
+    authors: "Gongbo Zhang et al.",
+    arxivId: "2604.26951",
+    tags: ["Diffusion LM", "Fine-tuning"],
+    why: "Cross-architecture distillation for diffusion LLMs — 8B/16B teacher to 0.6B student: +1.53 average across 8 benchmarks, HumanEval 48.78 vs 32.3 baseline.",
+    whyZh: "首个扩散LLM跨架构蒸馏框架，8B/16B教师压缩至0.6B学生，8项基准平均提升1.53分，HumanEval达48.78。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
