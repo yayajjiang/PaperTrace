@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-03",
+    title: "Path-Lock Expert: Separating Reasoning Mode in Hybrid Thinking via Architecture-Level Separation",
+    titleZh: "路径锁专家：通过架构级分离解耦混合思维中的推理模式",
+    authors: "Shouren Wang et al.",
+    arxivId: "2604.27201",
+    tags: ["Reasoning", "Efficient Inference"],
+    why: "Two mode-locked MLP experts per layer eliminate reasoning leakage in hybrid LLMs — Qwen3-4B no-think AIME24 accuracy: 20.67% → 40.00%, reflective tokens 2.54 → 0.39.",
+    whyZh: "每层MLP替换为两个模式锁定专家，架构级分离思考/非思考——Qwen3-4B无思考AIME24准确率从20.67%升至40.00%，反思token从2.54降至0.39。",
+    pick: true,
+  },
+  {
+    date: "2026-05-03",
+    title: "Too Correct to Learn: Reinforcement Learning on Saturated Reasoning Data",
+    titleZh: "太正确反而无法学习：饱和推理数据上的强化学习",
+    authors: "Zhenwen Liang et al.",
+    arxivId: "2604.18493",
+    tags: ["Reasoning", "RLHF"],
+    why: "CUTS prevents GRPO advantage collapse when strong models saturate benchmarks — parameter-free structured exploration restores learning signal and boosts out-of-domain generalization.",
+    whyZh: "CUTS通过无参数结构化探索防止GRPO在模型饱和时优势信号消失，有效恢复学习并提升域外泛化能力。",
+  },
+  {
+    date: "2026-05-03",
+    title: "One Refiner to Unlock Them All: Inference-Time Reasoning Elicitation via Reinforcement Query Refinement",
+    titleZh: "一个精化器解锁所有模型：基于强化查询精化的推理激发",
+    authors: "Yixiao Zhou et al.",
+    arxivId: "2604.25444",
+    tags: ["Reasoning", "RLHF"],
+    why: "ReQueR trains a single RL Refiner to rewrite queries for frozen LLMs — one-to-many reasoning elicitation with 1.7%–7.2% absolute gains without fine-tuning target models.",
+    whyZh: "ReQueR训练单一RL查询精化器，无需微调目标模型即可激发其推理潜力，跨架构绝对提升1.7%–7.2%。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
