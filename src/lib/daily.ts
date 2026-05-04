@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-04",
+    title: "ResRL: Boosting LLM Reasoning via Negative Sample Projection Residual Reinforcement Learning",
+    titleZh: "ResRL：负样本投影残差强化学习提升LLM推理",
+    authors: "Zihan Lin et al.",
+    arxivId: "2605.00380",
+    tags: ["Reasoning", "RLHF"],
+    why: "SVD-based negative sample projection decouples positive/negative semantics, outperforming GRPO/NSR across 12 math, code, agent, and function-calling benchmarks.",
+    whyZh: "SVD投影解耦正负样本语义，12项数学/代码/智能体基准全面超越GRPO/NSR。",
+    pick: true,
+  },
+  {
+    date: "2026-05-04",
+    title: "AGoQ: Activation and Gradient Quantization for Memory-Efficient Distributed Training of LLMs",
+    titleZh: "AGoQ：面向LLM分布式训练的激活与梯度量化",
+    authors: "Wenxiang Lin et al.",
+    arxivId: "2605.00539",
+    tags: ["Quantization", "Pre-training"],
+    why: "Layer-aware 4-bit activation + 8-bit gradient quantization cuts distributed LLM training memory by up to 52% and boosts speed by 1.34× over Megatron-LM and DeepSpeed.",
+    whyZh: "逐层量化激活与梯度，训练内存降低52%，速度比Megatron-LM提升1.34倍。",
+  },
+  {
+    date: "2026-05-04",
+    title: "Reward Models Are Secretly Value Functions: Temporally Coherent Reward Modeling",
+    titleZh: "奖励模型其实是价值函数：时间相干奖励建模",
+    authors: "Alex Nikulkov",
+    arxivId: "2604.22981",
+    tags: ["RLHF", "Theory", "Alignment"],
+    why: "Proves RM outputs should equal conditional expected reward; two Bradley-Terry regularizers provably tie token-level scores to RL value functions.",
+    whyZh: "奖励模型本质是价值函数，TCRM正则化统一token级评分与RL条件期望。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
