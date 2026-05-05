@@ -18,6 +18,27 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-05",
+    title: "ResRL: Boosting LLM Reasoning via Negative Sample Projection Residual Reinforcement Learning",
+    titleZh: "ResRL：基于负样本投影残差强化学习提升LLM推理",
+    authors: "Zihan Lin et al.",
+    arxivId: "2605.00380",
+    tags: ["Reasoning", "RLHF"],
+    why: "SVD subspace projection decouples shared semantics in positive/negative RLVR samples — +9.4% Avg@16 and +7.0% Pass@128 over NSR on math across 12 benchmarks.",
+    whyZh: "SVD投影残差解耦RLVR正负样本语义，数学推理Avg@16超NSR 9.4%、Pass@128超7.0%，12项基准SOTA。",
+  },
+  {
+    date: "2026-05-05",
+    title: "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+    titleZh: "TIDE：扩散大语言模型的跨架构蒸馏",
+    authors: "Gongbo Zhang et al.",
+    arxivId: "2604.26951",
+    tags: ["Diffusion LM", "Fine-tuning"],
+    why: "First cross-architecture dLLM distillation — 8B/16B MoE teacher compressed to 0.6B student, +1.53 avg on 8 benchmarks, HumanEval 48.78 vs 32.3 baseline.",
+    whyZh: "首个跨架构扩散LLM蒸馏框架，16B MoE教师→0.6B学生，8项基准平均+1.53，HumanEval 48.78超AR基线32.3。",
+    pick: true,
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
