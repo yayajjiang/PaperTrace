@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-06",
+    title: "ResRL: Boosting LLM Reasoning via Negative Sample Projection Residual Reinforcement Learning",
+    titleZh: "ResRL：基于负样本投影残差强化学习提升LLM推理能力",
+    authors: "Zihan Lin et al.",
+    arxivId: "2605.00380",
+    tags: ["Reasoning", "RLHF"],
+    why: "SVD-based residual RL decouples positive/negative sample semantics — +9.4% Avg@16 and +7.0% Pass@128 over NSR across 12 benchmarks.",
+    whyZh: "SVD低秩投影解耦正负样本语义梯度，12项基准全面超越NSR，数学推理Avg@16提升9.4%。",
+    pick: true,
+  },
+  {
+    date: "2026-05-06",
+    title: "Focus on the Core: Empowering Diffusion Large Language Models by Self-Contrast",
+    titleZh: "聚焦核心：基于自对比的扩散大语言模型增强",
+    authors: "Jinyuan Feng et al.",
+    arxivId: "2605.01373",
+    tags: ["Diffusion LM", "Efficient Inference"],
+    why: "Training-free self-contrast decoding for diffusion LLMs — HumanEval pass@1 +3.66 pts; FoCore-A cuts latency 58.4%.",
+    whyZh: "无需训练的自对比解码策略，HumanEval pass@1提升3.66分，加速变体延迟降低58.4%。",
+  },
+  {
+    date: "2026-05-06",
+    title: "LEAP: Layer-wise Exit-Aware Pretraining for Efficient Transformer Inference",
+    titleZh: "LEAP：面向高效Transformer推理的分层退出感知预训练",
+    authors: "Shashank Kapadia et al.",
+    arxivId: "2605.01058",
+    tags: ["Efficient Inference", "Pre-training"],
+    why: "Auxiliary objective reconciles distillation and early-exit incompatibility — 1.61× wall-clock speedup; 91.9% samples exit by layer 7.",
+    whyZh: "解决知识蒸馏与早退出的不兼容问题，实现1.61倍实际推理加速，91.9%样本在第7层即可退出。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
