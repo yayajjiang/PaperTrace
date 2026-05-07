@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-07",
+    title: "ResRL: Boosting LLM Reasoning via Negative Sample Projection Residual Reinforcement Learning",
+    titleZh: "ResRL：基于负样本投影残差强化学习的LLM推理增强",
+    authors: "Zihan Lin et al.",
+    arxivId: "2605.00380",
+    tags: ["Reasoning", "RLHF"],
+    why: "SVD-based negative-sample projection decouples shared semantics — 9.4% Avg@16 and 7.0% Pass@128 gains over NSR across 12 reasoning benchmarks.",
+    whyZh: "SVD负样本投影解耦正负共享语义，12基准数学推理Avg@16提升9.4%、Pass@128提升7.0%，超越NSR基线。",
+    pick: true,
+  },
+  {
+    date: "2026-05-07",
+    title: "MoBiE: Efficient Inference of Mixture of Binary Experts under Post-Training Quantization",
+    titleZh: "MoBiE：基于训练后量化的混合二值专家高效推理",
+    authors: "Zhixiong Zhao et al.",
+    arxivId: "2604.06798",
+    tags: ["MoE", "Quantization", "Efficient Inference"],
+    why: "First binarization framework for MoE LLMs — joint SVD decomposition and gradient-aware Hessian quantization cut memory without routing distortion.",
+    whyZh: "首个面向MoE LLM的二值化框架，联合SVD分解与梯度感知Hessian量化，压缩内存同时保持专家路由稳定性。",
+  },
+  {
+    date: "2026-05-07",
+    title: "Exploring Pass-Rate Reward in Reinforcement Learning for Code Generation",
+    titleZh: "探索代码生成强化学习中的通过率奖励",
+    authors: "Xin-Ye Li et al.",
+    arxivId: "2605.02944",
+    tags: ["Code", "RLHF"],
+    why: "Controlled study finds pass-rate rewards don't reliably outperform binary rewards in critic-free code RL — denser rewards don't shift gradients toward full-pass solutions.",
+    whyZh: "严格对照实验表明，无critic代码RL中pass-rate奖励并不稳定优于二元奖励，更密集奖励信号不能可靠引导梯度指向全通过解。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
