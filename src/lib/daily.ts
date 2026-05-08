@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-08",
+    title: "Rethinking RL for LLM Reasoning: It's Sparse Policy Selection, Not Capability Learning",
+    titleZh: "重新思考LLM推理的RL：稀疏策略选择而非能力习得",
+    authors: "Ömer Faruk Akgül et al.",
+    arxivId: "2605.06241",
+    tags: ["Reasoning", "Theory"],
+    why: "RL edits only 1–3% of token positions at high-entropy decision points; ReasonMaxxer matches full RL with 3 orders of magnitude less training compute.",
+    whyZh: "RL仅修改1-3%的token位置（高熵决策点），ReasonMaxxer无需RL即以千倍更少算力匹配完整RL推理性能。",
+    pick: true,
+  },
+  {
+    date: "2026-05-08",
+    title: "Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key",
+    titleZh: "RL能教会LLM长时域推理吗？表达性是关键",
+    authors: "Tianle Wang et al.",
+    arxivId: "2605.06638",
+    tags: ["Reasoning", "Theory", "Benchmark"],
+    why: "RL compute follows power law with reasoning depth; scaling exponent rises from 1.04 to 2.60 with logical expressiveness — fundamental limits on trainable reasoning.",
+    whyZh: "RL计算量随推理深度呈幂律增长，逻辑表达性越高指数越大（1.04至2.60），揭示推理训练的扩展规律。",
+  },
+  {
+    date: "2026-05-08",
+    title: "ReaComp: Compiling LLM Reasoning into Symbolic Solvers for Efficient Program Synthesis",
+    titleZh: "ReaComp：将LLM推理编译为符号求解器以实现高效程序合成",
+    authors: "Atharva Naik et al.",
+    arxivId: "2605.05485",
+    tags: ["Reasoning", "Code", "Efficient Inference"],
+    why: "Compiles reasoning traces into symbolic solvers — 91.3% on PBEBench-Lite, +16.3 pp over LLM test-time scaling at zero inference cost.",
+    whyZh: "将推理轨迹编译为符号求解器，PBEBench-Lite达91.3%，零推理成本超越LLM测试时扩展16.3个百分点。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
