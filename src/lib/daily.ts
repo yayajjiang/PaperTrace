@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-09",
+    title: "ReaComp: Compiling LLM Reasoning into Symbolic Solvers for Efficient Program Synthesis",
+    titleZh: "ReaComp：将LLM推理编译为符号求解器以实现高效程序合成",
+    authors: "Atharva Naik et al.",
+    arxivId: "2605.05485",
+    tags: ["Reasoning", "Code", "Efficient Inference"],
+    why: "Compiles LLM reasoning traces into reusable symbolic solvers — no LLM cost at test time, +16.3% over test-time scaling on PBEBench-Hard.",
+    whyZh: "将LLM推理轨迹编译为可复用符号求解器，测试时零LLM调用，PBEBench-Hard超越测试时缩放+16.3%。",
+    pick: true,
+  },
+  {
+    date: "2026-05-09",
+    title: "LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG",
+    titleZh: "LatentRAG：面向高效智能体RAG的潜空间推理与检索",
+    authors: "Yijia Zheng and Marcel Worring",
+    arxivId: "2605.06285",
+    tags: ["RAG", "Efficient Inference", "Agent"],
+    why: "Shifts agentic RAG thoughts and subqueries into continuous latent space — ~90% latency reduction on 7 benchmarks with comparable accuracy.",
+    whyZh: "将智能体RAG推理与检索迁至连续潜空间，7个基准上延迟降低约90%，精度可比显式方法。",
+  },
+  {
+    date: "2026-05-09",
+    title: "Post Reasoning: Improving the Performance of Non-Thinking Models at No Cost",
+    titleZh: "后置推理：零成本提升非思维模型的推理性能",
+    authors: "Richmond Xuan et al.",
+    arxivId: "2605.06165",
+    tags: ["Reasoning", "Fine-tuning"],
+    why: "Conditioning non-thinking models to justify answers after generation improves performance across 117 model–benchmark settings with zero added latency.",
+    whyZh: "生成答案后追加推理依据，零延迟零成本，在117个模型-基准设置下性能普遍提升。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
