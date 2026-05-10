@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-10",
+    title: "Rethinking RL for LLM Reasoning: It's Sparse Policy Selection, Not Capability Learning",
+    titleZh: "重思LLM推理中的RL：稀疏策略选择而非能力学习",
+    authors: "Ömer Faruk Akgül et al.",
+    arxivId: "2605.06241",
+    tags: ["Reasoning", "RLHF", "Theory"],
+    why: "RL targets just 1–3% of token positions — ReasonMaxxer replicates these corrections RL-free in minutes on one GPU, cutting cost by 3 orders of magnitude.",
+    whyZh: "RL仅调整1-3%的token位置，ReasonMaxxer无需在线RL即可复现效果，训练成本降低三个数量级。",
+    pick: true,
+  },
+  {
+    date: "2026-05-10",
+    title: "Continuous Latent Diffusion Language Model",
+    titleZh: "连续潜空间扩散语言模型（Cola DLM）",
+    authors: "Hongcan Guo et al.",
+    arxivId: "2605.06548",
+    tags: ["Diffusion LM", "Pre-training"],
+    why: "Hierarchical continuous latent diffusion via Text VAE + block-causal DiT — validated on 8 benchmarks against strictly matched ~2B AR and LLaDA baselines.",
+    whyZh: "文本VAE与块因果DiT构建分层连续潜扩散LM，在8项基准上与LLaDA等~2B基线严格对齐比较。",
+  },
+  {
+    date: "2026-05-10",
+    title: "Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key",
+    titleZh: "RL能教会LLM长时域推理吗？表达性是关键",
+    authors: "Tianle Wang et al.",
+    arxivId: "2605.06638",
+    tags: ["Reasoning", "Theory"],
+    why: "ScaleLogic: RL compute follows T ∝ D^γ (R²>0.99); expressiveness raises γ from 1.04 to 2.60, yielding up to +10.66 downstream benchmark points.",
+    whyZh: "ScaleLogic证明RL算力与推理深度呈幂律，逻辑表达性将指数从1.04提升至2.60，下游涨幅达10.66分。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
