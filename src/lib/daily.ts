@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-11",
+    title: "Rethinking RL for LLM Reasoning: It's Sparse Policy Selection, Not Capability Learning",
+    titleZh: "重思LLM推理的强化学习：稀疏策略选择而非能力习得",
+    authors: "Ömer Faruk Akgül et al.",
+    arxivId: "2605.06241",
+    tags: ["Reasoning", "RLHF"],
+    why: "RL corrects only 1–3% of token positions at high-entropy points — ReasonMaxxer matches full RL on 6 benchmarks at 1/1000th training cost.",
+    whyZh: "RL仅在1-3%高熵决策位置生效；ReasonMaxxer无需RL，以千分之一训练成本在6项数学基准上媲美完整RL。",
+    pick: true,
+  },
+  {
+    date: "2026-05-11",
+    title: "Beyond Reasoning: Reinforcement Learning Unlocks Parametric Knowledge in LLMs",
+    titleZh: "超越推理：强化学习解锁LLM的参数化知识",
+    authors: "Wanli Yang et al.",
+    arxivId: "2605.07153",
+    tags: ["Reasoning", "RLHF"],
+    why: "RL on factual QA yields ~27% average relative gains — redistributes existing latent knowledge to reliable greedy generation without learning new facts.",
+    whyZh: "RL在事实问答上带来约27%相对提升，机制是将既有潜在知识重分配至可靠贪心解码，而非习得新知识。",
+  },
+  {
+    date: "2026-05-11",
+    title: "FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion",
+    titleZh: "FlashDLM：通过高效KV缓存与引导扩散加速扩散语言模型推理",
+    authors: "Zhanqiu Hu et al.",
+    arxivId: "2505.21467",
+    tags: ["Diffusion LM", "Efficient Inference"],
+    why: "FreeCache + Guided Diffusion delivers 12.14x end-to-end speedup on Dream-7B-Instruct — training-free KV caching for diffusion LMs.",
+    whyZh: "FreeCache+引导扩散实现Dream-7B 12.14倍端到端加速，无需训练即可为扩散LM引入KV缓存加速。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
