@@ -18,6 +18,37 @@ export interface DailyPaper {
 
 export const dailyPapers: DailyPaper[] = [
   {
+    date: "2026-05-12",
+    title: "Beyond Reasoning: Reinforcement Learning Unlocks Parametric Knowledge in LLMs",
+    titleZh: "超越推理：强化学习解锁大语言模型中的参数化知识",
+    authors: "Wanli Yang et al.",
+    arxivId: "2605.07153",
+    tags: ["Reasoning", "RLHF"],
+    why: "RL improves closed-book factual recall — ~27% gains across 3 model families by redistributing probability mass toward correct answers.",
+    whyZh: "RL不仅提升推理，还改善封闭式事实回忆，三模型家族平均约27%相对增益，机制是将低概率正确答案推入贪婪解码。",
+    pick: true,
+  },
+  {
+    date: "2026-05-12",
+    title: "Rethinking RL for LLM Reasoning: It's Sparse Policy Selection, Not Capability Learning",
+    titleZh: "重新审视LLM推理强化学习：稀疏策略选择而非能力习得",
+    authors: "Ömer Faruk Akgül et al.",
+    arxivId: "2605.06241",
+    tags: ["Reasoning", "Theory"],
+    why: "RL touches only 1–3% of tokens at entropy peaks; ReasonMaxxer matches full RL on 6 math benchmarks at 1/1000 the training cost.",
+    whyZh: "RL仅修改1-3%高熵决策位置token；无需RL的ReasonMaxxer以千分之一训练成本在6个数学基准上匹配完整RL。",
+  },
+  {
+    date: "2026-05-12",
+    title: "Towards Closing the Autoregressive Gap via Entropy-Gated Continuous Bitstream Diffusion",
+    titleZh: "通过熵门控连续比特流扩散弥合自回归差距",
+    authors: "Georgios Batzolis et al.",
+    arxivId: "2605.07013",
+    tags: ["Diffusion LM", "Theory"],
+    why: "130M bitstream diffusion model reaches AR-level perplexity (59.76) on LM1B with 256 steps, setting a new diffusion-LM Pareto frontier on OWT.",
+    whyZh: "1.3亿参数比特流扩散模型在LM1B上达自回归水平（困惑度59.76），OWT上仅需原来四分之一步数建立扩散LM新帕累托前沿。",
+  },
+  {
     date: "2026-04-23",
     title: "DeepSeek-V4 Technical Report",
     titleZh: "DeepSeek-V4 技术报告",
