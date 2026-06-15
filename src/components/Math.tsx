@@ -12,10 +12,16 @@ interface MathProps {
   label?: string;
 }
 
+function sanitizeTex(tex: string) {
+  // Strip control characters that sometimes leak into markdown/source formulas
+  return tex.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, "");
+}
+
 export function Math({ tex, display = false, label }: MathProps) {
   const html = useMemo(() => {
+    const cleanTex = sanitizeTex(tex);
     try {
-      return katex.renderToString(tex, {
+      return katex.renderToString(cleanTex, {
         displayMode: display,
         throwOnError: false,
         trust: true,

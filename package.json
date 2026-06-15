@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "katex": "^0.16.11",
+    "marked": "^18.0.5",
     "next": "^14.2.0",
+    "pinyin": "^4.0.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
   },

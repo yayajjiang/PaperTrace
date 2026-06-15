@@ -71,6 +71,9 @@ function Header() {
           <a href={`${basePath}/knowledge-graph`} className="text-paper-800/60 dark:text-slate-400 hover:text-paper-800 dark:hover:text-slate-100 transition-colors hidden sm:block">
             {t("Graph", "图谱")}
           </a>
+          <a href={`${basePath}/llm-guide`} className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors hidden sm:block font-medium">
+            {t("LLM Guide", "LLM 指南")}
+          </a>
           <div className="w-px h-4 bg-paper-200 dark:bg-slate-700 hidden sm:block" />
           <button
             onClick={toggleLang}

@@ -1,0 +1,2196 @@
+{
+  "chapters": [
+    {
+      "slug": "1-intro",
+      "title": "1-导论与基础",
+      "children": [
+        {
+          "slug": "1-intro/1-intro",
+          "title": "1 · 导论与基础: 进入大模型世界的导航图"
+        },
+        {
+          "slug": "1-intro/1.1-roadmap/1.1-roadmap",
+          "title": "1.1 · 学习路线与知识图谱: 不同背景者的进阶地图"
+        },
+        {
+          "slug": "1-intro/1.1-roadmap/ai-learning-route/ai-learning-route",
+          "title": "人工智能学习路线"
+        },
+        {
+          "slug": "1-intro/1.1-roadmap/the-document-is-all-you-need/the-document-is-all-you-need",
+          "title": "The Document is All You Need"
+        },
+        {
+          "slug": "1-intro/1.2-misc/1.2-misc",
+          "title": "1.2 · 科普与行业杂谈: 大模型世界的生态图谱"
+        },
+        {
+          "slug": "1-intro/1.3-history/1.3-history",
+          "title": "1.3 · 发展历程与趋势展望: 从 Seq2Seq 到世界模型"
+        }
+      ]
+    },
+    {
+      "slug": "2-arch",
+      "title": "2-核心原理与架构",
+      "children": [
+        {
+          "slug": "2-arch/2-arch",
+          "title": "2 核心原理与架构：从乐高积木到动力引擎"
+        },
+        {
+          "slug": "2-arch/2.1-basics/2.1-basics",
+          "title": "2.1 深度学习基础组件：从感知机到Transformer的每一块砖"
+        },
+        {
+          "slug": "2-arch/2.1-basics/2.1.1-qkwl-ffn-yjhhs/2.1.1-qkwl-ffn-yjhhs",
+          "title": "静态知识的存储层：前馈网络 FFN 与激活函数"
+        },
+        {
+          "slug": "2-arch/2.1-basics/2.1.2-gyhc/2.1.2-gyhc",
+          "title": "2.1.2 优化曲面的平滑剂：归一化层"
+        },
+        {
+          "slug": "2-arch/2.1-basics/2.1.3-cclj/01-hyper-connections-y-mhc",
+          "title": "Hyper-Connections 与 mHC：残差主干在 2024-2026 年的新进展"
+        },
+        {
+          "slug": "2-arch/2.1-basics/2.1.3-cclj/2.1.3-cclj",
+          "title": "2.1.3 残差连接：从 ResNet 到 Transformer 的稳定主干"
+        },
+        {
+          "slug": "2-arch/2.1-basics/2.1.4-wzbm/01-rope-bt-xzwzbm",
+          "title": "01 RoPE本体：旋转位置编码"
+        },
+        {
+          "slug": "2-arch/2.1-basics/2.1.4-wzbm/02-rope-kz-csxw-dmtygcsx",
+          "title": "02 RoPE扩展：长上下文、多模态与工程实现"
+        },
+        {
+          "slug": "2-arch/2.1-basics/2.1.4-wzbm/2.1.4-wzbm",
+          "title": "2.1.4 位置编码 (Positional Encoding - RoPE, ALiBi)"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2-attention",
+          "title": "2.2 · 基础注意力机制"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2.1-zzyljz/2.2.1-zzyljz",
+          "title": "2.2.1 自注意力机制"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2.2-dtzylbt/01-mha-dtzyldbzxs/01-mha-dtzyldbzxs",
+          "title": "01 MHA：多头注意力的标准形式"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2.2-dtzylbt/02-mqa-gx-key-value-djzys/02-mqa-gx-key-value-djzys",
+          "title": "MQA：共享 Key/Value 的极致压缩"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2.2-dtzylbt/03-gqa-zxnyhczjzz/03-gqa-zxnyhczjzz",
+          "title": "GQA：在性能与 KV Cache 之间折中"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2.2-dtzylbt/04-mla-dzqblyjoszyl/04-mla-dzqblyjoszyl",
+          "title": "MLA：低秩潜变量与解耦式注意力"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2.2-dtzylbt/05-mla-jzxsyfxssbb/05-mla-jzxsyfxssbb",
+          "title": "MLA 矩阵吸收与非吸收双版本"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2.2-dtzylbt/2.2.2-dtzylbt",
+          "title": "2.2.2 多头注意力变体"
+        },
+        {
+          "slug": "2-arch/2.2-attention/2.2.2-dtzylbt/kimi-attention-residuals-sdwzyljh",
+          "title": "Kimi Attention Residuals：当层间残差混合变成深度维注意力"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3-efficient-attention",
+          "title": "2.3-高效与稀疏注意力"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/01-flash-attention/01-flash-attention",
+          "title": "01 · FlashAttention 家族全景图: 内存墙瓶颈与硬件感知优化"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/01-flash-attention/02-flash-attention-v1",
+          "title": "02 · FlashAttention-v1 核心推导: 分块, 在线 Softmax 与重计算"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/01-flash-attention/03-flash-attention-v2",
+          "title": "03 · FlashAttention-v2 执行优化: 循环交换与 Warp 调度"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/01-flash-attention/04-flash-attention-v3",
+          "title": "04 · FlashAttention-v3 压榨 Hopper: TMA 异步管道与 FP8 动态量化"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/01-flash-attention/05-flash-attention-v4",
+          "title": "05 · FlashAttention-4 终结 Blackwell 瓶颈: 异步与 SFU 指令极致优化"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/01-flash-attention/06-flash-attention-triton-sx",
+          "title": "06 · FlashAttention Triton 源码剖析与寄存器映射"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/02-paged-attention/01-paged-attention-y-vllm",
+          "title": "02 · PagedAttention 与 vLLM: 虚拟内存思想终结 KV Cache 碎片"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/03-gqa-y-mqa/01-gqa-y-mqa-ymsxfx",
+          "title": "01 · GQA与MQA源码实现分析"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/04-attention-sxfsdb/01-attention-sxfsqjdb",
+          "title": "Attention 实现方式全景对比: 从手动实现到 FlashAttention"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.1-yjgxzyl/2.3.1-yjgxzyl",
+          "title": "2.3.1-硬件高效注意力"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.2-xsyyszyl/01-moba-jgsdjx/01-moba-jgsdjx",
+          "title": "深度解析混合块注意力(MoBA):LLM长上下文处理的新范式"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.2-xsyyszyl/02-ysxszyljz-nsa/02-ysxszyljz-nsa",
+          "title": "原生稀疏注意力(NSA): 长上下文大模型的高效与高性能之道"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.2-xsyyszyl/03-xszylzs/03-xszylzs",
+          "title": "驯服二次方猛兽: 从稀疏矩阵到动态路由注意力的数学演义"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.2-xsyyszyl/04-radial-attention-xszyl/04-radial-attention-xszyl",
+          "title": "Radial Attention：O(n log n) 复杂度的稀疏注意力"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.2-xsyyszyl/05-dca-skzyl/05-dca-skzyl",
+          "title": "05 DCA：双块注意力"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.2-xsyyszyl/06-s2-attn-ywxszyl/06-s2-attn-ywxszyl",
+          "title": "06 S²-Attn：移位稀疏注意力"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.2-xsyyszyl/07-csa-hca-hhyszyl/07-csa-hca-hhyszyl",
+          "title": "07 CSA-HCA：混合压缩注意力"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.2-xsyyszyl/2.3.2-xsyyszyl",
+          "title": "2.3.2 · 稀疏与压缩注意力"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.3-xxzyljz/2.3.3-xxzyljz",
+          "title": "2.3.3-线性注意力机制"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.4-gxzylqjzs/2.3.4-gxzylqjzs",
+          "title": "高效注意力机制全景图：分类、对比与工程选择指南"
+        },
+        {
+          "slug": "2-arch/2.3-efficient-attention/2.3.5-dtqzzyl-mla/2.3.5-dtqzzyl-mla",
+          "title": "MLA 专题：Multi-Head Latent Attention 的极限深度剖析"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/01-llm-jepa-lhqrycjgyzjdbsxx",
+          "title": "LLM-JEPA：联合嵌入预测架构与自监督表示学习"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4-frontier-arch",
+          "title": "2.4 · 前沿架构与变体"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/01-deep-seek-moe",
+          "title": "DeepSeek MoE"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/02-moe-dgcsj",
+          "title": "MoE大模型架构的工程实践与深度解析"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/03-moe-top-k-yskdxfx",
+          "title": "MoE Top-K 运算可导性分析"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/04-moe-yjjgyjzs",
+          "title": "MoE 硬件架构研究综述"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/05-moe-xtyjgyhzs",
+          "title": "MoE 系统与架构优化综述"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/06-moe-yjjsjgzs",
+          "title": "MoE 硬件加速架构综述：从 FPGA 到近存计算"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/07-moe-hhbhbsytxyhtj",
+          "title": "MoE 混合并行部署与通信优化图解"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/08-moe-xtyhzs",
+          "title": "MoE 系统优化综述"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/09-moe-mxlhjszs",
+          "title": "MoE 模型量化技术综述"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.1-hhzjmx-moe/2.4.1-hhzjmx-moe",
+          "title": "MoE终极指南: 从90年代的开创性思想到Grok, DeepSeek, Mistral的前沿架构解析"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.2-ztkjmx-ssm/2.4.2-ztkjmx-ssm",
+          "title": "2.4.2 · 状态空间模型 SSM"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.3-mamba-xl/2.4.3-mamba-xl",
+          "title": "2.4.3 · Mamba 系列"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.4-xx-rnn-y-griffin/2.4.4-xx-rnn-y-griffin",
+          "title": "2.4.3 · 线性 RNN：RWKV"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.5-xxjgyhhmx/2.4.5-xxjgyhhmx",
+          "title": "2.4.5 · 新兴架构与混合模型"
+        },
+        {
+          "slug": "2-arch/2.4-frontier-arch/2.4.6-d-token-yc-mtp-sdjx",
+          "title": "Multi-Token Prediction 深度解析"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/01-wzbmywt",
+          "title": "01 · 位置编码与长度外推：从 RoPE 到 YaRN 的数学推演"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/02-wjddpx",
+          "title": "无界的地平线"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/03-csxwtlyhjsqj",
+          "title": "长上下文推理优化技术全景"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/2.5-long-context",
+          "title": "2.5 长上下文与外推技术"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/rope/01-sxyl-cxzjzdxdwzbm",
+          "title": "数学原理：从旋转矩阵到相对位置编码"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/rope/02-gcsxygxjs",
+          "title": "工程实现与高效计算"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/rope/03-cdwt-c-pi-d-yarn-dpskz",
+          "title": "长度外推：从 PI 到 YaRN 的频率扩展"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/rope/04-sjydmtkz",
+          "title": "视觉与多模态扩展"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/rope/05-gysjysxms",
+          "title": "工业实践与失效模式"
+        },
+        {
+          "slug": "2-arch/2.5-long-context/rope/rope",
+          "title": "RoPE：旋转位置编码"
+        }
+      ]
+    },
+    {
+      "slug": "10-surveys",
+      "title": "10-综述与前沿论文",
+      "children": [
+        {
+          "slug": "10-surveys/10-surveys",
+          "title": "10 综述与前沿论文"
+        },
+        {
+          "slug": "10-surveys/agent-survey-2023/agent-survey-2023",
+          "title": "2023年AI Agent调研"
+        },
+        {
+          "slug": "10-surveys/ai-agents-2024/ai-agents-2024",
+          "title": "2024年终总结AI&Agents"
+        },
+        {
+          "slug": "10-surveys/allen-ai-olmo-qkyst",
+          "title": "Allen AI OLMo: 全开源大模型生态"
+        },
+        {
+          "slug": "10-surveys/automated-weak-to-strong-researcher-jd",
+          "title": "Automated Weak-to-Strong Researcher 解读"
+        },
+        {
+          "slug": "10-surveys/c-llama3-bgcf/c-llama3-bgcf",
+          "title": "从Llama3报告出发"
+        },
+        {
+          "slug": "10-surveys/c-llama3-bgcfd-llm-jbjszl/c-llama3-bgcfd-llm-jbjszl",
+          "title": "从Llama3报告出发的LLM基本技术整理"
+        },
+        {
+          "slug": "10-surveys/c-ocr-d-ocr-2.0-dyj/aaai-fgd-motivation/aaai-fgd-motivation",
+          "title": "AAAI风格的Motivation"
+        },
+        {
+          "slug": "10-surveys/c-ocr-d-ocr-2.0-dyj/acl-fgd-motivation/acl-fgd-motivation",
+          "title": "ACL风格的Motivation"
+        },
+        {
+          "slug": "10-surveys/c-ocr-d-ocr-2.0-dyj/c-ocr-d-ocr-2.0-dyj",
+          "title": "从OCR到OCR 2.0的演进"
+        },
+        {
+          "slug": "10-surveys/c-ocr-d-ocr-2.0-dyj/iclr-fgd-motivation/iclr-fgd-motivation",
+          "title": "ICLR风格的Motivation"
+        },
+        {
+          "slug": "10-surveys/c-ocr-d-ocr-2.0-dyj/icml-fgd-motivation/icml-fgd-motivation",
+          "title": "ICML风格的Motivation"
+        },
+        {
+          "slug": "10-surveys/credal-transformer-c-softmax-dqdxbzdzjlldbqdxjm",
+          "title": "Credal Transformer: 从 Softmax 的确定性暴政到证据理论的不确定性建模"
+        },
+        {
+          "slug": "10-surveys/crosscoders-llm-tzyxyljdxx",
+          "title": "Crosscoders: 追踪 LLM 预训练中的特征涌现与两阶段学习"
+        },
+        {
+          "slug": "10-surveys/dyymxqhxxwtzs",
+          "title": "大语言模型强化学习问题综述"
+        },
+        {
+          "slug": "10-surveys/efficient-attention-survey",
+          "title": "高效注意力方法综述: 从静态稀疏到线性注意力"
+        },
+        {
+          "slug": "10-surveys/gated-attention-hybrid-attention-2025-2026/gated-attention-hybrid-attention-2025-2026",
+          "title": "Gated Attention 与混合注意力: 2025-2026 LLM 架构最大突破"
+        },
+        {
+          "slug": "10-surveys/implicit-cot",
+          "title": "隐式思维链推理综述: 超越语言形式的认知表征"
+        },
+        {
+          "slug": "10-surveys/latent-cot",
+          "title": "隐式思维链(Latent CoT)综述: 超越语言的推理"
+        },
+        {
+          "slug": "10-surveys/llm-arch-map/llm-arch-map",
+          "title": "大语言模型架构全景图"
+        },
+        {
+          "slug": "10-surveys/llm-jepa-c-token-ycdqryc",
+          "title": "LLM-JEPA: 从 Token 预测到嵌入预测的实现"
+        },
+        {
+          "slug": "10-surveys/llm-jsy-icl-y-principle/llm-jsy-icl-y-principle",
+          "title": "LLAMA实现方式"
+        },
+        {
+          "slug": "10-surveys/prefix-cj-attention-yh/prefix-cj-attention-yh",
+          "title": "Prefix场景Attention优化"
+        },
+        {
+          "slug": "10-surveys/qmzsyjszj/qmzsyjszj",
+          "title": "全面综述与技术总结"
+        },
+        {
+          "slug": "10-surveys/ssm-dynamics",
+          "title": "隐状态空间动力学与推理机制前沿观察"
+        },
+        {
+          "slug": "10-surveys/tool-integrated-reasoning-rl-y-agentic-rl-qyjz",
+          "title": "Tool-integrated Reasoning RL 与 Agentic RL 前沿进展"
+        },
+        {
+          "slug": "10-surveys/tool-learning/tool-learning",
+          "title": "工具学习全面综述"
+        },
+        {
+          "slug": "10-surveys/ttt-titans-overview/ttt-titans-overview",
+          "title": "TTT(Test-Time Training)与 Titans: 2025-2026 年最受关注的新架构"
+        },
+        {
+          "slug": "10-surveys/vision-r1-dmttld-rl-jh",
+          "title": "Vision-R1: 多模态推理的 RL 进化"
+        },
+        {
+          "slug": "10-surveys/xyd-transformer-jgyc",
+          "title": "下一代 Transformer 架构预测: 从纯注意力到混合架构"
+        }
+      ]
+    },
+    {
+      "slug": "14-models",
+      "title": "14-主流开源模型全景解析与技术报告精读",
+      "children": [
+        {
+          "slug": "14-models/14-models",
+          "title": "主流开源模型全景解析与技术报告精读"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/01-deep-seek-coder/01-deep-seek-coder-jsbgjy",
+          "title": "DeepSeek-Coder 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/01-deep-seek-coder/02-deep-seek-coder-hxjgpx",
+          "title": "DeepSeek-Coder 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/01-deep-seek-coder/05-deep-seek-coder-architecture-overview",
+          "title": "DeepSeek-Coder 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/01-deep-seek-coder/05-deep-seek-coder-index",
+          "title": "DeepSeek-Coder"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/02-deep-seek-math/01-deep-seek-math-jsbgjy",
+          "title": "DeepSeek-Math 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/02-deep-seek-math/02-deep-seek-math-slljjm",
+          "title": "DeepSeek-Math 数理逻辑解码"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/02-deep-seek-math/05-deep-seek-math-index",
+          "title": "DeepSeek-Math"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/02-deep-seek-math/05-deep-seek-math-mathematical-reasoning",
+          "title": "DeepSeek-Math 数理逻辑解码"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/03-deep-seek-v2/01-deep-seek-v2-jsbgjy",
+          "title": "DeepSeek-V2: 一个强大、经济且高效的混合专家语言模型"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/03-deep-seek-v2/02-deep-seek-v2-hxjgpx",
+          "title": "DeepSeek-V2 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/03-deep-seek-v2/05-deep-seek-v2-deep-seek-mo-e",
+          "title": "DeepSeek-V2: DeepSeekMoE 架构与负载均衡工程"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/03-deep-seek-v2/05-deep-seek-v2-index",
+          "title": "DeepSeek-V2"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/03-deep-seek-v2/05-deep-seek-v2-mla",
+          "title": "DeepSeek-V2: Multi-Head Latent Attention (MLA) 原理与工程实现"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/04-deep-seek-coder-v2/01-deep-seek-coder-v2-jsbgjy",
+          "title": "DeepSeek-Coder-V2 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/04-deep-seek-coder-v2/02-deep-seek-coder-v2-hxjgpx",
+          "title": "DeepSeek-Coder-V2 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/04-deep-seek-coder-v2/05-deep-seek-coder-v2-architecture-overview",
+          "title": "DeepSeek-Coder-V2 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/04-deep-seek-coder-v2/05-deep-seek-coder-v2-index",
+          "title": "DeepSeek-Coder-V2"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/01-deep-seek-v3-jsbgjy",
+          "title": "DeepSeek-V3 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/02-deep-seek-v3-hxjgpx",
+          "title": "DeepSeek-V3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/03-deep-seek-v3-gcldjd",
+          "title": "DeepSeek-V3 工程落地精读"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/05-deep-seek-v3-architecture-overview",
+          "title": "DeepSeek-V3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/05-deep-seek-v3-deep-seek-mo-e",
+          "title": "DeepSeekMoE: 细粒度专家架构与无辅助损失负载均衡"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/05-deep-seek-v3-dual-pipe",
+          "title": "DualPipe: 双向流水线并行的设计与工程实现"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/05-deep-seek-v3-index",
+          "title": "DeepSeek-V3 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/05-deep-seek-v3-mla",
+          "title": "MLA: 多头潜在注意力的低秩压缩与解耦设计"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/05-deep-seek-v3-mtp",
+          "title": "MTP: 多 Token 预测的训练动力学与推理应用"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/05-deep-seek-v3/05-deep-seek-v3-training-system",
+          "title": "DeepSeek-V3 工程落地精读"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/06-deep-seek-r1/01-deep-seek-r1-jsbgjy",
+          "title": "DeepSeek-R1: 通过强化学习激励 LLM 中的推理能力"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/06-deep-seek-r1/02-deep-seek-r1-zero-ylpx",
+          "title": "DeepSeek-R1-Zero 原理剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/06-deep-seek-r1/03-deep-seek-r1-djddqpx",
+          "title": "DeepSeek-R1 多阶段对齐剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/06-deep-seek-r1/04-deep-seek-r1-zlygyld",
+          "title": "DeepSeek-R1 蒸馏与工业落地"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/06-deep-seek-r1/05-deep-seek-r1-distillation",
+          "title": "DeepSeek-R1 蒸馏与工业落地"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/06-deep-seek-r1/05-deep-seek-r1-grpo",
+          "title": "DeepSeek-R1-Zero 原理剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/06-deep-seek-r1/05-deep-seek-r1-index",
+          "title": "DeepSeek-R1"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/06-deep-seek-r1/05-deep-seek-r1-training-pipeline",
+          "title": "DeepSeek-R1 多阶段对齐剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/07-deep-seek-v3.1/01-deep-seek-v3.1-yjxjjy",
+          "title": "DeepSeek-V3.1: 迈向 Agent 时代的第一步"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/07-deep-seek-v3.1/05-deep-seek-v3.1-hhtlmsdsjysx",
+          "title": "DeepSeek-V3.1 混合推理模式的设计与实现"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/07-deep-seek-v3.1/05-deep-seek-v3.1-index",
+          "title": "DeepSeek-V3.1"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/08-deep-seek-v3.2/01-deep-seek-v3.2-jsbgjy",
+          "title": "DeepSeek-V3.2 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/08-deep-seek-v3.2/05-deep-seek-v3.2-index",
+          "title": "DeepSeek-V3.2"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/08-deep-seek-v3.2/05-deep-seek-v3.2-speciale-jxtlpx",
+          "title": "DeepSeek-V3.2-Speciale 极限推理剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/09-deep-seek-v3.2-terminus/01-deep-seek-v3.2-terminus-yjxjjy",
+          "title": "DeepSeek-V3.1-Terminus: V3.1 架构的终局版本"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/09-deep-seek-v3.2-terminus/05-deep-seek-v3.2-terminus-index",
+          "title": "DeepSeek-V3.2-Terminus"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/09-deep-seek-v3.2-terminus/05-deep-seek-v3.2-terminus-yyyzxxfddcgcsj",
+          "title": "DeepSeek-V3.1-Terminus 语言一致性修复的多层工程实践"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/10-deep-seek-v4/01-deep-seek-v4-jsbgjy",
+          "title": "DeepSeek-V4: 面向高效百万 Token 上下文智能"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/10-deep-seek-v4/02-deep-seek-v4-hxjgpx",
+          "title": "DeepSeek-V4 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/10-deep-seek-v4/05-deep-seek-v4-hxjgygxcsxwsjpx",
+          "title": "DeepSeek-V4 核心架构与高效长上下文设计剖析"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/10-deep-seek-v4/05-deep-seek-v4-index",
+          "title": "DeepSeek-V4"
+        },
+        {
+          "slug": "14-models/14.1-deepseek/14.1-deepseek",
+          "title": "14.1 DeepSeek 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.10-gemma/01-gemma-1/01-gemma-1-jsbgjy",
+          "title": "Gemma-1 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.10-gemma/01-gemma-1/05-gemma-1-multi-query-attention",
+          "title": "Gemma-1 Multi-Query Attention 深度解析"
+        },
+        {
+          "slug": "14-models/14.10-gemma/02-gemma-2/01-gemma-2-jsbgjy",
+          "title": "Gemma-2 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.10-gemma/02-gemma-2/05-gemma-2-index",
+          "title": "Gemma-2 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.10-gemma/02-gemma-2/05-gemma-2-knowledge-distillation",
+          "title": "Gemma-2 知识蒸馏深度解析"
+        },
+        {
+          "slug": "14-models/14.10-gemma/03-gemma-3/01-gemma-3-jsbgjy",
+          "title": "Gemma 3 Technical Report 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.10-gemma/03-gemma-3/02-gemma-3-hxjgpx",
+          "title": "Gemma-3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.10-gemma/03-gemma-3/05-gemma-3-architecture-overview",
+          "title": "Gemma 3 核心架构与多模态长上下文设计剖析"
+        },
+        {
+          "slug": "14-models/14.10-gemma/03-gemma-3/05-gemma-3-index",
+          "title": "Gemma-3"
+        },
+        {
+          "slug": "14-models/14.10-gemma/04-gemma-4/01-gemma-4-jsggjy",
+          "title": "Gemma 4 技术规格精译"
+        },
+        {
+          "slug": "14-models/14.10-gemma/04-gemma-4/05-gemma-4-architecture-overview",
+          "title": "Gemma 4 架构迭代与端侧智能设计剖析"
+        },
+        {
+          "slug": "14-models/14.10-gemma/04-gemma-4/05-gemma-4-index",
+          "title": "Gemma-4"
+        },
+        {
+          "slug": "14-models/14.10-gemma/14.10-gemma",
+          "title": "14.10 Gemma 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.11-gemini/01-gemini-1.0/01-01-gemini-1.0-jsbgjy",
+          "title": "Gemini 1.0: 开启原生多模态时代 (Ultra/Pro/Nano) - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/01-gemini-1.0/05-01-gemini-1.0-hxjszt",
+          "title": "01-Gemini-1.0 核心技术专题：原生多模态与长上下文的底层原理"
+        },
+        {
+          "slug": "14-models/14.11-gemini/01-gemini-1.0/05-01-gemini-1.0-ysdmtyxly-pathways-fbsjcss",
+          "title": "Gemini 1.0：原生多模态预训练与Pathways分布式基础设施"
+        },
+        {
+          "slug": "14-models/14.11-gemini/02-gemini-1.5-pro/01-02-gemini-1.5-pro-jsbgjy",
+          "title": "Gemini 1.5 Pro: 100万上下文与MoE架构的引入 - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/02-gemini-1.5-pro/05-02-gemini-1.5-pro-bwsxw-moe-ydmtcctl",
+          "title": "Gemini 1.5 Pro：百万上下文MoE与多模态长程推理"
+        },
+        {
+          "slug": "14-models/14.11-gemini/02-gemini-1.5-pro/05-02-gemini-1.5-pro-hxjszt",
+          "title": "02-Gemini-1.5-Pro 核心技术专题：原生多模态与长上下文的底层原理"
+        },
+        {
+          "slug": "14-models/14.11-gemini/03-gemini-1.5-flash/01-03-gemini-1.5-flash-jsbgjy",
+          "title": "Gemini 1.5 Flash: 高频API调用的极致速度优化 - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/03-gemini-1.5-flash/05-03-gemini-1.5-flash-hxjszt",
+          "title": "03-Gemini-1.5-Flash 核心技术专题：百万上下文轻量模型的工程极致优化"
+        },
+        {
+          "slug": "14-models/14.11-gemini/04-gemini-1.5-flash-8b/01-04-gemini-1.5-flash-8b-jsbgjy",
+          "title": "Gemini 1.5 Flash-8B: 端侧与边缘计算的微型巨头 - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/04-gemini-1.5-flash-8b/05-04-gemini-1.5-flash-8b-hxjszt",
+          "title": "04-Gemini-1.5-Flash-8B 核心技术专题：端侧友好的极致轻量架构与 1M 上下文工程"
+        },
+        {
+          "slug": "14-models/14.11-gemini/05-gemini-2.0-pro/01-05-gemini-2.0-pro-jsbgjy",
+          "title": "Gemini 2.0 Pro: 全模态原生与空间智能突破 - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/05-gemini-2.0-pro/05-05-gemini-2.0-pro-hxjszt",
+          "title": "05-Gemini-2.0-Pro 核心技术专题：原生多模态与长上下文的底层原理"
+        },
+        {
+          "slug": "14-models/14.11-gemini/05-gemini-2.0-pro/05-05-gemini-2.0-pro-ysdmtscy-agentic-gjl",
+          "title": "Gemini 2.0 Pro：原生多模态输出与Agentic工具链"
+        },
+        {
+          "slug": "14-models/14.11-gemini/06-gemini-2.0-flash/01-06-gemini-2.0-flash-jsbgjy",
+          "title": "Gemini 2.0 Flash: 取代 1.5 Pro 的性价比王者 - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/06-gemini-2.0-flash/05-06-gemini-2.0-flash-hxjszt",
+          "title": "06-Gemini-2.0-Flash 核心技术专题：原生多模态输出与Agentic智能体架构"
+        },
+        {
+          "slug": "14-models/14.11-gemini/07-gemini-2.0-flash-thinking/01-07-gemini-2.0-flash-thinking-jsbgjy",
+          "title": "Gemini 2.0 Flash-Thinking: 内置隐式思考链 - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/07-gemini-2.0-flash-thinking/05-07-gemini-2.0-flash-thinking-hxjszt",
+          "title": "07-Gemini-2.0-Flash-Thinking 核心技术专题：轻量模型上的测试时计算扩展先驱实验"
+        },
+        {
+          "slug": "14-models/14.11-gemini/08-gemini-2.5-pro/01-08-gemini-2.5-pro-jsbgjy",
+          "title": "Gemini 2.5 Pro: 超大规模强化学习与物理世界模拟 - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/08-gemini-2.5-pro/05-08-gemini-2.5-pro-hxjszt",
+          "title": "08-Gemini-2.5-Pro 核心技术专题：原生多模态与长上下文的底层原理"
+        },
+        {
+          "slug": "14-models/14.11-gemini/08-gemini-2.5-pro/05-08-gemini-2.5-pro-skmsydmttldgchsx",
+          "title": "Gemini 2.5 Pro：思考模式与多模态推理的工程化实现"
+        },
+        {
+          "slug": "14-models/14.11-gemini/09-gemini-2.5-flash/01-09-gemini-2.5-flash-jsbgjy",
+          "title": "Gemini 2.5 Flash: 端到端低延迟语音交互霸主 - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/09-gemini-2.5-flash/05-09-gemini-2.5-flash-hxjszt",
+          "title": "09-Gemini-2.5-Flash 核心技术专题：轻量架构上的 Thinking Mode 推理能力迁移"
+        },
+        {
+          "slug": "14-models/14.11-gemini/10-project-astra/01-10-project-astra-jsbgjy",
+          "title": "Project Astra: 实时视觉与语音多模态全双工 Agent - 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.11-gemini/10-project-astra/05-10-project-astra-hxjszt",
+          "title": "10-Project-Astra 核心技术专题：实时多模态感知与持续记忆的 Agent 系统架构"
+        },
+        {
+          "slug": "14-models/14.11-gemini/11-gemini-3.0-pro/05-11-gemini-3.0-pro-hxjszt",
+          "title": "11-Gemini-3.0-Pro 核心技术专题：原生多模态生成与动态推理的次世代架构"
+        },
+        {
+          "slug": "14-models/14.11-gemini/13-gemini-3.1-pro/05-gemini-3.1-pro-dtcssjsyysdmtscyq",
+          "title": "Gemini 3.1 Pro：动态测试时计算与原生多模态生成引擎"
+        },
+        {
+          "slug": "14-models/14.11-gemini/14.11-gemini",
+          "title": "Gemini 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.12-openai/01-gpt-1/01-01-gpt-1-fxgcjy",
+          "title": "GPT-1: 无监督预训练的开山之作 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/01-gpt-1/05-01-gpt-1-hxjszt",
+          "title": "01-GPT-1 核心技术专题：生成式预训练范式的开创与 NLP 任务统一框架"
+        },
+        {
+          "slug": "14-models/14.12-openai/02-gpt-2/01-02-gpt-2-fxgcjy",
+          "title": "GPT-2: 多任务学习与 Zero-Shot 的萌芽 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/02-gpt-2/05-02-gpt-2-hxjszt",
+          "title": "02-GPT-2 核心技术专题：规模扩展的涌现效应与 Zero-shot 能力的发现"
+        },
+        {
+          "slug": "14-models/14.12-openai/03-gpt-3/01-03-gpt-3-fxgcjy",
+          "title": "GPT-3: In-Context Learning 的算力暴力美学 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/03-gpt-3/05-03-gpt-3-hxjszt",
+          "title": "03-GPT-3 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/03-gpt-3/05-03-gpt-3-sxwxxdgmhyxyslmx",
+          "title": "GPT-3：上下文学习的规模化涌现与算力美学"
+        },
+        {
+          "slug": "14-models/14.12-openai/04-instruct-gpt/01-04-instruct-gpt-fxgcjy",
+          "title": "InstructGPT: RLHF 对齐人类意图的里程碑 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/04-instruct-gpt/05-04-instruct-gpt-hxjszt",
+          "title": "04-InstructGPT 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/04-instruct-gpt/05-04-instruct-gpt-rlhf-dqfsdgchkc",
+          "title": "InstructGPT：RLHF对齐范式的工程化开创"
+        },
+        {
+          "slug": "14-models/14.12-openai/05-chat-gpt-3.5/01-05-chat-gpt-3.5-fxgcjy",
+          "title": "ChatGPT (GPT-3.5): 引爆全球 AI 浪潮的对话引擎 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/05-chat-gpt-3.5/05-05-chat-gpt-3.5-dhyhdcphgcy-rlhf-gmh",
+          "title": "ChatGPT (GPT-3.5)：对话优化的产品化工程与RLHF规模化"
+        },
+        {
+          "slug": "14-models/14.12-openai/05-chat-gpt-3.5/05-05-chat-gpt-3.5-hxjszt",
+          "title": "05-ChatGPT-3.5 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/06-gpt-4/01-06-gpt-4-fxgcjy",
+          "title": "GPT-4: 跨越模态界限的专家混合架构 (MoE) - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/06-gpt-4/05-06-gpt-4-hxjszt",
+          "title": "06-GPT-4 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/06-gpt-4/05-gpt-4-moe-jgtcyxlgmjjx",
+          "title": "GPT-4：MoE 架构推测与训练规模经济学"
+        },
+        {
+          "slug": "14-models/14.12-openai/07-gpt-4-vision/01-07-gpt-4-vision-fxgcjy",
+          "title": "GPT-4V: 视觉语言多模态的深度融合 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/07-gpt-4-vision/05-07-gpt-4-vision-hxjszt",
+          "title": "07-GPT-4-Vision 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/08-gpt-4-turbo/01-08-gpt-4-turbo-fxgcjy",
+          "title": "GPT-4 Turbo: 128K上下文与极致性能优化 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/08-gpt-4-turbo/05-08-gpt-4-turbo-hxjszt",
+          "title": "08-GPT-4-Turbo 核心技术专题：128K上下文窗口与推理效率的工程突破"
+        },
+        {
+          "slug": "14-models/14.12-openai/09-gpt-4o/01-09-gpt-4o-fxgcjy",
+          "title": "GPT-4o: Omni 全模态端到端原生架构 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/09-gpt-4o/05-09-gpt-4o-hxjszt",
+          "title": "09-GPT-4o 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/09-gpt-4o/05-09-gpt-4o-ysdmtdddjgy-omni-tybs",
+          "title": "GPT-4o：原生多模态端到端架构与Omni统一表示"
+        },
+        {
+          "slug": "14-models/14.12-openai/10-gpt-4o-mini/01-10-gpt-4o-mini-fxgcjy",
+          "title": "GPT-4o-mini: 端侧与边缘的高性价比之王 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/10-gpt-4o-mini/05-10-gpt-4o-mini-hxjszt",
+          "title": "10-GPT-4o-mini 核心技术专题：多模态小模型的成本极限与端侧部署探索"
+        },
+        {
+          "slug": "14-models/14.12-openai/11-o1-preview/01-11-o1-preview-fxgcjy",
+          "title": "o1-preview: 纯强化学习驱动的 System-2 思考引擎 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/11-o1-preview/05-11-o1-preview-hxjszt",
+          "title": "11-o1-preview 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/12-o1-mini/01-12-o1-mini-fxgcjy",
+          "title": "o1-mini: 专攻数学与代码的轻量化推理巨头 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/12-o1-mini/05-12-o1-mini-hxjszt",
+          "title": "12-o1-mini 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/13-o1/01-13-o1-fxgcjy",
+          "title": "o1: 完全体慢思考模型的终极形态 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/13-o1/05-13-o1-cssjskzyyclssw",
+          "title": "o1：测试时计算扩展与隐藏链式思维"
+        },
+        {
+          "slug": "14-models/14.12-openai/13-o1/05-13-o1-hxjszt",
+          "title": "13-o1 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/14-o3-mini/01-14-o3-mini-fxgcjy",
+          "title": "o3-mini: 推理成本极限压缩的新范式 - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/14-o3-mini/05-14-o3-mini-hxjszt",
+          "title": "14-o3-mini 核心技术专题：推理模型小型化的成本革命与推理强度自适应"
+        },
+        {
+          "slug": "14-models/14.12-openai/14.12-openai",
+          "title": "OpenAI 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.12-openai/15-operator-agent/01-15-operator-agent-fxgcjy",
+          "title": "Operator: 接管浏览器的自动化自主 Agent - 技术探测与反向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/15-operator-agent/05-15-operator-agent-cua-sjtlyllqzdhdgcsx",
+          "title": "OpenAI Operator (CUA)：视觉推理与浏览器自动化的工程实现"
+        },
+        {
+          "slug": "14-models/14.12-openai/15-operator-agent/05-15-operator-agent-hxjszt",
+          "title": "15-Operator-Agent 核心技术专题：黑盒边界与逆向工程"
+        },
+        {
+          "slug": "14-models/14.12-openai/16-gpt-4.5/05-16-gpt-4.5-hxjszt",
+          "title": "16-GPT-4.5 核心技术专题：情感智能升维与非推理路线的范式探索"
+        },
+        {
+          "slug": "14-models/14.12-openai/17-o3/05-o3-sysdqygjzqtl",
+          "title": "o3：审议式对齐与工具增强推理"
+        },
+        {
+          "slug": "14-models/14.12-openai/18-o4-mini/05-18-o4-mini-hxjszt",
+          "title": "18-o4-mini 核心技术专题：视觉推理能力与轻量推理模型的工程升级"
+        },
+        {
+          "slug": "14-models/14.12-openai/19-gpt-4.1/05-19-gpt-4.1-hxjszt",
+          "title": "19-GPT-4.1 核心技术专题：编码能力跃升与百万上下文的工程突破"
+        },
+        {
+          "slug": "14-models/14.12-openai/20-gpt-5/05-gpt-5-tytljgysslyjz",
+          "title": "GPT-5：统一推理架构与实时路由机制"
+        },
+        {
+          "slug": "14-models/14.12-openai/25-gpt-5.5/05-gpt-5.5-ysqmtjgy-agent-dxdyxlfs",
+          "title": "GPT-5.5：原生全模态架构与 Agent 导向的预训练范式"
+        },
+        {
+          "slug": "14-models/14.13-claude/01-claude-1/01-01-claude-1-jgjy",
+          "title": "Claude 1: Constitutional AI (宪法AI) 的初试啼声 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/01-claude-1/05-01-claude-1-hxjszt",
+          "title": "01-Claude-1 核心技术专题：Constitutional AI 安全对齐范式的首次工程实践"
+        },
+        {
+          "slug": "14-models/14.13-claude/02-claude-2/01-02-claude-2-jgjy",
+          "title": "Claude 2: 超长上下文 (100K) 的领跑者 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/02-claude-2/05-02-claude-2-ccsxwy-constitutional-ai-dgcsj",
+          "title": "Claude 2：超长上下文与Constitutional AI的工程实践"
+        },
+        {
+          "slug": "14-models/14.13-claude/02-claude-2/05-02-claude-2-hxjszt",
+          "title": "02-Claude-2 核心技术专题：RLAIF 与模型神经元干预"
+        },
+        {
+          "slug": "14-models/14.13-claude/03-claude-2.1/01-03-claude-2.1-jgjy",
+          "title": "Claude 2.1: 幻觉抑制与 200K 窗口扩展 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/03-claude-2.1/05-03-claude-2.1-hxjszt",
+          "title": "03-Claude-2.1 核心技术专题：200K 上下文扩展与幻觉率削减的工程实践"
+        },
+        {
+          "slug": "14-models/14.13-claude/04-claude-3-haiku/01-04-claude-3-haiku-jgjy",
+          "title": "Claude 3 Haiku: 极致响应速度的端侧小钢炮 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/04-claude-3-haiku/05-04-claude-3-haiku-hxjszt",
+          "title": "04-Claude-3-Haiku 核心技术专题：RLAIF 与模型神经元干预"
+        },
+        {
+          "slug": "14-models/14.13-claude/05-claude-3-sonnet/01-05-claude-3-sonnet-jgjy",
+          "title": "Claude 3 Sonnet: 企业级多模态生产力中枢 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/05-claude-3-sonnet/05-05-claude-3-sonnet-hxjszt",
+          "title": "05-Claude-3-Sonnet 核心技术专题：平衡性能与成本的Anthropic中坚架构"
+        },
+        {
+          "slug": "14-models/14.13-claude/06-claude-3-opus/01-06-claude-3-opus-jgjy",
+          "title": "Claude 3 Opus: 全面反超 GPT-4 的巅峰之作 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/06-claude-3-opus/05-06-claude-3-opus-csxwtlydmtljdsztp",
+          "title": "Claude 3 Opus：长上下文推理与多模态理解的双重突破"
+        },
+        {
+          "slug": "14-models/14.13-claude/06-claude-3-opus/05-06-claude-3-opus-hxjszt",
+          "title": "06-Claude-3-Opus 核心技术专题：RLAIF 与模型神经元干预"
+        },
+        {
+          "slug": "14-models/14.13-claude/07-claude-3.5-sonnet/01-07-claude-3.5-sonnet-jgjy",
+          "title": "Claude 3.5 Sonnet: 编码之神与交互式工件 (Artifacts) - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/07-claude-3.5-sonnet/05-07-claude-3.5-sonnet-bmnltpy-agent-hjhsj",
+          "title": "Claude 3.5 Sonnet：编码能力突破与Agent化交互设计"
+        },
+        {
+          "slug": "14-models/14.13-claude/07-claude-3.5-sonnet/05-07-claude-3.5-sonnet-hxjszt",
+          "title": "07-Claude-3.5-Sonnet 核心技术专题：RLAIF 与模型神经元干预"
+        },
+        {
+          "slug": "14-models/14.13-claude/08-claude-3.5-haiku/01-08-claude-3.5-haiku-jgjy",
+          "title": "Claude 3.5 Haiku: 算力成本的最优解 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/08-claude-3.5-haiku/05-08-claude-3.5-haiku-hxjszt",
+          "title": "08-Claude-3.5-Haiku 核心技术专题：RLAIF 与模型神经元干预"
+        },
+        {
+          "slug": "14-models/14.13-claude/09-claude-computer-use/01-09-claude-computer-use-jgjy",
+          "title": "Claude Computer Use: 突破沙盒的系统级图形界面接管 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/09-claude-computer-use/05-09-claude-computer-use-hxjszt",
+          "title": "09-Claude-Computer-Use 核心技术专题：RLAIF 与模型神经元干预"
+        },
+        {
+          "slug": "14-models/14.13-claude/09-claude-computer-use/05-09-claude-computer-use-sjgzqdd-gui-zdh-agent",
+          "title": "Claude Computer Use：视觉感知驱动的GUI自动化Agent"
+        },
+        {
+          "slug": "14-models/14.13-claude/10-claude-3.7-sonnet/01-10-claude-3.7-sonnet-jgjy",
+          "title": "Claude 3.7 Sonnet: 混合推理(Hybrid Reasoning)的混合巨兽 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/10-claude-3.7-sonnet/05-10-claude-3.7-sonnet-hhtljgykkskys",
+          "title": "Claude 3.7 Sonnet：混合推理架构与可控思考预算"
+        },
+        {
+          "slug": "14-models/14.13-claude/10-claude-3.7-sonnet/05-10-claude-3.7-sonnet-hxjszt",
+          "title": "10-Claude-3.7-Sonnet 核心技术专题：RLAIF 与模型神经元干预"
+        },
+        {
+          "slug": "14-models/14.13-claude/11-claude-4/01-11-claude-4-jgjy",
+          "title": "Claude 4: Anthropic 新一代安全与智能边界探索 - 架构还原与精译"
+        },
+        {
+          "slug": "14-models/14.13-claude/11-claude-4/05-11-claude-4-cc-agent-nlyjyjzdgctp",
+          "title": "Claude 4：长程Agent能力与记忆机制的工程突破"
+        },
+        {
+          "slug": "14-models/14.13-claude/11-claude-4/05-11-claude-4-hxjszt",
+          "title": "11-Claude-4 核心技术专题：RLAIF 与模型神经元干预"
+        },
+        {
+          "slug": "14-models/14.13-claude/12-claude-4.5-sonnet/05-12-claude-4.5-sonnet-hxjszt",
+          "title": "12-Claude-4.5-Sonnet 核心技术专题：编码能力跃迁与 Agent 自主执行的工程突破"
+        },
+        {
+          "slug": "14-models/14.13-claude/14.13-claude",
+          "title": "Claude 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.13-claude/17-claude-opus-4.7/05-claude-opus-4.7-hhxszylycsxw-agent-bmjg",
+          "title": "Claude Opus 4.7：混合稀疏注意力与长上下文 Agent 编码架构"
+        },
+        {
+          "slug": "14-models/14.14-mistral/01-mistral-7b/01-01-mistral-7b-jgjy",
+          "title": "Mistral 7B: 欧洲开源之光的起跑线"
+        },
+        {
+          "slug": "14-models/14.14-mistral/01-mistral-7b/05-01-mistral-7b-hxzt",
+          "title": "01-Mistral-7B 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.14-mistral/01-mistral-7b/05-mistral-7b-gqa-y-swa-dxsgm",
+          "title": "Mistral 7B 核心技术专题：GQA 与 SWA 的效率革命"
+        },
+        {
+          "slug": "14-models/14.14-mistral/02-mixtral-8x7b/01-02-mixtral-8x7b-jgjy",
+          "title": "Mixtral 8x7B: 首个击败 LLaMA 的开源 MoE"
+        },
+        {
+          "slug": "14-models/14.14-mistral/02-mixtral-8x7b/05-02-mixtral-8x7b-hxzt",
+          "title": "02-Mixtral-8x7B 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.14-mistral/02-mixtral-8x7b/05-mixtral-8x7b-xs-moe-lyjzydyyzjzyh",
+          "title": "Mixtral 8x7B 核心技术专题：稀疏 MoE 路由机制与多语言专家专业化"
+        },
+        {
+          "slug": "14-models/14.14-mistral/03-mistral-large/01-03-mistral-large-jgjy",
+          "title": "Mistral Large: 剑指 GPT-4 的旗舰闭源模型"
+        },
+        {
+          "slug": "14-models/14.14-mistral/03-mistral-large/05-03-mistral-large-hxzt",
+          "title": "03-Mistral-Large 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.14-mistral/03-mistral-large/05-mistral-large-qyj-moe-jgydyycsxwyh",
+          "title": "Mistral Large 核心技术专题：企业级 MoE 架构与多语言长上下文优化"
+        },
+        {
+          "slug": "14-models/14.14-mistral/14.14-mistral",
+          "title": "Mistral 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.15-xai/01-grok-1/01-01-grok-1-jgjy",
+          "title": "Grok-1: 314B 巨无霸全开源"
+        },
+        {
+          "slug": "14-models/14.15-xai/01-grok-1/05-01-grok-1-hxzt",
+          "title": "01-Grok-1 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.15-xai/01-grok-1/05-grok-1-kyclydgm-moe-jgsj",
+          "title": "Grok-1：开源策略与大规模 MoE 架构设计"
+        },
+        {
+          "slug": "14-models/14.15-xai/02-grok-1.5v/01-02-grok-1.5v-jgjy",
+          "title": "Grok-1.5V: 真实世界空间理解"
+        },
+        {
+          "slug": "14-models/14.15-xai/02-grok-1.5v/05-02-grok-1.5v-hxzt",
+          "title": "02-Grok-1.5V 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.15-xai/03-grok-2/01-03-grok-2-jgjy",
+          "title": "Grok-2: 混合黑林模型与 X 数据飞轮"
+        },
+        {
+          "slug": "14-models/14.15-xai/03-grok-2/05-03-grok-2-hxzt",
+          "title": "03-Grok-2 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.15-xai/04-grok-2.5/05-04-grok-2.5-hxjszt",
+          "title": "04-Grok-2.5 核心技术专题：xAI 实时数据融合与推理效率的工程优化"
+        },
+        {
+          "slug": "14-models/14.15-xai/05-grok-3/05-grok-3-cssjskzyysssjg",
+          "title": "Grok 3：测试时计算扩展与原生搜索架构"
+        },
+        {
+          "slug": "14-models/14.15-xai/06-grok-3.5/05-06-grok-3.5-hxjszt",
+          "title": "06-Grok-3.5 核心技术专题：xAI 推理模型的小型化与实时数据增强"
+        },
+        {
+          "slug": "14-models/14.15-xai/07-grok-4/05-grok-4-yxlgmqhxxy-moe-xsgm",
+          "title": "Grok 4：预训练规模强化学习与 MoE 效率革命"
+        },
+        {
+          "slug": "14-models/14.15-xai/08-grok-4.1/05-grok-4.1-tyqzsmsycsjqhxxxl",
+          "title": "Grok 4.1：统一权重双模式与长时界强化学习训练"
+        },
+        {
+          "slug": "14-models/14.15-xai/09-grok-4.20/05-grok-4.20-dzntbljgydhjxtsj",
+          "title": "Grok 4.20：多智能体辩论架构与低幻觉系统设计"
+        },
+        {
+          "slug": "14-models/14.15-xai/10-grok-4.3/05-grok-4.3-tlsdyhysssjrhjg",
+          "title": "Grok 4.3：推理速度优化与实时数据融合架构"
+        },
+        {
+          "slug": "14-models/14.15-xai/14.15-xai",
+          "title": "xAI 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.16-ling/01-ling-lite/01-01-ling-lite-jsbgjy",
+          "title": "01-Ling-Lite 技术报告纯中文精译"
+        },
+        {
+          "slug": "14-models/14.16-ling/01-ling-lite/01-ling-lite-jsbgjy",
+          "title": "Ling-Lite / Ling-Plus 技术报告摘要"
+        },
+        {
+          "slug": "14-models/14.16-ling/01-ling-lite/05-ling-lite-edit-ybxlcl",
+          "title": "EDiT：面向异构硬件的高效异步分布式训练"
+        },
+        {
+          "slug": "14-models/14.16-ling/02-ling-plus/01-02-ling-plus-jsbgjy",
+          "title": "02-Ling-Plus 技术报告纯中文精译"
+        },
+        {
+          "slug": "14-models/14.16-ling/02-ling-plus/01-ling-plus-jsbgjy",
+          "title": "Ling-Plus 技术报告摘要"
+        },
+        {
+          "slug": "14-models/14.16-ling/02-ling-plus/05-ling-plus-kptxldq",
+          "title": "跨平台训练对齐：在 5 种异构硬件上训练 290B MoE 的工程实践"
+        },
+        {
+          "slug": "14-models/14.16-ling/03-ling-2.0/01-ling-2.0-jsbgjy",
+          "title": "Ling 2.0 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.16-ling/03-ling-2.0/05-ling-2.0-evo-cot-y-lpo-jhstlxl",
+          "title": "Ling 2.0 Evo-CoT 与 LPO：非思考模型的进化式推理训练"
+        },
+        {
+          "slug": "14-models/14.16-ling/03-ling-2.5/01-03-ling-2.5-jsbgjy",
+          "title": "03-Ling-2.5 技术报告纯中文精译"
+        },
+        {
+          "slug": "14-models/14.16-ling/04-ling-2.5/01-ling-2.5-jsbgjy",
+          "title": "Ling 2.5 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.16-ling/04-ling-2.5/05-ling-2.5-hhxxzyljg",
+          "title": "Ling 2.5 混合线性注意力架构：从 $O(n^2)$ 到 $O(n)$ 的注意力革命"
+        },
+        {
+          "slug": "14-models/14.16-ling/04-ling-2.6/01-04-ling-2.6-jsbgjy",
+          "title": "04-Ling-2.6 技术报告纯中文精译"
+        },
+        {
+          "slug": "14-models/14.17-doubao/01-doubao-lite/01-01-doubao-lite-jgjy",
+          "title": "Doubao Lite: 字节端侧极致压缩"
+        },
+        {
+          "slug": "14-models/14.17-doubao/01-doubao-lite/05-01-doubao-lite-hxzt",
+          "title": "01-Doubao-Lite 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.17-doubao/01-doubao-lite/05-doubao-lite-dcqlhbsycbxsyh",
+          "title": "Doubao Lite 核心技术专题：端侧轻量化部署与成本效率优化"
+        },
+        {
+          "slug": "14-models/14.17-doubao/02-doubao-pro/01-02-doubao-pro-jgjy",
+          "title": "Doubao Pro: 字节全家桶中枢"
+        },
+        {
+          "slug": "14-models/14.17-doubao/02-doubao-pro/05-02-doubao-pro-hxzt",
+          "title": "02-Doubao-Pro 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.17-doubao/02-doubao-pro/05-doubao-pro-7-bgg-moe-ydmtysty",
+          "title": "Doubao Pro 核心技术专题：7 倍杠杆 MoE 与多模态原生统一"
+        },
+        {
+          "slug": "14-models/14.17-doubao/14.17-doubao",
+          "title": "Doubao 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/01-mini-cpm-2b/01-mini-cpm-2b-jsbgjy",
+          "title": "MiniCPM-2B 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/01-mini-cpm-2b/05-mini-cpm-2b-wsd-learning-rate-scheduler",
+          "title": "MiniCPM WSD 学习率调度器深度解析"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/02-mini-cpm-1.2b/01-mini-cpm-1.2b-jsbgjy",
+          "title": "MiniCPM-1.2B 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/02-mini-cpm-1.2b/05-mini-cpm-1.2b-sdssydcysjg",
+          "title": "MiniCPM-1.2B 深度瘦身与端侧压缩架构解析"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/03-mini-cpm-2b-128k/01-mini-cpm-2b-128k-jsbgjy",
+          "title": "MiniCPM-2B-128K 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/03-mini-cpm-2b-128k/05-mini-cpm-2b-128k-csxwkzydcbs",
+          "title": "MiniCPM-2B-128K 长上下文扩展与端侧部署解析"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/04-mini-cpm-moe-8x2b/01-mini-cpm-moe-8x2b-jsbgjy",
+          "title": "MiniCPM-MoE-8x2B 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/04-mini-cpm-moe-8x2b/05-mini-cpm-moe-8x2b-hhzjjgydcxsjh",
+          "title": "MiniCPM-MoE-8x2B 混合专家架构与端侧稀疏激活解析"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/05-mini-cpm-v-2.0/01-mini-cpm-v-2.0-jsbgjy",
+          "title": "MiniCPM-V 2.0 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/05-mini-cpm-v-2.0/04-mini-cpm-v-2.0-lwjdbj",
+          "title": "MiniCPM-V 2.0 论文精读笔记"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/05-mini-cpm-v-2.0/05-mini-cpm-v-2.0-dcdmtjgyzsygfbssjbm",
+          "title": "MiniCPM-V 2.0 核心技术专题：端侧多模态架构与自适应高分辨率视觉编码"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/06-mini-cpm-llama3-v-2.5/01-mini-cpm-llama3-v-2.5-jsbgjy",
+          "title": "MiniCPM-Llama3-V 2.5 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/06-mini-cpm-llama3-v-2.5/04-mini-cpm-llama3-v-2.5-lwjdbj",
+          "title": "MiniCPM-Llama3-V 2.5 论文精读笔记"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/06-mini-cpm-llama3-v-2.5/05-mini-cpm-llama3-v-2.5-rlaif-v-dmtdqykkz-ai-fk",
+          "title": "MiniCPM-Llama3-V 2.5 核心技术专题：RLAIF-V 多模态对齐与可扩展 AI 反馈"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/07-mini-cpm-s-1.2b/01-mini-cpm-s-1.2b-jsbgjy",
+          "title": "MiniCPM-S-1.2B 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/07-mini-cpm-s-1.2b/05-mini-cpm-s-1.2b-pro-sparse-xsjhydctljs",
+          "title": "MiniCPM-S-1.2B 核心技术专题: ProSparse 稀疏激活与端侧推理加速"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/08-mini-cpm-v-2.6/01-mini-cpm-v-2.6-jsbgjy",
+          "title": "MiniCPM-V-2.6 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/08-mini-cpm-v-2.6/05-mini-cpm-v-2.6-spljydcdmtsstl",
+          "title": "MiniCPM-V-2.6 核心技术专题: 视频理解与端侧多模态实时推理"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/09-mini-cpm-o-2.6/01-mini-cpm-o-2.6-jsbgjy",
+          "title": "MiniCPM-o-2.6 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/09-mini-cpm-o-2.6/05-mini-cpm-o-2.6-qmtdddjgysslsjh",
+          "title": "MiniCPM-o-2.6 核心技术专题: 全模态端到端架构与实时流式交互"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/10-mini-cpm3-4b/01-mini-cpm3-4b-jsbgjy",
+          "title": "MiniCPM3-4B 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/10-mini-cpm3-4b/05-mini-cpm3-4b-dcgjtyywxcwbcl",
+          "title": "MiniCPM3-4B: 端侧工具调用与无限长文本处理"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/11-mini-cpm-4.0/01-mini-cpm-4.0-jsbgjy",
+          "title": "MiniCPM4 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/11-mini-cpm-4.0/05-mini-cpm-4.0-inf-llm-v2-xszylydctljs",
+          "title": "MiniCPM4: InfLLM v2 稀疏注意力与端侧推理加速"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/12-mini-cpm-4.1/01-mini-cpm-4.1-jsbgjy",
+          "title": "MiniCPM-4.1 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/12-mini-cpm-4.1/05-mini-cpm-4.1-hhtlmsydcsklyh",
+          "title": "MiniCPM-4.1 混合推理模式与端侧思考链优化"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/13-mini-cpm-v-4.0/01-mini-cpm-v-4.0-jsbgjy",
+          "title": "MiniCPM-V-4.0 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/13-mini-cpm-v-4.0/05-mini-cpm-v-4.0-dcdmtmxdncyjsyh",
+          "title": "MiniCPM-V-4.0 端侧多模态模型的内存与计算优化"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/14-mini-cpm-v-4.5/01-mini-cpm-v-4.5-jsbgjy",
+          "title": "MiniCPM-V-4.5 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/14-mini-cpm-v-4.5/05-mini-cpm-v-4.5-ty-3d-resampler-ysklhsjys",
+          "title": "MiniCPM-V-4.5 统一 3D-Resampler 与时空联合视觉压缩"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/15-mini-cpm-o-4.5/01-mini-cpm-o-4.5-jsbgjy",
+          "title": "MiniCPM-o 4.5 技术报告精译：面向实时全双工全模态交互"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/15-mini-cpm-o-4.5/05-mini-cpm-o-4.5-omni-flow-qsglsjhkj",
+          "title": "MiniCPM-o 4.5 深度解析：Omni-Flow 全双工流式交互框架"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/16-mini-cpm-v-4.6/01-mini-cpm-v-4.6-jsbgjy",
+          "title": "MiniCPM-V-4.6 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.18-minicpm/16-mini-cpm-v-4.6/05-mini-cpm-v-4.6-hhsjysjgytlmd",
+          "title": "MiniCPM-V-4.6 核心技术专题：混合视觉压缩与端侧推理密度的极限突破"
+        },
+        {
+          "slug": "14-models/14.19-ernie/01-ernie-3.5/01-01-ernie-3.5-jgjy",
+          "title": "文心一言 3.5: 飞桨架构的深度绑定"
+        },
+        {
+          "slug": "14-models/14.19-ernie/01-ernie-3.5/05-01-ernie-3.5-hxzt",
+          "title": "01-Ernie-3.5 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.19-ernie/02-ernie-4.0/01-02-ernie-4.0-jgjy",
+          "title": "文心一言 4.0: 知识增强大语言模型"
+        },
+        {
+          "slug": "14-models/14.19-ernie/02-ernie-4.0/05-02-ernie-4.0-hxzt",
+          "title": "02-Ernie-4.0 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.19-ernie/14.19-ernie",
+          "title": "Ernie 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.2-qwen/01-qwen/01-qwen-jsbgjy",
+          "title": "Qwen 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/01-qwen/05-qwen-architecture-overview",
+          "title": "Qwen 核心架构与长上下文扩展设计剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/01-qwen/05-qwen-index",
+          "title": "Qwen"
+        },
+        {
+          "slug": "14-models/14.2-qwen/02-qwen2/01-qwen2-jsbgjy",
+          "title": "Qwen2 Technical Report 精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/02-qwen2/02-qwen2-hxjgpx",
+          "title": "Qwen2 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/02-qwen2/05-qwen2-architecture-overview",
+          "title": "Qwen2 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/02-qwen2/05-qwen2-index",
+          "title": "Qwen2 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.2-qwen/02-qwen2/05-qwen2-training-system",
+          "title": "Qwen2 工程落地精读"
+        },
+        {
+          "slug": "14-models/14.2-qwen/03-qwen2-vl/01-qwen2-vl-jsbgjy",
+          "title": "Qwen2-VL 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/03-qwen2-vl/05-qwen2-vl-architecture-overview",
+          "title": "Qwen2-VL 多模态架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/03-qwen2-vl/05-qwen2-vl-index",
+          "title": "Qwen2-VL"
+        },
+        {
+          "slug": "14-models/14.2-qwen/04-qwen2-audio/01-qwen2-audio-jsbgjy",
+          "title": "Qwen2-Audio 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/04-qwen2-audio/05-qwen2-audio-architecture-overview",
+          "title": "Qwen2-Audio 多模态架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/04-qwen2-audio/05-qwen2-audio-index",
+          "title": "Qwen2-Audio"
+        },
+        {
+          "slug": "14-models/14.2-qwen/05-qwen2.5/01-qwen2.5-jsbgjy",
+          "title": "Qwen2.5 Technical Report 精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/05-qwen2.5/02-qwen2.5-hxjgpx",
+          "title": "Qwen2.5 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/05-qwen2.5/05-qwen2.5-architecture-overview",
+          "title": "Qwen2.5 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/05-qwen2.5/05-qwen2.5-index",
+          "title": "Qwen2.5 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.2-qwen/05-qwen2.5/05-qwen2.5-training-system",
+          "title": "Qwen2.5 工程落地精读"
+        },
+        {
+          "slug": "14-models/14.2-qwen/06-qwen2.5-coder/01-qwen2.5-coder-jsbgjy",
+          "title": "Qwen2.5-Coder 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/06-qwen2.5-coder/05-qwen2.5-coder-architecture-overview",
+          "title": "Qwen2.5-Coder 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/06-qwen2.5-coder/05-qwen2.5-coder-index",
+          "title": "Qwen2.5-Coder"
+        },
+        {
+          "slug": "14-models/14.2-qwen/07-qwen2.5-math/01-qwen2.5-math-jsbgjy",
+          "title": "Qwen2.5-Math 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/07-qwen2.5-math/05-qwen2.5-math-index",
+          "title": "Qwen2.5-Math"
+        },
+        {
+          "slug": "14-models/14.2-qwen/07-qwen2.5-math/05-qwen2.5-math-mathematical-reasoning",
+          "title": "Qwen2.5-Math 数理逻辑剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/08-qwen2.5-vl/01-qwen2.5-vl-jsbgjy",
+          "title": "Qwen2.5-VL 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/08-qwen2.5-vl/05-qwen2.5-vl-architecture-overview",
+          "title": "Qwen2.5-VL 多模态架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/08-qwen2.5-vl/05-qwen2.5-vl-index",
+          "title": "Qwen2.5-VL Index"
+        },
+        {
+          "slug": "14-models/14.2-qwen/09-qwen3/01-qwen3-jsbgjy",
+          "title": "Qwen3 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.2-qwen/09-qwen3/02-qwen3-hxjgpx",
+          "title": "Qwen3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/09-qwen3/05-qwen3-architecture-overview",
+          "title": "Qwen3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/09-qwen3/05-qwen3-index",
+          "title": "Qwen3 Index"
+        },
+        {
+          "slug": "14-models/14.2-qwen/10-qwen3.5/01-qwen3.5-jsbgjy",
+          "title": "Qwen3.5: 以原生多模态智能体加速生产力"
+        },
+        {
+          "slug": "14-models/14.2-qwen/10-qwen3.5/05-qwen3.5-architecture-overview",
+          "title": "Qwen3.5 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/10-qwen3.5/05-qwen3.5-index",
+          "title": "Qwen3.5 Index"
+        },
+        {
+          "slug": "14-models/14.2-qwen/11-qwen3.6/01-qwen3.6-jsbgjy",
+          "title": "Qwen3.6: 全尺度智能体编程能力的飞跃"
+        },
+        {
+          "slug": "14-models/14.2-qwen/11-qwen3.6/05-qwen3.6-architecture-overview",
+          "title": "Qwen3.6 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.2-qwen/11-qwen3.6/05-qwen3.6-index",
+          "title": "Qwen3.6 Index"
+        },
+        {
+          "slug": "14-models/14.2-qwen/12-qwen3.7/01-qwen3.7-jsbgjy",
+          "title": "Qwen3.7: 面向智能体时代的新一代旗舰模型"
+        },
+        {
+          "slug": "14-models/14.2-qwen/12-qwen3.7/05-qwen3.7-cczzzhykkjfhdgcsj",
+          "title": "Qwen3.7 长程自主执行与跨框架泛化的工程实践"
+        },
+        {
+          "slug": "14-models/14.2-qwen/12-qwen3.7/05-qwen3.7-index",
+          "title": "Qwen3.7 Index"
+        },
+        {
+          "slug": "14-models/14.2-qwen/14.2-qwen",
+          "title": "14.2 Qwen 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.20-hunyuan/01-hunyuan-pro/01-01-hunyuan-pro-jgjy",
+          "title": "混元 Pro: 腾讯 MoE 与长文本解析"
+        },
+        {
+          "slug": "14-models/14.20-hunyuan/01-hunyuan-pro/05-01-hunyuan-pro-hxzt",
+          "title": "01-Hunyuan-Pro 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.20-hunyuan/01-hunyuan-pro/05-hunyuan-pro-xld-moe-yhh-mamba-jgdxstp",
+          "title": "Hunyuan Pro 核心技术专题：细粒度 MoE 与混合 Mamba 架构的效率突破"
+        },
+        {
+          "slug": "14-models/14.20-hunyuan/02-hunyuan-3d/01-02-hunyuan-3d-jgjy",
+          "title": "混元 3D: 原生 3D 资产生成架构"
+        },
+        {
+          "slug": "14-models/14.20-hunyuan/02-hunyuan-3d/05-02-hunyuan-3d-hxzt",
+          "title": "02-Hunyuan-3D 核心技术剖析"
+        },
+        {
+          "slug": "14-models/14.20-hunyuan/02-hunyuan-3d/05-hunyuan-3d-ys-3d-zcscyzjhscgx",
+          "title": "Hunyuan 3D 核心技术专题：原生 3D 资产生成与组件化生产管线"
+        },
+        {
+          "slug": "14-models/14.20-hunyuan/14.20-hunyuan",
+          "title": "Hunyuan 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.21-erine/01-ernie-4.5/05-ernie-4.5-ygdmt-moe-yzszqdrhjg",
+          "title": "ERNIE 4.5：异构多模态 MoE 与知识增强的融合架构"
+        },
+        {
+          "slug": "14-models/14.21-erine/02-ernie-3.0/05-ernie-3.0-dfstyyxlkjyzstprh",
+          "title": "ERNIE 3.0：多范式统一预训练框架与知识图谱融合"
+        },
+        {
+          "slug": "14-models/14.3-llama/01-llama-1/01-llama-1-jsbgjy",
+          "title": "LLaMA: Open and Efficient Foundation Language Models 精译"
+        },
+        {
+          "slug": "14-models/14.3-llama/01-llama-1/02-llama-1-hxjgpx",
+          "title": "Llama-1 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.3-llama/01-llama-1/05-llama-1-architecture-overview",
+          "title": "Llama 1 核心架构与数据工程剖析"
+        },
+        {
+          "slug": "14-models/14.3-llama/01-llama-1/05-llama-1-index",
+          "title": "Llama-1"
+        },
+        {
+          "slug": "14-models/14.3-llama/02-llama-2/01-llama-2-jsbgjy",
+          "title": "Llama 2: Open Foundation and Fine-Tuned Chat Models 精译"
+        },
+        {
+          "slug": "14-models/14.3-llama/02-llama-2/02-llama-2-hxjgpx",
+          "title": "Llama-2 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.3-llama/02-llama-2/03-llama-2-rlhf-yaqdqjd",
+          "title": "Llama-2 RLHF 与安全对齐精读"
+        },
+        {
+          "slug": "14-models/14.3-llama/02-llama-2/05-llama-2-architecture-overview",
+          "title": "Llama 2 核心架构与对齐技术剖析"
+        },
+        {
+          "slug": "14-models/14.3-llama/02-llama-2/05-llama-2-index",
+          "title": "Llama-2"
+        },
+        {
+          "slug": "14-models/14.3-llama/02-llama-2/05-llama-2-rlhf",
+          "title": "Llama 2 RLHF 与安全对齐精读"
+        },
+        {
+          "slug": "14-models/14.3-llama/03-llama-3/01-llama-3-jsbgjy",
+          "title": "Llama 3 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.3-llama/03-llama-3/02-llama-3-hxjgpx",
+          "title": "Llama-3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.3-llama/03-llama-3/03-llama-3-jqsxfxjd",
+          "title": "Llama-3 集群失效分析精读"
+        },
+        {
+          "slug": "14-models/14.3-llama/03-llama-3/05-llama-3-architecture-overview",
+          "title": "Llama 3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.3-llama/03-llama-3/05-llama-3-cluster-failure-analysis",
+          "title": "Llama 3 集群失效分析精读"
+        },
+        {
+          "slug": "14-models/14.3-llama/03-llama-3/05-llama-3-index",
+          "title": "Llama-3 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.3-llama/04-l-la-ma-3.1/01-l-la-ma-3.1-jsbgjy",
+          "title": "LLaMA-3.1 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.3-llama/04-l-la-ma-3.1/05-04-l-la-ma-3.1-hxjszt",
+          "title": "04-LLaMA-3.1 核心技术专题：开源大模型的规模化巅峰与多语言工程突破"
+        },
+        {
+          "slug": "14-models/14.3-llama/04-llama-4/01-llama-4-jsbgjy",
+          "title": "Llama 4: 原生多模态 MoE 模型的技术解读"
+        },
+        {
+          "slug": "14-models/14.3-llama/04-llama-4/05-llama-4-architecture-overview",
+          "title": "Llama 4 架构迭代与原生多模态设计剖析"
+        },
+        {
+          "slug": "14-models/14.3-llama/04-llama-4/05-llama-4-index",
+          "title": "Llama-4"
+        },
+        {
+          "slug": "14-models/14.3-llama/14.3-llama",
+          "title": "14.3 LLaMA 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.4-olmo/01-olmo/01-olmo-jsbgjy",
+          "title": "OLMo 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.4-olmo/01-olmo/02-olmo-kxbhjgpx",
+          "title": "OLMo 科学白盒架构剖析"
+        },
+        {
+          "slug": "14-models/14.4-olmo/01-olmo/05-olmo-architecture-overview",
+          "title": "OLMo 核心架构与全开放生态剖析"
+        },
+        {
+          "slug": "14-models/14.4-olmo/01-olmo/05-olmo-index",
+          "title": "OLMo 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.4-olmo/02-olmo-2/01-olmo-2-jsbgjy",
+          "title": "OLMo 2 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.4-olmo/02-olmo-2/02-olmo-2-bhyjyrzpx",
+          "title": "OLMo-2 白盒演进与日志剖析"
+        },
+        {
+          "slug": "14-models/14.4-olmo/02-olmo-2/05-olmo-2-index",
+          "title": "OLMo-2"
+        },
+        {
+          "slug": "14-models/14.4-olmo/02-olmo-2/05-olmo-2-training-system",
+          "title": "OLMo 2 训练稳定性工程与数据科学剖析"
+        },
+        {
+          "slug": "14-models/14.4-olmo/03-olmo-3/01-ol-mo-e-jsbgjy",
+          "title": "OLMoE: Open Mixture-of-Experts Language Models 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.4-olmo/03-olmo-3/02-olmo-3-hxjgpx",
+          "title": "OLMo-3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.4-olmo/03-olmo-3/05-olmo-3-index",
+          "title": "OLMo-3"
+        },
+        {
+          "slug": "14-models/14.4-olmo/03-olmo-3/05-olmo-3-moe",
+          "title": "OLMoE 核心架构与路由专业化剖析"
+        },
+        {
+          "slug": "14-models/14.4-olmo/14.4-olmo",
+          "title": "14.4 OLMo 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.5-kimi/01-kimi-chat/01-kimi-chat-csxwjsjy",
+          "title": "Kimi-Chat 长上下文技术精译"
+        },
+        {
+          "slug": "14-models/14.5-kimi/01-kimi-chat/05-kimi-chat-csxwkzdjsljygcsj",
+          "title": "Kimi-Chat 长上下文扩展的技术路径与工程实践"
+        },
+        {
+          "slug": "14-models/14.5-kimi/01-kimi-chat/05-kimi-chat-index",
+          "title": "Kimi-Chat 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.5-kimi/02-kimi-k2/01-kimi-k2-jsbgjy",
+          "title": "Kimi K2: Open Agentic Intelligence 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.5-kimi/02-kimi-k2/02-kimi-k2-hxyhpx",
+          "title": "Kimi-K2 核心演化剖析"
+        },
+        {
+          "slug": "14-models/14.5-kimi/02-kimi-k2/05-kimi-k2-architecture-overview",
+          "title": "Kimi K2 核心架构与 Agentic 训练体系剖析"
+        },
+        {
+          "slug": "14-models/14.5-kimi/02-kimi-k2/05-kimi-k2-index",
+          "title": "Kimi-K2 Index"
+        },
+        {
+          "slug": "14-models/14.5-kimi/03-kimi-k2.5/01-kimi-k2.5-jsbgjy",
+          "title": "Kimi K2.5 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.5-kimi/03-kimi-k2.5/02-kimi-k2.5-tljgpx",
+          "title": "Kimi K2.5 推理架构剖析"
+        },
+        {
+          "slug": "14-models/14.5-kimi/03-kimi-k2.5/05-kimi-k2.5-architecture-overview",
+          "title": "Kimi K2.5 原生多模态智能体与 Agent Swarm 编排体系剖析"
+        },
+        {
+          "slug": "14-models/14.5-kimi/03-kimi-k2.5/05-kimi-k2.5-index",
+          "title": "Kimi-K2.5 Index"
+        },
+        {
+          "slug": "14-models/14.5-kimi/04-kimi-k2.6/01-kimi-k2.6-jsbgjy",
+          "title": "Kimi K2.6 技术博客精译"
+        },
+        {
+          "slug": "14-models/14.5-kimi/04-kimi-k2.6/02-kimi-k2.6-dmty-agent-nlpx",
+          "title": "Kimi K2.6 多模态与 Agent 能力剖析"
+        },
+        {
+          "slug": "14-models/14.5-kimi/04-kimi-k2.6/05-kimi-k2.6-architecture-overview",
+          "title": "Kimi K2.6 多模态与 Agent 能力剖析"
+        },
+        {
+          "slug": "14-models/14.5-kimi/04-kimi-k2.6/05-kimi-k2.6-index",
+          "title": "Kimi-K2.6 Index"
+        },
+        {
+          "slug": "14-models/14.5-kimi/14.5-kimi",
+          "title": "14.5 Kimi 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.6-glm/01-glm-130b/01-glm-130b-dhlwjy",
+          "title": "GLM-130B: An Open Bilingual Pre-trained Model 顶会论文精译"
+        },
+        {
+          "slug": "14-models/14.6-glm/01-glm-130b/02-glm-130b-ew-rope-sltd",
+          "title": "GLM-130B 二维 RoPE 数理推导"
+        },
+        {
+          "slug": "14-models/14.6-glm/01-glm-130b/05-glm-130b-index",
+          "title": "GLM-130B Index"
+        },
+        {
+          "slug": "14-models/14.6-glm/01-glm-130b/05-glm-130b-rope",
+          "title": "GLM-130B 位置编码: 从二维到一维 RoPE 的数理推导"
+        },
+        {
+          "slug": "14-models/14.6-glm/02-chat-glm/01-chat-glm-xljsbgjy",
+          "title": "ChatGLM: 从 GLM-130B 到 GLM-4 All Tools 的大语言模型家族"
+        },
+        {
+          "slug": "14-models/14.6-glm/02-chat-glm/02-chat-glm-hxjgpx",
+          "title": "ChatGLM 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/02-chat-glm/05-chat-glm-architecture-overview",
+          "title": "ChatGLM 三代迭代与开源生态建设剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/02-chat-glm/05-chat-glm-index",
+          "title": "ChatGLM Index"
+        },
+        {
+          "slug": "14-models/14.6-glm/03-glm-4/01-glm-4-jsbgjy",
+          "title": "ChatGLM: 从 GLM-130B 到 GLM-4 All Tools 的大语言模型家族 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.6-glm/03-glm-4/02-glm-4-hxjgpx",
+          "title": "GLM-4 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/03-glm-4/05-glm-4-architecture-overview",
+          "title": "GLM-4 核心架构与中文对齐设计剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/03-glm-4/05-glm-4-index",
+          "title": "GLM-4 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.6-glm/04-glm-4-voice/01-glm-4-voice-jsbgjy",
+          "title": "GLM-4-Voice 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.6-glm/04-glm-4-voice/02-glm-4-voice-hxjgpx",
+          "title": "GLM-4-Voice 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/04-glm-4-voice/05-glm-4-voice-architecture-overview",
+          "title": "GLM-4-Voice 端到端语音对话架构与低延迟设计剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/04-glm-4-voice/05-glm-4-voice-index",
+          "title": "GLM-4-Voice Index"
+        },
+        {
+          "slug": "14-models/14.6-glm/05-glm-z1/01-glm-z1-jsbgjy",
+          "title": "GLM-Z1 技术报告精译 (强化学习专版)"
+        },
+        {
+          "slug": "14-models/14.6-glm/05-glm-z1/05-glm-z1-index",
+          "title": "GLM-Z1 Index"
+        },
+        {
+          "slug": "14-models/14.6-glm/05-glm-z1/05-glm-z1-ysskly-prm-yl",
+          "title": "GLM-Z1 深度解析：冷启动强化学习与推理模型工程"
+        },
+        {
+          "slug": "14-models/14.6-glm/06-glm-4.5v/01-glm-4.5v-jsbgjy",
+          "title": "GLM-4.5V 技术报告精译 (多模态原生)"
+        },
+        {
+          "slug": "14-models/14.6-glm/06-glm-4.5v/05-glm-4.5v-ysdmtjg",
+          "title": "GLM-4.5V 深度解析：原生多模态架构与视觉推理"
+        },
+        {
+          "slug": "14-models/14.6-glm/07-glm-4.7/01-glm-4.7-jsbgjy",
+          "title": "GLM-4.7 技术报告精译 (全员 Agent)"
+        },
+        {
+          "slug": "14-models/14.6-glm/07-glm-4.7/05-glm-4.7-hstyyl",
+          "title": "GLM-4.7 深度解析：Agentic Coding 与多模式思考架构"
+        },
+        {
+          "slug": "14-models/14.6-glm/08-glm-5/01-glm-5-jsbgjy",
+          "title": "GLM-5: from Vibe Coding to Agentic Engineering 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.6-glm/08-glm-5/02-glm-5-hxjgpx",
+          "title": "GLM-5 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/08-glm-5/05-glm-5-architecture-overview",
+          "title": "GLM-5 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/08-glm-5/05-glm-5-index",
+          "title": "GLM-5"
+        },
+        {
+          "slug": "14-models/14.6-glm/09-glm-5-turbo/01-glm-5-turbo-jsbgjy",
+          "title": "GLM-5-Turbo 技术报告精译 (补齐)"
+        },
+        {
+          "slug": "14-models/14.6-glm/09-glm-5-turbo/01-glm-5-turbo-jsbgjy-2",
+          "title": "GLM-5-Turbo 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.6-glm/09-glm-5-turbo/05-09-glm-5-turbo-hxjszt",
+          "title": "09-GLM-5-Turbo 核心技术专题：DSA 动态稀疏注意力与端侧部署的工程实践"
+        },
+        {
+          "slug": "14-models/14.6-glm/09-glm-5-turbo/05-glm-5-turbo-dsa-dtxszyldjcysp",
+          "title": "GLM-5 DSA 动态稀疏注意力的集成与适配"
+        },
+        {
+          "slug": "14-models/14.6-glm/09-glm-5-turbo/05-glm-5-turbo-index",
+          "title": "GLM-5-Turbo"
+        },
+        {
+          "slug": "14-models/14.6-glm/10-glm-5v-turbo/01-glm-5v-turbo-jsbgjy",
+          "title": "GLM-5V-Turbo: 面向多模态智能体的原生基础模型 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.6-glm/10-glm-5v-turbo/02-glm-5v-turbo-dmt-agent-jgpx",
+          "title": "GLM-5V-Turbo 多模态 Agent 架构剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/10-glm-5v-turbo/05-glm-5v-turbo-architecture-overview",
+          "title": "GLM-5V-Turbo 多模态 Agent 架构剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/10-glm-5v-turbo/05-glm-5v-turbo-index",
+          "title": "GLM-5V-Turbo"
+        },
+        {
+          "slug": "14-models/14.6-glm/11-glm-5.1/01-glm-5.1-jsbgjy",
+          "title": "GLM-5.1 技术报告精译 (补齐)"
+        },
+        {
+          "slug": "14-models/14.6-glm/11-glm-5.1/01-glm-5.1-jsbgjy-2",
+          "title": "GLM-5.1 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.6-glm/11-glm-5.1/05-glm-5.1-architecture-overview",
+          "title": "GLM-5.1 长程任务与 Agent 架构剖析"
+        },
+        {
+          "slug": "14-models/14.6-glm/11-glm-5.1/05-glm-5.1-index",
+          "title": "GLM-5.1"
+        },
+        {
+          "slug": "14-models/14.6-glm/14.6-glm",
+          "title": "14.6 GLM 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/01-step-1/01-01-step-1-jsbgjy",
+          "title": "01-Step-1 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/01-step-1/05-step-1-qy-dense-mxdgxxlyssyqjy",
+          "title": "Step-1 核心技术专题：千亿 Dense 模型的高效训练与搜索引擎基因"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/02-step-2/01-02-step-2-jsbgjy",
+          "title": "02-Step-2 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/02-step-2/05-step-2-wy-moe-ctxlyxtxtyh",
+          "title": "Step-2 核心技术专题：万亿参数 MoE 的从头训练与系统协同优化"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/02-step-3/01-step-3-jsbgjy",
+          "title": "Step-3: 模型-系统协同设计实现高性价比解码"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/02-step-3/02-step-3-hxjgpx",
+          "title": "Step-3 核心架构剖析"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/02-step-3/05-step-3-architecture-overview",
+          "title": "Step-3 模型-系统协同设计与解码成本优化剖析"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/02-step-3/05-step-3-index",
+          "title": "Step-3 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/03-step-3.5-flash/01-step-3.5-flash-jsbgjy",
+          "title": "Step-3.5-Flash 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/03-step-3.5-flash/02-step-3.5-flash-gxtlpx",
+          "title": "Step 3.5 Flash 高效推理剖析"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/03-step-3.5-flash/05-step-3.5-flash-architecture-overview",
+          "title": "Step 3.5 Flash Agentic 低延迟设计与可扩展 RL 框架剖析"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/03-step-3.5-flash/05-step-3.5-flash-index",
+          "title": "Step-3.5-Flash"
+        },
+        {
+          "slug": "14-models/14.7-stepfun/14.7-stepfun",
+          "title": "14.7 StepFun 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.8-minimax/01-abab/01-abab-cdjsbwfx",
+          "title": "ABAB 初代技术博文分析"
+        },
+        {
+          "slug": "14-models/14.8-minimax/01-abab/01-abab-jsbgjy",
+          "title": "MiniMax ABAB 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.8-minimax/01-abab/05-abab-gnsg-moe-dmxdjgtsygcyz",
+          "title": "ABAB 国内首个 MoE 大模型的架构探索与工程验证"
+        },
+        {
+          "slug": "14-models/14.8-minimax/01-abab/05-abab-index",
+          "title": "ABAB-初代 核心技术专题索引"
+        },
+        {
+          "slug": "14-models/14.8-minimax/02-mini-max-m2/01-mini-max-m2-jsbgjy",
+          "title": "MiniMax-M2 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.8-minimax/02-mini-max-m2/05-mini-max-m2-lightning-attention-jx",
+          "title": "MiniMax-M2 核心技术专题：Lightning Attention 闪电注意力"
+        },
+        {
+          "slug": "14-models/14.8-minimax/02-mini-max-m2/05-mini-max-m2-lightning-attention-y-400-wsxwxlgc",
+          "title": "MiniMax M2 核心技术专题：Lightning Attention 与 400 万上下文训练工程"
+        },
+        {
+          "slug": "14-models/14.8-minimax/03-mini-max-m2.1/01-mini-max-m2.1-jsbgjy",
+          "title": "MiniMax-M2.1 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.8-minimax/03-mini-max-m2.1/05-mini-max-m2.1-csxwyzjly",
+          "title": "MiniMax-M2.1 核心技术专题：极长上下文与专家路由优化"
+        },
+        {
+          "slug": "14-models/14.8-minimax/03-mini-max-m2.1/05-mini-max-m2.1-jcskydtzjly",
+          "title": "MiniMax M2.1 核心技术专题：交错思考与动态专家路由的效率革命"
+        },
+        {
+          "slug": "14-models/14.8-minimax/03-mini-max-m2.5/05-03-mini-max-m2.5-hxjszt",
+          "title": "03-MiniMax-M2.5 核心技术专题：Agent-Native RL 规模化与成本效率的极致工程"
+        },
+        {
+          "slug": "14-models/14.8-minimax/04-mini-max-m2.5/01-mini-max-m2.5-jsbgjy",
+          "title": "MiniMax-M2.5 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.8-minimax/04-mini-max-m2.5/01-mini-max-m2.5-jsbgjy-2",
+          "title": "MiniMax-M2.5 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.8-minimax/04-mini-max-m2.5/05-mini-max-m2.5-agent-native-rl-gmhycbxsdjzgc",
+          "title": "MiniMax-M2.5 Agent-Native RL 规模化与成本效率的极致工程"
+        },
+        {
+          "slug": "14-models/14.8-minimax/04-mini-max-m2.5/05-mini-max-m2.5-architecture-overview",
+          "title": "MiniMax M2.5 真实世界生产力与 Agent 原生 RL 框架剖析"
+        },
+        {
+          "slug": "14-models/14.8-minimax/04-mini-max-m2.5/05-mini-max-m2.5-index",
+          "title": "MiniMax-M2.5"
+        },
+        {
+          "slug": "14-models/14.8-minimax/05-mini-max-m2.7/01-mini-max-m2.7-jsbgjy",
+          "title": "MiniMax-M2.7 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.8-minimax/05-mini-max-m2.7/01-mini-max-m2.7-jsbgjy-2",
+          "title": "MiniMax M2.7 技术博客精译"
+        },
+        {
+          "slug": "14-models/14.8-minimax/05-mini-max-m2.7/05-mini-max-m2.7-architecture-overview",
+          "title": "MiniMax M2.7 自我进化与 Harness 优化剖析"
+        },
+        {
+          "slug": "14-models/14.8-minimax/05-mini-max-m2.7/05-mini-max-m2.7-index",
+          "title": "MiniMax-M2.7"
+        },
+        {
+          "slug": "14-models/14.8-minimax/05-mini-max-m2.7/05-mini-max-m2.7-zwjhydzntxz",
+          "title": "MiniMax M2.7 自我进化与多智能体协作剖析"
+        },
+        {
+          "slug": "14-models/14.8-minimax/14.8-minimax",
+          "title": "14.8 MiniMax 家族演进总览"
+        },
+        {
+          "slug": "14-models/14.9-mimo/01-mimo-7b/01-mimo-7b-jsbgjy",
+          "title": "MiMo-7B 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.9-mimo/01-mimo-7b/02-mimo-7b-tlyhpx",
+          "title": "MiMo-7B 推理优化剖析"
+        },
+        {
+          "slug": "14-models/14.9-mimo/01-mimo-7b/05-mimo-7b-architecture-overview",
+          "title": "MiMo-7B 推理密度最大化与 RL 基础设施优化剖析"
+        },
+        {
+          "slug": "14-models/14.9-mimo/01-mimo-7b/05-mimo-7b-index",
+          "title": "MiMo-7B"
+        },
+        {
+          "slug": "14-models/14.9-mimo/02-mimo-v2-flash/01-mimo-v2-flash-jsbgjy",
+          "title": "MiMo-V2-Flash 技术报告精译"
+        },
+        {
+          "slug": "14-models/14.9-mimo/02-mimo-v2-flash/02-mimo-v2-flash-gx-moe-tlpx",
+          "title": "MiMo-V2-Flash 高效 MoE 推理剖析"
+        },
+        {
+          "slug": "14-models/14.9-mimo/02-mimo-v2-flash/05-mimo-v2-flash-architecture-overview",
+          "title": "MiMo-V2-Flash 混合注意力与 MOPD 后训练范式剖析"
+        },
+        {
+          "slug": "14-models/14.9-mimo/02-mimo-v2-flash/05-mimo-v2-flash-index",
+          "title": "MiMo-V2-Flash"
+        },
+        {
+          "slug": "14-models/14.9-mimo/03-mimo-v2.5/01-mimo-v2.5-jsbgjy",
+          "title": "MiMo-V2.5 技术博客精译"
+        },
+        {
+          "slug": "14-models/14.9-mimo/03-mimo-v2.5/05-mimo-v2.5-architecture-overview",
+          "title": "MiMo-V2.5 多模态 Agentic 能力与 Harness 感知剖析"
+        },
+        {
+          "slug": "14-models/14.9-mimo/03-mimo-v2.5/05-mimo-v2.5-index",
+          "title": "MiMo-V2.5"
+        },
+        {
+          "slug": "14-models/14.9-mimo/03-mimo-v2.5/05-mimo-v2.5-qmt-agent-jgy-mopd-zl",
+          "title": "MiMo-V2.5 全模态 Agent 架构剖析"
+        },
+        {
+          "slug": "14-models/14.9-mimo/14.9-mimo",
+          "title": "14.9 MiMo 家族演进总览"
+        }
+      ]
+    }
+  ]
+}

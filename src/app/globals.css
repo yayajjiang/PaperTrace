@@ -146,6 +146,38 @@ code {
 .paper-content ol {
   @apply list-decimal pl-6 mb-4 space-y-1;
 }
+.paper-content blockquote {
+  @apply border-l-4 border-blue-300 pl-4 py-1 my-6 bg-blue-50/50 italic;
+}
+.dark .paper-content blockquote {
+  @apply border-blue-500 bg-slate-800/50;
+}
+.paper-content img {
+  @apply rounded-lg border border-paper-200 my-6 max-w-full h-auto;
+}
+.dark .paper-content img {
+  @apply border-slate-700;
+}
+.paper-content table {
+  @apply w-full text-sm border-collapse my-6;
+}
+.paper-content th,
+.paper-content td {
+  @apply border border-paper-200 px-3 py-2 text-left;
+}
+.dark .paper-content th,
+.dark .paper-content td {
+  @apply border-slate-700;
+}
+.paper-content th {
+  @apply bg-paper-100 font-semibold;
+}
+.dark .paper-content th {
+  @apply bg-slate-800;
+}
+.paper-content strong {
+  @apply font-semibold;
+}
 
 /* Smooth scrolling */
 html {
