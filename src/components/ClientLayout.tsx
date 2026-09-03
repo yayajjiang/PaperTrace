@@ -44,11 +44,13 @@ function Header() {
   const primaryNav = [
     { href: "/", label: t("Discover", "发现") },
     { href: "/radar", label: t("Radar", "雷达") },
+    { href: "/events", label: t("Events", "活动") },
     { href: "/domains", label: t("Domains", "领域") },
     { href: "/tools", label: t("Tools & MCP", "工具 & MCP") },
     { href: "/community", label: t("Community", "社区") },
   ];
   const secondaryNav = [
+    { href: "/queue", label: t("Attention queue", "注意力队列") },
     { href: "/frontier", label: t("Frontier watch", "前沿观察") },
     { href: "/skills", label: "Skills" },
     { href: "/daily", label: t("Research feed", "研究动态") },

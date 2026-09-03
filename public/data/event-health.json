@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-09-03T18:18:31.975Z",
+  "total": 32,
+  "upcoming": 31,
+  "stale": [],
+  "urgent": [
+    {
+      "id": "corl-demos-2026",
+      "deadlineAt": "2026-09-11"
+    },
+    {
+      "id": "semicon-tum-hackathon-2026",
+      "deadlineAt": "2026-09-15"
+    },
+    {
+      "id": "world-models-physical-ai-neurips-2026",
+      "deadlineAt": "2026-09-05"
+    },
+    {
+      "id": "uist-2026",
+      "deadlineAt": "2026-09-15"
+    },
+    {
+      "id": "genedis-2026",
+      "deadlineAt": "2026-09-10"
+    }
+  ],
+  "domains": {
+    "AI & CS": 25,
+    "Bio & Medicine": 6,
+    "Materials & Chemistry": 3,
+    "Math & Stats": 2,
+    "Multidisciplinary": 3,
+    "Physics": 7,
+    "Robotics": 8,
+    "Social Science": 6
+  }
+}

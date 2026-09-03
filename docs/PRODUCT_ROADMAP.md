@@ -18,6 +18,7 @@ PaperTrace turns a huge research information stream into three useful outcomes:
 | --- | --- |
 | Discover | Editorial homepage connecting live signals, tools, community, and the original paper library |
 | Research Radar | Model releases, papers, topic momentum, impact/buzz/utility ranking, and attention budgets |
+| Event Radar | Deadline-first conferences, hackathons, calls, exhibitions, scholarships, and recurring-event watch |
 | Domains | Cross-disciplinary taxonomy and distributed domain-editor model |
 | Tools & MCP | Searchable, filterable directory for agents, skills, MCP, data, compute, and demos |
 | Skills | Executable research and publishing workflows |
@@ -48,6 +49,10 @@ Status: in progress
 - [x] Balance automated arXiv discovery across six research domains
 - [x] Add structured community templates for help, collaboration, roles, tools, and frontier signals
 - [x] Publish a bilingual contribution and domain-editor compact
+- [x] Add a no-login Attention Queue with local saves and 30/60/120-minute reading plans
+- [x] Launch Event Radar with 32 organizer-verified entries across eight directions
+- [x] Add deadline-first sorting, China/global/type/domain filters, and recently-ended cycle watch
+- [x] Validate event dates and 14-day verification freshness during every daily deployment
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

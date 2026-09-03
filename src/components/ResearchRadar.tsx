@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { fallbackHeadlines, Headline } from "@/lib/headlines";
 import { useLang } from "@/lib/i18n";
+import { QueueButton } from "@/components/QueueButton";
 
 type SortKey = "latest" | "impact" | "buzz" | "utility";
 
@@ -83,7 +84,10 @@ export function ResearchRadar() {
                     ))}
                   </div>
                 )}
-                <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-xs font-bold text-blue-600 dark:text-blue-400">{item.source} ↗</a>
+                <div className="flex flex-wrap items-center gap-3 mt-4">
+                  <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-blue-600 dark:text-blue-400">{item.source} ↗</a>
+                  <QueueButton headline={item} />
+                </div>
                 {item.signals?.huggingFaceUpvotes !== undefined && <span className="ml-3 text-[11px] font-mono text-paper-800/40 dark:text-slate-500">↑ {item.signals.huggingFaceUpvotes} HF</span>}
                 {item.provenance && (
                   <details className="score-explainer mt-4">

@@ -542,6 +542,31 @@ html {
 .score-explainer dl > div { @apply grid grid-cols-[4.5rem_1fr] gap-2; }
 .score-explainer dt { @apply font-extrabold text-paper-800/70 dark:text-slate-300; }
 .score-disclaimer { @apply mt-3 pt-2 border-t border-dashed border-paper-200 dark:border-slate-700; }
+.queue-button { @apply inline-flex items-center gap-1 rounded-full border border-paper-200 dark:border-slate-600 px-2.5 py-1 text-[10px] font-bold text-paper-800/45 dark:text-slate-400 hover:border-blue-300 hover:text-blue-600 transition-colors; }
+.queue-button-saved { @apply border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300; }
+.queue-item { @apply flex items-start gap-4 rounded-2xl border border-paper-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 md:p-5 transition-colors; }
+.queue-item-selected { @apply border-emerald-200 dark:border-emerald-700 bg-emerald-50/30 dark:bg-emerald-500/5; }
+.queue-time { @apply flex-none w-11 h-11 rounded-xl bg-paper-50 dark:bg-slate-900 flex flex-col items-center justify-center; }
+.queue-time b { @apply text-sm leading-none dark:text-slate-200; }
+.queue-time span { @apply mt-1 text-[9px] text-paper-800/35 dark:text-slate-500; }
+.queue-remove { @apply flex-none w-7 h-7 rounded-full text-paper-800/30 dark:text-slate-500 hover:bg-rose-50 dark:hover:bg-rose-500/10 hover:text-rose-600; }
+.budget-button { @apply rounded-xl border border-paper-200 dark:border-slate-700 py-3 text-sm font-extrabold text-paper-800/55 dark:text-slate-300; }
+.budget-button small { @apply block mt-0.5 text-[9px] font-medium opacity-50; }
+.budget-button-active { @apply border-blue-300 dark:border-blue-600 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300; }
+.attention-summary { @apply grid gap-3 border-y border-paper-200 dark:border-slate-700 py-4; }
+.attention-summary div { @apply flex items-baseline justify-between gap-3; }
+.attention-summary b { @apply text-lg dark:text-white; }
+.attention-summary span { @apply text-[10px] text-paper-800/40 dark:text-slate-500; }
+.event-card { @apply relative flex items-start gap-4 rounded-2xl border border-paper-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 md:p-6 hover:border-blue-300 dark:hover:border-blue-600 transition-colors; }
+.event-calendar { @apply flex-none w-12 rounded-xl overflow-hidden border border-paper-200 dark:border-slate-700 text-center; }
+.event-calendar b { @apply block bg-paper-100 dark:bg-slate-700 py-1 text-[9px] uppercase tracking-wider text-paper-800/50 dark:text-slate-400; }
+.event-calendar strong { @apply block py-2 text-lg leading-none dark:text-white; }
+.event-deadline { @apply rounded-lg bg-rose-50 dark:bg-rose-500/10 px-2.5 py-1.5 text-[10px] text-rose-700 dark:text-rose-300; }
+.countdown-badge { @apply hidden sm:flex flex-none w-12 h-12 rounded-full bg-paper-50 dark:bg-slate-900 flex-col items-center justify-center text-paper-800/50 dark:text-slate-400; }
+.countdown-badge b { @apply text-sm leading-none; }
+.countdown-badge span { @apply text-[8px] mt-1; }
+.countdown-urgent { @apply bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-300; }
+.home-event-card { @apply rounded-2xl border border-paper-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 hover:border-blue-300 dark:hover:border-blue-600 transition-colors; }
 .why-watch { @apply rounded-lg bg-paper-50 dark:bg-slate-900/50 px-4 py-3; }
 .why-watch b { @apply block text-xs text-paper-800/70 dark:text-slate-300; }
 .why-watch p { @apply mt-1 text-xs leading-relaxed text-paper-800/50 dark:text-slate-500; }

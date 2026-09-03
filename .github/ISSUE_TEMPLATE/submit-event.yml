@@ -1,0 +1,65 @@
+name: Submit an event / 提交活动
+description: Add an upcoming conference, hackathon, competition, workshop, summer school, exhibition, meetup, grant, or open call.
+title: "[Event] "
+labels: ["event", "needs-verification"]
+body:
+  - type: input
+    id: official_url
+    attributes:
+      label: Organizer or official event URL / 主办方或活动官网
+      placeholder: https://…
+    validations:
+      required: true
+
+  - type: dropdown
+    id: event_type
+    attributes:
+      label: Event type / 活动类型
+      options:
+        - Conference or workshop / 大会或研讨会
+        - Hackathon or competition / 黑客松或比赛
+        - Exhibition or demo day / 展览或 Demo Day
+        - Summer school or training / 暑校或培训
+        - Grant, fellowship, or open call / 资助、奖学金或公开征集
+        - Meetup or community event / Meetup 或社区活动
+    validations:
+      required: true
+
+  - type: input
+    id: dates
+    attributes:
+      label: Event dates and timezone / 活动日期与时区
+      placeholder: 2026-11-14 to 2026-11-15, UTC+8
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Next actionable deadline / 最近可行动截止
+      description: Registration, submission, scholarship, demo, volunteer, or application deadline. Leave blank only if the organizer gives none.
+
+  - type: input
+    id: location
+    attributes:
+      label: Location and format / 地点与形式
+      placeholder: Beijing + online / Hybrid
+    validations:
+      required: true
+
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Who should care and why? / 谁值得关注，为什么
+      description: Name the field, audience, opportunity, and expected cost or eligibility constraints.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verified
+    attributes:
+      label: Verification / 核验
+      options:
+        - label: I checked these details on the organizer page today and separated confirmed facts from assumptions. / 我今天已在主办方页面核验，并区分了确认事实与推测。
+          required: true
+

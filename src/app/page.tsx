@@ -8,6 +8,7 @@ import { LiveHeadlines } from "@/components/LiveHeadlines";
 import { CommunityBoard } from "@/components/CommunityBoard";
 import { researchTools } from "@/lib/tools";
 import { frontierItems } from "@/lib/frontier";
+import { researchEvents } from "@/lib/events";
 
 interface PaperMeta {
   slug: string;
@@ -305,7 +306,7 @@ export default function Home() {
         {[
           { href: `${basePath}/domains`, icon: "01", label: t("Research domains", "研究领域"), desc: t("CS today, every field next", "从 CS 走向更多领域") },
           { href: `${basePath}/tools`, icon: "02", label: t("Tools & MCP", "工具 & MCP"), desc: t("Agents, skills and demos", "Agent、Skills 与 Demo") },
-          { href: `${basePath}/skills`, icon: "03", label: "Skills", desc: t("Executable research practice", "可执行的科研经验") },
+          { href: `${basePath}/events`, icon: "03", label: t("Events", "活动雷达"), desc: t("Deadlines before recaps", "在截止前收到提醒") },
           { href: `${basePath}/community`, icon: "04", label: t("Community", "共建社区"), desc: t("Research, roles and people", "科研、实习与人脉互助") },
         ].map((item) => (
           <a key={item.href} href={item.href}
@@ -322,6 +323,32 @@ export default function Home() {
       </div>
 
       <LiveHeadlines compact />
+
+      <section className="pt-16">
+        <div className="section-heading-row">
+          <div>
+            <div className="eyebrow mb-2">{t("Deadline desk", "近期活动与截止")}</div>
+            <h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("Still in time to participate", "现在知道，还来得及参加")}</h2>
+          </div>
+          <a href={`${basePath}/events`} className="text-sm font-semibold text-blue-600 dark:text-blue-400">{t("All events", "全部活动")} →</a>
+        </div>
+        <div className="grid md:grid-cols-3 gap-3">
+          {researchEvents
+            .filter((event) => event.endsAt >= new Date().toISOString().slice(0, 10))
+            .sort((a, b) => (a.deadlineAt || a.startsAt).localeCompare(b.deadlineAt || b.startsAt))
+            .slice(0, 3)
+            .map((event) => (
+              <a key={event.id} href={event.href} target="_blank" rel="noopener noreferrer" className="home-event-card group">
+                <div className="flex items-center justify-between gap-3">
+                  <span className={`topic-chip ${event.type === "Call" ? "bg-rose-100 text-rose-700" : event.type === "Hackathon" ? "bg-violet-100 text-violet-700" : "bg-blue-100 text-blue-700"}`}>{event.type}</span>
+                  <time className="text-[10px] font-mono text-paper-800/35 dark:text-slate-500">{event.deadlineAt ? `${t("DEADLINE", "截止")} ${event.deadlineAt}` : event.startsAt}</time>
+                </div>
+                <h3 className="font-bold mt-4 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">{lang === "en" ? event.title : event.titleZh}</h3>
+                <p className="mt-2 text-xs text-paper-800/50 dark:text-slate-400">{lang === "en" ? event.location : event.locationZh}</p>
+              </a>
+            ))}
+        </div>
+      </section>
 
       <section className="py-16 border-b border-paper-200 dark:border-slate-800">
         <div className="section-heading-row">
