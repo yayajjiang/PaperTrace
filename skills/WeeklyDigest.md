@@ -1,5 +1,7 @@
 # PaperTrace · 每周周报 Skill
 
+> 使用 [`attention-curator`](./attention-curator/SKILL.md) 将影响力、火爆度与实用性分开评估；不要用一周的社交热度替代技术影响判断。
+
 每周（通常周五或周日）整理一周 ML/AI 精华，发到 PaperTrace 日报页面作为"本周精选"专题。
 
 ---

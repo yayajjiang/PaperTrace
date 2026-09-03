@@ -1,0 +1,311 @@
+{
+  "generatedAt": "2026-09-03T17:39:20.612Z",
+  "items": [
+    {
+      "id": "56da2c8ef803",
+      "date": "2026-09-03",
+      "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
+      "titleZh": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
+      "summary": "",
+      "summaryZh": "",
+      "source": "Google DeepMind",
+      "sourceUrl": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 78,
+        "buzz": 93,
+        "utility": 58
+      }
+    },
+    {
+      "id": "b07b0b2b4d66",
+      "date": "2026-09-02",
+      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+      "titleZh": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+      "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+      "summaryZh": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/atv-big-air-tour",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 78,
+        "buzz": 91,
+        "utility": 58
+      }
+    },
+    {
+      "id": "383dbcd782ab",
+      "date": "2026-09-02",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "titleZh": "Proactive cyber defense for governments and enterprises",
+      "summary": "",
+      "summaryZh": "",
+      "source": "Google DeepMind",
+      "sourceUrl": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      }
+    },
+    {
+      "id": "18ef68f77655",
+      "date": "2026-09-02",
+      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "titleZh": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "summary": "",
+      "summaryZh": "",
+      "source": "Google DeepMind",
+      "sourceUrl": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 78,
+        "buzz": 91,
+        "utility": 58
+      }
+    },
+    {
+      "id": "55a0e2364ecb",
+      "date": "2026-09-02",
+      "title": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
+      "titleZh": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
+      "summary": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common m",
+      "summaryZh": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common m",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02887v1",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 90
+      }
+    },
+    {
+      "id": "e30314f002ad",
+      "date": "2026-09-02",
+      "title": "Discriminative World Models for Web Agents",
+      "titleZh": "Discriminative World Models for Web Agents",
+      "summary": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state predictio",
+      "summaryZh": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state predictio",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02885v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 69,
+        "buzz": 77,
+        "utility": 90
+      }
+    },
+    {
+      "id": "c442e53d1f35",
+      "date": "2026-09-02",
+      "title": "Repairing PBE-Spurious Metallicity for HSE06-Level Screening of 2D Photocatalysts for Green Hydrogen Production",
+      "titleZh": "Repairing PBE-Spurious Metallicity for HSE06-Level Screening of 2D Photocatalysts for Green Hydrogen Production",
+      "summary": "Semilocal PBE calculations can remove viable photocatalysts before screening by labeling narrow-gap semiconductors as metals. We address this failure mode in the Computational 2D Materials Database (C2DB) by combining leakage-aware repair of PBE-spurious metallicity with HSE06--P",
+      "summaryZh": "Semilocal PBE calculations can remove viable photocatalysts before screening by labeling narrow-gap semiconductors as metals. We address this failure mode in the Computational 2D Materials Database (C2DB) by combining leakage-aware repair of PBE-spurious metallicity with HSE06--P",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02883v1",
+      "tag": "Research",
+      "domain": "Materials & Chemistry",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      }
+    },
+    {
+      "id": "e0a6b70773be",
+      "date": "2026-09-02",
+      "title": "Graph Machine: Towards Better Pretraining via Edges",
+      "titleZh": "Graph Machine: Towards Better Pretraining via Edges",
+      "summary": "We introduce the Graph Machine (GM), an architecture that maintains an $O(n)$-sized state and accesses it through sparse, dynamic routing. Unlike methods with fixed-size states or sparse but static routing, GM preserves $O(n)$ complexity in its sparse layers without restricting t",
+      "summaryZh": "We introduce the Graph Machine (GM), an architecture that maintains an $O(n)$-sized state and accesses it through sparse, dynamic routing. Unlike methods with fixed-size states or sparse but static routing, GM preserves $O(n)$ complexity in its sparse layers without restricting t",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02881v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      }
+    },
+    {
+      "id": "58c2712d309c",
+      "date": "2026-09-02",
+      "title": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
+      "titleZh": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
+      "summary": "Ordinary differential equations (ODEs) underlie models in science and engineering, and many applications need derivatives of their solutions with respect to parameters. Ensembles of independent trajectories suit graphics processing units (GPUs), but current GPU software forces a ",
+      "summaryZh": "Ordinary differential equations (ODEs) underlie models in science and engineering, and many applications need derivatives of their solutions with respect to parameters. Ensembles of independent trajectories suit graphics processing units (GPUs), but current GPU software forces a ",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02876v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 90
+      }
+    },
+    {
+      "id": "f53aced64dc8",
+      "date": "2026-09-02",
+      "title": "Gaussian-Restricted Barycenters for KL-Unbalanced Optimal Transport: Variational Theory and Fixed-Point Convergence",
+      "titleZh": "Gaussian-Restricted Barycenters for KL-Unbalanced Optimal Transport: Variational Theory and Fixed-Point Convergence",
+      "summary": "We study Gaussian-restricted barycenters for quadratic two-sided Kullback--Leibler unbalanced optimal transport with independent marginal penalties and no coupling entropy. Exact profiling of the barycenter mass reduces the problem to a smooth Gaussian shape functional with endog",
+      "summaryZh": "We study Gaussian-restricted barycenters for quadratic two-sided Kullback--Leibler unbalanced optimal transport with independent marginal penalties and no coupling entropy. Exact profiling of the barycenter mass reduces the problem to a smooth Gaussian shape functional with endog",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02870v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      }
+    },
+    {
+      "id": "15716a4262d8",
+      "date": "2026-09-02",
+      "title": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
+      "titleZh": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
+      "summary": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision f",
+      "summaryZh": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision f",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02861v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 69,
+        "buzz": 77,
+        "utility": 82
+      }
+    },
+    {
+      "id": "d1f26b5f8897",
+      "date": "2026-09-02",
+      "title": "User Feedback Provides a Unique Signal that LLMs Can not Detect",
+      "titleZh": "User Feedback Provides a Unique Signal that LLMs Can not Detect",
+      "summary": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrati",
+      "summaryZh": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrati",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02859v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 69,
+        "buzz": 77,
+        "utility": 82
+      }
+    },
+    {
+      "id": "0a4e18f3598c",
+      "date": "2026-09-02",
+      "title": "Improved Gradient Descent Lower Bounds Beyond Nesterov",
+      "titleZh": "Improved Gradient Descent Lower Bounds Beyond Nesterov",
+      "summary": "We study how far gradient descent (GD) can be accelerated by predetermined stepsizes in smooth convex optimization. Going beyond the classical $Ω(n^{-2})$ first-order oracle lower bound of Nemirovsky and Yudin, we prove an $Ω(n^{-1.6342})$ non-anytime lower bound and an $Ω(n^{-1.",
+      "summaryZh": "We study how far gradient descent (GD) can be accelerated by predetermined stepsizes in smooth convex optimization. Going beyond the classical $Ω(n^{-2})$ first-order oracle lower bound of Nemirovsky and Yudin, we prove an $Ω(n^{-1.6342})$ non-anytime lower bound and an $Ω(n^{-1.",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02855v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      }
+    },
+    {
+      "id": "7e36294ac8fd",
+      "date": "2026-09-02",
+      "title": "The Implications of Linguistic Illegibility for LLM Security",
+      "titleZh": "The Implications of Linguistic Illegibility for LLM Security",
+      "summary": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the te",
+      "summaryZh": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the te",
+      "source": "arXiv multi-field",
+      "sourceUrl": "https://arxiv.org/abs/2609.02852v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 69,
+        "buzz": 77,
+        "utility": 58
+      }
+    },
+    {
+      "id": "3b5f2688fec1",
+      "date": "2026-09-01",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "titleZh": "How AI-native companies turn workflows into operating capability",
+      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "summaryZh": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/ai-native-company-workflows",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 78,
+        "buzz": 89,
+        "utility": 58
+      }
+    },
+    {
+      "id": "309be27bdcfe",
+      "date": "2026-09-01",
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "titleZh": "Path to Astra: critical capabilities and frontier safeguards",
+      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+      "summaryZh": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/path-to-astra",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 87,
+        "buzz": 89,
+        "utility": 82
+      }
+    },
+    {
+      "id": "50e05f9b472e",
+      "date": "2026-09-01",
+      "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+      "titleZh": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+      "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+      "summaryZh": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 78,
+        "buzz": 89,
+        "utility": 58
+      }
+    },
+    {
+      "id": "631a857c7a24",
+      "date": "2026-09-01",
+      "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
+      "titleZh": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
+      "summary": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
+      "summaryZh": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/gilbert-tobin",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 78,
+        "buzz": 89,
+        "utility": 90
+      }
+    }
+  ]
+}

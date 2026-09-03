@@ -1,0 +1,48 @@
+name: Submit a research tool
+description: Propose an open-source tool, research agent, skill library, or useful demo for PaperTrace.
+title: "[Tool] "
+labels: ["tool submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Demo or repository URL
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: What research job does it solve?
+      description: Describe the concrete user and task in two or three sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and evaluation
+      description: Add benchmarks, examples, limitations, or a reproducible comparison.
+    validations:
+      required: true
+  - type: textarea
+    id: start
+    attributes:
+      label: Fastest way to try it
+      description: Include a command, demo link, or three-step quick start.
+    validations:
+      required: true
+  - type: dropdown
+    id: license
+    attributes:
+      label: Is it open source?
+      options:
+        - Yes
+        - Partially
+        - No, demo only
+    validations:
+      required: true

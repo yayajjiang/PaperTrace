@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "17 1 * * *"
 
 permissions:
   contents: read
@@ -27,6 +29,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Refresh AI headlines
+        run: npm run news:sync
+        continue-on-error: true
 
       - name: Build
         run: npm run build

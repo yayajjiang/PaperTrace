@@ -1,6 +1,6 @@
 # PaperTrace
 
-**Bilingual (EN/ZH) ML learning resource** — paper deep-dives, job hunt tools, curated resources, and an AI timeline.
+**A bilingual research commons (EN/ZH)** — live research signals, paper deep-dives, tools, executable skills, and community.
 
 Live site: [PaperTrace on GitHub Pages](https://yayajjiang.github.io/PaperTrace)
 
@@ -31,7 +31,12 @@ Each paper gets a full breakdown with formula walkthroughs, interactive widgets,
 
 ### Other Pages
 
-- `/` — Landing page with paper grid, category filter
+- `/` — Discover: research signals, tools, community, and the original paper collection
+- `/radar` — Research Radar: model releases, topic pulse, attention budgets, and an interactive momentum map
+- `/domains` — Cross-disciplinary rooms and founding-editor tracks
+- `/tools` — Community research tools, agents, MCP infrastructure, and demos
+- `/skills` — Executable PaperTrace research workflows
+- `/community` — Research help, internships, collaborators, launches, WeChat, and GitHub co-building
 - `/daily` — Paper feed + News & Events (行业动态)
 - `/resources` — Curated learning resources: YouTube, Bilibili, newsletters, blogs, X/Twitter, tools
 - `/interview` — Job hunt hub: LeetCode resources, company job openings, ML interview Q&A (20 questions, 5 sections)
@@ -48,6 +53,7 @@ Each paper gets a full breakdown with formula walkthroughs, interactive widgets,
 - **KaTeX** — Math rendering
 - **Tailwind CSS** — Styling with dark mode
 - **Custom i18n** — `t(en, zh)` hook, no external library
+- **Automated research radar** — official RSS + multi-field arXiv sync on a daily GitHub Actions schedule
 
 ---
 

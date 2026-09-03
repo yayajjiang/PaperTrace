@@ -17,9 +17,9 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "PaperTrace — Interactive ML Paper Deep-Dives",
+  title: "PaperTrace — Research Signals, Tools & Community",
   description:
-    "Interactive deep-dives into ML papers with formulas, visualizations, and walk-through examples.",
+    "A bilingual research commons for live signals, interactive paper deep-dives, research tools, executable skills, and community.",
 };
 
 export default function RootLayout({

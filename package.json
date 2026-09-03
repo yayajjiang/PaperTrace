@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "news:sync": "node scripts/sync-news.mjs",
     "start": "next start",
     "lint": "next lint"
   },

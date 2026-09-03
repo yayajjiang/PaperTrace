@@ -1,0 +1,32 @@
+export const skillLibrary = [
+  {
+    id: "deep-dive",
+    name: "Paper → Deep Dive",
+    nameZh: "论文 → 交互式精读",
+    description: "Turn a research paper into a bilingual explanation with formula walkthroughs, concrete examples, connections and an interactive demo.",
+    descriptionZh: "把一篇论文变成含公式拆解、具体例子、工作关联与交互 Demo 的双语精读。",
+    trigger: "Build a PaperTrace deep-dive for [paper URL]",
+    stage: "Understand → explain → visualize → verify",
+    color: "blue",
+  },
+  {
+    id: "daily-digest",
+    name: "Daily Research Signal",
+    nameZh: "每日科研信号",
+    description: "Collect recent work, identify why it matters, label one editor's pick and publish a compact bilingual digest.",
+    descriptionZh: "收集近期工作、判断其价值、选出编辑精选，并发布紧凑的双语日报。",
+    trigger: "Create today's research digest for [domain]",
+    stage: "Collect → rank → summarize → source-check",
+    color: "emerald",
+  },
+  {
+    id: "weekly-narrative",
+    name: "Weekly Narrative",
+    nameZh: "每周研究主线",
+    description: "Find the week's connecting idea instead of listing links, then group 5–10 papers around one emerging narrative.",
+    descriptionZh: "不只罗列链接，而是找到一周内容之间的主线，并围绕一个趋势组织 5–10 篇论文。",
+    trigger: "Synthesize this week's [domain] research",
+    stage: "Collect → cluster → theme → publish",
+    color: "violet",
+  },
+];

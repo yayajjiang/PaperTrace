@@ -39,11 +39,28 @@ function useTheme() { return useContext(ThemeContext); }
 function Header() {
   const { lang, toggleLang, t } = useLang();
   const { dark, toggleTheme } = useTheme();
+  const [menuOpen, setMenuOpen] = useState(false);
   const basePath = process.env.NODE_ENV === "production" ? "/PaperTrace" : "";
+  const primaryNav = [
+    { href: "/", label: t("Discover", "发现") },
+    { href: "/radar", label: t("Radar", "雷达") },
+    { href: "/domains", label: t("Domains", "领域") },
+    { href: "/tools", label: t("Tools & MCP", "工具 & MCP") },
+    { href: "/community", label: t("Community", "社区") },
+  ];
+  const secondaryNav = [
+    { href: "/skills", label: "Skills" },
+    { href: "/daily", label: t("Research feed", "研究动态") },
+    { href: "/timeline", label: t("Timeline", "时间线") },
+    { href: "/guide", label: t("Research guide", "科研指南") },
+    { href: "/resources", label: t("Learning resources", "学习资源") },
+    { href: "/interview", label: t("Internships & jobs", "实习与找工") },
+    { href: "/knowledge-graph", label: t("Knowledge graph", "知识图谱") },
+  ];
 
   return (
-    <header className="border-b border-paper-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="border-b border-paper-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-5">
         <a
           href={basePath || "/"}
           className="flex items-center gap-2 hover:opacity-80 transition-opacity"
@@ -52,33 +69,24 @@ function Header() {
             Paper<span className="text-blue-500">Trace</span>
           </span>
         </a>
-        <nav className="flex items-center gap-3 text-sm">
-          <a href={`${basePath}/daily`} className="text-paper-800/60 dark:text-slate-400 hover:text-paper-800 dark:hover:text-slate-100 transition-colors hidden sm:block">
-            {t("Feed", "每日")}
-          </a>
-          <a href={`${basePath}/timeline`} className="text-paper-800/60 dark:text-slate-400 hover:text-paper-800 dark:hover:text-slate-100 transition-colors hidden sm:block">
-            {t("Timeline", "时间线")}
-          </a>
-          <a href={`${basePath}/guide`} className="text-paper-800/60 dark:text-slate-400 hover:text-paper-800 dark:hover:text-slate-100 transition-colors hidden sm:block">
-            {t("Guide", "指南")}
-          </a>
-          <a href={`${basePath}/resources`} className="text-paper-800/60 dark:text-slate-400 hover:text-paper-800 dark:hover:text-slate-100 transition-colors hidden sm:block">
-            {t("Resources", "资源")}
-          </a>
-          <a href={`${basePath}/interview`} className="text-paper-800/60 dark:text-slate-400 hover:text-paper-800 dark:hover:text-slate-100 transition-colors hidden sm:block">
-            {t("Job Hunt", "找工")}
-          </a>
-          <a href={`${basePath}/knowledge-graph`} className="text-paper-800/60 dark:text-slate-400 hover:text-paper-800 dark:hover:text-slate-100 transition-colors hidden sm:block">
-            {t("Graph", "图谱")}
-          </a>
-          <div className="w-px h-4 bg-paper-200 dark:bg-slate-700 hidden sm:block" />
+        <nav className="hidden lg:flex items-center gap-5 text-sm flex-1 justify-center" aria-label={t("Main navigation", "主导航")}>
+          {primaryNav.map((item) => (
+            <a key={item.href} href={`${basePath}${item.href === "/" ? "" : item.href}`} className="nav-link">{item.label}</a>
+          ))}
+          <details className="relative group">
+            <summary className="nav-link cursor-pointer list-none flex items-center gap-1">{t("More", "更多")} <span className="text-[9px] opacity-50">▼</span></summary>
+            <div className="nav-popover">
+              {secondaryNav.map((item) => <a key={item.href} href={`${basePath}${item.href}`}>{item.label}<span>→</span></a>)}
+            </div>
+          </details>
+        </nav>
+        <div className="flex items-center gap-2 text-sm">
           <button
             onClick={toggleLang}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-paper-100 dark:bg-slate-800 hover:bg-paper-200 dark:hover:bg-slate-700 transition-colors text-paper-800 dark:text-slate-200 font-medium"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md bg-paper-100 dark:bg-slate-800 hover:bg-paper-200 dark:hover:bg-slate-700 transition-colors text-paper-800 dark:text-slate-200 font-medium"
             title={t("Switch to Chinese", "切换到英文")}
           >
-            <span className="text-base">{lang === "en" ? "🇨🇳" : "🇬🇧"}</span>
-            <span>{lang === "en" ? "中文" : "EN"}</span>
+            <span>{lang === "en" ? "中" : "EN"}</span>
           </button>
           {/* Dark / light mode toggle */}
           <button
@@ -112,7 +120,7 @@ function Header() {
             href="https://github.com/yayajjiang/PaperTrace"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-8 h-8 flex items-center justify-center rounded-md bg-paper-100 dark:bg-slate-800 hover:bg-paper-200 dark:hover:bg-slate-700 transition-colors text-paper-800 dark:text-slate-200"
+            className="hidden sm:flex w-8 h-8 items-center justify-center rounded-md bg-paper-100 dark:bg-slate-800 hover:bg-paper-200 dark:hover:bg-slate-700 transition-colors text-paper-800 dark:text-slate-200"
             title="GitHub"
             aria-label="View source on GitHub"
           >
@@ -120,8 +128,20 @@ function Header() {
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
           </a>
-        </nav>
+          <button onClick={() => setMenuOpen((value) => !value)} className="lg:hidden w-8 h-8 flex items-center justify-center rounded-md bg-paper-100 dark:bg-slate-800 text-paper-800 dark:text-slate-200" aria-expanded={menuOpen} aria-label={t("Open navigation", "打开导航")}>
+            {menuOpen ? "×" : "≡"}
+          </button>
+        </div>
       </div>
+      {menuOpen && (
+        <div className="lg:hidden border-t border-paper-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4">
+          <nav className="max-w-6xl mx-auto grid grid-cols-2 gap-2">
+            {[...primaryNav, ...secondaryNav].map((item) => (
+              <a key={item.href} onClick={() => setMenuOpen(false)} href={`${basePath}${item.href === "/" ? "" : item.href}`} className="mobile-nav-link">{item.label}</a>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
@@ -129,13 +149,19 @@ function Header() {
 /* ── Footer ────────────────────────────────────────────────────── */
 function Footer() {
   const { t } = useLang();
+  const basePath = process.env.NODE_ENV === "production" ? "/PaperTrace" : "";
   return (
     <footer className="border-t border-paper-200 dark:border-slate-800 mt-20">
-      <div className="max-w-4xl mx-auto px-6 py-8 text-center text-sm text-paper-800/40 dark:text-slate-600">
-        {t(
-          "PaperTrace — Interactive deep-dives into ML papers",
-          "PaperTrace — ML 论文交互式精读"
-        )}
+      <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-paper-800/45 dark:text-slate-500 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+        <div>
+          <div className="font-bold text-paper-800/70 dark:text-slate-300">Paper<span className="text-blue-500">Trace</span></div>
+          <div className="mt-1">{t("A bilingual commons for research signals, tools and people.", "连接科研动态、工具与人的双语公共空间。")}</div>
+        </div>
+        <div className="flex flex-wrap gap-4">
+          <a href={`${basePath}/tools`} className="hover:text-blue-600">{t("Tools", "工具")}</a>
+          <a href={`${basePath}/community`} className="hover:text-blue-600">{t("Community", "社区")}</a>
+          <a href="https://github.com/yayajjiang/PaperTrace" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">GitHub ↗</a>
+        </div>
         <div className="flex justify-center mt-4">
           <Script
             id="mapmyvisitors"

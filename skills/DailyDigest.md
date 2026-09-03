@@ -1,5 +1,7 @@
 # PaperTrace · 每日日报 Skill
 
+> 选题与注意力评分优先使用 [`attention-curator`](./attention-curator/SKILL.md)；新实验室、模型生命周期、MCP 与 Agent 基础设施使用 [`frontier-watch`](./frontier-watch/SKILL.md) 核验后再进入日报。
+
 为 PaperTrace 生成当天的日报内容——papers + news，更新到 `src/lib/daily.ts`。
 
 ---

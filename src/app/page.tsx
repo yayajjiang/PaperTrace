@@ -4,6 +4,9 @@ import { useLang } from "@/lib/i18n";
 import Link from "next/link";
 import { useState } from "react";
 import { DLLMTimeline } from "@/components/DLLMTimeline";
+import { LiveHeadlines } from "@/components/LiveHeadlines";
+import { CommunityBoard } from "@/components/CommunityBoard";
+import { researchTools } from "@/lib/tools";
 
 interface PaperMeta {
   slug: string;
@@ -272,44 +275,99 @@ export default function Home() {
     });
 
   return (
-    <div className="max-w-4xl mx-auto px-6">
+    <div className="max-w-6xl mx-auto px-6">
       {/* Hero */}
-      <section className="py-16 md:py-24">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-4 animate-fadeInUp dark:text-slate-50">
-          {t("Interactive deep-dives", "交互式精读")}
-          <br />
-          {t("into ML papers", "ML 论文")}
-        </h1>
-        <p className="text-lg text-paper-800/60 dark:text-slate-400 max-w-2xl leading-relaxed animate-fadeInUp delay-1">
-          {t(
-            "Formulas broken down step by step. Walk-through examples with real numbers. Interactive visualizations you can poke at. No hand-waving.",
-            "公式逐步拆解。用真实数字的 walk-through 例子。可交互的可视化。拒绝含糊其辞。"
-          )}
-        </p>
+      <section className="home-hero py-16 md:py-24">
+        <div className="max-w-4xl relative z-10">
+          <div className="eyebrow mb-5 animate-fadeInUp">{t("The research commons", "开放科研公共空间")} <span>·</span> EN / 中文</div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] animate-fadeInUp dark:text-slate-50">
+            {t("Trace the signal.", "追踪信号，")}
+            <br />
+            <span className="hero-accent">{t("Build what matters.", "共建真正有用的东西。")}</span>
+          </h1>
+          <p className="text-lg md:text-xl text-paper-800/60 dark:text-slate-300 max-w-3xl leading-relaxed mt-6 animate-fadeInUp delay-1">
+            {t(
+              "Research news with context, papers explained without hand-waving, tools you can actually run, and a community that helps ideas travel across fields.",
+              "有上下文的科研热点、不含糊的论文精读、真正能跑的工具，以及让好想法跨领域流动的共建社区。"
+            )}
+          </p>
+          <div className="flex flex-wrap gap-3 mt-8 animate-fadeInUp delay-2">
+            <a href={`${basePath}/daily`} className="button-primary button-large">{t("Explore today's signals", "查看今日动态")} →</a>
+            <a href={`${basePath}/community`} className="button-secondary button-large">{t("Join the community", "加入社区")}</a>
+          </div>
+        </div>
+        <div className="hero-grid" aria-hidden="true" />
       </section>
 
       {/* Quick nav */}
-      <div className="flex flex-wrap gap-3 pb-10 -mt-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 pb-12">
         {[
-          { href: `${basePath}/daily`, icon: "📰", label: t("Paper Feed", "论文推荐"), desc: t("Daily picks", "每日精选") },
-          { href: `${basePath}/papers/top30`, icon: "📋", label: t("Ilya's Top 30", "Ilya 必读 30 篇"), desc: t("Sutskever's reading list", "Sutskever 私人书单") },
-          { href: `${basePath}/guide`, icon: "🗺️", label: t("Research Guide", "科研指南"), desc: t("How to read papers", "如何读论文") },
-          { href: `${basePath}/resources`, icon: "📚", label: t("Resources", "学习资源"), desc: t("YouTube, blogs, newsletters", "YouTube / B 站 / 公众号") },
+          { href: `${basePath}/domains`, icon: "01", label: t("Research domains", "研究领域"), desc: t("CS today, every field next", "从 CS 走向更多领域") },
+          { href: `${basePath}/tools`, icon: "02", label: t("Tools & MCP", "工具 & MCP"), desc: t("Agents, skills and demos", "Agent、Skills 与 Demo") },
+          { href: `${basePath}/skills`, icon: "03", label: "Skills", desc: t("Executable research practice", "可执行的科研经验") },
+          { href: `${basePath}/community`, icon: "04", label: t("Community", "共建社区"), desc: t("Research, roles and people", "科研、实习与人脉互助") },
         ].map((item) => (
           <a key={item.href} href={item.href}
-            className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 border border-paper-200 dark:border-slate-700 rounded-lg hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-sm dark:hover:shadow-blue-900/20 transition-all flex-1 min-w-[200px]"
+            className="quick-route group"
           >
-            <span className="text-xl">{item.icon}</span>
+            <span className="route-index">{item.icon}</span>
             <div>
-              <div className="font-semibold text-sm dark:text-slate-100">{item.label}</div>
+              <div className="font-bold text-sm dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">{item.label}</div>
               <div className="text-xs text-paper-800/50 dark:text-slate-500">{item.desc}</div>
             </div>
+            <span className="ml-auto text-paper-800/20 group-hover:text-blue-500">→</span>
           </a>
         ))}
       </div>
 
+      <LiveHeadlines compact />
+
+      <section className="py-16">
+        <div className="section-heading-row">
+          <div>
+            <div className="eyebrow mb-2">{t("Community-tested", "社区精选")}</div>
+            <h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("Research tools worth trying", "值得立即试用的科研工具")}</h2>
+          </div>
+          <a href={`${basePath}/tools`} className="text-sm font-semibold text-blue-600 dark:text-blue-400">{t("Open directory", "查看目录")} →</a>
+        </div>
+        <div className="grid md:grid-cols-3 gap-3">
+          {researchTools.filter((tool) => tool.featured).slice(0, 3).map((tool) => (
+            <a key={tool.id} href={tool.href} target="_blank" rel="noopener noreferrer" className="home-tool-card group">
+              <div className="flex items-center justify-between gap-3">
+                <span className="topic-chip bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300">{tool.category}</span>
+                <span className="text-xs font-mono text-paper-800/35 dark:text-slate-500">↑ {tool.votes}</span>
+              </div>
+              <h3 className="text-lg font-bold mt-5 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">{tool.name}</h3>
+              <p className="text-sm leading-relaxed text-paper-800/55 dark:text-slate-400 mt-2">{lang === "en" ? tool.tagline : tool.taglineZh}</p>
+              <div className="grid grid-cols-3 gap-2 mt-6">
+                {[[t("Impact", "影响"), tool.scores.impact], [t("Buzz", "热度"), tool.scores.buzz], [t("Utility", "实用"), tool.scores.utility]].map(([label, score]) => (
+                  <div key={String(label)} className="text-center"><b className="block text-sm dark:text-slate-200">{score}</b><span className="text-[10px] text-paper-800/35 dark:text-slate-500">{label}</span></div>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 py-12 border-y border-paper-200 dark:border-slate-800">
+        <div>
+          <div className="eyebrow mb-3">{t("People in the loop", "连接真实的人")}</div>
+          <h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("Ask, share, build together.", "提问、分享、一起建设。")}</h2>
+          <p className="mt-3 text-sm leading-relaxed text-paper-800/60 dark:text-slate-400">{t("Research help, internships, collaborators and tool launches belong in one place — with a path from quick chat to durable public knowledge.", "科研互助、实习岗位、合作伙伴和工具发布汇集在一起，让即时交流最终沉淀为长期可用的公共知识。")}</p>
+          <a href={`${basePath}/community`} className="button-secondary mt-6">{t("Enter community", "进入社区")} →</a>
+        </div>
+        <CommunityBoard limit={3} />
+      </section>
+
       {/* Sections — collapsible */}
-      <div className="pb-10 space-y-4">
+      <div className="py-16 space-y-4">
+        <div className="section-heading-row mb-8">
+          <div>
+            <div className="eyebrow mb-2">AI & CS · {t("Original collection", "原始内容库")}</div>
+            <h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("Interactive paper deep-dives", "交互式论文精读")}</h2>
+          </div>
+          <a href={`${basePath}/domains`} className="text-sm font-semibold text-blue-600 dark:text-blue-400">{t("All domains", "全部领域")} →</a>
+        </div>
         {sections.map((section) => {
           const isOpen = expandedSections.has(section.id);
           return (
