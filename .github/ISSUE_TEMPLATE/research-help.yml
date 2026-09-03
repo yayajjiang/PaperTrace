@@ -1,0 +1,70 @@
+name: Research help / 科研互助
+description: Ask for collaborators, methods, reproductions, internships, referrals, or domain guidance.
+title: "[Help] "
+labels: ["community", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        PaperTrace is a public research commons. Share only information you are comfortable publishing permanently. Never post private contact details, unpublished confidential results, credentials, patient data, or referral information without consent.
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type / 需求类型
+      options:
+        - Research question / 科研问题
+        - Reproduction help / 复现互助
+        - Find collaborators / 寻找合作者
+        - Internship or role / 实习或岗位
+        - People or introduction / 找人或引荐
+        - Tool or dataset help / 工具或数据求助
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain / 领域
+      options:
+        - AI & Computer Science
+        - Biology & Medicine
+        - Physics
+        - Mathematics & Statistics
+        - Materials & Chemistry
+        - Social Science
+        - Multidisciplinary
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and evidence / 背景与已有证据
+      description: Explain what you tried and link public papers, code, data, or prior discussion.
+      placeholder: "Goal, current approach, evidence, and the exact point where you are blocked…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired_outcome
+    attributes:
+      label: A useful response would be… / 期待得到什么
+      placeholder: "A paper pointer, a 30-minute discussion, reproduction partner, code review, candidate list…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: contribution
+    attributes:
+      label: What can you contribute? / 你可以提供什么
+      description: Good collaboration is reciprocal; time, data, evaluation, writing, compute, domain expertise, or mentorship all count.
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-posting check / 公开发布确认
+      options:
+        - label: I removed private or confidential information and have consent to share all named people or organizations. / 我已移除隐私与机密信息，并获得公开提及相关个人或组织的许可。
+          required: true
+

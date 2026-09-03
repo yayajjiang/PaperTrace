@@ -84,6 +84,24 @@ export function ResearchRadar() {
                   </div>
                 )}
                 <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-xs font-bold text-blue-600 dark:text-blue-400">{item.source} ↗</a>
+                {item.signals?.huggingFaceUpvotes !== undefined && <span className="ml-3 text-[11px] font-mono text-paper-800/40 dark:text-slate-500">↑ {item.signals.huggingFaceUpvotes} HF</span>}
+                {item.provenance && (
+                  <details className="score-explainer mt-4">
+                    <summary>{t("Why these scores?", "为什么这样评分？")}</summary>
+                    <div className="score-explainer-body">
+                      <div className="flex items-center justify-between gap-3 pb-2 border-b border-paper-200/70 dark:border-slate-700">
+                        <span>{t("Evidence layer", "证据层级")}</span>
+                        <b>{item.provenance.layer}</b>
+                      </div>
+                      <dl>
+                        <div><dt>{t("Impact", "影响力")}</dt><dd>{item.provenance.scoreNotes.impact}</dd></div>
+                        <div><dt>{t("Buzz", "火爆度")}</dt><dd>{item.provenance.scoreNotes.buzz}</dd></div>
+                        <div><dt>{t("Utility", "实用性")}</dt><dd>{item.provenance.scoreNotes.utility}</dd></div>
+                      </dl>
+                      <p className="score-disclaimer">{t("Heuristic signal, not an objective verdict. Open the source before making a research decision.", "这是辅助判断的启发式信号，不是客观结论；做研究决策前请打开原始来源。")}</p>
+                    </div>
+                  </details>
+                )}
               </div>
             </article>
           ))}

@@ -30,6 +30,12 @@ export default function DomainsPage() {
             </div>
             <h2 className="text-xl font-bold mt-6 dark:text-white">{lang === "en" ? domain.name : domain.nameZh}</h2>
             <p className="text-sm leading-relaxed text-paper-800/55 dark:text-slate-400 mt-2">{lang === "en" ? domain.description : domain.descriptionZh}</p>
+            <div className="mt-5">
+              <div className="text-[10px] uppercase tracking-[0.16em] font-bold text-paper-800/35 dark:text-slate-500 mb-2">{t("Open desks", "可延伸方向")}</div>
+              <div className="flex flex-wrap gap-1.5">
+                {domain.subtopics.map((topic) => <span key={topic.name} className="subtle-chip">{lang === "en" ? topic.name : topic.nameZh}</span>)}
+              </div>
+            </div>
             <div className="flex flex-wrap gap-1.5 mt-5">
               {domain.sources.map((source) => <span key={source} className="subtle-chip">{source}</span>)}
             </div>

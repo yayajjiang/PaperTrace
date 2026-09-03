@@ -37,10 +37,10 @@ export function LiveHeadlines({ compact = false }: { compact?: boolean }) {
             <span className="live-dot" /> {t("Signal desk", "热点雷达")}
           </div>
           <h2 id="signal-desk-title" className="text-2xl md:text-3xl font-bold dark:text-white">
-            {t("What changed in AI", "AI 世界刚刚发生了什么")}
+            {t("What changed in research", "科研世界刚刚发生了什么")}
           </h2>
         </div>
-        <Link href="/daily" className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline whitespace-nowrap">
+        <Link href="/radar" className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline whitespace-nowrap">
           {t("All signals", "全部动态")} →
         </Link>
       </div>

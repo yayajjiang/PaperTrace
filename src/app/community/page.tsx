@@ -30,10 +30,10 @@ const paths = [
 ];
 
 const rooms = [
-  { icon: "◒", title: "Research help", titleZh: "科研互助", text: "Methods, experiments, reproduction and paper feedback", textZh: "方法、实验、复现与论文反馈", color: "room-blue" },
-  { icon: "◇", title: "Internships & roles", titleZh: "实习与岗位", text: "Labs, startups, referrals and application experience", textZh: "实验室、创业团队、内推与申请经验", color: "room-emerald" },
-  { icon: "◎", title: "People & collaboration", titleZh: "人脉与合作", text: "Find reviewers, co-builders and cross-domain collaborators", textZh: "寻找审阅者、共建者与跨领域合作者", color: "room-violet" },
-  { icon: "⌁", title: "Tools & launches", titleZh: "工具与发布", text: "Share a tool, recruit testers and compare workflows", textZh: "分享工具、招募体验者、对比工作流", color: "room-amber" },
+  { icon: "◒", title: "Research help", titleZh: "科研互助", text: "Methods, experiments, reproduction and paper feedback", textZh: "方法、实验、复现与论文反馈", color: "room-blue", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=research-help.yml&title=%5BHelp%5D%20" },
+  { icon: "◇", title: "Internships & roles", titleZh: "实习与岗位", text: "Labs, startups, referrals and application experience", textZh: "实验室、创业团队、内推与申请经验", color: "room-emerald", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=research-help.yml&title=%5BRole%5D%20" },
+  { icon: "◎", title: "People & collaboration", titleZh: "人脉与合作", text: "Find reviewers, co-builders and cross-domain collaborators", textZh: "寻找审阅者、共建者与跨领域合作者", color: "room-violet", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=research-help.yml&title=%5BCollaboration%5D%20" },
+  { icon: "⌁", title: "Tools & launches", titleZh: "工具与发布", text: "Share a tool, recruit testers and compare workflows", textZh: "分享工具、招募体验者、对比工作流", color: "room-amber", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=submit-a-tool.yml" },
 ];
 
 export default function CommunityPage() {
@@ -68,7 +68,7 @@ export default function CommunityPage() {
         </div>
         <div className="grid sm:grid-cols-2 gap-3">
           {rooms.map((room) => (
-            <a key={room.title} href="https://github.com/yayajjiang/PaperTrace/discussions" target="_blank" rel="noopener noreferrer" className={`community-room ${room.color}`}>
+            <a key={room.title} href={room.href} target="_blank" rel="noopener noreferrer" className={`community-room ${room.color}`}>
               <span className="room-icon">{room.icon}</span>
               <div>
                 <h3 className="font-bold dark:text-slate-100">{lang === "en" ? room.title : room.titleZh}</h3>
@@ -111,13 +111,14 @@ export default function CommunityPage() {
             ))}
           </div>
           <div className="flex flex-wrap gap-3 mt-8">
-            <a href="https://github.com/yayajjiang/PaperTrace/issues/new" target="_blank" rel="noopener noreferrer" className="button-primary">
-              {t("Propose an idea", "提交想法")} ↗
+            <a href="https://github.com/yayajjiang/PaperTrace/issues/new?template=frontier-signal.yml" target="_blank" rel="noopener noreferrer" className="button-primary">
+              {t("Submit a signal", "提交前沿线索")} ↗
             </a>
-            <a href="https://github.com/yayajjiang/PaperTrace" target="_blank" rel="noopener noreferrer" className="button-secondary">
-              {t("View repository", "查看仓库")} ↗
+            <a href="https://github.com/yayajjiang/PaperTrace/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="button-secondary">
+              {t("Contribution guide", "共建指南")} ↗
             </a>
           </div>
+          <p className="mt-5 text-[11px] leading-relaxed text-paper-800/40 dark:text-slate-500">{t("Public by default: remove private contact details, confidential research, credentials and personal referrals before posting.", "默认公开：发布前请移除私人联系方式、未公开研究、凭据与未经许可的个人引荐信息。")}</p>
         </div>
 
         <aside className="qr-card">

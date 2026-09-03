@@ -1,0 +1,58 @@
+name: Frontier signal / 前沿线索
+description: Submit a model release, new lab, emerging direction, paper, tool, MCP server, or public discussion signal.
+title: "[Signal] "
+labels: ["signal", "needs-verification"]
+body:
+  - type: dropdown
+    id: signal_type
+    attributes:
+      label: Signal type / 线索类型
+      options:
+        - Model release or retirement / 模型发布或下线
+        - New lab or research team / 新实验室或团队
+        - Emerging research direction / 新研究方向
+        - Paper or benchmark / 论文或评测
+        - Tool, Skill, MCP, or demo / 工具、Skill、MCP 或 Demo
+        - Public discussion on X or Xiaohongshu / X 或小红书公开讨论
+    validations:
+      required: true
+
+  - type: input
+    id: canonical_source
+    attributes:
+      label: Canonical source / 官方或原始来源
+      description: A paper, repository, official announcement, documentation page, or public post URL is required.
+      placeholder: https://…
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: What changed? / 发生了什么
+      description: State the smallest verifiable claim. Separate reported benchmark claims from independent evidence.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_watch
+    attributes:
+      label: Why is it worth attention? / 为什么值得关注
+      description: Describe scientific impact, discussion signal, practical utility, and who should care.
+    validations:
+      required: true
+
+  - type: input
+    id: secondary_source
+    attributes:
+      label: Independent or secondary evidence / 独立或补充证据
+      placeholder: Optional URL
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification / 核验
+      options:
+        - label: I opened the linked source and did not infer private engagement metrics. / 我已打开来源，且没有推测不可公开核验的互动数据。
+          required: true
+

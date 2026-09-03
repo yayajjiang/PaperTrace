@@ -12,6 +12,11 @@ export interface Headline {
   tag: HeadlineTag;
   domain?: string;
   scores?: { impact: number; buzz: number; utility: number };
+  signals?: { huggingFaceUpvotes?: number; socialNote?: string };
+  provenance?: {
+    layer: "Primary" | "Structured discovery" | "Discussion" | "Community";
+    scoreNotes: { impact: string; buzz: string; utility: string };
+  };
   featured?: boolean;
 }
 

@@ -7,6 +7,7 @@ import { DLLMTimeline } from "@/components/DLLMTimeline";
 import { LiveHeadlines } from "@/components/LiveHeadlines";
 import { CommunityBoard } from "@/components/CommunityBoard";
 import { researchTools } from "@/lib/tools";
+import { frontierItems } from "@/lib/frontier";
 
 interface PaperMeta {
   slug: string;
@@ -321,6 +322,32 @@ export default function Home() {
       </div>
 
       <LiveHeadlines compact />
+
+      <section className="py-16 border-b border-paper-200 dark:border-slate-800">
+        <div className="section-heading-row">
+          <div>
+            <div className="eyebrow mb-2">{t("Frontier watch", "前沿观察")}</div>
+            <h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("New builders shaping the next cycle", "正在塑造下一轮方向的新力量")}</h2>
+          </div>
+          <a href={`${basePath}/frontier`} className="text-sm font-semibold text-blue-600 dark:text-blue-400">{t("Open watchlist", "查看观察列表")} →</a>
+        </div>
+        <div className="grid md:grid-cols-3 gap-3">
+          {frontierItems.slice(0, 3).map((item) => (
+            <a key={item.id} href={item.href} target="_blank" rel="noopener noreferrer" className="home-tool-card group">
+              <div className="flex items-center justify-between gap-2">
+                <span className="topic-chip bg-violet-100 text-violet-700 dark:bg-violet-500/15 dark:text-violet-300">{item.type}</span>
+                <time className="text-[10px] font-mono text-paper-800/35 dark:text-slate-500">{item.announcedAt}</time>
+              </div>
+              <h3 className="text-lg font-bold mt-5 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">{lang === "en" ? item.name : item.nameZh}</h3>
+              <p className="text-sm leading-relaxed text-paper-800/55 dark:text-slate-400 mt-2">{lang === "en" ? item.whyWatch : item.whyWatchZh}</p>
+              <div className="flex items-center justify-between gap-3 mt-5 text-[10px] font-bold">
+                <span className="text-paper-800/35 dark:text-slate-500">{item.domain}</span>
+                <span className="text-violet-700 dark:text-violet-300">◷ {item.attention}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
 
       <section className="py-16">
         <div className="section-heading-row">

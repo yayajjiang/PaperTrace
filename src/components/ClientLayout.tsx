@@ -49,6 +49,7 @@ function Header() {
     { href: "/community", label: t("Community", "社区") },
   ];
   const secondaryNav = [
+    { href: "/frontier", label: t("Frontier watch", "前沿观察") },
     { href: "/skills", label: "Skills" },
     { href: "/daily", label: t("Research feed", "研究动态") },
     { href: "/timeline", label: t("Timeline", "时间线") },

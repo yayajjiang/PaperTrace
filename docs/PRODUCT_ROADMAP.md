@@ -41,10 +41,13 @@ Status: in progress
 - [x] Add daily scheduled deployment and official-source news sync
 - [x] Add valid `attention-curator` and `frontier-watch` Skills
 - [ ] Finish visual QA at desktop and mobile sizes
-- [ ] Connect Hugging Face paper popularity as a separately labeled signal
+- [x] Connect Hugging Face paper popularity as a separately labeled signal
 - [ ] Add a verified social-signal ingestion path for public X and Xiaohongshu posts
-- [ ] Add Frontier Watch UI for new labs, research teams, researcher moves, and infrastructure
-- [ ] Add source provenance and score-explanation drawer to every Radar item
+- [x] Add Frontier Watch UI for new labs, research teams, researcher moves, and infrastructure
+- [x] Add source provenance and score-explanation drawer to every Radar item
+- [x] Balance automated arXiv discovery across six research domains
+- [x] Add structured community templates for help, collaboration, roles, tools, and frontier signals
+- [x] Publish a bilingual contribution and domain-editor compact
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring
@@ -79,8 +82,8 @@ AI & CS remains the first mature collection. Biology & Medicine, Physics, Mathem
 
 ## Next priorities
 
-1. Complete build and responsive QA, then commit the information-architecture milestone.
-2. Build Frontier Watch cards and data model for labs, teams, model releases, MCP/skills, and emerging directions.
-3. Add Hugging Face popularity ingestion with cache/fallback and provenance.
-4. Consolidate `/daily` and `/radar` into one content model while preserving existing URLs.
-5. Add community moderation/contribution documentation and domain-editor onboarding.
+1. Complete responsive visual QA for the new homepage, Radar, Domains, Tools, Community, Skills, and Frontier Watch.
+2. Consolidate `/daily` and `/radar` into one content model while preserving existing URLs.
+3. Add a public, auditable social-signal adapter with timestamped X/Xiaohongshu evidence.
+4. Add source-health reporting so failed feeds are visible instead of silently disappearing.
+5. Design the first domain-editor desk around one non-CS field and recruit a reviewer for its rubric.

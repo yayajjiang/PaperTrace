@@ -526,6 +526,26 @@ html {
 .chart-selection b { @apply block text-paper-800/75 dark:text-slate-200; }
 .chart-selection span { @apply block mt-0.5; }
 .chart-selection a { @apply flex-none font-bold text-blue-600 dark:text-blue-400; }
+.frontier-timeline { @apply relative; }
+.frontier-timeline::before { content: ""; @apply absolute top-3 bottom-3 left-[91px] md:left-[127px] w-px bg-paper-200 dark:bg-slate-700; }
+.frontier-item { @apply relative grid grid-cols-[76px_14px_1fr] md:grid-cols-[112px_14px_1fr] gap-3 md:gap-4 pb-5; }
+.frontier-date { @apply pt-6 text-[10px] md:text-xs font-mono text-paper-800/35 dark:text-slate-500 text-right; }
+.frontier-node { @apply relative z-10 mt-[27px] w-3 h-3 rounded-full bg-blue-500 ring-4 ring-paper-50 dark:ring-slate-900; }
+.frontier-card { @apply rounded-2xl border border-paper-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 md:p-6; }
+.score-explainer { @apply max-w-2xl rounded-xl overflow-hidden border border-paper-200/70 dark:border-slate-700 bg-paper-50/70 dark:bg-slate-900/30; }
+.score-explainer summary { @apply px-3 py-2.5 cursor-pointer list-none text-[11px] font-bold text-paper-800/55 dark:text-slate-300; }
+.score-explainer summary::-webkit-details-marker { display: none; }
+.score-explainer summary::after { content: "+"; float: right; font-family: monospace; }
+.score-explainer[open] summary::after { content: "−"; }
+.score-explainer-body { @apply px-3 pb-3 text-[11px] leading-relaxed text-paper-800/55 dark:text-slate-400; }
+.score-explainer dl { @apply grid gap-2 mt-3; }
+.score-explainer dl > div { @apply grid grid-cols-[4.5rem_1fr] gap-2; }
+.score-explainer dt { @apply font-extrabold text-paper-800/70 dark:text-slate-300; }
+.score-disclaimer { @apply mt-3 pt-2 border-t border-dashed border-paper-200 dark:border-slate-700; }
+.why-watch { @apply rounded-lg bg-paper-50 dark:bg-slate-900/50 px-4 py-3; }
+.why-watch b { @apply block text-xs text-paper-800/70 dark:text-slate-300; }
+.why-watch p { @apply mt-1 text-xs leading-relaxed text-paper-800/50 dark:text-slate-500; }
+.attention-badge { @apply text-[10px] font-bold text-violet-700 dark:text-violet-300; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }

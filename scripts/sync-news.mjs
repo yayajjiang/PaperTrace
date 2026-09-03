@@ -5,12 +5,16 @@ const feeds = [
   { name: "OpenAI", url: "https://openai.com/news/rss.xml", tag: "Release", domain: "AI & CS" },
   { name: "Anthropic", url: "https://www.anthropic.com/rss.xml", tag: "Release", domain: "AI & CS" },
   { name: "Google DeepMind", url: "https://deepmind.google/blog/rss.xml", tag: "Research", domain: "AI & CS" },
-  {
-    name: "arXiv multi-field",
-    url: "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL+OR+cat%3Aq-bio.BM+OR+cat%3Aq-bio.GN+OR+cat%3Aphysics.comp-ph+OR+cat%3Amath.OC+OR+cat%3Astat.ML+OR+cat%3Acond-mat.mtrl-sci+OR+cat%3Aphysics.chem-ph+OR+cat%3Aecon.EM%29&start=0&max_results=18&sortBy=submittedDate&sortOrder=descending",
-    tag: "Research",
-    domain: "Multidisciplinary",
-  },
+];
+
+const arxivUrl = (query) => `https://export.arxiv.org/api/query?search_query=${encodeURIComponent(`(${query})`)}&start=0&max_results=6&sortBy=submittedDate&sortOrder=descending`;
+const arxivFeeds = [
+  { name: "arXiv · AI & CS", url: arxivUrl("cat:cs.AI OR cat:cs.LG OR cat:cs.CL"), tag: "Research", domain: "AI & CS" },
+  { name: "arXiv · Bio", url: arxivUrl("cat:q-bio.BM OR cat:q-bio.GN OR cat:q-bio.QM"), tag: "Research", domain: "Bio & Medicine" },
+  { name: "arXiv · Physics", url: arxivUrl("cat:physics.comp-ph OR cat:astro-ph.IM OR cat:quant-ph"), tag: "Research", domain: "Physics" },
+  { name: "arXiv · Math & Stats", url: arxivUrl("cat:math.OC OR cat:math.ST OR cat:stat.ML"), tag: "Research", domain: "Math & Stats" },
+  { name: "arXiv · Materials & Chemistry", url: arxivUrl("cat:cond-mat.mtrl-sci OR cat:physics.chem-ph"), tag: "Research", domain: "Materials & Chemistry" },
+  { name: "arXiv · Social Science", url: arxivUrl("cat:econ.EM OR cat:econ.TH OR cat:cs.CY"), tag: "Research", domain: "Social Science" },
 ];
 
 const decode = (value = "") =>
@@ -38,6 +42,51 @@ const pickLink = (block) => {
   return atom || pick(block, ["link"]);
 };
 
+const editorialItems = [
+  {
+    id: "world-labs-atlas-2026",
+    date: "2026-09-01",
+    title: "World Labs releases Atlas, an omni world model",
+    titleZh: "World Labs 发布全模态世界模型 Atlas",
+    summary: "Atlas handles text, images, video and 3D in one spatial context, spanning generation, reconstruction and real-to-sim robotics.",
+    summaryZh: "Atlas 在统一空间上下文中处理文本、图像、视频与 3D，覆盖生成、重建与机器人 real-to-sim。",
+    source: "World Labs",
+    sourceUrl: "https://www.worldlabs.ai/blog/atlas",
+    tag: "Release",
+    domain: "AI & CS",
+    scores: { impact: 92, buzz: 92, utility: 78 },
+    provenance: {
+      layer: "Primary",
+      scoreNotes: {
+        impact: "Official release with a new multimodal world-model architecture and broad downstream scope.",
+        buzz: "Recent frontier-model release; social velocity is not yet used without a verifiable public metric.",
+        utility: "Early access and demos exist, but weights and a general public API are not yet available.",
+      },
+    },
+  },
+  {
+    id: "claude-opus-4-1-retired",
+    date: "2026-08-05",
+    title: "Claude Opus 4.1 retires from the Anthropic API",
+    titleZh: "Claude Opus 4.1 从 Anthropic API 下线",
+    summary: "Anthropic recommends migrating to Opus 4.8. Model retirement is tracked separately from launch news because it creates immediate evaluation and migration work.",
+    summaryZh: "Anthropic 建议迁移到 Opus 4.8。模型下线会直接产生评测与迁移工作，因此与新品发布分开追踪。",
+    source: "Anthropic Docs",
+    sourceUrl: "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+    tag: "Release",
+    domain: "AI & CS",
+    scores: { impact: 86, buzz: 80, utility: 94 },
+    provenance: {
+      layer: "Primary",
+      scoreNotes: {
+        impact: "Official API retirement affecting production workloads pinned to this model.",
+        buzz: "Lifecycle event; no unverified social count is included.",
+        utility: "Immediate migration action with a documented replacement model.",
+      },
+    },
+  },
+];
+
 function parse(xml, feed) {
   const blocks = xml.match(/<(?:item|entry)(?:\s[^>]*)?>[\s\S]*?<\/(?:item|entry)>/gi) || [];
   return blocks.map((block) => {
@@ -60,15 +109,17 @@ function parse(xml, feed) {
       : /theorem|proof/.test(lower) ? "Math & Stats"
       : /econom|social science/.test(lower) ? "Social Science"
       : feed.domain;
-    const inferredTag = /introduc|releas|launch|announc|new model|open.source/.test(title.toLowerCase()) ? "Release" : feed.tag;
+    const isCaseStudy = /case study|customer stor|how .{0,70} (uses|use|built|builds|governs|scales|adopts|deploys|turns|transforms)|with chatgpt|enterprise adoption|brand|organizations can now connect|companies turn workflows/i.test(title);
+    const inferredTag = isCaseStudy ? "Industry" : /introduc|releas|launch|announc|new model|open.source/.test(title.toLowerCase()) ? "Release" : feed.tag;
     const ageDays = Math.max(0, (Date.now() - Date.parse(`${date}T00:00:00Z`)) / 86_400_000);
     const recency = Math.max(35, Math.round(100 - ageDays * 2.5));
     const isOfficialRelease = inferredTag === "Release";
     const isPractical = /open.source|github|code|api|dataset|tool|release|available|demo/.test(lower);
+    const isTechnical = /model|research|paper|benchmark|robot|world model|algorithm|architecture|dataset|safety|science/.test(lower);
     const scores = {
-      impact: Math.min(98, (isOfficialRelease ? 78 : 60) + (/benchmark|evaluation|frontier|state.of.the.art/.test(lower) ? 9 : 0)),
-      buzz: Math.min(98, Math.round(recency * .72 + (isOfficialRelease ? 22 : 8))),
-      utility: Math.min(98, (isPractical ? 82 : 58) + (/open.source|github|code/.test(lower) ? 8 : 0)),
+      impact: Math.min(98, (isCaseStudy ? 44 : isOfficialRelease ? 78 : 60) + (isTechnical ? 6 : 0) + (/benchmark|evaluation|frontier|state.of.the.art/.test(lower) ? 7 : 0)),
+      buzz: Math.min(98, Math.round(recency * .72 + (isCaseStudy ? 3 : isOfficialRelease ? 22 : 8))),
+      utility: Math.min(98, (isCaseStudy ? 48 : isPractical ? 82 : 58) + (/open.source|github|code/.test(lower) ? 8 : 0)),
     };
     return {
       id: createHash("sha1").update(sourceUrl || title).digest("hex").slice(0, 12),
@@ -82,25 +133,125 @@ function parse(xml, feed) {
       tag: inferredTag,
       domain,
       scores,
+      provenance: {
+        layer: feed.name.startsWith("arXiv") ? "Structured discovery" : "Primary",
+        scoreNotes: {
+          impact: isCaseStudy ? "Vendor customer story; useful as an adoption signal, not technical evidence." : isTechnical ? "Technical scope and likely downstream relevance inferred from the primary item." : "Primary-source relevance heuristic; independent validation may still be needed.",
+          buzz: "Recency-based estimate; no social metric is included unless separately displayed.",
+          utility: isPractical ? "Code, API, data, demo or availability cues were found in the item." : "No strong runnable-artifact cue was found in the feed text.",
+        },
+      },
     };
   }).filter((item) => item.title && item.sourceUrl).slice(0, feed.tag === "Release" ? 5 : 10);
 }
 
-const results = await Promise.allSettled(
-  feeds.map(async (feed) => {
+async function fetchHuggingFacePapers() {
+  const response = await fetch("https://huggingface.co/api/daily_papers?limit=20", {
+    headers: { "user-agent": "PaperTrace/1.0 (+https://github.com/yayajjiang/PaperTrace)" },
+    signal: AbortSignal.timeout(15_000),
+  });
+  if (!response.ok) throw new Error(`Hugging Face Papers: ${response.status}`);
+  const payload = await response.json();
+  if (!Array.isArray(payload)) return [];
+  return payload.map((entry) => {
+    const paper = entry.paper || entry;
+    const id = paper.id || paper.paperId || entry.id;
+    const rawDate = entry.publishedAt || paper.publishedAt || paper.submittedOnDailyAt || paper.createdAt;
+    const date = Number.isNaN(Date.parse(rawDate)) ? new Date().toISOString().slice(0, 10) : new Date(rawDate).toISOString().slice(0, 10);
+    const title = decode(paper.title || entry.title || "");
+    const summary = decode(paper.summary || entry.summary || "").slice(0, 280);
+    const upvotes = Number(paper.upvotes ?? entry.upvotes ?? 0);
+    const practical = /github|code|dataset|benchmark|agent|tool|open.source/i.test(`${title} ${summary}`);
+    return {
+      id: `hf-${id}`,
+      date,
+      title,
+      titleZh: title,
+      summary,
+      summaryZh: summary,
+      source: "Hugging Face Papers",
+      sourceUrl: `https://huggingface.co/papers/${id}`,
+      tag: "Research",
+      domain: "AI & CS",
+      scores: {
+        impact: Math.min(94, 58 + Math.round(Math.sqrt(Math.max(0, upvotes)) * 1.8)),
+        buzz: Math.min(98, 45 + Math.round(Math.sqrt(Math.max(0, upvotes)) * 4.2)),
+        utility: practical ? 86 : 62,
+      },
+      signals: { huggingFaceUpvotes: upvotes },
+      provenance: {
+        layer: "Structured discovery",
+        scoreNotes: {
+          impact: "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
+          buzz: `Hugging Face Papers shows ${upvotes} upvotes at sync time; this is one platform signal, not total popularity.`,
+          utility: practical ? "Title or abstract mentions code, data, benchmark, agent or tooling cues." : "No strong runnable-artifact cue was found in the metadata.",
+        },
+      },
+    };
+  }).filter((item) => item.id !== "hf-undefined" && item.title).slice(0, 10);
+}
+
+const fetchFeed = async (feed) => {
     const response = await fetch(feed.url, {
       headers: { "user-agent": "PaperTrace/1.0 (+https://github.com/yayajjiang/PaperTrace)" },
       signal: AbortSignal.timeout(15_000),
     });
     if (!response.ok) throw new Error(`${feed.name}: ${response.status}`);
     return parse(await response.text(), feed);
-  })
-);
+};
 
-const items = results
+const results = await Promise.allSettled(feeds.map(fetchFeed));
+for (const feed of arxivFeeds) {
+  if (results.length > feeds.length) await new Promise((resolve) => setTimeout(resolve, 3_000));
+  try {
+    results.push({ status: "fulfilled", value: await fetchFeed(feed) });
+  } catch (reason) {
+    console.warn(reason instanceof Error ? reason.message : `${feed.name} unavailable`);
+    results.push({ status: "rejected", reason });
+  }
+}
+
+let huggingFaceItems = [];
+try {
+  huggingFaceItems = await fetchHuggingFacePapers();
+} catch (error) {
+  console.warn(error instanceof Error ? error.message : "Hugging Face Papers unavailable");
+}
+
+const rankedItems = results
   .flatMap((result) => result.status === "fulfilled" ? result.value : [])
-  .sort((a, b) => b.date.localeCompare(a.date))
-  .slice(0, 18);
+  .concat(huggingFaceItems)
+  .concat(editorialItems)
+  .filter((item, index, all) => all.findIndex((candidate) => candidate.sourceUrl === item.sourceUrl) === index)
+  .sort((a, b) => {
+    const age = (item) => Math.max(0, (Date.now() - Date.parse(`${item.date}T00:00:00Z`)) / 86_400_000);
+    const rank = (item) => item.scores.impact * .4 + item.scores.buzz * .3 + item.scores.utility * .3 - Math.min(30, age(item) * .65);
+    return rank(b) - rank(a);
+  });
+
+// Preserve editorial ranking while guaranteeing that a fast-moving AI feed
+// cannot crowd every other field out of the public research commons.
+const domainFloor = ["AI & CS", "Bio & Medicine", "Physics", "Math & Stats", "Materials & Chemistry", "Social Science"];
+const selectedUrls = new Set();
+const selected = [];
+for (const domain of domainFloor) {
+  for (const item of rankedItems.filter((candidate) => candidate.domain === domain).slice(0, 4)) {
+    selected.push(item);
+    selectedUrls.add(item.sourceUrl);
+  }
+}
+for (const item of rankedItems) {
+  if (selected.length >= 48) break;
+  if (!selectedUrls.has(item.sourceUrl)) {
+    selected.push(item);
+    selectedUrls.add(item.sourceUrl);
+  }
+}
+const itemRank = (item) => {
+  const age = Math.max(0, (Date.now() - Date.parse(`${item.date}T00:00:00Z`)) / 86_400_000);
+  return item.scores.impact * .4 + item.scores.buzz * .3 + item.scores.utility * .3 - Math.min(30, age * .65);
+};
+const items = selected.sort((a, b) => itemRank(b) - itemRank(a));
 
 if (items.length === 0) {
   throw new Error("No headlines fetched; keeping the checked-in editorial fallback.");
@@ -112,4 +263,4 @@ await writeFile(
   `${JSON.stringify({ generatedAt: new Date().toISOString(), items }, null, 2)}\n`,
   "utf8"
 );
-console.log(`Wrote ${items.length} headlines from ${results.filter((item) => item.status === "fulfilled").length} feeds.`);
+console.log(`Wrote ${items.length} headlines from ${results.filter((item) => item.status === "fulfilled").length} feeds${huggingFaceItems.length ? " + Hugging Face Papers" : ""}.`);

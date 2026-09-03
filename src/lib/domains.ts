@@ -7,6 +7,7 @@ export interface Domain {
   color: string;
   status: "active" | "forming";
   sources: string[];
+  subtopics: Array<{ name: string; nameZh: string }>;
 }
 
 export const domains: Domain[] = [
@@ -19,6 +20,16 @@ export const domains: Domain[] = [
     color: "#2563eb",
     status: "active",
     sources: ["arXiv cs.AI / cs.LG / cs.CL", "Hugging Face Papers", "Open-source repos"],
+    subtopics: [
+      { name: "Foundation Models", nameZh: "基础模型" },
+      { name: "World Models", nameZh: "世界模型" },
+      { name: "Embodied AI", nameZh: "具身智能" },
+      { name: "Agents & MCP", nameZh: "Agent 与 MCP" },
+      { name: "Multimodal", nameZh: "多模态" },
+      { name: "Systems & Efficiency", nameZh: "系统与效率" },
+      { name: "Alignment & Safety", nameZh: "对齐与安全" },
+      { name: "HCI", nameZh: "人机交互" },
+    ],
   },
   {
     id: "bio-medicine",
@@ -29,6 +40,14 @@ export const domains: Domain[] = [
     color: "#059669",
     status: "forming",
     sources: ["Europe PMC", "PubMed", "bioRxiv / medRxiv"],
+    subtopics: [
+      { name: "Genomics", nameZh: "基因组学" },
+      { name: "Proteins", nameZh: "蛋白质" },
+      { name: "Drug Discovery", nameZh: "药物发现" },
+      { name: "Clinical Evidence", nameZh: "临床证据" },
+      { name: "NeuroAI", nameZh: "神经科学与 AI" },
+      { name: "Computational Biology", nameZh: "计算生物学" },
+    ],
   },
   {
     id: "physics",
@@ -39,6 +58,14 @@ export const domains: Domain[] = [
     color: "#7c3aed",
     status: "forming",
     sources: ["arXiv physics", "INSPIRE HEP", "NASA ADS"],
+    subtopics: [
+      { name: "High-energy Physics", nameZh: "高能物理" },
+      { name: "Astrophysics", nameZh: "天体物理" },
+      { name: "Quantum", nameZh: "量子" },
+      { name: "Condensed Matter", nameZh: "凝聚态" },
+      { name: "Simulation", nameZh: "数值模拟" },
+      { name: "Scientific ML", nameZh: "科学机器学习" },
+    ],
   },
   {
     id: "math-stats",
@@ -49,6 +76,14 @@ export const domains: Domain[] = [
     color: "#0891b2",
     status: "forming",
     sources: ["arXiv math / stat", "Mathlib", "zbMATH Open"],
+    subtopics: [
+      { name: "Optimization", nameZh: "优化" },
+      { name: "Probability", nameZh: "概率" },
+      { name: "Formal Proof", nameZh: "形式化证明" },
+      { name: "Causal Inference", nameZh: "因果推断" },
+      { name: "Bayesian Methods", nameZh: "贝叶斯方法" },
+      { name: "Numerical Methods", nameZh: "数值方法" },
+    ],
   },
   {
     id: "materials-chemistry",
@@ -59,6 +94,14 @@ export const domains: Domain[] = [
     color: "#d97706",
     status: "forming",
     sources: ["Materials Project", "ChemRxiv", "PLUMED"],
+    subtopics: [
+      { name: "Molecular Design", nameZh: "分子设计" },
+      { name: "Catalysis", nameZh: "催化" },
+      { name: "Batteries", nameZh: "电池" },
+      { name: "Structure Prediction", nameZh: "结构预测" },
+      { name: "Molecular Dynamics", nameZh: "分子动力学" },
+      { name: "Reaction Prediction", nameZh: "反应预测" },
+    ],
   },
   {
     id: "social-science",
@@ -69,5 +112,13 @@ export const domains: Domain[] = [
     color: "#e11d48",
     status: "forming",
     sources: ["SSRN", "OpenAlex", "OSF"],
+    subtopics: [
+      { name: "Economics", nameZh: "经济学" },
+      { name: "Psychology", nameZh: "心理学" },
+      { name: "Organizations", nameZh: "组织科学" },
+      { name: "Public Policy", nameZh: "公共政策" },
+      { name: "Computational Social Science", nameZh: "计算社会科学" },
+      { name: "Reproducibility", nameZh: "可复现性" },
+    ],
   },
 ];

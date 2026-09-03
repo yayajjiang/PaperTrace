@@ -1,6 +1,56 @@
 {
-  "generatedAt": "2026-09-03T17:39:20.612Z",
+  "generatedAt": "2026-09-03T18:04:19.022Z",
   "items": [
+    {
+      "id": "world-labs-atlas-2026",
+      "date": "2026-09-01",
+      "title": "World Labs releases Atlas, an omni world model",
+      "titleZh": "World Labs 发布全模态世界模型 Atlas",
+      "summary": "Atlas handles text, images, video and 3D in one spatial context, spanning generation, reconstruction and real-to-sim robotics.",
+      "summaryZh": "Atlas 在统一空间上下文中处理文本、图像、视频与 3D，覆盖生成、重建与机器人 real-to-sim。",
+      "source": "World Labs",
+      "sourceUrl": "https://www.worldlabs.ai/blog/atlas",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 92,
+        "buzz": 92,
+        "utility": 78
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Official release with a new multimodal world-model architecture and broad downstream scope.",
+          "buzz": "Recent frontier-model release; social velocity is not yet used without a verifiable public metric.",
+          "utility": "Early access and demos exist, but weights and a general public API are not yet available."
+        }
+      }
+    },
+    {
+      "id": "309be27bdcfe",
+      "date": "2026-09-01",
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "titleZh": "Path to Astra: critical capabilities and frontier safeguards",
+      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+      "summaryZh": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/path-to-astra",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 91,
+        "buzz": 89,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
     {
       "id": "56da2c8ef803",
       "date": "2026-09-03",
@@ -13,43 +63,192 @@
       "tag": "Release",
       "domain": "AI & CS",
       "scores": {
-        "impact": 78,
+        "impact": 84,
         "buzz": 93,
         "utility": 58
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
-      "id": "b07b0b2b4d66",
+      "id": "e30314f002ad",
       "date": "2026-09-02",
-      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
-      "titleZh": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
-      "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
-      "summaryZh": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/atv-big-air-tour",
-      "tag": "Release",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 78,
-        "buzz": 91,
-        "utility": 58
-      }
-    },
-    {
-      "id": "383dbcd782ab",
-      "date": "2026-09-02",
-      "title": "Proactive cyber defense for governments and enterprises",
-      "titleZh": "Proactive cyber defense for governments and enterprises",
-      "summary": "",
-      "summaryZh": "",
-      "source": "Google DeepMind",
-      "sourceUrl": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+      "title": "Discriminative World Models for Web Agents",
+      "titleZh": "Discriminative World Models for Web Agents",
+      "summary": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state predictio",
+      "summaryZh": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state predictio",
+      "source": "arXiv · AI & CS",
+      "sourceUrl": "https://arxiv.org/abs/2609.02885v1",
       "tag": "Research",
       "domain": "AI & CS",
       "scores": {
-        "impact": 60,
+        "impact": 73,
         "buzz": 77,
-        "utility": 58
+        "utility": 90
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "e8dab1e0a322",
+      "date": "2026-09-01",
+      "title": "PopPert: Population-level Joint-Distribution Modeling for Single-Cell Perturbation Prediction",
+      "titleZh": "PopPert: Population-level Joint-Distribution Modeling for Single-Cell Perturbation Prediction",
+      "summary": "Predicting transcriptional responses to specific perturbations is critical for understanding cellular regulatory mechanisms and accelerating drug discovery. Single-cell RNA sequencing destroys each measured cell, yielding only unpaired populations of control and perturbed cells. ",
+      "summaryZh": "Predicting transcriptional responses to specific perturbations is critical for understanding cellular regulatory mechanisms and accelerating drug discovery. Single-cell RNA sequencing destroys each measured cell, yielding only unpaired populations of control and perturbed cells. ",
+      "source": "arXiv · Bio",
+      "sourceUrl": "https://arxiv.org/abs/2609.01357v1",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 73,
+        "buzz": 75,
+        "utility": 90
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "15716a4262d8",
+      "date": "2026-09-02",
+      "title": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
+      "titleZh": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
+      "summary": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision f",
+      "summaryZh": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision f",
+      "source": "arXiv · AI & CS",
+      "sourceUrl": "https://arxiv.org/abs/2609.02861v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 73,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "d1f26b5f8897",
+      "date": "2026-09-02",
+      "title": "User Feedback Provides a Unique Signal that LLMs Can not Detect",
+      "titleZh": "User Feedback Provides a Unique Signal that LLMs Can not Detect",
+      "summary": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrati",
+      "summaryZh": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrati",
+      "source": "arXiv · AI & CS",
+      "sourceUrl": "https://arxiv.org/abs/2609.02859v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 73,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "55a0e2364ecb",
+      "date": "2026-09-02",
+      "title": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
+      "titleZh": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
+      "summary": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common m",
+      "summaryZh": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common m",
+      "source": "arXiv · AI & CS",
+      "sourceUrl": "https://arxiv.org/abs/2609.02887v1",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 90
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "1dedcea88ada",
+      "date": "2026-09-02",
+      "title": "High performance Stingray",
+      "titleZh": "High performance Stingray",
+      "summary": "X-ray astrophysical objects show variability on a wide range of timescales, i.e. from fractions of second to years. The open-source Python library stingray is able to perform time series analyses with a focus on high-energy astrophysics. Comprising the most commonly used Fourier ",
+      "summaryZh": "X-ray astrophysical objects show variability on a wide range of timescales, i.e. from fractions of second to years. The open-source Python library stingray is able to perform time series analyses with a focus on high-energy astrophysics. Comprising the most commonly used Fourier ",
+      "source": "arXiv · Physics",
+      "sourceUrl": "https://arxiv.org/abs/2609.02857v1",
+      "tag": "Research",
+      "domain": "Physics",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 90
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "58c2712d309c",
+      "date": "2026-09-02",
+      "title": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
+      "titleZh": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
+      "summary": "Ordinary differential equations (ODEs) underlie models in science and engineering, and many applications need derivatives of their solutions with respect to parameters. Ensembles of independent trajectories suit graphics processing units (GPUs), but current GPU software forces a ",
+      "summaryZh": "Ordinary differential equations (ODEs) underlie models in science and engineering, and many applications need derivatives of their solutions with respect to parameters. Ensembles of independent trajectories suit graphics processing units (GPUs), but current GPU software forces a ",
+      "source": "arXiv · AI & CS",
+      "sourceUrl": "https://arxiv.org/abs/2609.02876v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 90
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
       }
     },
     {
@@ -67,40 +266,442 @@
         "impact": 78,
         "buzz": 91,
         "utility": 58
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
-      "id": "55a0e2364ecb",
+      "id": "dfd1ea2e5518",
+      "date": "2026-09-01",
+      "title": "Introducing agentic video understanding with Gemini",
+      "titleZh": "Introducing agentic video understanding with Gemini",
+      "summary": "",
+      "summaryZh": "",
+      "source": "Google DeepMind",
+      "sourceUrl": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 78,
+        "buzz": 89,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "30e65cdcd9a8",
       "date": "2026-09-02",
-      "title": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
-      "titleZh": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
-      "summary": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common m",
-      "summaryZh": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common m",
-      "source": "arXiv multi-field",
-      "sourceUrl": "https://arxiv.org/abs/2609.02887v1",
+      "title": "The Ultraviolet Spectrograph on ESA's Jupiter Icy Moons Explorer Mission (JUICE-UVS)",
+      "titleZh": "The Ultraviolet Spectrograph on ESA's Jupiter Icy Moons Explorer Mission (JUICE-UVS)",
+      "summary": "The Jupiter Icy Moons Explorer (JUICE) mission, led by ESA, has an Ultraviolet Spectrograph (JUICE-UVS) contributed by NASA and built at Southwest Research Institute. JUICE-UVS is designed to provide a diversity of measurements to further our understanding of the potential habita",
+      "summaryZh": "The Jupiter Icy Moons Explorer (JUICE) mission, led by ESA, has an Ultraviolet Spectrograph (JUICE-UVS) contributed by NASA and built at Southwest Research Institute. JUICE-UVS is designed to provide a diversity of measurements to further our understanding of the potential habita",
+      "source": "arXiv · Physics",
+      "sourceUrl": "https://arxiv.org/abs/2609.02856v1",
       "tag": "Research",
-      "domain": "Bio & Medicine",
+      "domain": "Physics",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "4fca877a6d02",
+      "date": "2026-09-02",
+      "title": "Copula Transformations for Data-Consistent Inversion",
+      "titleZh": "Copula Transformations for Data-Consistent Inversion",
+      "summary": "Data-consistent inversion (DCI) constructs probability measures whose push-forward distributions agree with observed data, while iterative data-consistent inversion (iDCI) extends this framework to generalized stochastic inverse problems by enforcing multiple push-forward constra",
+      "summaryZh": "Data-consistent inversion (DCI) constructs probability measures whose push-forward distributions agree with observed data, while iterative data-consistent inversion (iDCI) extends this framework to generalized stochastic inverse problems by enforcing multiple push-forward constra",
+      "source": "arXiv · Math & Stats",
+      "sourceUrl": "https://arxiv.org/abs/2609.02832v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "40d1c054979e",
+      "date": "2026-09-02",
+      "title": "Full-Model Optimality for Tunable Linear Generative Priors in Compressed Sensing",
+      "titleZh": "Full-Model Optimality for Tunable Linear Generative Priors in Compressed Sensing",
+      "summary": "Generative models have been studied experimentally and theoretically as priors for inverse problems such as compressed sensing. Recent work by Gunn et al. studied the use of generative priors with tunable complexity, where a family of generative priors with varying complexity is ",
+      "summaryZh": "Generative models have been studied experimentally and theoretically as priors for inverse problems such as compressed sensing. Recent work by Gunn et al. studied the use of generative priors with tunable complexity, where a family of generative priors with varying complexity is ",
+      "source": "arXiv · Math & Stats",
+      "sourceUrl": "https://arxiv.org/abs/2609.02790v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "dc5577d5f682",
+      "date": "2026-09-02",
+      "title": "AlterSeeK-Path: Systematic construction of generalized band-structure paths for displaying altermagnetic spin splitting",
+      "titleZh": "AlterSeeK-Path: Systematic construction of generalized band-structure paths for displaying altermagnetic spin splitting",
+      "summary": "Altermagnetic materials exhibit spin splitting in their electronic band structures while maintaining zero net magnetization. However, conventional high-symmetry k-paths generally hide this splitting because they follow symmetry lines that in most cases enforce spin degeneracy. We",
+      "summaryZh": "Altermagnetic materials exhibit spin splitting in their electronic band structures while maintaining zero net magnetization. However, conventional high-symmetry k-paths generally hide this splitting because they follow symmetry lines that in most cases enforce spin degeneracy. We",
+      "source": "arXiv · Materials & Chemistry",
+      "sourceUrl": "https://arxiv.org/abs/2609.02770v1",
+      "tag": "Research",
+      "domain": "Materials & Chemistry",
       "scores": {
         "impact": 60,
         "buzz": 77,
         "utility": 90
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
       }
     },
     {
-      "id": "e30314f002ad",
+      "id": "719f237650be",
       "date": "2026-09-02",
-      "title": "Discriminative World Models for Web Agents",
-      "titleZh": "Discriminative World Models for Web Agents",
-      "summary": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state predictio",
-      "summaryZh": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state predictio",
-      "source": "arXiv multi-field",
-      "sourceUrl": "https://arxiv.org/abs/2609.02885v1",
+      "title": "Relating solute interactions to interfacial properties",
+      "titleZh": "Relating solute interactions to interfacial properties",
+      "summary": "Liquid interfaces are both ubiquitous and also critically important for many commercial products, modern technologies, biological processes, and environmental phenomena. The properties of these interfaces can depend quite sensitively upon the composition of the bulk liquid phase.",
+      "summaryZh": "Liquid interfaces are both ubiquitous and also critically important for many commercial products, modern technologies, biological processes, and environmental phenomena. The properties of these interfaces can depend quite sensitively upon the composition of the bulk liquid phase.",
+      "source": "arXiv · Materials & Chemistry",
+      "sourceUrl": "https://arxiv.org/abs/2609.02762v1",
+      "tag": "Research",
+      "domain": "Materials & Chemistry",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "0ef03bb92dde",
+      "date": "2026-09-02",
+      "title": "The PIONEER Project: A PrIvacy companion for mOtivatioN and knowlEdge transfER",
+      "titleZh": "The PIONEER Project: A PrIvacy companion for mOtivatioN and knowlEdge transfER",
+      "summary": "Remaining control over their private data is one of the key challenges in this century for users. We know from prior work that users are often neither in a position to fully grasp the content of the usually complicated texts, nor are they motivated to spend the time necessary to ",
+      "summaryZh": "Remaining control over their private data is one of the key challenges in this century for users. We know from prior work that users are often neither in a position to fully grasp the content of the usually complicated texts, nor are they motivated to spend the time necessary to ",
+      "source": "arXiv · Social Science",
+      "sourceUrl": "https://arxiv.org/abs/2609.02700v1",
       "tag": "Research",
       "domain": "AI & CS",
       "scores": {
-        "impact": 69,
+        "impact": 66,
         "buzz": 77,
-        "utility": 90
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "b1c48e334f6b",
+      "date": "2026-09-02",
+      "title": "Collective creativity in hybrid societies",
+      "titleZh": "Collective creativity in hybrid societies",
+      "summary": "Generative AI is changing how cultural artifacts are created and circulated, and with it our understanding of creativity itself. Researchers disagree about whether these tools enrich or impoverish culture, and we argue that much of that disagreement comes from conflating two dist",
+      "summaryZh": "Generative AI is changing how cultural artifacts are created and circulated, and with it our understanding of creativity itself. Researchers disagree about whether these tools enrich or impoverish culture, and we argue that much of that disagreement comes from conflating two dist",
+      "source": "arXiv · Social Science",
+      "sourceUrl": "https://arxiv.org/abs/2609.02620v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "d0107115b8c5",
+      "date": "2026-09-02",
+      "title": "Exponential speedup of polarization stabilization for long distance DWDM quantum networks",
+      "titleZh": "Exponential speedup of polarization stabilization for long distance DWDM quantum networks",
+      "summary": "Fibre-based quantum networks distributing polarization entanglement require a stable and uninterrupted transmission basis for reliable operation. Bright classical reference light enables rapid polarization feedback but can introduce noise into quantum channels. Entangled-photon-b",
+      "summaryZh": "Fibre-based quantum networks distributing polarization entanglement require a stable and uninterrupted transmission basis for reliable operation. Bright classical reference light enables rapid polarization feedback but can introduce noise into quantum channels. Entangled-photon-b",
+      "source": "arXiv · Physics",
+      "sourceUrl": "https://arxiv.org/abs/2609.02841v1",
+      "tag": "Research",
+      "domain": "Physics",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "547fe3119bc7",
+      "date": "2026-09-02",
+      "title": "Effective Sub-Quantum Readout for Non-Monochromatic Axion Signals in High-$Q$ Haloscopes",
+      "titleZh": "Effective Sub-Quantum Readout for Non-Monochromatic Axion Signals in High-$Q$ Haloscopes",
+      "summary": "The search for wave-like dark matter using microwave cavity haloscopes is constrained by the Standard Quantum Limit, which dictates that phase-preserving linear amplification results in a minimum of one quantum of total system noise for a narrow-band signal. We demonstrate that t",
+      "summaryZh": "The search for wave-like dark matter using microwave cavity haloscopes is constrained by the Standard Quantum Limit, which dictates that phase-preserving linear amplification results in a minimum of one quantum of total system noise for a narrow-band signal. We demonstrate that t",
+      "source": "arXiv · Physics",
+      "sourceUrl": "https://arxiv.org/abs/2609.02828v1",
+      "tag": "Research",
+      "domain": "Physics",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "eb5e63d64c63",
+      "date": "2026-09-02",
+      "title": "Fundamental Limits of Adaptive Stabilization with an Unknown Growth Exponent",
+      "titleZh": "Fundamental Limits of Adaptive Stabilization with an Unknown Growth Exponent",
+      "summary": "A basic question in adaptive control is how rapidly a discrete-time nonlinear plant with unknown parameters may grow while remaining stabilizable. When the nonlinear growth exponent is known and only a scalar coefficient is unknown, existing theory identifies 4 as the exact criti",
+      "summaryZh": "A basic question in adaptive control is how rapidly a discrete-time nonlinear plant with unknown parameters may grow while remaining stabilizable. When the nonlinear growth exponent is known and only a scalar coefficient is unknown, existing theory identifies 4 as the exact criti",
+      "source": "arXiv · Math & Stats",
+      "sourceUrl": "https://arxiv.org/abs/2609.02740v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "26d16b8bb9c0",
+      "date": "2026-09-02",
+      "title": "Systematic display of the spin splitting in band structures of representative altermagnetic crystals",
+      "titleZh": "Systematic display of the spin splitting in band structures of representative altermagnetic crystals",
+      "summary": "In this work we demonstrate a novel approach to exhibit the unique spin splitting that is typical of collinear altermagnets. This approach is to plot band structures on Brillouin zone paths that sample general k-points to show a representative picture that corresponds to Brilloui",
+      "summaryZh": "In this work we demonstrate a novel approach to exhibit the unique spin splitting that is typical of collinear altermagnets. This approach is to plot band structures on Brillouin zone paths that sample general k-points to show a representative picture that corresponds to Brilloui",
+      "source": "arXiv · Materials & Chemistry",
+      "sourceUrl": "https://arxiv.org/abs/2609.02767v1",
+      "tag": "Research",
+      "domain": "Materials & Chemistry",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "4c8ae5014957",
+      "date": "2026-09-02",
+      "title": "Statistical Inference for Probability Barycenters and Kolmogorov Moments",
+      "titleZh": "Statistical Inference for Probability Barycenters and Kolmogorov Moments",
+      "summary": "A probability coordinate chart is a continuous strictly increasing bijection that transports observations to the open unit interval, where averaging is always well defined. For barycentric inference, the first coordinate moment is returned through the inverse chart. Higher initia",
+      "summaryZh": "A probability coordinate chart is a continuous strictly increasing bijection that transports observations to the open unit interval, where averaging is always well defined. For barycentric inference, the first coordinate moment is returned through the inverse chart. Higher initia",
+      "source": "arXiv · Math & Stats",
+      "sourceUrl": "https://arxiv.org/abs/2609.02869v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 73,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "hf-2609.01657",
+      "date": "2026-08-30",
+      "title": "NeoMME: A Single-Tower Multimodal-Native Multilingual Foundation Encoder for Efficient Fine-Tuning and Inference",
+      "titleZh": "NeoMME: A Single-Tower Multimodal-Native Multilingual Foundation Encoder for Efficient Fine-Tuning and Inference",
+      "summary": "Multimodal models often build on architectures designed for generative vision-language modeling, typically combining separately pretrained vision encoders with causal language models. Visual document retrievers such as ColPali repurpose these models as encoders, carrying over the",
+      "summaryZh": "Multimodal models often build on architectures designed for generative vision-language modeling, typically combining separately pretrained vision encoders with causal language models. Visual document retrievers such as ColPali repurpose these models as encoders, carrying over the",
+      "source": "Hugging Face Papers",
+      "sourceUrl": "https://huggingface.co/papers/2609.01657",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 66,
+        "buzz": 64,
+        "utility": 86
+      },
+      "signals": {
+        "huggingFaceUpvotes": 20
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
+          "buzz": "Hugging Face Papers shows 20 upvotes at sync time; this is one platform signal, not total popularity.",
+          "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
+        }
+      }
+    },
+    {
+      "id": "claude-opus-4-1-retired",
+      "date": "2026-08-05",
+      "title": "Claude Opus 4.1 retires from the Anthropic API",
+      "titleZh": "Claude Opus 4.1 从 Anthropic API 下线",
+      "summary": "Anthropic recommends migrating to Opus 4.8. Model retirement is tracked separately from launch news because it creates immediate evaluation and migration work.",
+      "summaryZh": "Anthropic 建议迁移到 Opus 4.8。模型下线会直接产生评测与迁移工作，因此与新品发布分开追踪。",
+      "source": "Anthropic Docs",
+      "sourceUrl": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 86,
+        "buzz": 80,
+        "utility": 94
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Official API retirement affecting production workloads pinned to this model.",
+          "buzz": "Lifecycle event; no unverified social count is included.",
+          "utility": "Immediate migration action with a documented replacement model."
+        }
+      }
+    },
+    {
+      "id": "a9f91cd29901",
+      "date": "2026-09-02",
+      "title": "An adaptive time-tree transition kernel for Bayesian phylogenetic inference",
+      "titleZh": "An adaptive time-tree transition kernel for Bayesian phylogenetic inference",
+      "summary": "Bayesian phylogenetic and phylodynamic analyses can be very time-consuming, owing to the combination of complex models that are used to estimate key parameters from increasingly large genomic data sets and their associated metadata. The use of high-performance computer hardware c",
+      "summaryZh": "Bayesian phylogenetic and phylodynamic analyses can be very time-consuming, owing to the combination of complex models that are used to estimate key parameters from increasingly large genomic data sets and their associated metadata. The use of high-performance computer hardware c",
+      "source": "arXiv · Bio",
+      "sourceUrl": "https://arxiv.org/abs/2609.02445v1",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "07458942a581",
+      "date": "2026-09-02",
+      "title": "Subcellularly Resolved Single-Cell Embedding Learning with Transcriptomic data, Protein Structure and Localization Information",
+      "titleZh": "Subcellularly Resolved Single-Cell Embedding Learning with Transcriptomic data, Protein Structure and Localization Information",
+      "summary": "Existing cell embedding methods predominantly rely on transcriptomic or proteomic measurements and represent each cell as a holistic entity, thereby overlooking the subcellular localization of individual molecules. Moreover, they rarely incorporate protein structural information,",
+      "summaryZh": "Existing cell embedding methods predominantly rely on transcriptomic or proteomic measurements and represent each cell as a holistic entity, thereby overlooking the subcellular localization of individual molecules. Moreover, they rarely incorporate protein structural information,",
+      "source": "arXiv · Bio",
+      "sourceUrl": "https://arxiv.org/abs/2609.02344v1",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
@@ -110,14 +711,22 @@
       "titleZh": "Repairing PBE-Spurious Metallicity for HSE06-Level Screening of 2D Photocatalysts for Green Hydrogen Production",
       "summary": "Semilocal PBE calculations can remove viable photocatalysts before screening by labeling narrow-gap semiconductors as metals. We address this failure mode in the Computational 2D Materials Database (C2DB) by combining leakage-aware repair of PBE-spurious metallicity with HSE06--P",
       "summaryZh": "Semilocal PBE calculations can remove viable photocatalysts before screening by labeling narrow-gap semiconductors as metals. We address this failure mode in the Computational 2D Materials Database (C2DB) by combining leakage-aware repair of PBE-spurious metallicity with HSE06--P",
-      "source": "arXiv multi-field",
+      "source": "arXiv · Materials & Chemistry",
       "sourceUrl": "https://arxiv.org/abs/2609.02883v1",
       "tag": "Research",
       "domain": "Materials & Chemistry",
       "scores": {
-        "impact": 60,
+        "impact": 66,
         "buzz": 77,
         "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
@@ -127,31 +736,275 @@
       "titleZh": "Graph Machine: Towards Better Pretraining via Edges",
       "summary": "We introduce the Graph Machine (GM), an architecture that maintains an $O(n)$-sized state and accesses it through sparse, dynamic routing. Unlike methods with fixed-size states or sparse but static routing, GM preserves $O(n)$ complexity in its sparse layers without restricting t",
       "summaryZh": "We introduce the Graph Machine (GM), an architecture that maintains an $O(n)$-sized state and accesses it through sparse, dynamic routing. Unlike methods with fixed-size states or sparse but static routing, GM preserves $O(n)$ complexity in its sparse layers without restricting t",
-      "source": "arXiv multi-field",
+      "source": "arXiv · AI & CS",
       "sourceUrl": "https://arxiv.org/abs/2609.02881v1",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "3cc4f6f74692",
+      "date": "2026-09-02",
+      "title": "Low-Temperature Transport in Li-Ion Battery EC/EMC/FEC Electrolytes: Molecular Dynamics and Machine-Learning Modeling",
+      "titleZh": "Low-Temperature Transport in Li-Ion Battery EC/EMC/FEC Electrolytes: Molecular Dynamics and Machine-Learning Modeling",
+      "summary": "Low-temperature operation imposes severe limitations on lithium-ion transport in battery electrolytes, yet the coupled effects of solvent composition and fluorinated additives in the cold-temperature regime remain insufficiently resolved. Here, we combine classical molecular dyna",
+      "summaryZh": "Low-temperature operation imposes severe limitations on lithium-ion transport in battery electrolytes, yet the coupled effects of solvent composition and fluorinated additives in the cold-temperature regime remain insufficiently resolved. Here, we combine classical molecular dyna",
+      "source": "arXiv · Materials & Chemistry",
+      "sourceUrl": "https://arxiv.org/abs/2609.02824v1",
+      "tag": "Research",
+      "domain": "Materials & Chemistry",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "5dc3a828b1f8",
+      "date": "2026-09-02",
+      "title": "Estimation risk in conditional expectiles",
+      "titleZh": "Estimation risk in conditional expectiles",
+      "summary": "We establish the consistency and asymptotic normality of a two-step estimator of conditional expectiles in the context of conditional scale models. We first estimate the conditional variance parameters by quasi-maximum likelihood and then compute the unconditional expectile of th",
+      "summaryZh": "We establish the consistency and asymptotic normality of a two-step estimator of conditional expectiles in the context of conditional scale models. We first estimate the conditional variance parameters by quasi-maximum likelihood and then compute the unconditional expectile of th",
+      "source": "arXiv · Social Science",
+      "sourceUrl": "https://arxiv.org/abs/2609.02673v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 66,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "hf-2609.00474",
+      "date": "2026-09-01",
+      "title": "Exploring Collaboration between a language and a non-language agent",
+      "titleZh": "Exploring Collaboration between a language and a non-language agent",
+      "summary": "LLMs are increasingly deployed as orchestrators that coordinate specialized subagents to solve complex tasks through natural language. However, in many important domains like game playing and robotics, the strongest available agents are not language models. Integrating non-langua",
+      "summaryZh": "LLMs are increasingly deployed as orchestrators that coordinate specialized subagents to solve complex tasks through natural language. However, in many important domains like game playing and robotics, the strongest available agents are not language models. Integrating non-langua",
+      "source": "Hugging Face Papers",
+      "sourceUrl": "https://huggingface.co/papers/2609.00474",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 62,
+        "buzz": 54,
+        "utility": 86
+      },
+      "signals": {
+        "huggingFaceUpvotes": 5
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
+          "buzz": "Hugging Face Papers shows 5 upvotes at sync time; this is one platform signal, not total popularity.",
+          "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
+        }
+      }
+    },
+    {
+      "id": "05b725043b10",
+      "date": "2026-09-01",
+      "title": "Score-Based Generative Data Assimilation for Integrating Aggregated Surveillance Data into Agent-Based Models in Epidemic Tracking",
+      "titleZh": "Score-Based Generative Data Assimilation for Integrating Aggregated Surveillance Data into Agent-Based Models in Epidemic Tracking",
+      "summary": "Reliable epidemic monitoring often requires inferring regional infection burden and transmission heterogeneity from noisy, spatially aggregated, and potentially sparse surveillance data. Agent-based models (ABMs) are attractive for this task because they represent individual beha",
+      "summaryZh": "Reliable epidemic monitoring often requires inferring regional infection burden and transmission heterogeneity from noisy, spatially aggregated, and potentially sparse surveillance data. Agent-based models (ABMs) are attractive for this task because they represent individual beha",
+      "source": "arXiv · Bio",
+      "sourceUrl": "https://arxiv.org/abs/2609.01434v1",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 66,
+        "buzz": 75,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "1be0cc460f56",
+      "date": "2026-09-01",
+      "title": "A mechanistic modeling framework to interpret ACTH stimulation tests across HPA axis adaptation states and glucocorticoid feedback dynamics",
+      "titleZh": "A mechanistic modeling framework to interpret ACTH stimulation tests across HPA axis adaptation states and glucocorticoid feedback dynamics",
+      "summary": "The hypothalamic pituitary adrenal (HPA) axis is a key regulatory system coordinating endocrine responses to physiological and psychological stress. While the ACTH stimulation test remains a cornerstone of adrenal function assessment, its interpretation is complicated by the dyna",
+      "summaryZh": "The hypothalamic pituitary adrenal (HPA) axis is a key regulatory system coordinating endocrine responses to physiological and psychological stress. While the ACTH stimulation test remains a cornerstone of adrenal function assessment, its interpretation is complicated by the dyna",
+      "source": "arXiv · Bio",
+      "sourceUrl": "https://arxiv.org/abs/2609.01684v1",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 66,
+        "buzz": 75,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "93ddad40e2aa",
+      "date": "2026-09-01",
+      "title": "On the interpretation of the kinetics of ligand-receptor binding",
+      "titleZh": "On the interpretation of the kinetics of ligand-receptor binding",
+      "summary": "When the rates of ligand binding are measured by methods such as surface plasmon resonance, it is common practice to use the observed rate constants for the onset and offset of binding to estimate an equilibrium constant for ligand binding. If this agrees with the equilibrium con",
+      "summaryZh": "When the rates of ligand binding are measured by methods such as surface plasmon resonance, it is common practice to use the observed rate constants for the onset and offset of binding to estimate an equilibrium constant for ligand binding. If this agrees with the equilibrium con",
+      "source": "arXiv · Bio",
+      "sourceUrl": "https://arxiv.org/abs/2609.01228v2",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 66,
+        "buzz": 75,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "74eaf6be41db",
+      "date": "2026-09-02",
+      "title": "Sequential Pricing Mechanisms for Surplus Division",
+      "titleZh": "Sequential Pricing Mechanisms for Surplus Division",
+      "summary": "Extending the Price-and-Choose (P&C) mechanism of Echenique and Nunez (2025), we propose the Price-Accept-and-Choose (PA&C) mechanism, which preserves efficiency while eliminating P&C's first-mover advantage. We then analyze randomized and bidding variants and show that the resul",
+      "summaryZh": "Extending the Price-and-Choose (P&C) mechanism of Echenique and Nunez (2025), we propose the Price-Accept-and-Choose (PA&C) mechanism, which preserves efficiency while eliminating P&C's first-mover advantage. We then analyze randomized and bidding variants and show that the resul",
+      "source": "arXiv · Social Science",
+      "sourceUrl": "https://arxiv.org/abs/2609.02773v1",
+      "tag": "Research",
+      "domain": "Social Science",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "383dbcd782ab",
+      "date": "2026-09-02",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "titleZh": "Proactive cyber defense for governments and enterprises",
+      "summary": "",
+      "summaryZh": "",
+      "source": "Google DeepMind",
+      "sourceUrl": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
       "tag": "Research",
       "domain": "AI & CS",
       "scores": {
         "impact": 60,
         "buzz": 77,
         "utility": 58
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
-      "id": "58c2712d309c",
+      "id": "28caee3ca4b9",
       "date": "2026-09-02",
-      "title": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
-      "titleZh": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
-      "summary": "Ordinary differential equations (ODEs) underlie models in science and engineering, and many applications need derivatives of their solutions with respect to parameters. Ensembles of independent trajectories suit graphics processing units (GPUs), but current GPU software forces a ",
-      "summaryZh": "Ordinary differential equations (ODEs) underlie models in science and engineering, and many applications need derivatives of their solutions with respect to parameters. Ensembles of independent trajectories suit graphics processing units (GPUs), but current GPU software forces a ",
-      "source": "arXiv multi-field",
-      "sourceUrl": "https://arxiv.org/abs/2609.02876v1",
+      "title": "A quantum oracle separation between QMA(2) and QMA",
+      "titleZh": "A quantum oracle separation between QMA(2) and QMA",
+      "summary": "We find a quantum oracle relative to which $\\mathsf{QMA} \\neq \\mathsf{QMA}(2)$. As a consequence, we resolve the no-disentanglers conjecture of Watrous: for every $ε+δ<1$, any $(ε,δ)$-disentangler requires input size exponential in the number of output qubits. Our proof combines ",
+      "summaryZh": "We find a quantum oracle relative to which $\\mathsf{QMA} \\neq \\mathsf{QMA}(2)$. As a consequence, we resolve the no-disentanglers conjecture of Watrous: for every $ε+δ<1$, any $(ε,δ)$-disentangler requires input size exponential in the number of output qubits. Our proof combines ",
+      "source": "arXiv · Physics",
+      "sourceUrl": "https://arxiv.org/abs/2609.02865v1",
       "tag": "Research",
-      "domain": "Math & Stats",
+      "domain": "Physics",
       "scores": {
         "impact": 60,
         "buzz": 77,
-        "utility": 90
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "487277ff019b",
+      "date": "2026-09-02",
+      "title": "Learning Spectral-Like Mesh-Free Discretisations",
+      "titleZh": "Learning Spectral-Like Mesh-Free Discretisations",
+      "summary": "Meshfree methods such as smoothed particle hydrodynamics (SPH) with kernel corrections, radial basis function-generated finite differences (RBF-FD), and the local anisotropic basis function method (LABFM) construct discrete differential operators by imposing polynomial consistenc",
+      "summaryZh": "Meshfree methods such as smoothed particle hydrodynamics (SPH) with kernel corrections, radial basis function-generated finite differences (RBF-FD), and the local anisotropic basis function method (LABFM) construct discrete differential operators by imposing polynomial consistenc",
+      "source": "arXiv · Physics",
+      "sourceUrl": "https://arxiv.org/abs/2609.02833v1",
+      "tag": "Research",
+      "domain": "Physics",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
@@ -161,7 +1014,7 @@
       "titleZh": "Gaussian-Restricted Barycenters for KL-Unbalanced Optimal Transport: Variational Theory and Fixed-Point Convergence",
       "summary": "We study Gaussian-restricted barycenters for quadratic two-sided Kullback--Leibler unbalanced optimal transport with independent marginal penalties and no coupling entropy. Exact profiling of the barycenter mass reduces the problem to a smooth Gaussian shape functional with endog",
       "summaryZh": "We study Gaussian-restricted barycenters for quadratic two-sided Kullback--Leibler unbalanced optimal transport with independent marginal penalties and no coupling entropy. Exact profiling of the barycenter mass reduces the problem to a smooth Gaussian shape functional with endog",
-      "source": "arXiv multi-field",
+      "source": "arXiv · Math & Stats",
       "sourceUrl": "https://arxiv.org/abs/2609.02870v1",
       "tag": "Research",
       "domain": "Math & Stats",
@@ -169,40 +1022,14 @@
         "impact": 60,
         "buzz": 77,
         "utility": 58
-      }
-    },
-    {
-      "id": "15716a4262d8",
-      "date": "2026-09-02",
-      "title": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
-      "titleZh": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
-      "summary": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision f",
-      "summaryZh": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision f",
-      "source": "arXiv multi-field",
-      "sourceUrl": "https://arxiv.org/abs/2609.02861v1",
-      "tag": "Research",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 69,
-        "buzz": 77,
-        "utility": 82
-      }
-    },
-    {
-      "id": "d1f26b5f8897",
-      "date": "2026-09-02",
-      "title": "User Feedback Provides a Unique Signal that LLMs Can not Detect",
-      "titleZh": "User Feedback Provides a Unique Signal that LLMs Can not Detect",
-      "summary": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrati",
-      "summaryZh": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrati",
-      "source": "arXiv multi-field",
-      "sourceUrl": "https://arxiv.org/abs/2609.02859v1",
-      "tag": "Research",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 69,
-        "buzz": 77,
-        "utility": 82
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
@@ -212,7 +1039,7 @@
       "titleZh": "Improved Gradient Descent Lower Bounds Beyond Nesterov",
       "summary": "We study how far gradient descent (GD) can be accelerated by predetermined stepsizes in smooth convex optimization. Going beyond the classical $Ω(n^{-2})$ first-order oracle lower bound of Nemirovsky and Yudin, we prove an $Ω(n^{-1.6342})$ non-anytime lower bound and an $Ω(n^{-1.",
       "summaryZh": "We study how far gradient descent (GD) can be accelerated by predetermined stepsizes in smooth convex optimization. Going beyond the classical $Ω(n^{-2})$ first-order oracle lower bound of Nemirovsky and Yudin, we prove an $Ω(n^{-1.6342})$ non-anytime lower bound and an $Ω(n^{-1.",
-      "source": "arXiv multi-field",
+      "source": "arXiv · Math & Stats",
       "sourceUrl": "https://arxiv.org/abs/2609.02855v1",
       "tag": "Research",
       "domain": "Math & Stats",
@@ -220,91 +1047,173 @@
         "impact": 60,
         "buzz": 77,
         "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
-      "id": "7e36294ac8fd",
+      "id": "7be92a5c5607",
       "date": "2026-09-02",
-      "title": "The Implications of Linguistic Illegibility for LLM Security",
-      "titleZh": "The Implications of Linguistic Illegibility for LLM Security",
-      "summary": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the te",
-      "summaryZh": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the te",
-      "source": "arXiv multi-field",
-      "sourceUrl": "https://arxiv.org/abs/2609.02852v1",
+      "title": "First Principle Analysis of the Magnetism and Electronic Structure of Fe2XSi (X=Ti, V)",
+      "titleZh": "First Principle Analysis of the Magnetism and Electronic Structure of Fe2XSi (X=Ti, V)",
+      "summary": "The electronic, magnetic, and mechanical properties of Fe2XSi, where X is titanium (Ti) and vanadium (V), are investigated using computational methods. Volume optimization reveals that the ground state of Fe2TiSi is a nonmagnetic narrow-band gap semiconductor, and that of Fe2VSi ",
+      "summaryZh": "The electronic, magnetic, and mechanical properties of Fe2XSi, where X is titanium (Ti) and vanadium (V), are investigated using computational methods. Volume optimization reveals that the ground state of Fe2TiSi is a nonmagnetic narrow-band gap semiconductor, and that of Fe2VSi ",
+      "source": "arXiv · Materials & Chemistry",
+      "sourceUrl": "https://arxiv.org/abs/2609.02800v1",
+      "tag": "Research",
+      "domain": "Materials & Chemistry",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "d029ea77f383",
+      "date": "2026-09-02",
+      "title": "Off-policy causal estimation in networks",
+      "titleZh": "Off-policy causal estimation in networks",
+      "summary": "In the presence of interference, where the treatment assigned to one unit can affect the outcomes of others, many causal estimands depend on the treatment-assignment policy under which the experiment is conducted. This policy dependence creates a fundamental challenge for off-pol",
+      "summaryZh": "In the presence of interference, where the treatment assigned to one unit can affect the outcomes of others, many causal estimands depend on the treatment-assignment policy under which the experiment is conducted. This policy dependence creates a fundamental challenge for off-pol",
+      "source": "arXiv · Social Science",
+      "sourceUrl": "https://arxiv.org/abs/2609.02756v1",
+      "tag": "Research",
+      "domain": "Math & Stats",
+      "scores": {
+        "impact": 60,
+        "buzz": 77,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "b2cc29a69555",
+      "date": "2026-09-02",
+      "title": "Differentiable Electricity-Market Clearing for Gradient-Based Planning",
+      "titleZh": "Differentiable Electricity-Market Clearing for Gradient-Based Planning",
+      "summary": "Planning a large data center is difficult because a facility big enough to matter changes the electricity prices it will pay. Those prices are set by market clearing, a constrained optimization problem solved anew in every operating condition. However, simulating the market tells",
+      "summaryZh": "Planning a large data center is difficult because a facility big enough to matter changes the electricity prices it will pay. Those prices are set by market clearing, a constrained optimization problem solved anew in every operating condition. However, simulating the market tells",
+      "source": "arXiv · Social Science",
+      "sourceUrl": "https://arxiv.org/abs/2609.02646v1",
       "tag": "Research",
       "domain": "AI & CS",
       "scores": {
-        "impact": 69,
+        "impact": 60,
         "buzz": 77,
         "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
       }
     },
     {
-      "id": "3b5f2688fec1",
-      "date": "2026-09-01",
-      "title": "How AI-native companies turn workflows into operating capability",
-      "titleZh": "How AI-native companies turn workflows into operating capability",
-      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
-      "summaryZh": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/ai-native-company-workflows",
-      "tag": "Release",
+      "id": "hf-2608.30751",
+      "date": "2026-08-31",
+      "title": "Autoregressive Mosaics: Probing 2D Spatial Reasoning in Text-Only Language Models",
+      "titleZh": "Autoregressive Mosaics: Probing 2D Spatial Reasoning in Text-Only Language Models",
+      "summary": "Large language models (LLMs) trained only on text and code can sometimes generate programs that draw recognizable images. However, it is unclear whether this reflects an internal representation of 2D spatial layout or simply the ability to translate spatial descriptions into code",
+      "summaryZh": "Large language models (LLMs) trained only on text and code can sometimes generate programs that draw recognizable images. However, it is unclear whether this reflects an internal representation of 2D spatial layout or simply the ability to translate spatial descriptions into code",
+      "source": "Hugging Face Papers",
+      "sourceUrl": "https://huggingface.co/papers/2608.30751",
+      "tag": "Research",
       "domain": "AI & CS",
       "scores": {
-        "impact": 78,
-        "buzz": 89,
-        "utility": 58
+        "impact": 61,
+        "buzz": 52,
+        "utility": 86
+      },
+      "signals": {
+        "huggingFaceUpvotes": 3
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
+          "buzz": "Hugging Face Papers shows 3 upvotes at sync time; this is one platform signal, not total popularity.",
+          "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
+        }
       }
     },
     {
-      "id": "309be27bdcfe",
-      "date": "2026-09-01",
-      "title": "Path to Astra: critical capabilities and frontier safeguards",
-      "titleZh": "Path to Astra: critical capabilities and frontier safeguards",
-      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
-      "summaryZh": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/path-to-astra",
-      "tag": "Release",
+      "id": "hf-2609.00377",
+      "date": "2026-08-30",
+      "title": "FoldingAgent: Inferring Parametric Origami Procedures from Demonstration Videos",
+      "titleZh": "FoldingAgent: Inferring Parametric Origami Procedures from Demonstration Videos",
+      "summary": "We present FoldingAgent, an agentic framework for inferring explicit parametric folding programs directly from origami demonstration videos. Our framework leverages the reasoning power of a pre-trained Vision-Language Model (VLM) equipped with a suite of specialized tools that en",
+      "summaryZh": "We present FoldingAgent, an agentic framework for inferring explicit parametric folding programs directly from origami demonstration videos. Our framework leverages the reasoning power of a pre-trained Vision-Language Model (VLM) equipped with a suite of specialized tools that en",
+      "source": "Hugging Face Papers",
+      "sourceUrl": "https://huggingface.co/papers/2609.00377",
+      "tag": "Research",
       "domain": "AI & CS",
       "scores": {
-        "impact": 87,
-        "buzz": 89,
-        "utility": 82
+        "impact": 61,
+        "buzz": 52,
+        "utility": 86
+      },
+      "signals": {
+        "huggingFaceUpvotes": 3
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
+          "buzz": "Hugging Face Papers shows 3 upvotes at sync time; this is one platform signal, not total popularity.",
+          "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
+        }
       }
     },
     {
-      "id": "50e05f9b472e",
-      "date": "2026-09-01",
-      "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
-      "titleZh": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
-      "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
-      "summaryZh": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
-      "tag": "Release",
+      "id": "hf-2608.30322",
+      "date": "2026-08-30",
+      "title": "Ignorance or Incompetence? Constructing Knowledge-Gated, Verifiable Tasks for LLM Agents",
+      "titleZh": "Ignorance or Incompetence? Constructing Knowledge-Gated, Verifiable Tasks for LLM Agents",
+      "summary": "Professional agent tasks often depend on conventions that are absent from public corpora, yet benchmarks rarely control whether an agent has access to those conventions. We introduce a knowledge-gated task-construction protocol that separates a task instruction from a compact art",
+      "summaryZh": "Professional agent tasks often depend on conventions that are absent from public corpora, yet benchmarks rarely control whether an agent has access to those conventions. We introduce a knowledge-gated task-construction protocol that separates a task instruction from a compact art",
+      "source": "Hugging Face Papers",
+      "sourceUrl": "https://huggingface.co/papers/2608.30322",
+      "tag": "Research",
       "domain": "AI & CS",
       "scores": {
-        "impact": 78,
-        "buzz": 89,
-        "utility": 58
-      }
-    },
-    {
-      "id": "631a857c7a24",
-      "date": "2026-09-01",
-      "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
-      "titleZh": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
-      "summary": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
-      "summaryZh": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/gilbert-tobin",
-      "tag": "Release",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 78,
-        "buzz": 89,
-        "utility": 90
+        "impact": 61,
+        "buzz": 51,
+        "utility": 86
+      },
+      "signals": {
+        "huggingFaceUpvotes": 2
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
+          "buzz": "Hugging Face Papers shows 2 upvotes at sync time; this is one platform signal, not total popularity.",
+          "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
+        }
       }
     }
   ]
