@@ -21,6 +21,7 @@ export const skillLibrary: SkillEntry[] = [
     trigger: "Build a PaperTrace deep-dive for [paper URL]",
     stage: "Understand → explain → visualize → verify",
     color: "blue",
+    status: "Installed · .agents/skills/papertrace-deep-dive",
   },
   {
     id: "daily-digest",
@@ -31,6 +32,7 @@ export const skillLibrary: SkillEntry[] = [
     trigger: "Create today's research digest for [domain]",
     stage: "Collect → rank → summarize → source-check",
     color: "emerald",
+    status: "Installed · .agents/skills/research-signal-curator",
   },
   {
     id: "weekly-narrative",
@@ -41,6 +43,7 @@ export const skillLibrary: SkillEntry[] = [
     trigger: "Synthesize this week's [domain] research",
     stage: "Collect → cluster → theme → publish",
     color: "violet",
+    status: "Installed · .agents/skills/weekly-research-narrative",
   },
   {
     id: "ai-research",

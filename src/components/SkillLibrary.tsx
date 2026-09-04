@@ -27,7 +27,7 @@ export function SkillLibrary() {
           <h2 className="text-xl font-bold mt-6 dark:text-white">{lang === "en" ? skill.name : skill.nameZh}</h2>
           <p className="text-sm leading-relaxed text-paper-800/55 dark:text-slate-400 mt-3">{lang === "en" ? skill.description : skill.descriptionZh}</p>
           <div className="skill-stage mt-5">{skill.stage}</div>
-          {skill.origin && <p className="mt-3 text-[10px] font-mono text-paper-800/40 dark:text-slate-500">{skill.origin} · {skill.status}</p>}
+          {(skill.origin || skill.status) && <p className="mt-3 text-[10px] font-mono text-paper-800/40 dark:text-slate-500">{[skill.origin, skill.status].filter(Boolean).join(" · ")}</p>}
           <button onClick={() => copy(skill.id, skill.trigger)} className="copy-prompt mt-5">
             <span className="truncate">{skill.trigger}</span>
             <b>{copied === skill.id ? t("Copied", "已复制") : t("Copy", "复制")}</b>

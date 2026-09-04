@@ -79,6 +79,7 @@ Status: in progress
 - [x] Preserve failed-source headlines as visibly stale last-known-good snapshots instead of silently dropping them
 - [x] Archive stale April 2025 “urgent” jobs and require public source, verification, and expiry fields for role submissions
 - [x] Split role and collaboration requests into task-specific, privacy-aware community forms
+- [x] Turn the three PaperTrace workflow cards into real project-local Skills with root-level task routing
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring
