@@ -64,6 +64,8 @@ Status: in progress
 - [x] Add a four-layer Source Network including LINUX DO, with use cases and explicit evidence boundaries
 - [x] Add public community adapters for LINUX DO and Hacker News with platform-local engagement snapshots
 - [x] Promote GPT-6 Astra from community discovery to an official-source homepage headline and lifecycle record
+- [x] Reorganize homepage entry points into Watch and Build task groups
+- [x] Activate live filtered signal desks for every non-CS research domain while keeping editorial ownership distributed
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

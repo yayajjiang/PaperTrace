@@ -294,31 +294,55 @@ export default function Home() {
             )}
           </p>
           <div className="flex flex-wrap gap-3 mt-8 animate-fadeInUp delay-2">
-            <a href={`${basePath}/daily`} className="button-primary button-large">{t("Explore today's signals", "查看今日动态")} →</a>
+            <a href={`${basePath}/radar`} className="button-primary button-large">{t("Explore today's signals", "查看今日动态")} →</a>
             <a href={`${basePath}/community`} className="button-secondary button-large">{t("Join the community", "加入社区")}</a>
           </div>
         </div>
         <div className="hero-grid" aria-hidden="true" />
       </section>
 
-      {/* Quick nav */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 pb-12">
+      {/* Task-oriented control center */}
+      <div className="grid lg:grid-cols-2 gap-6 pb-12">
         {[
-          { href: `${basePath}/domains`, icon: "01", label: t("Research domains", "研究领域"), desc: t("CS today, every field next", "从 CS 走向更多领域") },
-          { href: `${basePath}/tools`, icon: "02", label: t("Tools & MCP", "工具 & MCP"), desc: t("Agents, skills and demos", "Agent、Skills 与 Demo") },
-          { href: `${basePath}/events`, icon: "03", label: t("Events", "活动雷达"), desc: t("Deadlines before recaps", "在截止前收到提醒") },
-          { href: `${basePath}/community`, icon: "04", label: t("Community", "共建社区"), desc: t("Research, roles and people", "科研、实习与人脉互助") },
-        ].map((item) => (
-          <a key={item.href} href={item.href}
-            className="quick-route group"
-          >
-            <span className="route-index">{item.icon}</span>
-            <div>
-              <div className="font-bold text-sm dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">{item.label}</div>
-              <div className="text-xs text-paper-800/50 dark:text-slate-500">{item.desc}</div>
+          {
+            label: t("Watch", "关注"),
+            description: t("Spend attention before the opportunity or deadline passes.", "在机会或截止日期过去前投入注意力。"),
+            routes: [
+              { href: basePath + "/radar", label: t("Research radar", "研究雷达"), desc: t("Papers and live signals", "论文与实时动态") },
+              { href: basePath + "/events", label: t("Event radar", "活动雷达"), desc: t("Deadlines before recaps", "在截止前收到提醒") },
+              { href: basePath + "/models", label: t("Model lifecycle", "模型生命周期"), desc: t("Launches and migrations", "发布、下线与迁移") },
+              { href: basePath + "/frontier", label: t("Frontier watch", "前沿观察"), desc: t("Labs, teams and new bets", "实验室、团队与新方向") },
+            ],
+          },
+          {
+            label: t("Build", "建设"),
+            description: t("Turn a useful signal into an experiment, artifact or collaboration.", "把有价值的信号变成实验、作品或合作。"),
+            routes: [
+              { href: basePath + "/tools", label: t("Tools & MCP", "工具 & MCP"), desc: t("Agents, data and demos", "Agent、数据与 Demo") },
+              { href: basePath + "/skills", label: "Skills", desc: t("Reusable operating knowledge", "可复用的操作知识") },
+              { href: basePath + "/domains", label: t("Research domains", "研究领域"), desc: t("CS today, every field next", "从 CS 走向更多领域") },
+              { href: basePath + "/community", label: t("Community", "共建社区"), desc: t("Research, roles and people", "科研、实习与人脉互助") },
+            ],
+          },
+        ].map((group, groupIndex) => (
+          <section key={group.label} className="route-group">
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <div><div className="eyebrow">{group.label}</div><p className="mt-2 text-xs text-paper-800/45 dark:text-slate-500">{group.description}</p></div>
+              <span className="route-group-index">0{groupIndex + 1}</span>
             </div>
-            <span className="ml-auto text-paper-800/20 group-hover:text-blue-500">→</span>
-          </a>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {group.routes.map((item, index) => (
+                <a key={item.href} href={item.href} className="quick-route group">
+                  <span className="route-index">{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <div className="font-bold text-sm dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">{item.label}</div>
+                    <div className="text-xs text-paper-800/50 dark:text-slate-500">{item.desc}</div>
+                  </div>
+                  <span className="ml-auto text-paper-800/20 group-hover:text-blue-500">→</span>
+                </a>
+              ))}
+            </div>
+          </section>
         ))}
       </div>
 

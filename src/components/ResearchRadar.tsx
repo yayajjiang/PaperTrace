@@ -22,6 +22,8 @@ export function ResearchRadar() {
   const basePath = process.env.NODE_ENV === "production" ? "/PaperTrace" : "";
 
   useEffect(() => {
+    const requestedDomain = new URLSearchParams(window.location.search).get("domain");
+    if (requestedDomain) setDomain(requestedDomain);
     fetch(`${basePath}/data/headlines.json`)
       .then((response) => (response.ok ? response.json() : Promise.reject()))
       .then((data: { generatedAt?: string; items?: Headline[]; sources?: SourceHealth[] }) => {

@@ -334,6 +334,8 @@ html {
 .route-index {
   @apply font-mono text-[10px] font-bold text-blue-600 dark:text-blue-400 w-7 h-7 rounded-full bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center flex-none;
 }
+.route-group { @apply rounded-2xl border border-paper-200 bg-paper-50/60 p-4 dark:border-slate-800 dark:bg-slate-900/40; }
+.route-group-index { @apply font-mono text-xs font-bold text-paper-800/20 dark:text-slate-700; }
 
 .signal-panel {
   @apply rounded-2xl p-6 md:p-8 border border-paper-200 dark:border-slate-700;

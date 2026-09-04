@@ -21,11 +21,11 @@ export default function DomainsPage() {
 
       <div className="domain-grid mt-12">
         {domains.map((domain, index) => (
-          <article key={domain.id} className={`domain-card ${domain.status === "active" ? "domain-card-active" : ""}`} style={{ "--domain-color": domain.color } as React.CSSProperties}>
+          <article key={domain.id} className={`domain-card ${domain.status !== "forming" ? "domain-card-active" : ""}`} style={{ "--domain-color": domain.color } as React.CSSProperties}>
             <div className="flex items-start justify-between gap-4">
               <span className="domain-index">0{index + 1}</span>
-              <span className={`topic-chip ${domain.status === "active" ? "bg-emerald-100 text-emerald-700" : "bg-paper-100 text-paper-800/50"}`}>
-                {domain.status === "active" ? t("ACTIVE", "已开放") : t("FORMING", "筹备中")}
+              <span className={`topic-chip ${domain.status !== "forming" ? "bg-emerald-100 text-emerald-700" : "bg-paper-100 text-paper-800/50"}`}>
+                {domain.status === "active" ? t("FULL COLLECTION", "完整内容库") : domain.status === "live" ? t("LIVE SIGNALS", "实时信号") : t("FORMING", "筹备中")}
               </span>
             </div>
             <h2 className="text-xl font-bold mt-6 dark:text-white">{lang === "en" ? domain.name : domain.nameZh}</h2>
@@ -40,13 +40,8 @@ export default function DomainsPage() {
               {domain.sources.map((source) => <span key={source} className="subtle-chip">{source}</span>)}
             </div>
             <div className="mt-7">
-              {domain.status === "active" ? (
-                <Link href="/" className="text-sm font-bold text-blue-600 dark:text-blue-400">{t("Explore collection", "浏览内容")} →</Link>
-              ) : (
-                <a href={`https://github.com/yayajjiang/PaperTrace/issues/new?title=${encodeURIComponent(`[Domain editor] ${domain.name}`)}`} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-paper-800/60 dark:text-slate-300 hover:text-blue-600">
-                  {t("Become a founding editor", "成为领域共建人")} →
-                </a>
-              )}
+              <Link href={domain.status === "active" ? "/" : "/radar?domain=" + encodeURIComponent(domain.radarDomain)} className="text-sm font-bold text-blue-600 dark:text-blue-400">{domain.status === "active" ? t("Explore collection", "浏览内容") : t("Open live desk", "打开实时工作台")} →</Link>
+              {domain.status !== "active" && <a href={`https://github.com/yayajjiang/PaperTrace/issues/new?title=${encodeURIComponent(`[Domain editor] ${domain.name}`)}`} target="_blank" rel="noopener noreferrer" className="block mt-3 text-xs font-bold text-paper-800/45 dark:text-slate-400 hover:text-blue-600">{t("Become a founding editor", "成为领域共建人")} →</a>}
             </div>
           </article>
         ))}
