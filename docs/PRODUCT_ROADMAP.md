@@ -77,6 +77,8 @@ Status: in progress
 - [x] Discover recent model uploads from seven selected Hugging Face organizations while labeling registry signals separately from launches
 - [x] Generate a bilingual RSS feed from ranked signals for no-login subscriptions
 - [x] Preserve failed-source headlines as visibly stale last-known-good snapshots instead of silently dropping them
+- [x] Archive stale April 2025 “urgent” jobs and require public source, verification, and expiry fields for role submissions
+- [x] Split role and collaboration requests into task-specific, privacy-aware community forms
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

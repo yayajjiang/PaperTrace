@@ -7,9 +7,10 @@ PaperTrace 是一个双语科研公共空间，目标是把巨大信息流提炼
 ## Four contribution paths / 四种参与方式
 
 1. **Frontier signal / 前沿线索** — model releases and retirements, new labs, papers, benchmarks, emerging directions, public X/Xiaohongshu discussion, MCP servers, Skills, tools, and demos.
-2. **Research help / 科研互助** — questions, reproduction, collaborators, internships, roles, people search, methods, datasets, and code review.
-3. **Domain editor / 领域维护者** — own one small desk such as World Models, Genomics, Quantum, Causal Inference, Batteries, or Organizational Science.
-4. **Product and code / 产品与代码** — improve ingestion, scoring, bilingual content, accessibility, design, tests, or documentation.
+2. **Research help / 科研互助** — questions, reproduction, methods, datasets, and code review.
+3. **Roles and collaboration / 岗位与合作** — public opportunities with an expiry boundary, or scoped collaboration requests with a concrete acceptance check.
+4. **Domain editor / 领域维护者** — own one small desk such as World Models, Genomics, Quantum, Causal Inference, Batteries, or Organizational Science.
+5. **Product and code / 产品与代码** — improve ingestion, scoring, bilingual content, accessibility, design, tests, or documentation.
 
 Use the matching GitHub issue template. WeChat can help with fast conversation; important conclusions, public resources, and resolved answers should be summarized back into an issue or pull request so they remain searchable.
 
@@ -40,4 +41,3 @@ npm run build
 ```
 
 Keep unrelated changes separate. For editorial data, include the canonical URL and the date checked. For a new interactive paper page, preserve the existing bilingual `t(en, zh)` pattern and static-export compatibility.
-

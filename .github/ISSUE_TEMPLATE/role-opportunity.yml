@@ -1,0 +1,92 @@
+name: Research role or internship / 科研岗位或实习
+description: Share a currently open, publicly verifiable research role, internship, visiting position, fellowship, or volunteer opportunity.
+title: "[Role] "
+labels: ["community", "role", "needs-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share public opportunities only. Do not post a private phone number, personal WeChat ID, referral promise, or email address without explicit consent. Closed or unverifiable posts will be archived.
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization or lab / 机构或实验室
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: Role title / 岗位名称
+    validations:
+      required: true
+
+  - type: dropdown
+    id: opportunity_type
+    attributes:
+      label: Opportunity type / 机会类型
+      options:
+        - Internship / 实习
+        - Full-time / 全职
+        - Visiting researcher or student / 访问学者或学生
+        - PhD or postdoc / 博士或博士后
+        - Fellowship or grant / 奖学金或资助
+        - Volunteer or open-source role / 志愿者或开源岗位
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain / 领域
+      options:
+        - AI & Computer Science
+        - Biology & Medicine
+        - Physics
+        - Mathematics & Statistics
+        - Materials & Chemistry
+        - Social Science
+        - Multidisciplinary
+    validations:
+      required: true
+
+  - type: input
+    id: official_url
+    attributes:
+      label: Official public listing / 官方公开岗位链接
+      placeholder: https://…
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location, remote policy, and timezone / 地点、远程政策与时区
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Application deadline or “rolling” / 截止日期或“招满即止”
+      placeholder: 2026-10-15, UTC+8
+    validations:
+      required: true
+
+  - type: textarea
+    id: fit
+    attributes:
+      label: Work, eligibility, and who should apply / 工作内容、资格与适合人群
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification / 核验
+      options:
+        - label: I opened the official listing today and removed private contact or referral information. / 我今天已打开官方岗位页，并移除私人联系方式或内推信息。
+          required: true
+        - label: I understand this public issue may be archived after the deadline or after 30 days without re-verification. / 我理解该公开 Issue 会在截止后或 30 天未复核后归档。
+          required: true

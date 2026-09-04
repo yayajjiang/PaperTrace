@@ -1,0 +1,78 @@
+name: Collaboration request / 寻找科研合作者
+description: Find a reproduction partner, domain reviewer, co-builder, mentor, or study-group member around a concrete research task.
+title: "[Collaboration] "
+labels: ["community", "collaboration", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Define the work before naming people. Share only public-safe context; never publish confidential results, credentials, private contact details, or an introduction request involving someone who has not consented.
+
+  - type: dropdown
+    id: collaboration_type
+    attributes:
+      label: Collaboration type / 合作类型
+      options:
+        - Reproduction or experiment / 复现或实验
+        - Paper feedback or review / 论文反馈或审阅
+        - Dataset, benchmark, or code / 数据集、评测或代码
+        - Cross-domain expertise / 跨领域专业支持
+        - Reading or study group / 共读或学习小组
+        - Open-source co-building / 开源共建
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain / 领域
+      options:
+        - AI & Computer Science
+        - Biology & Medicine
+        - Physics
+        - Mathematics & Statistics
+        - Materials & Chemistry
+        - Social Science
+        - Multidisciplinary
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Concrete goal and acceptance check / 具体目标与验收方式
+      description: What artifact or answer should exist when this collaboration succeeds?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current state and public evidence / 当前进展与公开证据
+      description: Link papers, code, data, prior attempts, or an issue that makes the request auditable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: contribution
+    attributes:
+      label: What you can contribute / 你能提供什么
+      description: Time, implementation, data, evaluation, writing, compute, mentoring, or domain expertise.
+    validations:
+      required: true
+
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox and cadence / 时间范围与协作节奏
+      placeholder: Four weeks, one async update each Friday
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-posting check / 公开发布确认
+      options:
+        - label: I removed private or confidential information and have consent to name every person or organization included. / 我已移除隐私与机密信息，并获准公开提及相关个人或组织。
+          required: true

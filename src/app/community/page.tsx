@@ -31,8 +31,8 @@ const paths = [
 
 const rooms = [
   { icon: "◒", title: "Research help", titleZh: "科研互助", text: "Methods, experiments, reproduction and paper feedback", textZh: "方法、实验、复现与论文反馈", color: "room-blue", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=research-help.yml&title=%5BHelp%5D%20" },
-  { icon: "◇", title: "Internships & roles", titleZh: "实习与岗位", text: "Labs, startups, referrals and application experience", textZh: "实验室、创业团队、内推与申请经验", color: "room-emerald", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=research-help.yml&title=%5BRole%5D%20" },
-  { icon: "◎", title: "People & collaboration", titleZh: "人脉与合作", text: "Find reviewers, co-builders and cross-domain collaborators", textZh: "寻找审阅者、共建者与跨领域合作者", color: "room-violet", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=research-help.yml&title=%5BCollaboration%5D%20" },
+  { icon: "◇", title: "Internships & roles", titleZh: "实习与岗位", text: "Verified public openings with an expiry boundary", textZh: "带核验日期与失效边界的公开机会", color: "room-emerald", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=role-opportunity.yml" },
+  { icon: "◎", title: "People & collaboration", titleZh: "人脉与合作", text: "Find reviewers and co-builders around a defined task", textZh: "围绕明确任务寻找审阅者与共建者", color: "room-violet", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=collaboration-request.yml" },
   { icon: "⌁", title: "Tools & launches", titleZh: "工具与发布", text: "Share a tool, recruit testers and compare workflows", textZh: "分享工具、招募体验者、对比工作流", color: "room-amber", href: "https://github.com/yayajjiang/PaperTrace/issues/new?template=submit-a-tool.yml" },
 ];
 

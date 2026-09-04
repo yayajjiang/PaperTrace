@@ -124,55 +124,14 @@ export default function InterviewPage() {
     },
   ];
 
-  // ── Community posts (add new entries here) ──────────────────────────────
-  // Fields: company, role (EN), roleZh (ZH), type, location, region?,
-  //         urgent?, desc?, descZh?, href?, date?
-  // ── Community posts ──────────────────────────────────────────────────────
-  // Add new entries here when someone submits. Fields:
-  //   company, role (EN), roleZh (ZH), type, location, region?,
-  //   urgent?, desc?, descZh?, contact?, href?, date?
-  // ── Community posts ──────────────────────────────────────────────────────
-  // Add new entries when someone submits via DM/WeChat. Fields:
-  //   company, role (EN), roleZh (ZH), type, location, region?,
-  //   urgent?, desc?, descZh?, contact?, href?, date?
+  // Only currently verified public opportunities belong here. Every entry
+  // must include an official URL, verification date, and expiry boundary.
   const urgentPosts: {
     company: string; role: string; roleZh: string;
     type: "internship" | "fulltime"; location: string; region?: string;
     urgent?: boolean; desc?: string; descZh?: string;
     contact?: string; href?: string; date?: string;
-  }[] = [
-    {
-      company: "DeepSeek",
-      role: "Research Intern — Reasoning & RL",
-      roleZh: "科研实习 — 推理 & 强化学习",
-      type: "internship", location: "Hangzhou", region: "🇨🇳", urgent: true,
-      desc: "Working on LLM reasoning, post-training, and RL-based alignment. Background in math/CS preferred. 3–6 months, potential for return offer.",
-      descZh: "方向：大模型推理、后训练及强化学习对齐。数学/CS 背景优先，3–6 个月，表现优秀可转正。",
-      contact: "微信投递，联系公众号后台",
-      date: "2025-04",
-    },
-    {
-      company: "字节跳动 · Seed",
-      role: "LLM Pre-training Intern",
-      roleZh: "大模型预训练实习",
-      type: "internship", location: "Beijing", region: "🇨🇳",
-      desc: "Joining the Seed foundation model team. Focus on data pipeline, training efficiency, and scaling experiments. Strong Python + distributed training background needed.",
-      descZh: "加入 Seed 基础模型团队，方向：数据流水线、训练效率与 scaling 实验。需要扎实 Python 功底及分布式训练经验。",
-      contact: "邮件简历至 seed-intern@bytedance.com",
-      href: "https://jobs.bytedance.com",
-      date: "2025-04",
-    },
-    {
-      company: "Anthropic",
-      role: "Research Engineer Intern",
-      roleZh: "Research Engineer 实习",
-      type: "internship", location: "San Francisco, CA", region: "🇺🇸",
-      desc: "Summer internship on the interpretability or alignment team. Strong ML fundamentals required. US work authorization needed.",
-      descZh: "暑期实习，方向：可解释性或对齐团队。需要扎实 ML 基础及美国工作资质。",
-      href: "https://www.anthropic.com/careers",
-      date: "2025-04",
-    },
-  ];
+  }[] = [];
 
   const basePath = process.env.NODE_ENV === "production" ? "/PaperTrace" : "";
 
@@ -284,18 +243,18 @@ export default function InterviewPage() {
             <div>
               <p className="font-semibold text-sm dark:text-slate-100">{t("Community Posts", "急招帖子")}</p>
               <p className="text-xs text-paper-800/50 dark:text-slate-500 mt-0.5">
-                {t("Submitted by the community. Want to post? Reach out.", "社区投稿。想发帖？联系我们。")}
+                {t("Only publicly verifiable, unexpired opportunities are listed.", "仅展示可公开核验且尚未失效的机会。")}
               </p>
             </div>
-            <span className="text-xs px-3 py-1.5 rounded-full border border-paper-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-paper-800/40 dark:text-slate-600 font-medium flex-shrink-0 cursor-default select-none">
-              + {t("Submit a post", "投稿")}
-            </span>
+            <a href="https://github.com/yayajjiang/PaperTrace/issues/new?template=role-opportunity.yml" target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full border border-paper-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-medium flex-shrink-0">
+              + {t("Submit verified role", "提交已核验岗位")}
+            </a>
           </div>
 
           {urgentPosts.length === 0 ? (
             <div className="text-center py-10 border border-dashed border-paper-200 dark:border-slate-700 rounded-xl">
               <p className="text-sm text-paper-800/40 dark:text-slate-600">
-                {t("No posts yet. Be the first to submit.", "暂无投稿。成为第一个发帖的人。")}
+                {t("No currently verified community roles. Old April 2025 posts were archived instead of being shown as urgent.", "当前没有已核验的社区岗位；2025 年 4 月旧帖已归档，不再显示为急招。")}
               </p>
             </div>
           ) : (
