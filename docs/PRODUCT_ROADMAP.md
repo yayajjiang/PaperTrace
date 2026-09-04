@@ -17,6 +17,7 @@ PaperTrace turns a huge research information stream into three useful outcomes:
 | Surface | Job |
 | --- | --- |
 | Discover | Editorial homepage connecting live signals, tools, community, and the original paper library |
+| Today Brief | A 5/20/60-minute action plan across news, deadlines, migrations, and community discovery |
 | Research Radar | Model releases, papers, topic momentum, impact/buzz/utility ranking, and attention budgets |
 | Model Lifecycle | Releases, product/API availability, retirement boundaries, replacements, and migration actions |
 | Event Radar | Deadline-first conferences, hackathons, calls, exhibitions, scholarships, and recurring-event watch |
@@ -66,6 +67,7 @@ Status: in progress
 - [x] Promote GPT-6 Astra from community discovery to an official-source homepage headline and lifecycle record
 - [x] Reorganize homepage entry points into Watch and Build task groups
 - [x] Activate live filtered signal desks for every non-CS research domain while keeping editorial ownership distributed
+- [x] Add a no-login 5/20/60-minute Today Brief that compresses feeds into concrete next actions
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

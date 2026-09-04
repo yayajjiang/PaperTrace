@@ -50,6 +50,7 @@ function Header() {
     { href: "/community", label: t("Community", "社区") },
   ];
   const secondaryNav = [
+    { href: "/briefing", label: t("Today's brief", "今日简报") },
     { href: "/models", label: t("Model lifecycle", "模型生命周期") },
     { href: "/sources", label: t("Source network", "信息源网络") },
     { href: "/queue", label: t("Attention queue", "注意力队列") },

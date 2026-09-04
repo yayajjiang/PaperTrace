@@ -294,7 +294,7 @@ export default function Home() {
             )}
           </p>
           <div className="flex flex-wrap gap-3 mt-8 animate-fadeInUp delay-2">
-            <a href={`${basePath}/radar`} className="button-primary button-large">{t("Explore today's signals", "查看今日动态")} →</a>
+            <a href={`${basePath}/briefing`} className="button-primary button-large">{t("Open today's brief", "打开今日简报")} →</a>
             <a href={`${basePath}/community`} className="button-secondary button-large">{t("Join the community", "加入社区")}</a>
           </div>
         </div>
@@ -308,10 +308,10 @@ export default function Home() {
             label: t("Watch", "关注"),
             description: t("Spend attention before the opportunity or deadline passes.", "在机会或截止日期过去前投入注意力。"),
             routes: [
+              { href: basePath + "/briefing", label: t("Today's brief", "今日简报"), desc: t("5 / 20 / 60-minute plan", "5 / 20 / 60 分钟计划") },
               { href: basePath + "/radar", label: t("Research radar", "研究雷达"), desc: t("Papers and live signals", "论文与实时动态") },
               { href: basePath + "/events", label: t("Event radar", "活动雷达"), desc: t("Deadlines before recaps", "在截止前收到提醒") },
               { href: basePath + "/models", label: t("Model lifecycle", "模型生命周期"), desc: t("Launches and migrations", "发布、下线与迁移") },
-              { href: basePath + "/frontier", label: t("Frontier watch", "前沿观察"), desc: t("Labs, teams and new bets", "实验室、团队与新方向") },
             ],
           },
           {

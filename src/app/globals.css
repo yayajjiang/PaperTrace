@@ -608,6 +608,33 @@ html {
 .community-signal-card { @apply rounded-xl border border-paper-200 bg-white p-5 transition hover:border-violet-300 dark:border-slate-700 dark:bg-slate-800/50 dark:hover:border-violet-700; }
 .community-metric { @apply text-[10px] text-paper-800/45 dark:text-slate-500; }
 .community-metric b { @apply text-paper-800/70 dark:text-slate-300; }
+.briefing-budget { @apply inline-flex rounded-xl border border-paper-200 bg-white p-1 dark:border-slate-700 dark:bg-slate-800; }
+.briefing-budget button { @apply flex min-w-20 items-baseline justify-center gap-1 rounded-lg px-4 py-2 text-paper-800/40 transition dark:text-slate-500; }
+.briefing-budget button b { @apply text-lg; }
+.briefing-budget button span { @apply text-[10px]; }
+.briefing-budget .briefing-budget-active { @apply bg-blue-600 text-white shadow-sm dark:bg-blue-500 dark:text-white; }
+.briefing-section { @apply rounded-2xl border border-paper-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800/50; }
+.briefing-section-head { @apply flex items-center gap-3; }
+.briefing-section-head > span { @apply flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 font-mono text-[10px] font-bold text-blue-600 dark:bg-blue-500/10 dark:text-blue-300; }
+.briefing-section-head b { @apply block text-sm dark:text-white; }
+.briefing-section-head small { @apply block text-[10px] text-paper-800/35 dark:text-slate-500; }
+.briefing-news { @apply flex gap-3 rounded-xl border border-paper-100 p-4 transition hover:border-blue-300 dark:border-slate-700 dark:hover:border-blue-700; }
+.briefing-news > span { @apply font-mono text-[10px] text-paper-800/25 dark:text-slate-600; }
+.briefing-news b { @apply block text-sm leading-snug dark:text-slate-100; }
+.briefing-news p { @apply mt-1 line-clamp-2 text-xs leading-relaxed text-paper-800/50 dark:text-slate-400; }
+.briefing-news small { @apply mt-2 block text-[10px] text-paper-800/30 dark:text-slate-600; }
+.briefing-action { @apply flex items-start justify-between gap-4 rounded-lg bg-paper-50 p-3 transition hover:bg-blue-50 dark:bg-slate-900/60 dark:hover:bg-blue-950/30; }
+.briefing-action b { @apply block text-xs dark:text-slate-200; }
+.briefing-action small { @apply mt-1 block text-[10px] leading-relaxed text-paper-800/40 dark:text-slate-500; }
+.briefing-action > span { @apply shrink-0 rounded-full bg-paper-200 px-2 py-1 text-[10px] font-bold text-paper-800/50 dark:bg-slate-700 dark:text-slate-300; }
+.briefing-action > .deadline-urgent { @apply bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300; }
+.briefing-community { @apply flex min-h-28 flex-col rounded-xl border border-paper-100 p-4 transition hover:border-violet-300 dark:border-slate-700 dark:hover:border-violet-700; }
+.briefing-community > span { @apply text-[10px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300; }
+.briefing-community > b { @apply mt-3 text-sm leading-snug dark:text-slate-100; }
+.briefing-community > small { @apply mt-auto pt-3 text-[10px] text-amber-600; }
+.briefing-finish { @apply flex flex-col gap-4 rounded-2xl border border-blue-200 bg-blue-50/70 p-5 sm:flex-row sm:items-center sm:justify-between dark:border-blue-800 dark:bg-blue-950/20; }
+.briefing-finish b { @apply dark:text-white; }
+.briefing-finish p { @apply mt-1 text-xs text-paper-800/55 dark:text-slate-400; }
 .health-ok, .health-warn { @apply inline-block flex-none w-2 h-2 rounded-full; }
 .health-ok { @apply bg-emerald-500; }
 .health-warn { @apply bg-amber-500; }
