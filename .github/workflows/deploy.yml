@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Refresh AI headlines
+      - name: Refresh research headlines
         run: npm run news:sync
         continue-on-error: true
 

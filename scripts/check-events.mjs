@@ -25,9 +25,12 @@ const urgent = upcoming
   .filter((event) => event.deadlineAt && event.deadlineAt >= today && ageDays(event.deadlineAt) >= -14)
   .map((event) => ({ id: event.id, deadlineAt: event.deadlineAt }));
 const domains = Object.fromEntries([...new Set(payload.flatMap((event) => event.domains))].sort().map((domain) => [domain, upcoming.filter((event) => event.domains.includes(domain)).length]));
+const coverageTargets = ["AI & CS", "Robotics", "Bio & Medicine", "Physics", "Math & Stats", "Materials & Chemistry", "Social Science"];
+const coverageGaps = coverageTargets.filter((domain) => (domains[domain] || 0) < 3).map((domain) => ({ domain, upcoming: domains[domain] || 0, target: 3 }));
 
 await mkdir("public/data", { recursive: true });
-await writeFile("public/data/event-health.json", `${JSON.stringify({ checkedAt: new Date().toISOString(), total: payload.length, upcoming: upcoming.length, stale, urgent, domains }, null, 2)}\n`);
-console.log(`Validated ${payload.length} events: ${upcoming.length} upcoming, ${urgent.length} urgent deadlines, ${stale.length} stale records.`);
+await writeFile("public/data/event-health.json", `${JSON.stringify({ checkedAt: new Date().toISOString(), total: payload.length, upcoming: upcoming.length, stale, urgent, domains, coverageGaps }, null, 2)}\n`);
+console.log(`Validated ${payload.length} events: ${upcoming.length} upcoming, ${urgent.length} urgent deadlines, ${stale.length} stale records, ${coverageGaps.length} coverage gaps.`);
 if (stale.length) console.warn(`Re-verify stale event records: ${stale.map((item) => item.id).join(", ")}`);
+if (coverageGaps.length) console.warn(`Expand under-covered fields: ${coverageGaps.map((item) => item.domain).join(", ")}`);
 

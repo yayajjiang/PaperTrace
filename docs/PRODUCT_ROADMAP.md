@@ -50,9 +50,10 @@ Status: in progress
 - [x] Add structured community templates for help, collaboration, roles, tools, and frontier signals
 - [x] Publish a bilingual contribution and domain-editor compact
 - [x] Add a no-login Attention Queue with local saves and 30/60/120-minute reading plans
-- [x] Launch Event Radar with 32 organizer-verified entries across eight directions
+- [x] Launch Event Radar with 33 organizer-verified entries across eight directions
 - [x] Add deadline-first sorting, China/global/type/domain filters, and recently-ended cycle watch
 - [x] Validate event dates and 14-day verification freshness during every daily deployment
+- [x] Add twice-weekly curation audit that updates one GitHub inbox for urgent deadlines, stale records, source failures, and field imbalance
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

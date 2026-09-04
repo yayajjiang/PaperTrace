@@ -554,6 +554,23 @@
     "verifiedAt": "2026-09-04"
   },
   {
+    "id": "austms-2026",
+    "title": "Australian Mathematical Society Annual Meeting 2026",
+    "titleZh": "澳大利亚数学学会 2026 年会",
+    "type": "Conference",
+    "domains": ["Math & Stats"],
+    "startsAt": "2026-12-01",
+    "endsAt": "2026-12-04",
+    "location": "Perth, Australia",
+    "locationZh": "澳大利亚·珀斯",
+    "format": "In person",
+    "summary": "The society's 70th annual meeting brings together mathematics researchers, educators, students and industry, preceded by an early-career workshop on November 30.",
+    "summaryZh": "学会第 70 届年会，连接数学研究者、教育者、学生与产业，并于 11 月 30 日举办青年学者 Workshop。",
+    "organizer": "Australian Mathematical Society",
+    "href": "https://austms2026.org.au/",
+    "verifiedAt": "2026-09-04"
+  },
+  {
     "id": "wrc-2026",
     "title": "World Robot Conference 2026",
     "titleZh": "2026 世界机器人大会",

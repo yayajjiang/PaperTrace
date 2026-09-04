@@ -6,6 +6,7 @@ import { useLang } from "@/lib/i18n";
 import { QueueButton } from "@/components/QueueButton";
 
 type SortKey = "latest" | "impact" | "buzz" | "utility";
+type SourceHealth = { name: string; status: "ok" | "error"; itemCount: number; note?: string };
 
 const scoreOf = (item: Headline, key: Exclude<SortKey, "latest">) => item.scores?.[key] ?? 0;
 
@@ -13,6 +14,7 @@ export function ResearchRadar() {
   const { lang, t } = useLang();
   const [items, setItems] = useState<Headline[]>(fallbackHeadlines);
   const [generatedAt, setGeneratedAt] = useState<string>("");
+  const [sourceHealth, setSourceHealth] = useState<SourceHealth[]>([]);
   const [query, setQuery] = useState("");
   const [domain, setDomain] = useState("All");
   const [sort, setSort] = useState<SortKey>("latest");
@@ -22,9 +24,10 @@ export function ResearchRadar() {
   useEffect(() => {
     fetch(`${basePath}/data/headlines.json`)
       .then((response) => (response.ok ? response.json() : Promise.reject()))
-      .then((data: { generatedAt?: string; items?: Headline[] }) => {
+      .then((data: { generatedAt?: string; items?: Headline[]; sources?: SourceHealth[] }) => {
         if (data.items?.length) setItems(data.items);
         if (data.generatedAt) setGeneratedAt(data.generatedAt);
+        if (data.sources) setSourceHealth(data.sources);
       })
       .catch(() => undefined);
   }, [basePath]);
@@ -124,6 +127,22 @@ export function ResearchRadar() {
             {t("Official feeds update daily. X and Xiaohongshu signals enter only when a public post can be checked; raw popularity never overrides evidence.", "官方信息源每日更新。X 与小红书信号仅在公开内容可核验时进入；原始热度不会覆盖证据判断。")}
           </div>
           {generatedAt && <div className="mt-4 text-[10px] font-mono text-paper-800/30 dark:text-slate-600">SYNC {new Date(generatedAt).toLocaleString(lang === "zh" ? "zh-CN" : "en-US")}</div>}
+          {sourceHealth.length > 0 && (
+            <details className="source-health mt-4">
+              <summary>
+                <span className={sourceHealth.some((source) => source.status === "error") ? "health-warn" : "health-ok"} />
+                {sourceHealth.filter((source) => source.status === "ok").length}/{sourceHealth.length} {t("sources online", "信息源在线")}
+              </summary>
+              <div className="mt-3 space-y-2">
+                {sourceHealth.map((source) => (
+                  <div key={source.name} className="flex items-start gap-2 text-[10px]">
+                    <span className={source.status === "ok" ? "health-ok" : "health-warn"} />
+                    <div className="min-w-0"><b className="block truncate">{source.name} · {source.itemCount}</b>{source.note && <span className="block mt-0.5 break-words opacity-60">{source.note}</span>}</div>
+                  </div>
+                ))}
+              </div>
+            </details>
+          )}
         </aside>
       </div>
     </>

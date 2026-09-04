@@ -1,5 +1,62 @@
 {
-  "generatedAt": "2026-09-03T18:04:19.022Z",
+  "generatedAt": "2026-09-03T19:11:29.419Z",
+  "sources": [
+    {
+      "name": "OpenAI",
+      "status": "ok",
+      "itemCount": 5
+    },
+    {
+      "name": "Anthropic",
+      "status": "ok",
+      "itemCount": 10
+    },
+    {
+      "name": "Google DeepMind",
+      "status": "ok",
+      "itemCount": 10
+    },
+    {
+      "name": "arXiv · AI & CS",
+      "status": "ok",
+      "itemCount": 6
+    },
+    {
+      "name": "arXiv · Bio",
+      "status": "ok",
+      "itemCount": 6
+    },
+    {
+      "name": "arXiv · Physics",
+      "status": "ok",
+      "itemCount": 6
+    },
+    {
+      "name": "arXiv · Math & Stats",
+      "status": "ok",
+      "itemCount": 6
+    },
+    {
+      "name": "arXiv · Materials & Chemistry",
+      "status": "ok",
+      "itemCount": 6
+    },
+    {
+      "name": "arXiv · Social Science",
+      "status": "ok",
+      "itemCount": 6
+    },
+    {
+      "name": "Hugging Face Papers",
+      "status": "ok",
+      "itemCount": 10
+    },
+    {
+      "name": "Editorial watchlist",
+      "status": "ok",
+      "itemCount": 2
+    }
+  ],
   "items": [
     {
       "id": "world-labs-atlas-2026",
@@ -123,6 +180,31 @@
           "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
           "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
           "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "e8e7441ac397",
+      "date": "2026-08-26",
+      "title": "Previewing the Model Hardware Standard",
+      "titleZh": "Previewing the Model Hardware Standard",
+      "summary": "Announcements from Anthropic's official newsroom. Open the primary source for the full claim and evidence.",
+      "summaryZh": "来自 Anthropic 官方 Newsroom 的Announcements；请打开原始来源查看完整主张与证据。",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "tag": "Release",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 84,
+        "buzz": 82,
+        "utility": 78
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Official Anthropic model or infrastructure announcement.",
+          "buzz": "Recency-based estimate; no unverified social count is included.",
+          "utility": "The title indicates a model, tool, standard or research workflow."
         }
       }
     },
@@ -577,6 +659,31 @@
       }
     },
     {
+      "id": "d575f18cfc60",
+      "date": "2026-08-26",
+      "title": "Expanding our support for scientists",
+      "titleZh": "Expanding our support for scientists",
+      "summary": "Announcements from Anthropic's official newsroom. Open the primary source for the full claim and evidence.",
+      "summaryZh": "来自 Anthropic 官方 Newsroom 的Announcements；请打开原始来源查看完整主张与证据。",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/expanding-support-for-scientists",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 68,
+        "buzz": 82,
+        "utility": 78
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Official Anthropic research or company announcement.",
+          "buzz": "Recency-based estimate; no unverified social count is included.",
+          "utility": "The title indicates a model, tool, standard or research workflow."
+        }
+      }
+    },
+    {
       "id": "4c8ae5014957",
       "date": "2026-09-02",
       "title": "Statistical Inference for Probability Barycenters and Kolmogorov Moments",
@@ -618,13 +725,13 @@
         "utility": 86
       },
       "signals": {
-        "huggingFaceUpvotes": 20
+        "huggingFaceUpvotes": 21
       },
       "provenance": {
         "layer": "Structured discovery",
         "scoreNotes": {
           "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
-          "buzz": "Hugging Face Papers shows 20 upvotes at sync time; this is one platform signal, not total popularity.",
+          "buzz": "Hugging Face Papers shows 21 upvotes at sync time; this is one platform signal, not total popularity.",
           "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
         }
       }
@@ -651,6 +758,56 @@
           "impact": "Official API retirement affecting production workloads pinned to this model.",
           "buzz": "Lifecycle event; no unverified social count is included.",
           "utility": "Immediate migration action with a documented replacement model."
+        }
+      }
+    },
+    {
+      "id": "07a03b3c017c",
+      "date": "2026-08-31",
+      "title": "Developing Enterprise Frontier Safeguards with our customers",
+      "titleZh": "Developing Enterprise Frontier Safeguards with our customers",
+      "summary": "Announcements from Anthropic's official newsroom. Open the primary source for the full claim and evidence.",
+      "summaryZh": "来自 Anthropic 官方 Newsroom 的Announcements；请打开原始来源查看完整主张与证据。",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 68,
+        "buzz": 82,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Official Anthropic research or company announcement.",
+          "buzz": "Recency-based estimate; no unverified social count is included.",
+          "utility": "No strong runnable-artifact cue was found in the listing."
+        }
+      }
+    },
+    {
+      "id": "e83ff5faec70",
+      "date": "2026-08-30",
+      "title": "Improving our alignment and security efforts",
+      "titleZh": "Improving our alignment and security efforts",
+      "summary": "Research from Anthropic's official newsroom. Open the primary source for the full claim and evidence.",
+      "summaryZh": "来自 Anthropic 官方 Newsroom 的Research；请打开原始来源查看完整主张与证据。",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 68,
+        "buzz": 82,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Official Anthropic research or company announcement.",
+          "buzz": "Recency-based estimate; no unverified social count is included.",
+          "utility": "No strong runnable-artifact cue was found in the listing."
         }
       }
     },
@@ -1104,115 +1261,6 @@
           "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
           "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
           "utility": "No strong runnable-artifact cue was found in the feed text."
-        }
-      }
-    },
-    {
-      "id": "b2cc29a69555",
-      "date": "2026-09-02",
-      "title": "Differentiable Electricity-Market Clearing for Gradient-Based Planning",
-      "titleZh": "Differentiable Electricity-Market Clearing for Gradient-Based Planning",
-      "summary": "Planning a large data center is difficult because a facility big enough to matter changes the electricity prices it will pay. Those prices are set by market clearing, a constrained optimization problem solved anew in every operating condition. However, simulating the market tells",
-      "summaryZh": "Planning a large data center is difficult because a facility big enough to matter changes the electricity prices it will pay. Those prices are set by market clearing, a constrained optimization problem solved anew in every operating condition. However, simulating the market tells",
-      "source": "arXiv · Social Science",
-      "sourceUrl": "https://arxiv.org/abs/2609.02646v1",
-      "tag": "Research",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 60,
-        "buzz": 77,
-        "utility": 58
-      },
-      "provenance": {
-        "layer": "Structured discovery",
-        "scoreNotes": {
-          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
-          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
-          "utility": "No strong runnable-artifact cue was found in the feed text."
-        }
-      }
-    },
-    {
-      "id": "hf-2608.30751",
-      "date": "2026-08-31",
-      "title": "Autoregressive Mosaics: Probing 2D Spatial Reasoning in Text-Only Language Models",
-      "titleZh": "Autoregressive Mosaics: Probing 2D Spatial Reasoning in Text-Only Language Models",
-      "summary": "Large language models (LLMs) trained only on text and code can sometimes generate programs that draw recognizable images. However, it is unclear whether this reflects an internal representation of 2D spatial layout or simply the ability to translate spatial descriptions into code",
-      "summaryZh": "Large language models (LLMs) trained only on text and code can sometimes generate programs that draw recognizable images. However, it is unclear whether this reflects an internal representation of 2D spatial layout or simply the ability to translate spatial descriptions into code",
-      "source": "Hugging Face Papers",
-      "sourceUrl": "https://huggingface.co/papers/2608.30751",
-      "tag": "Research",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 61,
-        "buzz": 52,
-        "utility": 86
-      },
-      "signals": {
-        "huggingFaceUpvotes": 3
-      },
-      "provenance": {
-        "layer": "Structured discovery",
-        "scoreNotes": {
-          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
-          "buzz": "Hugging Face Papers shows 3 upvotes at sync time; this is one platform signal, not total popularity.",
-          "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
-        }
-      }
-    },
-    {
-      "id": "hf-2609.00377",
-      "date": "2026-08-30",
-      "title": "FoldingAgent: Inferring Parametric Origami Procedures from Demonstration Videos",
-      "titleZh": "FoldingAgent: Inferring Parametric Origami Procedures from Demonstration Videos",
-      "summary": "We present FoldingAgent, an agentic framework for inferring explicit parametric folding programs directly from origami demonstration videos. Our framework leverages the reasoning power of a pre-trained Vision-Language Model (VLM) equipped with a suite of specialized tools that en",
-      "summaryZh": "We present FoldingAgent, an agentic framework for inferring explicit parametric folding programs directly from origami demonstration videos. Our framework leverages the reasoning power of a pre-trained Vision-Language Model (VLM) equipped with a suite of specialized tools that en",
-      "source": "Hugging Face Papers",
-      "sourceUrl": "https://huggingface.co/papers/2609.00377",
-      "tag": "Research",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 61,
-        "buzz": 52,
-        "utility": 86
-      },
-      "signals": {
-        "huggingFaceUpvotes": 3
-      },
-      "provenance": {
-        "layer": "Structured discovery",
-        "scoreNotes": {
-          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
-          "buzz": "Hugging Face Papers shows 3 upvotes at sync time; this is one platform signal, not total popularity.",
-          "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
-        }
-      }
-    },
-    {
-      "id": "hf-2608.30322",
-      "date": "2026-08-30",
-      "title": "Ignorance or Incompetence? Constructing Knowledge-Gated, Verifiable Tasks for LLM Agents",
-      "titleZh": "Ignorance or Incompetence? Constructing Knowledge-Gated, Verifiable Tasks for LLM Agents",
-      "summary": "Professional agent tasks often depend on conventions that are absent from public corpora, yet benchmarks rarely control whether an agent has access to those conventions. We introduce a knowledge-gated task-construction protocol that separates a task instruction from a compact art",
-      "summaryZh": "Professional agent tasks often depend on conventions that are absent from public corpora, yet benchmarks rarely control whether an agent has access to those conventions. We introduce a knowledge-gated task-construction protocol that separates a task instruction from a compact art",
-      "source": "Hugging Face Papers",
-      "sourceUrl": "https://huggingface.co/papers/2608.30322",
-      "tag": "Research",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 61,
-        "buzz": 51,
-        "utility": 86
-      },
-      "signals": {
-        "huggingFaceUpvotes": 2
-      },
-      "provenance": {
-        "layer": "Structured discovery",
-        "scoreNotes": {
-          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
-          "buzz": "Hugging Face Papers shows 2 upvotes at sync time; this is one platform signal, not total popularity.",
-          "utility": "Title or abstract mentions code, data, benchmark, agent or tooling cues."
         }
       }
     }

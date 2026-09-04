@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-03T18:18:31.975Z",
-  "total": 32,
-  "upcoming": 31,
+  "checkedAt": "2026-09-03T19:12:35.681Z",
+  "total": 33,
+  "upcoming": 32,
   "stale": [],
   "urgent": [
     {
@@ -29,10 +29,11 @@
     "AI & CS": 25,
     "Bio & Medicine": 6,
     "Materials & Chemistry": 3,
-    "Math & Stats": 2,
+    "Math & Stats": 3,
     "Multidisciplinary": 3,
     "Physics": 7,
     "Robotics": 8,
     "Social Science": 6
-  }
+  },
+  "coverageGaps": []
 }

@@ -567,6 +567,12 @@ html {
 .countdown-badge span { @apply text-[8px] mt-1; }
 .countdown-urgent { @apply bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-300; }
 .home-event-card { @apply rounded-2xl border border-paper-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 hover:border-blue-300 dark:hover:border-blue-600 transition-colors; }
+.source-health { @apply border-t border-paper-200 dark:border-slate-700 pt-4 text-[10px] text-paper-800/45 dark:text-slate-500; }
+.source-health summary { @apply cursor-pointer list-none flex items-center gap-2 font-bold; }
+.source-health summary::-webkit-details-marker { display: none; }
+.health-ok, .health-warn { @apply inline-block flex-none w-2 h-2 rounded-full; }
+.health-ok { @apply bg-emerald-500; }
+.health-warn { @apply bg-amber-500; }
 .why-watch { @apply rounded-lg bg-paper-50 dark:bg-slate-900/50 px-4 py-3; }
 .why-watch b { @apply block text-xs text-paper-800/70 dark:text-slate-300; }
 .why-watch p { @apply mt-1 text-xs leading-relaxed text-paper-800/50 dark:text-slate-500; }

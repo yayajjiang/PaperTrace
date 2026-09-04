@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 
 const feeds = [
   { name: "OpenAI", url: "https://openai.com/news/rss.xml", tag: "Release", domain: "AI & CS" },
-  { name: "Anthropic", url: "https://www.anthropic.com/rss.xml", tag: "Release", domain: "AI & CS" },
+  { name: "Anthropic", url: "https://www.anthropic.com/news", tag: "Release", domain: "AI & CS", format: "html" },
   { name: "Google DeepMind", url: "https://deepmind.google/blog/rss.xml", tag: "Research", domain: "AI & CS" },
 ];
 
@@ -25,6 +25,7 @@ const decode = (value = "") =>
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&#39;|&apos;/g, "'")
+    .replace(/&#x27;/g, "'")
     .replace(/&quot;/g, '"')
     .replace(/\s+/g, " ")
     .trim();
@@ -145,6 +146,41 @@ function parse(xml, feed) {
   }).filter((item) => item.title && item.sourceUrl).slice(0, feed.tag === "Release" ? 5 : 10);
 }
 
+function parseAnthropicNews(html, feed) {
+  const links = Array.from(html.matchAll(/<a href="(\/news\/[^"]+)" class="[^"]*PublicationList[^\"]*__listItem">([\s\S]*?)<\/a>/g));
+  return links.map((match) => {
+    const block = match[2];
+    const title = decode(block.match(/<span class="[^"]*__title[^\"]*">([\s\S]*?)<\/span>/)?.[1] || "");
+    const rawDate = decode(block.match(/<time[^>]*>([\s\S]*?)<\/time>/)?.[1] || "");
+    const category = decode(block.match(/<span class="[^"]*__subject[^\"]*">([\s\S]*?)<\/span>/)?.[1] || "Research");
+    const sourceUrl = `https://www.anthropic.com${match[1]}`;
+    const lower = title.toLowerCase();
+    const release = /introduc|preview|releas|claude|model|standard/.test(lower);
+    const practical = /model|hardware|api|code|scientist|research|tool/.test(lower);
+    return {
+      id: createHash("sha1").update(sourceUrl).digest("hex").slice(0, 12),
+      date: Number.isNaN(Date.parse(rawDate)) ? new Date().toISOString().slice(0, 10) : new Date(rawDate).toISOString().slice(0, 10),
+      title,
+      titleZh: title,
+      summary: `${category || "News"} from Anthropic's official newsroom. Open the primary source for the full claim and evidence.`,
+      summaryZh: `来自 Anthropic 官方 Newsroom 的${category || "动态"}；请打开原始来源查看完整主张与证据。`,
+      source: feed.name,
+      sourceUrl,
+      tag: release ? "Release" : "Research",
+      domain: feed.domain,
+      scores: { impact: release ? 84 : 68, buzz: 82, utility: practical ? 78 : 58 },
+      provenance: {
+        layer: "Primary",
+        scoreNotes: {
+          impact: release ? "Official Anthropic model or infrastructure announcement." : "Official Anthropic research or company announcement.",
+          buzz: "Recency-based estimate; no unverified social count is included.",
+          utility: practical ? "The title indicates a model, tool, standard or research workflow." : "No strong runnable-artifact cue was found in the listing.",
+        },
+      },
+    };
+  }).filter((item) => item.title).slice(0, 10);
+}
+
 async function fetchHuggingFacePapers() {
   const response = await fetch("https://huggingface.co/api/daily_papers?limit=20", {
     headers: { "user-agent": "PaperTrace/1.0 (+https://github.com/yayajjiang/PaperTrace)" },
@@ -197,7 +233,8 @@ const fetchFeed = async (feed) => {
       signal: AbortSignal.timeout(15_000),
     });
     if (!response.ok) throw new Error(`${feed.name}: ${response.status}`);
-    return parse(await response.text(), feed);
+    const body = await response.text();
+    return feed.format === "html" ? parseAnthropicNews(body, feed) : parse(body, feed);
 };
 
 const results = await Promise.allSettled(feeds.map(fetchFeed));
@@ -212,10 +249,12 @@ for (const feed of arxivFeeds) {
 }
 
 let huggingFaceItems = [];
+let huggingFaceError = "";
 try {
   huggingFaceItems = await fetchHuggingFacePapers();
 } catch (error) {
-  console.warn(error instanceof Error ? error.message : "Hugging Face Papers unavailable");
+  huggingFaceError = error instanceof Error ? error.message : "Hugging Face Papers unavailable";
+  console.warn(huggingFaceError);
 }
 
 const rankedItems = results
@@ -252,6 +291,16 @@ const itemRank = (item) => {
   return item.scores.impact * .4 + item.scores.buzz * .3 + item.scores.utility * .3 - Math.min(30, age * .65);
 };
 const items = selected.sort((a, b) => itemRank(b) - itemRank(a));
+const sourceHealth = [...feeds, ...arxivFeeds].map((feed, index) => {
+  const result = results[index];
+  return result?.status === "fulfilled"
+    ? { name: feed.name, status: "ok", itemCount: result.value.length }
+    : { name: feed.name, status: "error", itemCount: 0, note: result?.reason instanceof Error ? result.reason.message.slice(0, 120) : "Feed unavailable" };
+});
+sourceHealth.push(huggingFaceError
+  ? { name: "Hugging Face Papers", status: "error", itemCount: 0, note: huggingFaceError.slice(0, 120) }
+  : { name: "Hugging Face Papers", status: "ok", itemCount: huggingFaceItems.length });
+sourceHealth.push({ name: "Editorial watchlist", status: "ok", itemCount: editorialItems.length });
 
 if (items.length === 0) {
   throw new Error("No headlines fetched; keeping the checked-in editorial fallback.");
@@ -260,7 +309,7 @@ if (items.length === 0) {
 await mkdir("public/data", { recursive: true });
 await writeFile(
   "public/data/headlines.json",
-  `${JSON.stringify({ generatedAt: new Date().toISOString(), items }, null, 2)}\n`,
+  `${JSON.stringify({ generatedAt: new Date().toISOString(), sources: sourceHealth, items }, null, 2)}\n`,
   "utf8"
 );
 console.log(`Wrote ${items.length} headlines from ${results.filter((item) => item.status === "fulfilled").length} feeds${huggingFaceItems.length ? " + Hugging Face Papers" : ""}.`);
