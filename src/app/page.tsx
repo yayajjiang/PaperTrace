@@ -9,6 +9,7 @@ import { CommunityBoard } from "@/components/CommunityBoard";
 import { researchTools } from "@/lib/tools";
 import { frontierItems } from "@/lib/frontier";
 import { researchEvents } from "@/lib/events";
+import { SinceLastVisit } from "@/components/SinceLastVisit";
 
 interface PaperMeta {
   slug: string;
@@ -345,6 +346,8 @@ export default function Home() {
           </section>
         ))}
       </div>
+
+      <SinceLastVisit />
 
       <LiveHeadlines compact />
 

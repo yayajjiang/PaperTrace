@@ -662,6 +662,12 @@ html {
 .health-summary span { @apply text-[10px] uppercase tracking-wider text-paper-800/40 dark:text-slate-500; }
 .data-health-card { @apply rounded-2xl border border-paper-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5; }
 .warning-chip { @apply rounded-full bg-amber-50 dark:bg-amber-500/10 px-2.5 py-1 text-amber-700 dark:text-amber-300; }
+.visit-delta { @apply mb-10 rounded-2xl border border-paper-200 dark:border-slate-700 bg-paper-50/60 dark:bg-slate-800/40 p-4 md:p-5; }
+.delta-desk { @apply flex flex-col rounded-xl bg-white dark:bg-slate-800 border border-paper-200 dark:border-slate-700 px-3 py-2.5 hover:border-blue-300 transition-colors; }
+.delta-desk b { @apply text-lg leading-none text-paper-800/55 dark:text-slate-300; }
+.delta-desk span { @apply mt-1.5 text-[9px] leading-tight text-paper-800/40 dark:text-slate-500; }
+.delta-desk-new { @apply border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-500/10; }
+.delta-desk-new b { @apply text-blue-700 dark:text-blue-300; }
 .why-watch { @apply rounded-lg bg-paper-50 dark:bg-slate-900/50 px-4 py-3; }
 .why-watch b { @apply block text-xs text-paper-800/70 dark:text-slate-300; }
 .why-watch p { @apply mt-1 text-xs leading-relaxed text-paper-800/50 dark:text-slate-500; }

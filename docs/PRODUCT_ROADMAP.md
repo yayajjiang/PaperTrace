@@ -72,6 +72,7 @@ Status: in progress
 - [x] Publish a data-health desk with freshness budgets, failed sources, stale records, and last-run timestamps
 - [x] Remove unverified seeded vote and reply counts from community prompts
 - [x] Add no-login `.ics` exports for filtered event sets, open deadlines, and 7-day / 1-day reminders
+- [x] Add a private, no-login “since your last review” delta across headlines, discussions, incidents, deadlines, and migrations
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring
