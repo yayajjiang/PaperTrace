@@ -33,7 +33,8 @@ Status: in progress
 - [x] Create Research Radar with multi-axis filtering and model-watch mode
 - [x] Add interactive Momentum Map: impact × utility, bubble size = buzz
 - [x] Add Topic Pulse with World Models, Embodied AI, Research Agents/Skills/MCP, and model lifecycle
-- [x] Create a cross-domain Tools directory with search, category/domain filters, evidence, and local upvotes
+- [x] Create a cross-domain Tools directory with search, category/domain filters, evidence, and clearly local upvotes
+- [x] Replace unverifiable tool vote seeds with timestamped GitHub stars, forks, activity, license, and source health
 - [x] Seed community-submitted tools: AREX-Skill/DisCo, DeepXiv, DINQ, DINQ Analysis, Find 1st Author, Scholar Copilot
 - [x] Seed cross-field infrastructure: OpenAlex, Europe PMC, Materials Project, PLUMED, INSPIRE HEP, Open Knowledge Maps
 - [x] Create Community rooms for research help, internships/roles, people/collaboration, and launches
@@ -41,6 +42,8 @@ Status: in progress
 - [x] Create Domains page; move the existing product conceptually under AI & CS and open five founding-editor tracks
 - [x] Add daily scheduled deployment and official-source news sync
 - [x] Add valid `attention-curator` and `frontier-watch` Skills
+- [x] Install and inspect an external MIT-licensed `ai-research` workflow at project scope
+- [x] Add an open Skills ecosystem desk with trust state, license, source, install command, and routed AREX collection
 - [ ] Finish visual QA at desktop and mobile sizes
 - [x] Connect Hugging Face paper popularity as a separately labeled signal
 - [ ] Add a verified social-signal ingestion path for public X and Xiaohongshu posts
@@ -91,5 +94,5 @@ AI & CS remains the first mature collection. Biology & Medicine, Physics, Mathem
 1. Complete responsive visual QA for the new homepage, Radar, Domains, Tools, Community, Skills, and Frontier Watch.
 2. Consolidate `/daily` and `/radar` into one content model while preserving existing URLs.
 3. Add a public, auditable social-signal adapter with timestamped X/Xiaohongshu evidence.
-4. Add source-health reporting so failed feeds are visible instead of silently disappearing.
+4. Expand the model lifecycle desk from releases into deprecations, migrations and action deadlines.
 5. Design the first domain-editor desk around one non-CS field and recruit a reviewer for its rubric.

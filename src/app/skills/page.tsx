@@ -1,6 +1,7 @@
 "use client";
 
-import { SkillLibrary } from "@/components/SkillLibrary";
+import { SkillLibrary, SkillSourceDirectory } from "@/components/SkillLibrary";
+import { skillLibrary } from "@/lib/skill-library";
 import { useLang } from "@/lib/i18n";
 
 export default function SkillsPage() {
@@ -25,12 +26,23 @@ export default function SkillsPage() {
       <section className="mt-14">
         <div className="section-heading-row">
           <div>
-            <div className="eyebrow mb-2">{t("PaperTrace-native", "PaperTrace 原生")}</div>
-            <h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("Publishing workflows", "内容生产工作流")}</h2>
+            <div className="eyebrow mb-2">{t("Runnable here", "当前可运行")}</div>
+            <h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("Research and publishing workflows", "科研与内容生产工作流")}</h2>
           </div>
-          <span className="text-sm text-paper-800/45 dark:text-slate-500">3 {t("skills", "个技能")}</span>
+          <span className="text-sm text-paper-800/45 dark:text-slate-500">{skillLibrary.length} {t("skills", "个技能")}</span>
         </div>
         <SkillLibrary />
+      </section>
+
+      <section className="mt-16">
+        <div className="section-heading-row">
+          <div>
+            <div className="eyebrow mb-2">{t("Open ecosystem", "开放生态")}</div>
+            <h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("Reuse before rebuilding", "优先复用，不重复造轮子")}</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-paper-800/55 dark:text-slate-400">{t("A collection is admitted only when its source, license, install path and execution boundary are visible. Large catalogs stay behind a router instead of flooding every prompt.", "只有来源、许可证、安装路径与执行边界清晰的技能库才会收录；大型目录通过路由按需加载，不把全部内容塞进每次提示词。")}</p>
+          </div>
+        </div>
+        <SkillSourceDirectory />
       </section>
 
       <section className="mt-16 skill-architecture">

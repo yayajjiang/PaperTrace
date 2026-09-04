@@ -7,6 +7,18 @@ import { useLang } from "@/lib/i18n";
 const categories: Array<ToolCategory | "All"> = ["All", "Agent Skills", "MCP & Infra", "Paper Search", "People Search", "Data & Compute", "Demo"];
 const domains: Array<ResearchDomain | "All"> = ["All", "AI & CS", "Bio & Medicine", "Physics", "Math & Stats", "Materials & Chemistry", "Social Science", "Multidisciplinary"];
 const voteKey = "papertrace-tool-votes";
+type ToolSignal = {
+  id: string;
+  repository: string;
+  sourceUrl: string;
+  stars: number;
+  forks: number;
+  pushedAt: string;
+  capturedAt: string;
+  stale?: boolean;
+};
+
+const compactNumber = new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 });
 
 export function ToolDirectory() {
   const { lang, t } = useLang();
@@ -14,10 +26,20 @@ export function ToolDirectory() {
   const [domain, setDomain] = useState<ResearchDomain | "All">("All");
   const [query, setQuery] = useState("");
   const [votes, setVotes] = useState<Set<string>>(new Set());
+  const [signals, setSignals] = useState<Record<string, ToolSignal>>({});
+  const [signalsAt, setSignalsAt] = useState("");
+  const basePath = process.env.NODE_ENV === "production" ? "/PaperTrace" : "";
 
   useEffect(() => {
     try { setVotes(new Set(JSON.parse(localStorage.getItem(voteKey) || "[]"))); } catch {}
-  }, []);
+    fetch(`${basePath}/data/tool-signals.json`)
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((data: { generatedAt?: string; signals?: ToolSignal[] }) => {
+        setSignals(Object.fromEntries((data.signals || []).map((item) => [item.id, item])));
+        if (data.generatedAt) setSignalsAt(data.generatedAt);
+      })
+      .catch(() => undefined);
+  }, [basePath]);
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -66,11 +88,12 @@ export function ToolDirectory() {
       <div className="space-y-4">
         {filtered.map((tool) => {
           const voted = votes.has(tool.id);
+          const signal = signals[tool.id];
           return (
             <article key={tool.id} className={`tool-card ${tool.featured ? "tool-card-featured" : ""}`}>
               <div className="flex flex-col md:flex-row md:items-start gap-5">
                 <button onClick={() => toggleVote(tool.id)} className={`vote-button flex-row md:flex-col ${voted ? "vote-button-active" : ""}`} aria-pressed={voted}>
-                  <span>↑</span><span>{tool.votes + (voted ? 1 : 0)}</span>
+                  <span>↑</span><span>{voted ? 1 : 0}</span>
                 </button>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -108,6 +131,15 @@ export function ToolDirectory() {
                     </div>
                   )}
 
+                  {signal && (
+                    <a href={signal.sourceUrl} target="_blank" rel="noopener noreferrer" className="public-signal-row mt-4">
+                      <span><b>★ {compactNumber.format(signal.stars)}</b> GitHub</span>
+                      <span>{compactNumber.format(signal.forks)} forks</span>
+                      <span>{t("active", "最近更新")} {new Date(signal.pushedAt).toLocaleDateString(lang === "zh" ? "zh-CN" : "en-US")}</span>
+                      {signal.stale && <span className="text-amber-600">{t("stale snapshot", "快照待刷新")}</span>}
+                    </a>
+                  )}
+
                   {tool.install && (
                     <div className="install-line mt-4"><span>$</span><code>{tool.install}</code></div>
                   )}
@@ -128,7 +160,10 @@ export function ToolDirectory() {
         })}
         {filtered.length === 0 && <div className="empty-state">{t("No tools match this search yet.", "暂时没有匹配的工具。")}</div>}
       </div>
-      <p className="mt-4 text-[11px] text-paper-800/35 dark:text-slate-500 text-right">{t("Upvotes are stored in this browser in the static preview.", "静态预览版的点赞保存在此浏览器。")}</p>
+      <p className="mt-4 text-[11px] text-paper-800/35 dark:text-slate-500 text-right">
+        {t("Your upvote stays in this browser. GitHub metrics are public snapshots", "你的点赞仅保存在本浏览器；GitHub 指标为公开快照")}
+        {signalsAt ? ` · ${new Date(signalsAt).toLocaleString(lang === "zh" ? "zh-CN" : "en-US")}` : ""}
+      </p>
     </>
   );
 }

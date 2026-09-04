@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "news:sync": "node scripts/sync-news.mjs",
+    "tools:sync": "node scripts/sync-tool-signals.mjs",
     "events:check": "node scripts/check-events.mjs",
     "start": "next start",
     "lint": "next lint"

@@ -389,7 +389,7 @@ export default function Home() {
             <a key={tool.id} href={tool.href} target="_blank" rel="noopener noreferrer" className="home-tool-card group">
               <div className="flex items-center justify-between gap-3">
                 <span className="topic-chip bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300">{tool.category}</span>
-                <span className="text-xs font-mono text-paper-800/35 dark:text-slate-500">↑ {tool.votes}</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-paper-800/35 dark:text-slate-500">{t("Curated", "编辑精选")}</span>
               </div>
               <h3 className="text-lg font-bold mt-5 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">{tool.name}</h3>
               <p className="text-sm leading-relaxed text-paper-800/55 dark:text-slate-400 mt-2">{lang === "en" ? tool.tagline : tool.taglineZh}</p>

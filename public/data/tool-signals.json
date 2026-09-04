@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-09-04T02:21:14.885Z",
+  "methodology": "Public GitHub repository API snapshot. Stars measure repository attention, not scientific quality.",
+  "sources": [
+    {
+      "name": "VectorSpaceLab/AREX-Skill",
+      "status": "ok"
+    },
+    {
+      "name": "DeepXiv/deepxiv_sdk",
+      "status": "ok"
+    },
+    {
+      "name": "plumed/plumed2",
+      "status": "ok"
+    }
+  ],
+  "signals": [
+    {
+      "id": "arex-skill",
+      "repository": "VectorSpaceLab/AREX-Skill",
+      "sourceUrl": "https://github.com/VectorSpaceLab/AREX-Skill",
+      "stars": 119,
+      "forks": 8,
+      "openIssues": 1,
+      "pushedAt": "2026-09-03T02:25:21Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "capturedAt": "2026-09-04T02:21:14.884Z"
+    },
+    {
+      "id": "deepxiv",
+      "repository": "DeepXiv/deepxiv_sdk",
+      "sourceUrl": "https://github.com/DeepXiv/deepxiv_sdk",
+      "stars": 780,
+      "forks": 44,
+      "openIssues": 2,
+      "pushedAt": "2026-09-04T02:20:09Z",
+      "archived": false,
+      "license": "MIT",
+      "capturedAt": "2026-09-04T02:21:14.881Z"
+    },
+    {
+      "id": "plumed",
+      "repository": "plumed/plumed2",
+      "sourceUrl": "https://github.com/plumed/plumed2",
+      "stars": 518,
+      "forks": 331,
+      "openIssues": 157,
+      "pushedAt": "2026-09-03T09:03:28Z",
+      "archived": false,
+      "license": "LGPL-3.0",
+      "capturedAt": "2026-09-04T02:21:14.885Z"
+    }
+  ]
+}

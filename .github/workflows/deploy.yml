@@ -34,6 +34,12 @@ jobs:
         run: npm run news:sync
         continue-on-error: true
 
+      - name: Refresh public tool signals
+        run: npm run tools:sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
       - name: Validate event deadlines and freshness
         run: npm run events:check
 

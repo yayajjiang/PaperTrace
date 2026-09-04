@@ -16,7 +16,6 @@ export interface ResearchTool {
   paper?: string;
   guide?: string;
   install?: string;
-  votes: number;
   featured?: boolean;
   scores: { impact: number; buzz: number; utility: number };
   evidence?: { value: string; label: string; labelZh: string }[];
@@ -29,23 +28,22 @@ export const researchTools: ResearchTool[] = [
     tagline: "The missing skill layer between intelligence and research",
     taglineZh: "补上智能与科研之间缺失的技能层",
     description:
-      "5,000+ verified executable skills distilled from 1,000+ repositories across 20 research fields. DisCo can create, verify and refresh skills, then route them into Codex, Claude Code, Pi and other harnesses.",
+      "The current public checkout contains 1,060 operating skills for 170 repositories across 14 families. DisCo can create, verify and refresh skill graphs, then route only the relevant fragment into a research task.",
     descriptionZh:
-      "从 1,000+ 个仓库蒸馏出 5,000+ 个经验证的可执行技能，覆盖 20 个研究领域；DisCo 可构建、验证、刷新技能，并接入 Codex、Claude Code、Pi 等 Harness。",
+      "当前公开版本包含面向 170 个仓库的 1,060 个操作技能，覆盖 14 个能力族；DisCo 可构建、验证、刷新技能图，并只把任务相关片段路由进科研流程。",
     category: "Agent Skills",
     domains: ["AI & CS", "Multidisciplinary"],
     tags: ["Open Source", "Agent", "Reproducibility"],
     href: "https://github.com/VectorSpaceLab/AREX-Skill",
     github: "https://github.com/VectorSpaceLab/AREX-Skill",
     paper: "https://arxiv.org/abs/2609.02749",
-    install: "npm install -g --ignore-scripts @arex-skill/disco",
-    votes: 412,
+    install: "npm install -g @auto-ml-skills/disco && disco repo-skills install",
     featured: true,
     scores: { impact: 88, buzz: 94, utility: 93 },
     evidence: [
       { value: "+134.3%", label: "MLE-bench gain", labelZh: "MLE-bench 提升" },
-      { value: "5,000+", label: "verified skills", labelZh: "已验证技能" },
-      { value: "178", label: "capability clusters", labelZh: "能力簇" },
+      { value: "1,060", label: "public skills", labelZh: "公开技能" },
+      { value: "170", label: "repository graphs", labelZh: "仓库技能图" },
     ],
   },
   {
@@ -62,7 +60,6 @@ export const researchTools: ResearchTool[] = [
     tags: ["CLI", "arXiv", "Agent API"],
     href: "https://github.com/DeepXiv/deepxiv_sdk",
     github: "https://github.com/DeepXiv/deepxiv_sdk",
-    votes: 237,
     featured: true,
     scores: { impact: 78, buzz: 82, utility: 91 },
     evidence: [
@@ -84,7 +81,6 @@ export const researchTools: ResearchTool[] = [
     tags: ["Agent", "Evidence", "MCP"],
     href: "https://www.dinq.me",
     paper: "https://arxiv.org/abs/2608.23501",
-    votes: 198,
     featured: true,
     scores: { impact: 84, buzz: 87, utility: 86 },
     evidence: [
@@ -105,7 +101,6 @@ export const researchTools: ResearchTool[] = [
     domains: ["Multidisciplinary"],
     tags: ["Demo", "Analysis", "People Search"],
     href: "https://analysis.dinq.me/",
-    votes: 94,
     scores: { impact: 62, buzz: 68, utility: 71 },
   },
   {
@@ -120,7 +115,6 @@ export const researchTools: ResearchTool[] = [
     domains: ["Multidisciplinary"],
     tags: ["Demo", "Discovery", "Research Talent"],
     href: "https://find.1stauthor.com/",
-    votes: 76,
     scores: { impact: 56, buzz: 63, utility: 69 },
   },
   {
@@ -137,7 +131,6 @@ export const researchTools: ResearchTool[] = [
     tags: ["Local-first", "Knowledge Base", "Custom Skills"],
     href: "https://www.schoai.cn",
     guide: "https://my.feishu.cn/wiki/AgZlwq6Xli9xnokfjUMcPsqEnSJ",
-    votes: 132,
     featured: true,
     scores: { impact: 70, buzz: 76, utility: 85 },
   },
@@ -154,7 +147,6 @@ export const researchTools: ResearchTool[] = [
     domains: ["Multidisciplinary"],
     tags: ["Open Data", "API", "Knowledge Graph"],
     href: "https://openalex.org/",
-    votes: 361,
     scores: { impact: 96, buzz: 72, utility: 94 },
   },
   {
@@ -170,7 +162,6 @@ export const researchTools: ResearchTool[] = [
     domains: ["Bio & Medicine"],
     tags: ["Open Access", "Literature", "Biomedical"],
     href: "https://europepmc.org/",
-    votes: 289,
     scores: { impact: 94, buzz: 65, utility: 95 },
   },
   {
@@ -186,7 +177,6 @@ export const researchTools: ResearchTool[] = [
     domains: ["Materials & Chemistry", "Physics"],
     tags: ["Open Data", "API", "Simulation"],
     href: "https://materialsproject.org/",
-    votes: 344,
     scores: { impact: 97, buzz: 70, utility: 96 },
   },
   {
@@ -203,7 +193,6 @@ export const researchTools: ResearchTool[] = [
     tags: ["Open Source", "Simulation", "Molecular Dynamics"],
     href: "https://www.plumed.org/",
     github: "https://github.com/plumed/plumed2",
-    votes: 218,
     scores: { impact: 92, buzz: 60, utility: 90 },
   },
   {
@@ -219,7 +208,6 @@ export const researchTools: ResearchTool[] = [
     domains: ["Physics"],
     tags: ["Literature", "Citations", "Research Jobs"],
     href: "https://inspirehep.net/",
-    votes: 246,
     scores: { impact: 95, buzz: 61, utility: 93 },
   },
   {
@@ -235,7 +223,6 @@ export const researchTools: ResearchTool[] = [
     domains: ["Multidisciplinary", "Social Science"],
     tags: ["Open Source", "Visualization", "Discovery"],
     href: "https://openknowledgemaps.org/",
-    votes: 205,
     scores: { impact: 86, buzz: 66, utility: 87 },
   },
 ];

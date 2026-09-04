@@ -30,6 +30,12 @@ jobs:
         run: npm run news:sync
         continue-on-error: true
 
+      - name: Refresh open-source tool signals
+        run: npm run tools:sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
       - name: Open or update the curation inbox
         uses: actions/github-script@v7
         with:
@@ -37,12 +43,15 @@ jobs:
             const fs = require('fs');
             const events = JSON.parse(fs.readFileSync('public/data/event-health.json', 'utf8'));
             const news = JSON.parse(fs.readFileSync('public/data/headlines.json', 'utf8'));
+            const tools = JSON.parse(fs.readFileSync('public/data/tool-signals.json', 'utf8'));
             const failedSources = (news.sources || []).filter(source => source.status !== 'ok');
+            const failedTools = (tools.sources || []).filter(source => source.status !== 'ok');
             const sections = [];
             if (events.urgent.length) sections.push(`## Deadlines within 14 days\n${events.urgent.map(item => `- [ ] \`${item.id}\` — ${item.deadlineAt}`).join('\n')}`);
             if (events.stale.length) sections.push(`## Event records not verified for 14 days\n${events.stale.map(item => `- [ ] \`${item.id}\` — last checked ${item.verifiedAt}`).join('\n')}`);
             if (events.coverageGaps.length) sections.push(`## Coverage gaps\n${events.coverageGaps.map(item => `- [ ] ${item.domain}: ${item.upcoming}/${item.target} upcoming entries`).join('\n')}`);
             if (failedSources.length) sections.push(`## Failed research sources\n${failedSources.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
+            if (failedTools.length) sections.push(`## Failed repository signals\n${failedTools.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
             if (!sections.length) return;
             const title = '[Curation] Research Radar watch';
             const body = `Automated audit at ${new Date().toISOString()}. Check canonical organizer/source pages before editing.\n\n${sections.join('\n\n')}\n\nThis issue is refreshed instead of duplicated.`;
