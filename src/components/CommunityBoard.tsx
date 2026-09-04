@@ -44,12 +44,12 @@ export function CommunityBoard({ limit }: { limit?: number }) {
               aria-label={t("Upvote topic", "为话题点赞")}
             >
               <span aria-hidden="true">↑</span>
-              <span>{topic.votes + (voted ? 1 : 0)}</span>
+              <span>{voted ? 1 : 0}</span>
             </button>
             <a href={topic.href} target="_blank" rel="noopener noreferrer" className="min-w-0 flex-1 group">
               <div className="flex items-center gap-2 mb-1.5">
                 <span className={`topic-chip ${tagStyle[topic.tag]}`}>{topic.tag}</span>
-                <span className="text-xs text-paper-800/35 dark:text-slate-500">{topic.comments} {t("replies", "条讨论")}</span>
+                <span className="text-xs text-paper-800/35 dark:text-slate-500">{t("Open discussion", "开放讨论")}</span>
               </div>
               <h3 className="font-bold dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {lang === "en" ? topic.title : topic.titleZh}
@@ -62,7 +62,7 @@ export function CommunityBoard({ limit }: { limit?: number }) {
         );
       })}
       <p className="text-[11px] text-paper-800/35 dark:text-slate-500 text-right">
-        {t("Your upvotes stay in this browser for now.", "当前点赞仅保存在此浏览器。")}
+        {t("Counts are local interest signals from this browser only; no community totals are implied.", "数字仅代表此浏览器的本地兴趣票，不暗示全站社区总票数。")}
       </p>
     </div>
   );

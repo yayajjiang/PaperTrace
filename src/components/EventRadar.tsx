@@ -12,6 +12,76 @@ function daysUntil(date: string) {
   return Math.ceil((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 86_400_000);
 }
 
+function addDay(date: string) {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + 1);
+  return value.toISOString().slice(0, 10);
+}
+
+function icsDate(date: string) {
+  return date.replaceAll("-", "");
+}
+
+function icsText(value: string) {
+  return value.replaceAll("\\", "\\\\").replaceAll("\n", "\\n").replaceAll(",", "\\,").replaceAll(";", "\\;");
+}
+
+function calendarContent(events: typeof researchEvents, lang: "en" | "zh") {
+  const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const blocks = events.flatMap((event) => {
+    const title = lang === "en" ? event.title : event.titleZh;
+    const location = lang === "en" ? event.location : event.locationZh;
+    const summary = lang === "en" ? event.summary : event.summaryZh;
+    const main = [
+      "BEGIN:VEVENT",
+      `UID:${event.id}@papertrace`,
+      `DTSTAMP:${stamp}`,
+      `DTSTART;VALUE=DATE:${icsDate(event.startsAt)}`,
+      `DTEND;VALUE=DATE:${icsDate(addDay(event.endsAt))}`,
+      `SUMMARY:${icsText(title)}`,
+      `LOCATION:${icsText(location)}`,
+      `DESCRIPTION:${icsText(`${summary}\nVerified ${event.verifiedAt}\n${event.href}`)}`,
+      `URL:${event.href}`,
+      "END:VEVENT",
+    ];
+    if (!event.deadlineAt || event.deadlineAt < today) return [main];
+    const deadlineLabel = lang === "en" ? event.deadlineLabel : event.deadlineLabelZh;
+    const deadline = [
+      "BEGIN:VEVENT",
+      `UID:${event.id}-deadline@papertrace`,
+      `DTSTAMP:${stamp}`,
+      `DTSTART;VALUE=DATE:${icsDate(event.deadlineAt)}`,
+      `DTEND;VALUE=DATE:${icsDate(addDay(event.deadlineAt))}`,
+      `SUMMARY:${icsText(`${lang === "en" ? "Deadline" : "截止"} · ${deadlineLabel || title} · ${title}`)}`,
+      `DESCRIPTION:${icsText(`${event.organizer}\n${event.href}`)}`,
+      `URL:${event.href}`,
+      "BEGIN:VALARM",
+      "TRIGGER:-P7D",
+      "ACTION:DISPLAY",
+      `DESCRIPTION:${icsText(`${lang === "en" ? "One week until" : "距截止一周"}: ${title}`)}`,
+      "END:VALARM",
+      "BEGIN:VALARM",
+      "TRIGGER:-P1D",
+      "ACTION:DISPLAY",
+      `DESCRIPTION:${icsText(`${lang === "en" ? "Tomorrow" : "明天截止"}: ${title}`)}`,
+      "END:VALARM",
+      "END:VEVENT",
+    ];
+    return [main, deadline];
+  });
+  return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//PaperTrace//Event Radar//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", ...blocks.flat(), "END:VCALENDAR", ""].join("\r\n");
+}
+
+function downloadCalendar(events: typeof researchEvents, lang: "en" | "zh", filename: string) {
+  const blob = new Blob([calendarContent(events, lang)], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
 export function EventRadar() {
   const { lang, t } = useLang();
   const [type, setType] = useState<EventType | "All">("All");
@@ -53,6 +123,7 @@ export function EventRadar() {
           <div className="flex flex-wrap gap-1.5 mt-4">{event.domains.map((domain) => <span key={domain} className="subtle-chip">{domain}</span>)}</div>
           <div className="flex flex-wrap items-center gap-3 mt-5">
             {event.deadlineAt && event.deadlineAt >= today && <span className="event-deadline"><b>{lang === "en" ? event.deadlineLabel : event.deadlineLabelZh}</b> · {event.deadlineAt}</span>}
+            <button onClick={() => downloadCalendar([event], lang, `${event.id}.ics`)} className="calendar-button">{t("Add to calendar", "加入日历")} ↓</button>
             <a href={event.href} target="_blank" rel="noopener noreferrer" className="ml-auto text-xs font-bold text-blue-600 dark:text-blue-400">{t("Official page", "官网核验")} ↗</a>
           </div>
           <div className="mt-3 text-[9px] font-mono text-paper-800/25 dark:text-slate-600">{t("VERIFIED", "核验于")} {event.verifiedAt} · {event.organizer}</div>
@@ -65,7 +136,10 @@ export function EventRadar() {
   return (
     <>
       <div className="directory-controls">
-        <label className="directory-search"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t("Search events, cities or domains…", "搜索活动、城市或领域…")} /></label>
+        <div className="flex flex-col sm:flex-row gap-2">
+          <label className="directory-search flex-1"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t("Search events, cities or domains…", "搜索活动、城市或领域…")} /></label>
+          <button disabled={upcoming.length === 0} onClick={() => downloadCalendar(upcoming, lang, "papertrace-events.ics")} className="calendar-export-button">{t(`Export ${upcoming.length} visible`, `导出当前 ${upcoming.length} 项`)} · .ics</button>
+        </div>
         <div className="flex flex-wrap gap-2">
           {types.map((item) => <button key={item} onClick={() => setType(item)} className={`filter-pill ${type === item ? "filter-pill-active" : ""}`}>{item === "All" ? t("All formats", "全部类型") : item}</button>)}
           <span className="hidden sm:block w-px bg-paper-200 dark:bg-slate-700 mx-1" />

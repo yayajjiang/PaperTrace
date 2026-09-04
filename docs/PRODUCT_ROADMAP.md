@@ -69,6 +69,9 @@ Status: in progress
 - [x] Activate live filtered signal desks for every non-CS research domain while keeping editorial ownership distributed
 - [x] Add a no-login 5/20/60-minute Today Brief that compresses feeds into concrete next actions
 - [x] Add official OpenAI and Claude service-status snapshots, recent incidents, and outage-vs-retirement separation
+- [x] Publish a data-health desk with freshness budgets, failed sources, stale records, and last-run timestamps
+- [x] Remove unverified seeded vote and reply counts from community prompts
+- [x] Add no-login `.ics` exports for filtered event sets, open deadlines, and 7-day / 1-day reminders
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

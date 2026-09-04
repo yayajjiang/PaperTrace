@@ -53,6 +53,7 @@ function Header() {
     { href: "/briefing", label: t("Today's brief", "今日简报") },
     { href: "/models", label: t("Model lifecycle", "模型生命周期") },
     { href: "/sources", label: t("Source network", "信息源网络") },
+    { href: "/health", label: t("Data health", "数据健康") },
     { href: "/queue", label: t("Attention queue", "注意力队列") },
     { href: "/frontier", label: t("Frontier watch", "前沿观察") },
     { href: "/skills", label: "Skills" },
@@ -166,6 +167,7 @@ function Footer() {
         <div className="flex flex-wrap gap-4">
           <a href={`${basePath}/tools`} className="hover:text-blue-600">{t("Tools", "工具")}</a>
           <a href={`${basePath}/community`} className="hover:text-blue-600">{t("Community", "社区")}</a>
+          <a href={`${basePath}/health`} className="hover:text-blue-600">{t("Data health", "数据健康")}</a>
           <a href="https://github.com/yayajjiang/PaperTrace" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">GitHub ↗</a>
         </div>
         <div className="flex justify-center mt-4">
