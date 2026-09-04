@@ -53,7 +53,8 @@ Each paper gets a full breakdown with formula walkthroughs, interactive widgets,
 - **KaTeX** — Math rendering
 - **Tailwind CSS** — Styling with dark mode
 - **Custom i18n** — `t(en, zh)` hook, no external library
-- **Automated research radar** — official RSS + multi-field arXiv sync on a daily GitHub Actions schedule
+- **Automated research radar** — official RSS, multi-field arXiv, and selected model registries refreshed every 8 hours by GitHub Actions
+- **No-login subscriptions** — a generated bilingual `/feed.xml` for any RSS reader
 
 ---
 

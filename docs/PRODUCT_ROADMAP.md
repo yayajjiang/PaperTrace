@@ -75,6 +75,8 @@ Status: in progress
 - [x] Add a private, no-login “since your last review” delta across headlines, discussions, incidents, deadlines, and migrations
 - [x] Raise public refresh cadence to every 8 hours and the editorial inbox audit to daily
 - [x] Discover recent model uploads from seven selected Hugging Face organizations while labeling registry signals separately from launches
+- [x] Generate a bilingual RSS feed from ranked signals for no-login subscriptions
+- [x] Preserve failed-source headlines as visibly stale last-known-good snapshots instead of silently dropping them
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

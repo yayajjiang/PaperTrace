@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 
 const feeds = [
@@ -31,6 +31,13 @@ const decode = (value = "") =>
     .replace(/&quot;/g, '"')
     .replace(/\s+/g, " ")
     .trim();
+
+const xmlEscape = (value = "") => String(value)
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;")
+  .replaceAll("'", "&apos;");
 
 const pick = (block, names) => {
   for (const name of names) {
@@ -330,12 +337,25 @@ try {
 
 const modelRegistryResults = await Promise.allSettled(modelRegistryOrgs.map(fetchHuggingFaceModels));
 const modelRegistryItems = modelRegistryResults.flatMap((result) => result.status === "fulfilled" ? result.value : []);
+let previousItems = [];
+try {
+  previousItems = JSON.parse(await readFile("public/data/headlines.json", "utf8")).items || [];
+} catch {}
+const failedSourceNames = new Set([
+  ...[...feeds, ...arxivFeeds].flatMap((feed, index) => results[index]?.status === "rejected" ? [feed.name] : []),
+  ...(huggingFaceError ? ["Hugging Face Papers"] : []),
+  ...modelRegistryOrgs.flatMap((author, index) => modelRegistryResults[index]?.status === "rejected" ? [`HF Models · ${author}`] : []),
+]);
+const preservedItems = previousItems
+  .filter((item) => failedSourceNames.has(item.source))
+  .map((item) => ({ ...item, stale: true, staleReason: "Upstream source failed during the latest sync; showing the last verified snapshot." }));
 
 const rankedItems = results
   .flatMap((result) => result.status === "fulfilled" ? result.value : [])
   .concat(huggingFaceItems)
   .concat(modelRegistryItems)
   .concat(editorialItems)
+  .concat(preservedItems)
   .filter((item, index, all) => all.findIndex((candidate) => candidate.sourceUrl === item.sourceUrl) === index)
   .sort((a, b) => {
     const age = (item) => Math.max(0, (Date.now() - Date.parse(`${item.date}T00:00:00Z`)) / 86_400_000);
@@ -368,18 +388,19 @@ const itemRank = (item) => {
 const items = selected.sort((a, b) => itemRank(b) - itemRank(a));
 const sourceHealth = [...feeds, ...arxivFeeds].map((feed, index) => {
   const result = results[index];
+  const preservedCount = preservedItems.filter((item) => item.source === feed.name).length;
   return result?.status === "fulfilled"
     ? { name: feed.name, status: "ok", itemCount: result.value.length }
-    : { name: feed.name, status: "error", itemCount: 0, note: result?.reason instanceof Error ? result.reason.message.slice(0, 120) : "Feed unavailable" };
+    : { name: feed.name, status: "error", itemCount: preservedCount, note: `${result?.reason instanceof Error ? result.reason.message.slice(0, 80) : "Feed unavailable"}${preservedCount ? ` · serving ${preservedCount} last-known-good items` : ""}` };
 });
 sourceHealth.push(huggingFaceError
-  ? { name: "Hugging Face Papers", status: "error", itemCount: 0, note: huggingFaceError.slice(0, 120) }
+  ? { name: "Hugging Face Papers", status: "error", itemCount: preservedItems.filter((item) => item.source === "Hugging Face Papers").length, note: `${huggingFaceError.slice(0, 80)} · last-known-good items preserved when available` }
   : { name: "Hugging Face Papers", status: "ok", itemCount: huggingFaceItems.length });
 modelRegistryOrgs.forEach((author, index) => {
   const result = modelRegistryResults[index];
   sourceHealth.push(result.status === "fulfilled"
     ? { name: `HF Models · ${author}`, status: "ok", itemCount: result.value.length }
-    : { name: `HF Models · ${author}`, status: "error", itemCount: 0, note: result.reason instanceof Error ? result.reason.message.slice(0, 120) : "Registry unavailable" });
+    : { name: `HF Models · ${author}`, status: "error", itemCount: preservedItems.filter((item) => item.source === `HF Models · ${author}`).length, note: `${result.reason instanceof Error ? result.reason.message.slice(0, 80) : "Registry unavailable"} · last-known-good items preserved when available` });
 });
 sourceHealth.push({ name: "Editorial watchlist", status: "ok", itemCount: editorialItems.length });
 
@@ -393,4 +414,27 @@ await writeFile(
   `${JSON.stringify({ generatedAt: new Date().toISOString(), sources: sourceHealth, items }, null, 2)}\n`,
   "utf8"
 );
+const siteUrl = "https://yayajjiang.github.io/PaperTrace";
+const rssItems = items.slice(0, 30).map((item) => `    <item>
+      <title>${xmlEscape(item.title)}</title>
+      <link>${xmlEscape(item.sourceUrl)}</link>
+      <guid isPermaLink="false">papertrace:${xmlEscape(item.id)}</guid>
+      <pubDate>${new Date(`${item.date}T12:00:00Z`).toUTCString()}</pubDate>
+      <category>${xmlEscape(item.domain || "Research")}</category>
+      <description>${xmlEscape(`${item.summary}\n\n中文：${item.summaryZh}\n\nSource: ${item.source} · Impact ${item.scores?.impact ?? "–"} · Buzz ${item.scores?.buzz ?? "–"} · Utility ${item.scores?.utility ?? "–"}`)}</description>
+    </item>`).join("\n");
+const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>PaperTrace Research Signals</title>
+    <link>${siteUrl}/radar</link>
+    <description>Bilingual, evidence-aware research headlines across fields · 跨领域双语科研信号</description>
+    <language>en-US</language>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <ttl>480</ttl>
+${rssItems}
+  </channel>
+</rss>
+`;
+await writeFile("public/feed.xml", rss, "utf8");
 console.log(`Wrote ${items.length} headlines from ${results.filter((item) => item.status === "fulfilled").length} feeds${huggingFaceItems.length ? " + Hugging Face Papers" : ""} + ${modelRegistryItems.length} recent model entries.`);

@@ -50,6 +50,7 @@ export function LiveHeadlines({ compact = false }: { compact?: boolean }) {
           <div className="flex items-center gap-2 mb-5">
             <span className={`topic-chip ${tagStyle[lead.tag]}`}>{lead.tag}</span>
             {lead.domain && <span className="domain-label">{lead.domain}</span>}
+            {lead.stale && <span className="warning-chip">{t("STALE", "旧快照")}</span>}
             <span className="text-xs font-mono text-slate-500 dark:text-slate-400">{lead.date}</span>
           </div>
           <h3 className="text-xl md:text-2xl font-bold leading-tight dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -75,6 +76,7 @@ export function LiveHeadlines({ compact = false }: { compact?: boolean }) {
             <a key={item.id} href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="headline-row group">
               <div className="flex items-center justify-between gap-3 mb-2">
                 <span className={`topic-chip ${tagStyle[item.tag]}`}>{item.tag}</span>
+                {item.stale && <span className="warning-chip">{t("STALE", "旧快照")}</span>}
                 <time className="text-[11px] font-mono text-paper-800/40 dark:text-slate-500">{item.date}</time>
               </div>
               <h3 className="text-sm font-bold leading-snug dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">

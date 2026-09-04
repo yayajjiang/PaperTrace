@@ -76,6 +76,7 @@ export function ResearchRadar() {
                 <div className="flex flex-wrap items-center gap-2 mb-2">
                   <span className={`topic-chip ${item.tag === "Release" ? "bg-emerald-100 text-emerald-700" : item.tag === "Industry" ? "bg-amber-100 text-amber-700" : "bg-blue-100 text-blue-700"}`}>{item.tag}</span>
                   <span className="domain-label">{item.domain || "Multidisciplinary"}</span>
+                  {item.stale && <span className="warning-chip" title={item.staleReason}>{t("LAST KNOWN GOOD", "上一版可靠快照")}</span>}
                   <time className="text-[11px] font-mono text-paper-800/35 dark:text-slate-500 ml-auto">{item.date}</time>
                 </div>
                 <h2 className="font-bold text-lg leading-snug dark:text-white">{lang === "en" ? item.title : item.titleZh}</h2>
@@ -126,7 +127,7 @@ export function ResearchRadar() {
             <div><b>{t("Utility", "实用性")}</b><p>{t("Code, data, demo, API and cost to reproduce.", "代码、数据、Demo、API 与复现成本。")}</p></div>
           </div>
           <div className="mt-6 pt-5 border-t border-paper-200 dark:border-slate-700 text-xs leading-relaxed text-paper-800/45 dark:text-slate-500">
-            {t("Official feeds update daily. X and Xiaohongshu signals enter only when a public post can be checked; raw popularity never overrides evidence.", "官方信息源每日更新。X 与小红书信号仅在公开内容可核验时进入；原始热度不会覆盖证据判断。")}
+            {t("Official feeds refresh every 8 hours. Failed sources keep a visibly stale last-known-good snapshot. X and Xiaohongshu enter only when a public post can be checked.", "官方信息源每 8 小时刷新。来源失败时保留并明确标注上一版可靠快照。X 与小红书信号仅在公开内容可核验时进入。")}
           </div>
           {generatedAt && <div className="mt-4 text-[10px] font-mono text-paper-800/30 dark:text-slate-600">SYNC {new Date(generatedAt).toLocaleString(lang === "zh" ? "zh-CN" : "en-US")}</div>}
           {sourceHealth.length > 0 && (

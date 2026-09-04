@@ -18,6 +18,8 @@ export interface Headline {
     scoreNotes: { impact: string; buzz: string; utility: string };
   };
   featured?: boolean;
+  stale?: boolean;
+  staleReason?: string;
 }
 
 // Editorially verified fallbacks keep the homepage useful if a feed is down.

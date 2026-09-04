@@ -168,6 +168,7 @@ function Footer() {
           <a href={`${basePath}/tools`} className="hover:text-blue-600">{t("Tools", "工具")}</a>
           <a href={`${basePath}/community`} className="hover:text-blue-600">{t("Community", "社区")}</a>
           <a href={`${basePath}/health`} className="hover:text-blue-600">{t("Data health", "数据健康")}</a>
+          <a href={`${basePath}/feed.xml`} className="hover:text-orange-600">RSS</a>
           <a href="https://github.com/yayajjiang/PaperTrace" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">GitHub ↗</a>
         </div>
         <div className="flex justify-center mt-4">

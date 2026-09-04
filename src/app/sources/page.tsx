@@ -20,7 +20,10 @@ export default function SourcesPage() {
           <div><strong>{fields}</strong><span>{t("research fields", "研究领域")}</span></div>
           <div><strong>0</strong><span>{t("auto-post targets", "自动发帖平台")}</span></div>
         </div>
-        <a href={`${process.env.NODE_ENV === "production" ? "/PaperTrace" : ""}/health`} className="inline-flex mt-5 text-xs font-bold text-blue-600 dark:text-blue-400">{t("Inspect live data health", "查看实时数据健康")} →</a>
+        <div className="flex flex-wrap gap-4 mt-5 text-xs font-bold">
+          <a href={`${process.env.NODE_ENV === "production" ? "/PaperTrace" : ""}/health`} className="text-blue-600 dark:text-blue-400">{t("Inspect live data health", "查看实时数据健康")} →</a>
+          <a href={`${process.env.NODE_ENV === "production" ? "/PaperTrace" : ""}/feed.xml`} className="text-orange-600 dark:text-orange-400">{t("Subscribe via RSS", "订阅 RSS")} ↗</a>
+        </div>
       </section>
       <section className="mt-10"><SourceNetwork /></section>
       <CommunityPulse />

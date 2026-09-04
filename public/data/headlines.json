@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T07:20:27.263Z",
+  "generatedAt": "2026-09-04T07:31:29.725Z",
   "sources": [
     {
       "name": "OpenAI",
@@ -83,8 +83,9 @@
     },
     {
       "name": "HF Models · nvidia",
-      "status": "ok",
-      "itemCount": 2
+      "status": "error",
+      "itemCount": 0,
+      "note": "fetch failed · last-known-good items preserved when available"
     },
     {
       "name": "Editorial watchlist",
@@ -185,7 +186,7 @@
         "utility": 78
       },
       "signals": {
-        "huggingFaceLikes": 558,
+        "huggingFaceLikes": 559,
         "huggingFaceDownloads": 54571,
         "registryPublishedAt": "2026-08-31T06:16:18.000Z"
       },
@@ -193,7 +194,7 @@
         "layer": "Structured discovery",
         "scoreNotes": {
           "impact": "A fresh model-registry artifact; scientific or product impact needs downstream evidence.",
-          "buzz": "Hugging Face shows 558 likes and 54571 downloads at sync time; these are platform-local signals.",
+          "buzz": "Hugging Face shows 559 likes and 54571 downloads at sync time; these are platform-local signals.",
           "utility": "A downloadable model entry exists; verify files, license (mit) and model card before use."
         }
       }

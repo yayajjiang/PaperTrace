@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>PaperTrace Research Signals</title>
+    <link>https://yayajjiang.github.io/PaperTrace/radar</link>
+    <description>Bilingual, evidence-aware research headlines across fields · 跨领域双语科研信号</description>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 04 Sep 2026 07:31:29 GMT</lastBuildDate>
+    <ttl>480</ttl>
+    <item>
+      <title>OpenAI releases GPT-6 Astra</title>
+      <link>https://openai.com/index/gpt-6-astra/</link>
+      <guid isPermaLink="false">papertrace:openai-gpt-6-astra-2026</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Astra is rolling out from limited organizational access to ChatGPT, Codex and API surfaces. OpenAI reports major gains in computer use, coding, science and cybersecurity; benchmark numbers remain vendor-reported until independently reproduced.
+
+中文：Astra 正从少量组织逐步开放到 ChatGPT、Codex 与 API。OpenAI 报告其在计算机操作、代码、科学与网络安全上大幅提升；相关基准在独立复现前仍属于厂商自报。
+
+Source: OpenAI · Impact 98 · Buzz 99 · Utility 88</description>
+    </item>
+    <item>
+      <title>World Labs releases Atlas, an omni world model</title>
+      <link>https://www.worldlabs.ai/blog/atlas</link>
+      <guid isPermaLink="false">papertrace:world-labs-atlas-2026</guid>
+      <pubDate>Tue, 01 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Atlas handles text, images, video and 3D in one spatial context, spanning generation, reconstruction and real-to-sim robotics.
+
+中文：Atlas 在统一空间上下文中处理文本、图像、视频与 3D，覆盖生成、重建与机器人 real-to-sim。
+
+Source: World Labs · Impact 92 · Buzz 92 · Utility 78</description>
+    </item>
+    <item>
+      <title>Path to Astra: critical capabilities and frontier safeguards</title>
+      <link>https://openai.com/index/path-to-astra</link>
+      <guid isPermaLink="false">papertrace:309be27bdcfe</guid>
+      <pubDate>Tue, 01 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.
+
+中文：Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.
+
+Source: OpenAI · Impact 91 · Buzz 88 · Utility 82</description>
+    </item>
+    <item>
+      <title>New model registry entry: deepseek-ai/DeepSeek-V4-Flash-Vision-Exp</title>
+      <link>https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp</link>
+      <guid isPermaLink="false">papertrace:hf-model-deepseek-ai-deepseek-v4-flash-vision-exp</guid>
+      <pubDate>Mon, 31 Aug 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>deepseek-ai published a new Hugging Face model entry for image-text-to-text. This is a registry signal—not proof of a formal launch. License: mit.
+
+中文：deepseek-ai 在 Hugging Face 发布了新的 image-text-to-text 模型条目。这是仓库上新信号，不等同于正式发布公告。许可证：mit。
+
+Source: HF Models · deepseek-ai · Impact 82 · Buzz 90 · Utility 78</description>
+    </item>
+    <item>
+      <title>SimpleDesign: A Joint Model for Protein Sequence and Structure Codesign</title>
+      <link>https://arxiv.org/abs/2609.03377v1</link>
+      <guid isPermaLink="false">papertrace:65cdac693b77</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Bio &amp; Medicine</category>
+      <description>Proteins are fundamental to biological processes, with their function determined by the complex interplay between the amino acid sequence and the three-dimensional structure. Developing generative models capable of understanding this intrinsically multi-modal relationship is cruc
+
+中文：Proteins are fundamental to biological processes, with their function determined by the complex interplay between the amino acid sequence and the three-dimensional structure. Developing generative models capable of understanding this intrinsically multi-modal relationship is cruc
+
+Source: arXiv · Bio · Impact 73 · Buzz 78 · Utility 90</description>
+    </item>
+    <item>
+      <title>Daybreak for Frontline Defenders: $1B to protect essential services</title>
+      <link>https://openai.com/index/daybreak-for-frontline-defenders</link>
+      <guid isPermaLink="false">papertrace:5190d2a1dccd</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.
+
+中文：OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.
+
+Source: OpenAI · Impact 85 · Buzz 92 · Utility 58</description>
+    </item>
+    <item>
+      <title>Safety overview: GPT-6 Astra</title>
+      <link>https://openai.com/index/safety-overview-gpt-6-astra</link>
+      <guid isPermaLink="false">papertrace:2e155b11d809</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.
+
+中文：GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.
+
+Source: OpenAI · Impact 84 · Buzz 92 · Utility 58</description>
+    </item>
+    <item>
+      <title>Introducing WeatherNext 3, our most advanced and accurate global weather AI model</title>
+      <link>https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/</link>
+      <guid isPermaLink="false">papertrace:56da2c8ef803</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>
+
+中文：
+
+Source: Google DeepMind · Impact 84 · Buzz 92 · Utility 58</description>
+    </item>
+    <item>
+      <title>A Stochastic Riemannian Alternating Descent Ascent Method for Nonsmooth Composite Expectation Optimization on Riemannian Manifolds</title>
+      <link>https://arxiv.org/abs/2609.04116v1</link>
+      <guid isPermaLink="false">papertrace:e930207683c6</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Math &amp; Stats</category>
+      <description>In this paper, we consider a class of Riemannian nonsmooth composite expectation optimization problems, which arises in various machine learning, signal processing, and statistics applications. Noting that these problems admit structured minimax reformulations, we propose an effi
+
+中文：In this paper, we consider a class of Riemannian nonsmooth composite expectation optimization problems, which arises in various machine learning, signal processing, and statistics applications. Noting that these problems admit structured minimax reformulations, we propose an effi
+
+Source: arXiv · Math &amp; Stats · Impact 73 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize</title>
+      <link>https://arxiv.org/abs/2609.04197v1</link>
+      <guid isPermaLink="false">papertrace:a3e5ba214a98</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unrelia
+
+中文：Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unrelia
+
+Source: arXiv · AI &amp; CS · Impact 73 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Robust PAC Learning of Concurrent Stochastic Games</title>
+      <link>https://arxiv.org/abs/2609.04189v1</link>
+      <guid isPermaLink="false">papertrace:89ddc0e0c7bd</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>We introduce the first Probably Approximately Correct (PAC) learning framework for general-sum concurrent stochastic games (CSGs) with transition uncertainty, while addressing the challenge of Nash equilibrium (NE) existence. Our algorithm maintains data-driven $L^1$ confidence s
+
+中文：We introduce the first Probably Approximately Correct (PAC) learning framework for general-sum concurrent stochastic games (CSGs) with transition uncertainty, while addressing the challenge of Nash equilibrium (NE) existence. Our algorithm maintains data-driven $L^1$ confidence s
+
+Source: arXiv · AI &amp; CS · Impact 73 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Making Gender-Inclusive Practices Actionable: Evaluating a Research-Informed Computing Education Toolkit</title>
+      <link>https://arxiv.org/abs/2609.03936v1</link>
+      <guid isPermaLink="false">papertrace:e8ce482aff22</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>The persistent gender imbalance in computing remains a global concern, and universities offer a key part of the pipeline to address it. Although research has identified practices that support under-represented student groups, translating this evidence into actionable guidance rem
+
+中文：The persistent gender imbalance in computing remains a global concern, and universities offer a key part of the pipeline to address it. Although research has identified practices that support under-represented student groups, translating this evidence into actionable guidance rem
+
+Source: arXiv · Social Science · Impact 73 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Mechanistic Framework for Multicomponent Nanoparticle Assembly: Predicting RNA-lipid and PEI-DNA nanoparticle assembly</title>
+      <link>https://arxiv.org/abs/2609.04029v1</link>
+      <guid isPermaLink="false">papertrace:ebf4174089cd</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Materials &amp; Chemistry</category>
+      <description>The assembly of multicomponent nanoparticles is often kinetically controlled and exhibits strong pathway dependence. Transport, solvent exchange, nucleation/growth, and collision-driven coalescence together determine not only ensemble-averaged properties but also particle-to-part
+
+中文：The assembly of multicomponent nanoparticles is often kinetically controlled and exhibits strong pathway dependence. Transport, solvent exchange, nucleation/growth, and collision-driven coalescence together determine not only ensemble-averaged properties but also particle-to-part
+
+Source: arXiv · Materials &amp; Chemistry · Impact 66 · Buzz 78 · Utility 90</description>
+    </item>
+    <item>
+      <title>Legibility is Not Interpretability: Comparing Judged and Actual Importance in Chain-Of-Thought Reasoning</title>
+      <link>https://arxiv.org/abs/2609.04194v1</link>
+      <guid isPermaLink="false">papertrace:ca41ad6246e0</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Reasoning traces from chain-of-thought models appear to offer a legible window into how a model arrives at its answer. A growing body of work treats them as such, using LLM judges to diagnose errors, evaluate faithfulness, and provide step-level supervision via process reward mod
+
+中文：Reasoning traces from chain-of-thought models appear to offer a legible window into how a model arrives at its answer. A growing body of work treats them as such, using LLM judges to diagnose errors, evaluate faithfulness, and provide step-level supervision via process reward mod
+
+Source: arXiv · AI &amp; CS · Impact 66 · Buzz 78 · Utility 90</description>
+    </item>
+    <item>
+      <title>Vanilla Exact Synthesis of CNOT Circuits is NP-hard</title>
+      <link>https://arxiv.org/abs/2609.04160v1</link>
+      <guid isPermaLink="false">papertrace:74499a24572c</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Exact CNOT synthesis asks for a minimum-size CNOT circuit implementing an invertible linear transformation. Although several related synthesis models have been shown to be computationally hard, their hardness proofs rely on additional structure such as restricted qubit connectivi
+
+中文：Exact CNOT synthesis asks for a minimum-size CNOT circuit implementing an invertible linear transformation. Although several related synthesis models have been shown to be computationally hard, their hardness proofs rely on additional structure such as restricted qubit connectivi
+
+Source: arXiv · Physics · Impact 66 · Buzz 78 · Utility 90</description>
+    </item>
+    <item>
+      <title>New model registry entry: google/timesfm-3.0-pytorch</title>
+      <link>https://huggingface.co/google/timesfm-3.0-pytorch</link>
+      <guid isPermaLink="false">papertrace:hf-model-google-timesfm-3-0-pytorch</guid>
+      <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>google published a new Hugging Face model entry for time-series-forecasting. This is a registry signal—not proof of a formal launch. License: other.
+
+中文：google 在 Hugging Face 发布了新的 time-series-forecasting 模型条目。这是仓库上新信号，不等同于正式发布公告。许可证：other。
+
+Source: HF Models · google · Impact 82 · Buzz 90 · Utility 78</description>
+    </item>
+    <item>
+      <title>Previewing the Model Hardware Standard</title>
+      <link>https://www.anthropic.com/news/model-hardware-standard-research-preview</link>
+      <guid isPermaLink="false">papertrace:e8e7441ac397</guid>
+      <pubDate>Wed, 26 Aug 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Announcements from Anthropic&apos;s official newsroom. Open the primary source for the full claim and evidence.
+
+中文：来自 Anthropic 官方 Newsroom 的Announcements；请打开原始来源查看完整主张与证据。
+
+Source: Anthropic · Impact 84 · Buzz 82 · Utility 78</description>
+    </item>
+    <item>
+      <title>Introducing Gemini 3.8 Flash and 3.8 Flash Cyber</title>
+      <link>https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/</link>
+      <guid isPermaLink="false">papertrace:18ef68f77655</guid>
+      <pubDate>Wed, 02 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>
+
+中文：
+
+Source: Google DeepMind · Impact 78 · Buzz 90 · Utility 58</description>
+    </item>
+    <item>
+      <title>OpenAI supports California’s bill to advance youth AI safety</title>
+      <link>https://openai.com/index/supporting-california-bill-advance-ai-youth-safety</link>
+      <guid isPermaLink="false">papertrace:0703988e3a33</guid>
+      <pubDate>Mon, 31 Aug 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.
+
+中文：OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.
+
+Source: OpenAI · Impact 84 · Buzz 86 · Utility 58</description>
+    </item>
+    <item>
+      <title>Strengthened Silicate Glasses by Residual Stress: Depth of Compression and Surface Flaws Stability Conditions</title>
+      <link>https://arxiv.org/abs/2609.04109v1</link>
+      <guid isPermaLink="false">papertrace:637ca0c05790</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Materials &amp; Chemistry</category>
+      <description>The application of silicate glasses in severe service environments requires a precise evaluation of structural strength under mechanical loads and surface tribological conditions. Because glass strength is governed by surface flaws and microcracks rather than being an intrinsic m
+
+中文：The application of silicate glasses in severe service environments requires a precise evaluation of structural strength under mechanical loads and surface tribological conditions. Because glass strength is governed by surface flaws and microcracks rather than being an intrinsic m
+
+Source: arXiv · Materials &amp; Chemistry · Impact 67 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>New model registry entry: Qwen/Qwen3.8-Flash-Next-FP8</title>
+      <link>https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8</link>
+      <guid isPermaLink="false">papertrace:hf-model-qwen-qwen3-8-flash-next-fp8</guid>
+      <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Qwen published a new Hugging Face model entry for image-text-to-text. This is a registry signal—not proof of a formal launch. License: other.
+
+中文：Qwen 在 Hugging Face 发布了新的 image-text-to-text 模型条目。这是仓库上新信号，不等同于正式发布公告。许可证：other。
+
+Source: HF Models · Qwen · Impact 77 · Buzz 90 · Utility 78</description>
+    </item>
+    <item>
+      <title>The Identification of Biological Stains at Crime Scenes: A Promising Role for Proteomics and Machine Learning</title>
+      <link>https://arxiv.org/abs/2609.03521v1</link>
+      <guid isPermaLink="false">papertrace:a0d6c4183631</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Bio &amp; Medicine</category>
+      <description>Forensic body fluid identification is crucial for reconstructing crime scene events. While DNA analysis provides individualization, it lacks information about the fluid&apos;s origin. We developed and evaluated three complementary proteomic approaches using LC-HRMS/MS to identify bloo
+
+中文：Forensic body fluid identification is crucial for reconstructing crime scene events. While DNA analysis provides individualization, it lacks information about the fluid&apos;s origin. We developed and evaluated three complementary proteomic approaches using LC-HRMS/MS to identify bloo
+
+Source: arXiv · Bio · Impact 66 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Natural Disasters and the Nonprofit Sector</title>
+      <link>https://arxiv.org/abs/2609.04136v1</link>
+      <guid isPermaLink="false">papertrace:0e0cf19a6ed8</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Math &amp; Stats</category>
+      <description>When natural disasters strike, individuals, communities, and even entire countries can suffer. Researchers have studied the impacts of disasters on various factors of interest, from mental health, to poverty, to economic activity. However, the impact of disasters on the nonprofit
+
+中文：When natural disasters strike, individuals, communities, and even entire countries can suffer. Researchers have studied the impacts of disasters on various factors of interest, from mental health, to poverty, to economic activity. However, the impact of disasters on the nonprofit
+
+Source: arXiv · Social Science · Impact 66 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Hierarchical automation of scanning probe microscopy through agentic orchestration and algorithmic control</title>
+      <link>https://arxiv.org/abs/2609.04015v1</link>
+      <guid isPermaLink="false">papertrace:96e044879ce1</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Materials &amp; Chemistry</category>
+      <description>Rapid advances in agentic artificial intelligence enable scientific systems to interpret open-ended objectives, combine heterogeneous information, invoke specialized tools, and revise experimental strategies as evidence accumulates. However, physical experimentation also contains
+
+中文：Rapid advances in agentic artificial intelligence enable scientific systems to interpret open-ended objectives, combine heterogeneous information, invoke specialized tools, and revise experimental strategies as evidence accumulates. However, physical experimentation also contains
+
+Source: arXiv · Materials &amp; Chemistry · Impact 66 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Compile by Training: Turning Natural-Language Specifications into Local Neural Functions</title>
+      <link>https://arxiv.org/abs/2609.04199v1</link>
+      <guid isPermaLink="false">papertrace:5ac6737397a7</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a provider. We present compile by training, which turns a natural-language specificati
+
+中文：Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a provider. We present compile by training, which turns a natural-language specificati
+
+Source: arXiv · AI &amp; CS · Impact 66 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond</title>
+      <link>https://arxiv.org/abs/2609.03999v1</link>
+      <guid isPermaLink="false">papertrace:69daecb867af</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>Large language models (LLMs) are becoming integral to web applications and browser agents, transforming online interactions while introducing new attack vectors and reshaping longstanding web vulnerabilities. Classical threats such as cross-site scripting (XSS) can be amplified t
+
+中文：Large language models (LLMs) are becoming integral to web applications and browser agents, transforming online interactions while introducing new attack vectors and reshaping longstanding web vulnerabilities. Classical threats such as cross-site scripting (XSS) can be amplified t
+
+Source: arXiv · Social Science · Impact 66 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Introducing agentic video understanding with Gemini</title>
+      <link>https://deepmind.google/blog/introducing-agentic-video-in-gemini/</link>
+      <guid isPermaLink="false">papertrace:dfd1ea2e5518</guid>
+      <pubDate>Tue, 01 Sep 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; CS</category>
+      <description>
+
+中文：
+
+Source: Google DeepMind · Impact 78 · Buzz 88 · Utility 58</description>
+    </item>
+    <item>
+      <title>An Integrative Computational Approach to Predict Viral Epitopes by Targeting the MHC-TCR Complexation</title>
+      <link>https://arxiv.org/abs/2609.03182v1</link>
+      <guid isPermaLink="false">papertrace:3ae75228da91</guid>
+      <pubDate>Wed, 02 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Bio &amp; Medicine</category>
+      <description>T-cell immunity acts as a major defense system against controlling viral infections in vertebrates. During viral entry, innate immune cells degrade the viral proteins (antigens) and present them on their surface via Major Histocompatibility (MHC) proteins. T-cell receptors (TCRs)
+
+中文：T-cell immunity acts as a major defense system against controlling viral infections in vertebrates. During viral entry, innate immune cells degrade the viral proteins (antigens) and present them on their surface via Major Histocompatibility (MHC) proteins. T-cell receptors (TCRs)
+
+Source: arXiv · Bio · Impact 66 · Buzz 76 · Utility 82</description>
+    </item>
+    <item>
+      <title>Twin-photon generation in a silicon nitride microresonator</title>
+      <link>https://arxiv.org/abs/2609.04171v1</link>
+      <guid isPermaLink="false">papertrace:49fa37f4538b</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Physics</category>
+      <description>Photonic chips with silicon nitride ($\mathrm{Si_3N_4}$) microring resonators are well established as heralded single-photon sources, but their operation as frequency-degenerate twin-photon sources has not previously been demonstrated. Here, we realise a twin-photon source at tel
+
+中文：Photonic chips with silicon nitride ($\mathrm{Si_3N_4}$) microring resonators are well established as heralded single-photon sources, but their operation as frequency-degenerate twin-photon sources has not previously been demonstrated. Here, we realise a twin-photon source at tel
+
+Source: arXiv · Physics · Impact 60 · Buzz 78 · Utility 82</description>
+    </item>
+    <item>
+      <title>Synthesis and Characterization of Compositionally Complex (Gd/Ho/Er/Dy)2Zr2O7 Thin Film Combinatorial Library</title>
+      <link>https://arxiv.org/abs/2609.04074v1</link>
+      <guid isPermaLink="false">papertrace:2cba5910dec0</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Materials &amp; Chemistry</category>
+      <description>High-throughput synthesis and characterization of novel ceramic materials with improved thermomechanical properties and phase stability are needed to accelerate the discovery of next-generation thermal barrier materials. A combinatorial thin film material library of (GdDyHoEr)2Zr
+
+中文：High-throughput synthesis and characterization of novel ceramic materials with improved thermomechanical properties and phase stability are needed to accelerate the discovery of next-generation thermal barrier materials. A combinatorial thin film material library of (GdDyHoEr)2Zr
+
+Source: arXiv · Materials &amp; Chemistry · Impact 60 · Buzz 78 · Utility 82</description>
+    </item>
+  </channel>
+</rss>

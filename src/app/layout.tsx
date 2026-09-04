@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "PaperTrace — Research Signals, Tools & Community",
   description:
     "A bilingual research commons for live signals, interactive paper deep-dives, research tools, executable skills, and community.",
+  alternates: {
+    types: { "application/rss+xml": "https://yayajjiang.github.io/PaperTrace/feed.xml" },
+  },
 };
 
 export default function RootLayout({
