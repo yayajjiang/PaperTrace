@@ -45,6 +45,27 @@ const pickLink = (block) => {
 
 const editorialItems = [
   {
+    id: "openai-gpt-6-astra-2026",
+    date: "2026-09-03",
+    title: "OpenAI releases GPT-6 Astra",
+    titleZh: "OpenAI 发布 GPT-6 Astra",
+    summary: "Astra is rolling out from limited organizational access to ChatGPT, Codex and API surfaces. OpenAI reports major gains in computer use, coding, science and cybersecurity; benchmark numbers remain vendor-reported until independently reproduced.",
+    summaryZh: "Astra 正从少量组织逐步开放到 ChatGPT、Codex 与 API。OpenAI 报告其在计算机操作、代码、科学与网络安全上大幅提升；相关基准在独立复现前仍属于厂商自报。",
+    source: "OpenAI",
+    sourceUrl: "https://openai.com/index/gpt-6-astra/",
+    tag: "Release",
+    domain: "AI & CS",
+    scores: { impact: 98, buzz: 99, utility: 88 },
+    provenance: {
+      layer: "Primary",
+      scoreNotes: {
+        impact: "A new flagship generation spanning research and agentic computer use, verified as an official release; benchmark magnitudes remain vendor-reported.",
+        buzz: "Official release corroborated by high-velocity public developer discussion; raw cross-platform totals are not merged.",
+        utility: "Rolling out across ChatGPT, Codex, API, Azure and Bedrock, with an exact API model ID and pricing documented.",
+      },
+    },
+  },
+  {
     id: "world-labs-atlas-2026",
     date: "2026-09-01",
     title: "World Labs releases Atlas, an omni world model",
@@ -143,7 +164,7 @@ function parse(xml, feed) {
         },
       },
     };
-  }).filter((item) => item.title && item.sourceUrl).slice(0, feed.tag === "Release" ? 5 : 10);
+  }).filter((item) => item.title && item.sourceUrl).slice(0, 12);
 }
 
 function parseAnthropicNews(html, feed) {

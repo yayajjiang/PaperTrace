@@ -1,5 +1,22 @@
 [
   {
+    "id": "openai-gpt-6-astra",
+    "provider": "OpenAI",
+    "model": "GPT-6 Astra",
+    "surface": "ChatGPT + Codex + API + cloud partners",
+    "status": "Limited",
+    "announcedAt": "2026-09-03",
+    "actionAt": null,
+    "dateLabel": "Rolling out from 2026-09-03",
+    "summary": "OpenAI's new flagship is initially available to a limited set of organizations, with broader ChatGPT, API, Azure and Bedrock access rolling out over the following days.",
+    "summaryZh": "OpenAI 新旗舰最初向少量组织开放，随后数日逐步扩展到 ChatGPT、API、Azure 与 Bedrock。",
+    "nextAction": "Run a task-level regression suite before changing defaults. Keep OpenAI's benchmark claims separate from independently reproduced results.",
+    "nextActionZh": "更换默认模型前先运行任务级回归测试，并将 OpenAI 自报基准与独立复现结果分开记录。",
+    "replacement": null,
+    "officialUrl": "https://openai.com/index/gpt-6-astra/",
+    "verifiedAt": "2026-09-04"
+  },
+  {
     "id": "openai-gpt-5-6",
     "provider": "OpenAI",
     "model": "GPT-5.6 · Sol / Terra / Luna",

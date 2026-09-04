@@ -1,6 +1,7 @@
 "use client";
 
 import { SourceNetwork } from "@/components/SourceNetwork";
+import { CommunityPulse } from "@/components/CommunityPulse";
 import { signalSources } from "@/lib/sources";
 import { useLang } from "@/lib/i18n";
 
@@ -21,6 +22,7 @@ export default function SourcesPage() {
         </div>
       </section>
       <section className="mt-10"><SourceNetwork /></section>
+      <CommunityPulse />
     </div>
   );
 }

@@ -62,6 +62,8 @@ Status: in progress
 - [x] Add twice-weekly curation audit that updates one GitHub inbox for urgent deadlines, stale records, source failures, and field imbalance
 - [x] Add model lifecycle action desk with verified release, deprecation, retirement, replacement, and surface-specific status
 - [x] Add a four-layer Source Network including LINUX DO, with use cases and explicit evidence boundaries
+- [x] Add public community adapters for LINUX DO and Hacker News with platform-local engagement snapshots
+- [x] Promote GPT-6 Astra from community discovery to an official-source homepage headline and lifecycle record
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

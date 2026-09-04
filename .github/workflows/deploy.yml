@@ -40,6 +40,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
 
+      - name: Refresh public community signals
+        run: npm run community:sync
+        continue-on-error: true
+
       - name: Validate event deadlines and freshness
         run: npm run events:check
 

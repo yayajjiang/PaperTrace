@@ -39,6 +39,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
 
+      - name: Refresh community discovery signals
+        run: npm run community:sync
+        continue-on-error: true
+
       - name: Open or update the curation inbox
         uses: actions/github-script@v7
         with:
@@ -48,14 +52,17 @@ jobs:
             const news = JSON.parse(fs.readFileSync('public/data/headlines.json', 'utf8'));
             const tools = JSON.parse(fs.readFileSync('public/data/tool-signals.json', 'utf8'));
             const models = JSON.parse(fs.readFileSync('public/data/model-health.json', 'utf8'));
+            const community = JSON.parse(fs.readFileSync('public/data/community-signals.json', 'utf8'));
             const failedSources = (news.sources || []).filter(source => source.status !== 'ok');
             const failedTools = (tools.sources || []).filter(source => source.status !== 'ok');
+            const failedCommunity = (community.sources || []).filter(source => source.status !== 'ok');
             const sections = [];
             if (events.urgent.length) sections.push(`## Deadlines within 14 days\n${events.urgent.map(item => `- [ ] \`${item.id}\` — ${item.deadlineAt}`).join('\n')}`);
             if (events.stale.length) sections.push(`## Event records not verified for 14 days\n${events.stale.map(item => `- [ ] \`${item.id}\` — last checked ${item.verifiedAt}`).join('\n')}`);
             if (events.coverageGaps.length) sections.push(`## Coverage gaps\n${events.coverageGaps.map(item => `- [ ] ${item.domain}: ${item.upcoming}/${item.target} upcoming entries`).join('\n')}`);
             if (failedSources.length) sections.push(`## Failed research sources\n${failedSources.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
             if (failedTools.length) sections.push(`## Failed repository signals\n${failedTools.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
+            if (failedCommunity.length) sections.push(`## Failed community sources\n${failedCommunity.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
             if (models.upcomingActions.length) sections.push(`## Model actions within 60 days\n${models.upcomingActions.map(item => `- [ ] ${item.provider} · \`${item.id}\` — ${item.actionAt} (${item.days}d, ${item.status})`).join('\n')}`);
             if (models.stale.length) sections.push(`## Model records not verified for 14 days\n${models.stale.map(item => `- [ ] \`${item.id}\` — last checked ${item.verifiedAt}`).join('\n')}`);
             if (!sections.length) return;

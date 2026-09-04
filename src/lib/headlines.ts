@@ -24,19 +24,19 @@ export interface Headline {
 // The scheduled news sync replaces these with newer official-source items.
 export const fallbackHeadlines: Headline[] = [
   {
-    id: "openai-youth-ai-safety-2026",
-    date: "2026-08-31",
-    title: "OpenAI backs California's youth AI-safety bill",
-    titleZh: "OpenAI 支持加州青少年 AI 安全法案",
+    id: "openai-gpt-6-astra-2026",
+    date: "2026-09-03",
+    title: "OpenAI releases GPT-6 Astra",
+    titleZh: "OpenAI 发布 GPT-6 Astra",
     summary:
-      "A policy signal worth watching: frontier labs are moving from voluntary safeguards toward concrete rules for age-appropriate AI experiences.",
+      "Astra is rolling out across ChatGPT, Codex and API surfaces. OpenAI reports large gains in computer use, coding, science and cybersecurity; benchmark figures remain vendor-reported until independently reproduced.",
     summaryZh:
-      "一个值得关注的政策信号：前沿实验室正从自愿安全措施，走向更具体的未成年人 AI 产品规范。",
+      "Astra 正逐步开放到 ChatGPT、Codex 与 API。OpenAI 报告其在计算机操作、代码、科学与网络安全上大幅提升；相关基准在独立复现前仍属于厂商自报。",
     source: "OpenAI",
-    sourceUrl: "https://openai.com/news/",
-    tag: "Industry",
+    sourceUrl: "https://openai.com/index/gpt-6-astra/",
+    tag: "Release",
     domain: "AI & CS",
-    scores: { impact: 79, buzz: 81, utility: 63 },
+    scores: { impact: 98, buzz: 99, utility: 88 },
     featured: true,
   },
   {

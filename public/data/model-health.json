@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-09-04T03:08:58.081Z",
-  "total": 10,
+  "checkedAt": "2026-09-04T06:07:12.806Z",
+  "total": 11,
   "providers": {
     "Anthropic": 3,
     "Google": 3,
-    "OpenAI": 3,
+    "OpenAI": 4,
     "World Labs": 1
   },
   "stale": [],

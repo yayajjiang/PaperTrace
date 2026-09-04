@@ -13,7 +13,7 @@ body:
         - Emerging research direction / 新研究方向
         - Paper or benchmark / 论文或评测
         - Tool, Skill, MCP, or demo / 工具、Skill、MCP 或 Demo
-        - Public discussion on X or Xiaohongshu / X 或小红书公开讨论
+        - Public discussion on X, Xiaohongshu, LINUX DO, or another community / X、小红书、LINUX DO 或其他社区公开讨论
     validations:
       required: true
 
@@ -55,4 +55,3 @@ body:
       options:
         - label: I opened the linked source and did not infer private engagement metrics. / 我已打开来源，且没有推测不可公开核验的互动数据。
           required: true
-
