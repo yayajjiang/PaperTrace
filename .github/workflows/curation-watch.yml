@@ -43,6 +43,10 @@ jobs:
         run: npm run community:sync
         continue-on-error: true
 
+      - name: Refresh model-provider status
+        run: npm run status:sync
+        continue-on-error: true
+
       - name: Open or update the curation inbox
         uses: actions/github-script@v7
         with:
@@ -53,9 +57,12 @@ jobs:
             const tools = JSON.parse(fs.readFileSync('public/data/tool-signals.json', 'utf8'));
             const models = JSON.parse(fs.readFileSync('public/data/model-health.json', 'utf8'));
             const community = JSON.parse(fs.readFileSync('public/data/community-signals.json', 'utf8'));
+            const providerStatus = JSON.parse(fs.readFileSync('public/data/provider-status.json', 'utf8'));
             const failedSources = (news.sources || []).filter(source => source.status !== 'ok');
             const failedTools = (tools.sources || []).filter(source => source.status !== 'ok');
             const failedCommunity = (community.sources || []).filter(source => source.status !== 'ok');
+            const failedStatus = (providerStatus.sources || []).filter(source => source.status !== 'ok');
+            const providerIncidents = (providerStatus.providers || []).filter(provider => provider.indicator !== 'none');
             const sections = [];
             if (events.urgent.length) sections.push(`## Deadlines within 14 days\n${events.urgent.map(item => `- [ ] \`${item.id}\` — ${item.deadlineAt}`).join('\n')}`);
             if (events.stale.length) sections.push(`## Event records not verified for 14 days\n${events.stale.map(item => `- [ ] \`${item.id}\` — last checked ${item.verifiedAt}`).join('\n')}`);
@@ -63,6 +70,8 @@ jobs:
             if (failedSources.length) sections.push(`## Failed research sources\n${failedSources.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
             if (failedTools.length) sections.push(`## Failed repository signals\n${failedTools.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
             if (failedCommunity.length) sections.push(`## Failed community sources\n${failedCommunity.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
+            if (failedStatus.length) sections.push(`## Failed provider status sources\n${failedStatus.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
+            if (providerIncidents.length) sections.push(`## Active provider incidents\n${providerIncidents.map(item => `- [ ] ${item.name}: ${item.description} (${item.indicator})`).join('\n')}`);
             if (models.upcomingActions.length) sections.push(`## Model actions within 60 days\n${models.upcomingActions.map(item => `- [ ] ${item.provider} · \`${item.id}\` — ${item.actionAt} (${item.days}d, ${item.status})`).join('\n')}`);
             if (models.stale.length) sections.push(`## Model records not verified for 14 days\n${models.stale.map(item => `- [ ] \`${item.id}\` — last checked ${item.verifiedAt}`).join('\n')}`);
             if (!sections.length) return;

@@ -1,6 +1,7 @@
 "use client";
 
 import { ModelLifecycle } from "@/components/ModelLifecycle";
+import { ProviderStatus } from "@/components/ProviderStatus";
 import lifecycle from "@/data/model-lifecycle.json";
 import { useLang } from "@/lib/i18n";
 
@@ -22,6 +23,7 @@ export default function ModelsPage() {
           <div><strong>100%</strong><span>{t("primary sources", "官方一手来源")}</span></div>
         </div>
       </section>
+      <ProviderStatus />
       <section className="mt-10"><ModelLifecycle /></section>
       <p className="mt-8 text-xs leading-relaxed text-paper-800/40 dark:text-slate-500">{t("A 'no retirement before' date is a commitment boundary, not a confirmed shutdown. Always re-open the official source before a production migration.", "“不会早于某日下线”是承诺边界，不是已确认停服日。生产迁移前务必再次打开官方来源核验。")}</p>
     </div>

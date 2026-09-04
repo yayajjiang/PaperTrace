@@ -9,6 +9,7 @@
     "tools:sync": "node scripts/sync-tool-signals.mjs",
     "models:check": "node scripts/check-model-lifecycle.mjs",
     "community:sync": "node scripts/sync-community-signals.mjs",
+    "status:sync": "node scripts/sync-provider-status.mjs",
     "events:check": "node scripts/check-events.mjs",
     "start": "next start",
     "lint": "next lint"

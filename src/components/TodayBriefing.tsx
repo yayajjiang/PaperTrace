@@ -8,6 +8,7 @@ import { useLang } from "@/lib/i18n";
 
 type Budget = 5 | 20 | 60;
 type CommunitySignal = { id: string; platform: string; title: string; url: string; primaryUrl?: string | null; publishedAt: string; lastActivityAt?: string | null; stale?: boolean };
+type ProviderStatus = { name: string; indicator: string; description: string; pageUrl: string; recentIncidents: Array<{ name: string; status: string; createdAt: string }> };
 
 const dayDelta = (date: string) => {
   const today = new Date();
@@ -20,6 +21,7 @@ export function TodayBriefing() {
   const [budget, setBudget] = useState<Budget>(20);
   const [headlines, setHeadlines] = useState<Headline[]>(fallbackHeadlines);
   const [community, setCommunity] = useState<CommunitySignal[]>([]);
+  const [providerStatus, setProviderStatus] = useState<ProviderStatus[]>([]);
   const [generatedAt, setGeneratedAt] = useState("");
   const basePath = process.env.NODE_ENV === "production" ? "/PaperTrace" : "";
   const limits = budget === 5 ? { news: 1, events: 1, community: 0 } : budget === 20 ? { news: 3, events: 2, community: 1 } : { news: 6, events: 4, community: 3 };
@@ -28,9 +30,11 @@ export function TodayBriefing() {
     Promise.all([
       fetch(basePath + "/data/headlines.json").then((response) => response.ok ? response.json() : Promise.reject()),
       fetch(basePath + "/data/community-signals.json").then((response) => response.ok ? response.json() : Promise.reject()),
-    ]).then(([news, pulse]) => {
+      fetch(basePath + "/data/provider-status.json").then((response) => response.ok ? response.json() : Promise.reject()),
+    ]).then(([news, pulse, status]) => {
       if (news.items?.length) setHeadlines(news.items);
       setCommunity(pulse.items || []);
+      setProviderStatus(status.providers || []);
       setGeneratedAt(news.generatedAt || "");
     }).catch(() => undefined);
   }, [basePath]);
@@ -56,6 +60,20 @@ export function TodayBriefing() {
           </button>
         ))}
       </div>
+
+      {providerStatus.length > 0 && (
+        <div className="briefing-status-strip mt-5">
+          <b>{t("Provider status", "模型服务状态")}</b>
+          {providerStatus.map((provider) => (
+            <a key={provider.name} href={provider.pageUrl} target="_blank" rel="noopener noreferrer">
+              <span className={provider.indicator === "none" ? "health-ok" : "health-warn"} />
+              <strong>{provider.name}</strong>
+              <small>{provider.description}</small>
+              {provider.recentIncidents[0] && <em>{provider.recentIncidents[0].status}: {provider.recentIncidents[0].name}</em>}
+            </a>
+          ))}
+        </div>
+      )}
 
       <div className="grid lg:grid-cols-[1.2fr_.8fr] gap-6 mt-8 items-start">
         <section className="briefing-section">

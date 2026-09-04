@@ -68,6 +68,7 @@ Status: in progress
 - [x] Reorganize homepage entry points into Watch and Build task groups
 - [x] Activate live filtered signal desks for every non-CS research domain while keeping editorial ownership distributed
 - [x] Add a no-login 5/20/60-minute Today Brief that compresses feeds into concrete next actions
+- [x] Add official OpenAI and Claude service-status snapshots, recent incidents, and outage-vs-retirement separation
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

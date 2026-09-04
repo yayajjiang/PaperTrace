@@ -1,0 +1,158 @@
+{
+  "generatedAt": "2026-09-04T06:48:59.591Z",
+  "methodology": "Official provider status APIs. Operational status is distinct from model availability and lifecycle.",
+  "sources": [
+    {
+      "name": "OpenAI",
+      "status": "ok"
+    },
+    {
+      "name": "Claude",
+      "status": "ok"
+    }
+  ],
+  "providers": [
+    {
+      "name": "OpenAI",
+      "pageUrl": "https://status.openai.com/",
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "updatedAt": "2026-07-09T19:25:56Z",
+      "affectedComponents": [],
+      "recentIncidents": [
+        {
+          "id": "01M1KWEDH417T2CF44YYHZDFCR",
+          "name": "Elevated errors across ChatGPT and Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "createdAt": "2026-09-03T14:58:23Z",
+          "updatedAt": "2026-09-03T16:55:49Z",
+          "resolvedAt": "2026-09-03T16:55:49Z",
+          "latestUpdate": "The issue causing elevated errors across ChatGPT and Codex has been resolved. Some Codex remote control users may need to pair their mobile device again following this incident."
+        },
+        {
+          "id": "01M1J99EDCYED5GP2W8GZ3N2NA",
+          "name": "ChatGPT Work Mode High Error Rates",
+          "status": "resolved",
+          "impact": "major",
+          "createdAt": "2026-09-03T00:04:23Z",
+          "updatedAt": "2026-09-03T00:10:45Z",
+          "resolvedAt": "2026-09-03T00:10:45Z",
+          "latestUpdate": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M1HN7GRR6FJNWFVX2F8QMA3R",
+          "name": "Elevated errors creating new accounts",
+          "status": "resolved",
+          "impact": "none",
+          "createdAt": "2026-09-02T18:13:48Z",
+          "updatedAt": "2026-09-02T18:45:12Z",
+          "resolvedAt": "2026-09-02T18:45:12Z",
+          "latestUpdate": "The issue affecting new account creation has been resolved."
+        },
+        {
+          "id": "01M1CYZDD84XD0H56XNEV2PT98",
+          "name": "Elevated latency in the Responses API",
+          "status": "resolved",
+          "impact": "minor",
+          "createdAt": "2026-08-31T22:27:56Z",
+          "updatedAt": "2026-09-01T19:05:46Z",
+          "resolvedAt": "2026-09-01T19:05:46Z",
+          "latestUpdate": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M1D6E14BQSYQA3R5CNQBB7EB",
+          "name": "Elevated errors in ChatGPT conversations for Free and Go plans",
+          "status": "resolved",
+          "impact": "minor",
+          "createdAt": "2026-09-01T00:38:15Z",
+          "updatedAt": "2026-09-01T01:00:01Z",
+          "resolvedAt": "2026-09-01T01:00:01Z",
+          "latestUpdate": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
+          "name": "ChatGPT Work seeing elevated errors and latency",
+          "status": "resolved",
+          "impact": "major",
+          "createdAt": "2026-08-31T15:04:53Z",
+          "updatedAt": "2026-08-31T20:28:40Z",
+          "resolvedAt": "2026-08-31T20:28:40Z",
+          "latestUpdate": "All impacted services have now fully recovered."
+        }
+      ],
+      "capturedAt": "2026-09-04T06:48:59.591Z"
+    },
+    {
+      "name": "Claude",
+      "pageUrl": "https://status.claude.com/",
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "updatedAt": "2026-09-04T06:39:25.534Z",
+      "affectedComponents": [],
+      "recentIncidents": [
+        {
+          "id": "461yvfrzpwtt",
+          "name": "Elevated errors for multiple models",
+          "status": "resolved",
+          "impact": "major",
+          "createdAt": "2026-09-03T13:26:04.201Z",
+          "updatedAt": "2026-09-03T16:23:12.071Z",
+          "resolvedAt": "2026-09-03T16:23:12.052Z",
+          "latestUpdate": "The issue affecting Claude Mythos 5.1, Claude Fable 5.1, and Claude Opus 5 has been resolved. Impact has ended as of 9:16 PT / 16:16 UTC."
+        },
+        {
+          "id": "288w7p4hk1l1",
+          "name": "Elevated errors for Claude Sonnet 5",
+          "status": "resolved",
+          "impact": "major",
+          "createdAt": "2026-09-03T12:37:31.766Z",
+          "updatedAt": "2026-09-03T12:56:26.648Z",
+          "resolvedAt": "2026-09-03T12:56:26.632Z",
+          "latestUpdate": "This incident has been resolved."
+        },
+        {
+          "id": "ls6bn1x81m0w",
+          "name": "Elevated errors for Claude Sonnet 5",
+          "status": "resolved",
+          "impact": "major",
+          "createdAt": "2026-09-02T21:17:58.704Z",
+          "updatedAt": "2026-09-02T21:44:28.108Z",
+          "resolvedAt": "2026-09-02T21:44:28.095Z",
+          "latestUpdate": "The issue affecting Claude Sonnet 5 has been resolved. Impact occurred from 2:05pm PT / 21:05 UTC to 2:19pm PT / 21:19 UTC."
+        },
+        {
+          "id": "620swtqyn24k",
+          "name": "Delays in credit purchases",
+          "status": "resolved",
+          "impact": "minor",
+          "createdAt": "2026-09-01T23:26:48.992Z",
+          "updatedAt": "2026-09-02T01:24:22.264Z",
+          "resolvedAt": "2026-09-02T01:24:22.251Z",
+          "latestUpdate": "This issue has been resolved."
+        },
+        {
+          "id": "3g3d55q6vk3h",
+          "name": "Degraded performance on platform.claude.com and Claude for Microsoft Office 365",
+          "status": "resolved",
+          "impact": "minor",
+          "createdAt": "2026-09-01T17:05:11.462Z",
+          "updatedAt": "2026-09-01T18:07:03.389Z",
+          "resolvedAt": "2026-09-01T18:07:03.372Z",
+          "latestUpdate": "This issue has been resolved."
+        },
+        {
+          "id": "nr3h7bw8b3k3",
+          "name": "Degraded performance on Claude for Microsoft Office 365",
+          "status": "resolved",
+          "impact": "minor",
+          "createdAt": "2026-09-01T16:02:48.681Z",
+          "updatedAt": "2026-09-01T16:22:19.494Z",
+          "resolvedAt": "2026-09-01T16:22:19.479Z",
+          "latestUpdate": "This issue has been resolved."
+        }
+      ],
+      "capturedAt": "2026-09-04T06:48:59.591Z"
+    }
+  ]
+}
