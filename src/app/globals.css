@@ -573,6 +573,36 @@ html {
 .source-health { @apply border-t border-paper-200 dark:border-slate-700 pt-4 text-[10px] text-paper-800/45 dark:text-slate-500; }
 .source-health summary { @apply cursor-pointer list-none flex items-center gap-2 font-bold; }
 .source-health summary::-webkit-details-marker { display: none; }
+.lifecycle-card { @apply rounded-xl border border-paper-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800/50; }
+.lifecycle-status { @apply inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider; }
+.lifecycle-available { @apply bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300; }
+.lifecycle-preview { @apply bg-violet-100 text-violet-700 dark:bg-violet-500/15 dark:text-violet-300; }
+.lifecycle-limited { @apply bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300; }
+.lifecycle-watch { @apply bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300; }
+.lifecycle-deprecated { @apply bg-orange-100 text-orange-700 dark:bg-orange-500/15 dark:text-orange-300; }
+.lifecycle-retired { @apply bg-paper-100 text-paper-800/45 dark:bg-slate-700 dark:text-slate-400; }
+.migration-line { @apply flex flex-wrap items-center gap-2 text-[11px]; }
+.migration-line span { @apply font-bold text-paper-800/40 dark:text-slate-500; }
+.migration-line code { @apply rounded bg-paper-100 px-2 py-1 text-paper-800 dark:bg-slate-900 dark:text-slate-300; }
+.next-action { @apply rounded-lg border-l-2 border-blue-500 bg-blue-50/70 px-3 py-2 text-xs dark:bg-blue-950/20; }
+.next-action b { @apply text-blue-700 dark:text-blue-300; }
+.next-action p { @apply mt-1 leading-relaxed text-paper-800/60 dark:text-slate-400; }
+.deadline-count { @apply rounded-full bg-paper-100 px-2 py-1 text-[10px] font-bold text-paper-800/50 dark:bg-slate-700 dark:text-slate-300; }
+.deadline-urgent { @apply bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300; }
+.source-layer-card { @apply flex min-h-28 flex-col items-start rounded-xl border border-paper-200 bg-white p-4 text-left transition hover:-translate-y-0.5 hover:border-blue-300 dark:border-slate-700 dark:bg-slate-800/50; }
+.source-layer-card > span { @apply font-mono text-[10px] text-blue-500; }
+.source-layer-card > b { @apply mt-2 text-sm dark:text-white; }
+.source-layer-card > small { @apply mt-1 text-[11px] leading-relaxed text-paper-800/45 dark:text-slate-500; }
+.source-layer-active { @apply border-blue-500 bg-blue-50/50 ring-1 ring-blue-500 dark:border-blue-500 dark:bg-blue-950/20; }
+.source-card { @apply rounded-xl border border-paper-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800/50; }
+.source-layer-badge { @apply rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider; }
+.source-layer-primary { @apply bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300; }
+.source-layer-index { @apply bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300; }
+.source-layer-community { @apply bg-violet-100 text-violet-700 dark:bg-violet-500/15 dark:text-violet-300; }
+.source-layer-social { @apply bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300; }
+.source-boundary { @apply rounded-lg bg-paper-50 px-3 py-2 text-[11px] dark:bg-slate-900/60; }
+.source-boundary b { @apply text-paper-800/50 dark:text-slate-300; }
+.source-boundary p { @apply mt-1 leading-relaxed text-paper-800/45 dark:text-slate-500; }
 .health-ok, .health-warn { @apply inline-block flex-none w-2 h-2 rounded-full; }
 .health-ok { @apply bg-emerald-500; }
 .health-warn { @apply bg-amber-500; }

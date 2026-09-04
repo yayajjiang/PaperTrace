@@ -50,6 +50,8 @@ function Header() {
     { href: "/community", label: t("Community", "社区") },
   ];
   const secondaryNav = [
+    { href: "/models", label: t("Model lifecycle", "模型生命周期") },
+    { href: "/sources", label: t("Source network", "信息源网络") },
     { href: "/queue", label: t("Attention queue", "注意力队列") },
     { href: "/frontier", label: t("Frontier watch", "前沿观察") },
     { href: "/skills", label: "Skills" },

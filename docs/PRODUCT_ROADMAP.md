@@ -18,7 +18,9 @@ PaperTrace turns a huge research information stream into three useful outcomes:
 | --- | --- |
 | Discover | Editorial homepage connecting live signals, tools, community, and the original paper library |
 | Research Radar | Model releases, papers, topic momentum, impact/buzz/utility ranking, and attention budgets |
+| Model Lifecycle | Releases, product/API availability, retirement boundaries, replacements, and migration actions |
 | Event Radar | Deadline-first conferences, hackathons, calls, exhibitions, scholarships, and recurring-event watch |
+| Source Network | Primary, index, community, and social discovery sources with explicit trust boundaries |
 | Domains | Cross-disciplinary taxonomy and distributed domain-editor model |
 | Tools & MCP | Searchable, filterable directory for agents, skills, MCP, data, compute, and demos |
 | Skills | Executable research and publishing workflows |
@@ -44,6 +46,7 @@ Status: in progress
 - [x] Add valid `attention-curator` and `frontier-watch` Skills
 - [x] Install and inspect an external MIT-licensed `ai-research` workflow at project scope
 - [x] Add an open Skills ecosystem desk with trust state, license, source, install command, and routed AREX collection
+- [x] Add selective-review entries for AI4S Skills, K-Dense Scientific Agent Skills, and Awesome Scientific Skills
 - [ ] Finish visual QA at desktop and mobile sizes
 - [x] Connect Hugging Face paper popularity as a separately labeled signal
 - [ ] Add a verified social-signal ingestion path for public X and Xiaohongshu posts
@@ -57,6 +60,8 @@ Status: in progress
 - [x] Add deadline-first sorting, China/global/type/domain filters, and recently-ended cycle watch
 - [x] Validate event dates and 14-day verification freshness during every daily deployment
 - [x] Add twice-weekly curation audit that updates one GitHub inbox for urgent deadlines, stale records, source failures, and field imbalance
+- [x] Add model lifecycle action desk with verified release, deprecation, retirement, replacement, and surface-specific status
+- [x] Add a four-layer Source Network including LINUX DO, with use cases and explicit evidence boundaries
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

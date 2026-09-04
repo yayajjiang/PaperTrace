@@ -43,6 +43,9 @@ jobs:
       - name: Validate event deadlines and freshness
         run: npm run events:check
 
+      - name: Validate model lifecycle actions
+        run: npm run models:check
+
       - name: Build
         run: npm run build
 

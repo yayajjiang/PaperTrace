@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-04T03:08:58.081Z",
+  "total": 10,
+  "providers": {
+    "Anthropic": 3,
+    "Google": 3,
+    "OpenAI": 3,
+    "World Labs": 1
+  },
+  "stale": [],
+  "upcomingActions": [
+    {
+      "id": "anthropic-sonnet-4-5-boundary",
+      "provider": "Anthropic",
+      "actionAt": "2026-09-29",
+      "days": 25,
+      "status": "Watch"
+    },
+    {
+      "id": "anthropic-haiku-4-5-boundary",
+      "provider": "Anthropic",
+      "actionAt": "2026-10-15",
+      "days": 41,
+      "status": "Watch"
+    }
+  ]
+}

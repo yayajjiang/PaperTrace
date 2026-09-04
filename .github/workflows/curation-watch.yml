@@ -26,6 +26,9 @@ jobs:
       - name: Audit event freshness and coverage
         run: npm run events:check
 
+      - name: Audit model lifecycle deadlines
+        run: npm run models:check
+
       - name: Refresh and audit research sources
         run: npm run news:sync
         continue-on-error: true
@@ -44,6 +47,7 @@ jobs:
             const events = JSON.parse(fs.readFileSync('public/data/event-health.json', 'utf8'));
             const news = JSON.parse(fs.readFileSync('public/data/headlines.json', 'utf8'));
             const tools = JSON.parse(fs.readFileSync('public/data/tool-signals.json', 'utf8'));
+            const models = JSON.parse(fs.readFileSync('public/data/model-health.json', 'utf8'));
             const failedSources = (news.sources || []).filter(source => source.status !== 'ok');
             const failedTools = (tools.sources || []).filter(source => source.status !== 'ok');
             const sections = [];
@@ -52,6 +56,8 @@ jobs:
             if (events.coverageGaps.length) sections.push(`## Coverage gaps\n${events.coverageGaps.map(item => `- [ ] ${item.domain}: ${item.upcoming}/${item.target} upcoming entries`).join('\n')}`);
             if (failedSources.length) sections.push(`## Failed research sources\n${failedSources.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
             if (failedTools.length) sections.push(`## Failed repository signals\n${failedTools.map(item => `- [ ] ${item.name}: ${item.note || 'unavailable'}`).join('\n')}`);
+            if (models.upcomingActions.length) sections.push(`## Model actions within 60 days\n${models.upcomingActions.map(item => `- [ ] ${item.provider} · \`${item.id}\` — ${item.actionAt} (${item.days}d, ${item.status})`).join('\n')}`);
+            if (models.stale.length) sections.push(`## Model records not verified for 14 days\n${models.stale.map(item => `- [ ] \`${item.id}\` — last checked ${item.verifiedAt}`).join('\n')}`);
             if (!sections.length) return;
             const title = '[Curation] Research Radar watch';
             const body = `Automated audit at ${new Date().toISOString()}. Check canonical organizer/source pages before editing.\n\n${sections.join('\n\n')}\n\nThis issue is refreshed instead of duplicated.`;
