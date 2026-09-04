@@ -17,6 +17,8 @@ const arxivFeeds = [
   { name: "arXiv · Social Science", url: arxivUrl("cat:econ.EM OR cat:econ.TH OR cat:cs.CY"), tag: "Research", domain: "Social Science" },
 ];
 
+const modelRegistryOrgs = ["Qwen", "deepseek-ai", "meta-llama", "mistralai", "openai", "google", "nvidia"];
+
 const decode = (value = "") =>
   value
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
@@ -131,7 +133,7 @@ function parse(xml, feed) {
       : /theorem|proof/.test(lower) ? "Math & Stats"
       : /econom|social science/.test(lower) ? "Social Science"
       : feed.domain;
-    const isCaseStudy = /case study|customer stor|how .{0,70} (uses|use|built|builds|governs|scales|adopts|deploys|turns|transforms)|with chatgpt|enterprise adoption|brand|organizations can now connect|companies turn workflows/i.test(title);
+    const isCaseStudy = /case study|customer stor|with our customers|how .{0,70} (uses|use|built|builds|governs|scales|adopts|deploys|turns|transforms)|\b\w+ builds .{0,80} infrastructure|\b\w+ (cut|reviewed) .{0,80}(with|using) (gpt|chatgpt|claude|gemini)|with chatgpt|enterprise adoption|brand|organizations can now connect|companies turn workflows|expanding access to ai/i.test(title);
     const inferredTag = isCaseStudy ? "Industry" : /introduc|releas|launch|announc|new model|open.source/.test(title.toLowerCase()) ? "Release" : feed.tag;
     const ageDays = Math.max(0, (Date.now() - Date.parse(`${date}T00:00:00Z`)) / 86_400_000);
     const recency = Math.max(35, Math.round(100 - ageDays * 2.5));
@@ -248,6 +250,54 @@ async function fetchHuggingFacePapers() {
   }).filter((item) => item.id !== "hf-undefined" && item.title).slice(0, 10);
 }
 
+async function fetchHuggingFaceModels(author) {
+  const url = `https://huggingface.co/api/models?author=${encodeURIComponent(author)}&sort=createdAt&direction=-1&limit=8&full=false`;
+  const response = await fetch(url, {
+    headers: { "user-agent": "PaperTrace/1.0 (+https://github.com/yayajjiang/PaperTrace)" },
+    signal: AbortSignal.timeout(15_000),
+  });
+  if (!response.ok) throw new Error(`Hugging Face Models · ${author}: ${response.status}`);
+  const payload = await response.json();
+  if (!Array.isArray(payload)) return [];
+  return payload
+    .filter((model) => model.id && model.createdAt && (Date.now() - Date.parse(model.createdAt)) / 86_400_000 <= 21)
+    .filter((model) => !/(?:^|[-_.])(gguf|awq|gptq|mlx|bnb)(?:$|[-_.])/i.test(model.id))
+    .slice(0, 2)
+    .map((model) => {
+      const likes = Number(model.likes || 0);
+      const downloads = Number(model.downloads || 0);
+      const task = model.pipeline_tag || "unspecified task";
+      const license = (model.tags || []).find((tag) => tag.startsWith("license:"))?.slice(8) || "check model card";
+      const date = new Date(model.createdAt).toISOString().slice(0, 10);
+      return {
+        id: `hf-model-${model.id.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`,
+        date,
+        title: `New model registry entry: ${model.id}`,
+        titleZh: `模型仓库新条目：${model.id}`,
+        summary: `${author} published a new Hugging Face model entry for ${task}. This is a registry signal—not proof of a formal launch. License: ${license}.`,
+        summaryZh: `${author} 在 Hugging Face 发布了新的 ${task} 模型条目。这是仓库上新信号，不等同于正式发布公告。许可证：${license}。`,
+        source: `HF Models · ${author}`,
+        sourceUrl: `https://huggingface.co/${model.id}`,
+        tag: "Research",
+        domain: "AI & CS",
+        scores: {
+          impact: Math.min(82, 50 + Math.round(Math.sqrt(Math.max(0, likes)) * 2)),
+          buzz: Math.min(90, 42 + Math.round(Math.sqrt(Math.max(0, likes)) * 4)),
+          utility: Math.min(90, 66 + (license !== "check model card" ? 8 : 0) + (downloads > 0 ? 4 : 0)),
+        },
+        signals: { huggingFaceLikes: likes, huggingFaceDownloads: downloads, registryPublishedAt: model.createdAt },
+        provenance: {
+          layer: "Structured discovery",
+          scoreNotes: {
+            impact: "A fresh model-registry artifact; scientific or product impact needs downstream evidence.",
+            buzz: `Hugging Face shows ${likes} likes and ${downloads} downloads at sync time; these are platform-local signals.`,
+            utility: `A downloadable model entry exists; verify files, license (${license}) and model card before use.`,
+          },
+        },
+      };
+    });
+}
+
 const fetchFeed = async (feed) => {
     const response = await fetch(feed.url, {
       headers: { "user-agent": "PaperTrace/1.0 (+https://github.com/yayajjiang/PaperTrace)" },
@@ -278,9 +328,13 @@ try {
   console.warn(huggingFaceError);
 }
 
+const modelRegistryResults = await Promise.allSettled(modelRegistryOrgs.map(fetchHuggingFaceModels));
+const modelRegistryItems = modelRegistryResults.flatMap((result) => result.status === "fulfilled" ? result.value : []);
+
 const rankedItems = results
   .flatMap((result) => result.status === "fulfilled" ? result.value : [])
   .concat(huggingFaceItems)
+  .concat(modelRegistryItems)
   .concat(editorialItems)
   .filter((item, index, all) => all.findIndex((candidate) => candidate.sourceUrl === item.sourceUrl) === index)
   .sort((a, b) => {
@@ -321,6 +375,12 @@ const sourceHealth = [...feeds, ...arxivFeeds].map((feed, index) => {
 sourceHealth.push(huggingFaceError
   ? { name: "Hugging Face Papers", status: "error", itemCount: 0, note: huggingFaceError.slice(0, 120) }
   : { name: "Hugging Face Papers", status: "ok", itemCount: huggingFaceItems.length });
+modelRegistryOrgs.forEach((author, index) => {
+  const result = modelRegistryResults[index];
+  sourceHealth.push(result.status === "fulfilled"
+    ? { name: `HF Models · ${author}`, status: "ok", itemCount: result.value.length }
+    : { name: `HF Models · ${author}`, status: "error", itemCount: 0, note: result.reason instanceof Error ? result.reason.message.slice(0, 120) : "Registry unavailable" });
+});
 sourceHealth.push({ name: "Editorial watchlist", status: "ok", itemCount: editorialItems.length });
 
 if (items.length === 0) {
@@ -333,4 +393,4 @@ await writeFile(
   `${JSON.stringify({ generatedAt: new Date().toISOString(), sources: sourceHealth, items }, null, 2)}\n`,
   "utf8"
 );
-console.log(`Wrote ${items.length} headlines from ${results.filter((item) => item.status === "fulfilled").length} feeds${huggingFaceItems.length ? " + Hugging Face Papers" : ""}.`);
+console.log(`Wrote ${items.length} headlines from ${results.filter((item) => item.status === "fulfilled").length} feeds${huggingFaceItems.length ? " + Hugging Face Papers" : ""} + ${modelRegistryItems.length} recent model entries.`);

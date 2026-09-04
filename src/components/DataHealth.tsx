@@ -20,12 +20,12 @@ type Feed = {
 };
 
 const feeds: Feed[] = [
-  { id: "headlines", name: ["Headlines", "头条"], path: "/data/headlines.json", expectedHours: 36, job: ["Official newsrooms + cross-field paper discovery", "官方新闻源与跨领域论文发现"] },
-  { id: "providers", name: ["Provider status", "服务状态"], path: "/data/provider-status.json", expectedHours: 36, job: ["Official OpenAI and Claude incidents", "OpenAI 与 Claude 官方事故状态"] },
-  { id: "community", name: ["Community signals", "社区信号"], path: "/data/community-signals.json", expectedHours: 36, job: ["Public discussion snapshots; discovery only", "公开讨论快照；仅用于发现"] },
-  { id: "tools", name: ["Tool signals", "工具信号"], path: "/data/tool-signals.json", expectedHours: 36, job: ["GitHub activity, license and repository attention", "GitHub 活跃度、许可证与仓库关注度"] },
-  { id: "events", name: ["Event audit", "活动审计"], path: "/data/event-health.json", expectedHours: 36, job: ["Deadline freshness and field coverage", "截止日期新鲜度与领域覆盖"] },
-  { id: "models", name: ["Model lifecycle", "模型生命周期"], path: "/data/model-health.json", expectedHours: 36, job: ["Release, migration and retirement checks", "发布、迁移与退役检查"] },
+  { id: "headlines", name: ["Headlines", "头条"], path: "/data/headlines.json", expectedHours: 18, job: ["Official newsrooms + cross-field paper discovery", "官方新闻源与跨领域论文发现"] },
+  { id: "providers", name: ["Provider status", "服务状态"], path: "/data/provider-status.json", expectedHours: 18, job: ["Official OpenAI and Claude incidents", "OpenAI 与 Claude 官方事故状态"] },
+  { id: "community", name: ["Community signals", "社区信号"], path: "/data/community-signals.json", expectedHours: 18, job: ["Public discussion snapshots; discovery only", "公开讨论快照；仅用于发现"] },
+  { id: "tools", name: ["Tool signals", "工具信号"], path: "/data/tool-signals.json", expectedHours: 18, job: ["GitHub activity, license and repository attention", "GitHub 活跃度、许可证与仓库关注度"] },
+  { id: "events", name: ["Event audit", "活动审计"], path: "/data/event-health.json", expectedHours: 18, job: ["Deadline freshness and field coverage", "截止日期新鲜度与领域覆盖"] },
+  { id: "models", name: ["Model lifecycle", "模型生命周期"], path: "/data/model-health.json", expectedHours: 18, job: ["Release, migration and retirement checks", "发布、迁移与退役检查"] },
 ];
 
 function ageHours(timestamp?: string) {
@@ -78,7 +78,7 @@ export function DataHealth() {
       <div className="health-summary">
         <div><strong>{healthy}/{feeds.length}</strong><span>{t("fresh and healthy", "新鲜且健康")}</span></div>
         <div><strong>{attention}</strong><span>{t("need attention", "需要关注")}</span></div>
-        <div><strong>36h</strong><span>{t("freshness budget", "新鲜度预算")}</span></div>
+        <div><strong>18h</strong><span>{t("freshness budget", "新鲜度预算")}</span></div>
       </div>
       <div className="grid md:grid-cols-2 gap-4 mt-6">
         {summary.map(({ feed, timestamp, hours, failedSources, staleRecords, state }) => (

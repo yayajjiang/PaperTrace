@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T06:07:07.612Z",
+  "generatedAt": "2026-09-04T07:20:27.263Z",
   "sources": [
     {
       "name": "OpenAI",
@@ -50,6 +50,41 @@
       "name": "Hugging Face Papers",
       "status": "ok",
       "itemCount": 10
+    },
+    {
+      "name": "HF Models · Qwen",
+      "status": "ok",
+      "itemCount": 2
+    },
+    {
+      "name": "HF Models · deepseek-ai",
+      "status": "ok",
+      "itemCount": 1
+    },
+    {
+      "name": "HF Models · meta-llama",
+      "status": "ok",
+      "itemCount": 0
+    },
+    {
+      "name": "HF Models · mistralai",
+      "status": "ok",
+      "itemCount": 0
+    },
+    {
+      "name": "HF Models · openai",
+      "status": "ok",
+      "itemCount": 0
+    },
+    {
+      "name": "HF Models · google",
+      "status": "ok",
+      "itemCount": 2
+    },
+    {
+      "name": "HF Models · nvidia",
+      "status": "ok",
+      "itemCount": 2
     },
     {
       "name": "Editorial watchlist",
@@ -134,27 +169,32 @@
       }
     },
     {
-      "id": "7bc341571432",
+      "id": "hf-model-deepseek-ai-deepseek-v4-flash-vision-exp",
       "date": "2026-08-31",
-      "title": "Polimill builds Japan's next-generation public AI infrastructure",
-      "titleZh": "Polimill builds Japan's next-generation public AI infrastructure",
-      "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
-      "summaryZh": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/polimill",
-      "tag": "Release",
+      "title": "New model registry entry: deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "titleZh": "模型仓库新条目：deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "summary": "deepseek-ai published a new Hugging Face model entry for image-text-to-text. This is a registry signal—not proof of a formal launch. License: mit.",
+      "summaryZh": "deepseek-ai 在 Hugging Face 发布了新的 image-text-to-text 模型条目。这是仓库上新信号，不等同于正式发布公告。许可证：mit。",
+      "source": "HF Models · deepseek-ai",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "tag": "Research",
       "domain": "AI & CS",
       "scores": {
-        "impact": 84,
-        "buzz": 86,
-        "utility": 90
+        "impact": 82,
+        "buzz": 90,
+        "utility": 78
+      },
+      "signals": {
+        "huggingFaceLikes": 558,
+        "huggingFaceDownloads": 54571,
+        "registryPublishedAt": "2026-08-31T06:16:18.000Z"
       },
       "provenance": {
-        "layer": "Primary",
+        "layer": "Structured discovery",
         "scoreNotes": {
-          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
-          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
-          "utility": "Code, API, data, demo or availability cues were found in the item."
+          "impact": "A fresh model-registry artifact; scientific or product impact needs downstream evidence.",
+          "buzz": "Hugging Face shows 558 likes and 54571 downloads at sync time; these are platform-local signals.",
+          "utility": "A downloadable model entry exists; verify files, license (mit) and model card before use."
         }
       }
     },
@@ -203,31 +243,6 @@
         "layer": "Primary",
         "scoreNotes": {
           "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
-          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
-          "utility": "No strong runnable-artifact cue was found in the feed text."
-        }
-      }
-    },
-    {
-      "id": "7a45b185cff5",
-      "date": "2026-09-03",
-      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-      "titleZh": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
-      "summaryZh": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/playco-game-prototyping-with-astra",
-      "tag": "Release",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 84,
-        "buzz": 92,
-        "utility": 58
-      },
-      "provenance": {
-        "layer": "Primary",
-        "scoreNotes": {
-          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
           "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
           "utility": "No strong runnable-artifact cue was found in the feed text."
         }
@@ -459,6 +474,36 @@
       }
     },
     {
+      "id": "hf-model-google-timesfm-3-0-pytorch",
+      "date": "2026-08-24",
+      "title": "New model registry entry: google/timesfm-3.0-pytorch",
+      "titleZh": "模型仓库新条目：google/timesfm-3.0-pytorch",
+      "summary": "google published a new Hugging Face model entry for time-series-forecasting. This is a registry signal—not proof of a formal launch. License: other.",
+      "summaryZh": "google 在 Hugging Face 发布了新的 time-series-forecasting 模型条目。这是仓库上新信号，不等同于正式发布公告。许可证：other。",
+      "source": "HF Models · google",
+      "sourceUrl": "https://huggingface.co/google/timesfm-3.0-pytorch",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 82,
+        "buzz": 90,
+        "utility": 78
+      },
+      "signals": {
+        "huggingFaceLikes": 380,
+        "huggingFaceDownloads": 46862,
+        "registryPublishedAt": "2026-08-24T22:05:51.000Z"
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "A fresh model-registry artifact; scientific or product impact needs downstream evidence.",
+          "buzz": "Hugging Face shows 380 likes and 46862 downloads at sync time; these are platform-local signals.",
+          "utility": "A downloadable model entry exists; verify files, license (other) and model card before use."
+        }
+      }
+    },
+    {
       "id": "e8e7441ac397",
       "date": "2026-08-26",
       "title": "Previewing the Model Hardware Standard",
@@ -480,31 +525,6 @@
           "impact": "Official Anthropic model or infrastructure announcement.",
           "buzz": "Recency-based estimate; no unverified social count is included.",
           "utility": "The title indicates a model, tool, standard or research workflow."
-        }
-      }
-    },
-    {
-      "id": "be4a3c542626",
-      "date": "2026-09-03",
-      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
-      "titleZh": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
-      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
-      "summaryZh": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/legora-financial-statement-review-with-astra",
-      "tag": "Release",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 78,
-        "buzz": 92,
-        "utility": 58
-      },
-      "provenance": {
-        "layer": "Primary",
-        "scoreNotes": {
-          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
-          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
-          "utility": "No strong runnable-artifact cue was found in the feed text."
         }
       }
     },
@@ -580,6 +600,36 @@
           "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
           "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
           "utility": "Code, API, data, demo or availability cues were found in the item."
+        }
+      }
+    },
+    {
+      "id": "hf-model-qwen-qwen3-8-flash-next-fp8",
+      "date": "2026-08-24",
+      "title": "New model registry entry: Qwen/Qwen3.8-Flash-Next-FP8",
+      "titleZh": "模型仓库新条目：Qwen/Qwen3.8-Flash-Next-FP8",
+      "summary": "Qwen published a new Hugging Face model entry for image-text-to-text. This is a registry signal—not proof of a formal launch. License: other.",
+      "summaryZh": "Qwen 在 Hugging Face 发布了新的 image-text-to-text 模型条目。这是仓库上新信号，不等同于正式发布公告。许可证：other。",
+      "source": "HF Models · Qwen",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 77,
+        "buzz": 90,
+        "utility": 78
+      },
+      "signals": {
+        "huggingFaceLikes": 186,
+        "huggingFaceDownloads": 161716,
+        "registryPublishedAt": "2026-08-24T08:25:23.000Z"
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "A fresh model-registry artifact; scientific or product impact needs downstream evidence.",
+          "buzz": "Hugging Face shows 186 likes and 161716 downloads at sync time; these are platform-local signals.",
+          "utility": "A downloadable model entry exists; verify files, license (other) and model card before use."
         }
       }
     },
@@ -759,31 +809,6 @@
       }
     },
     {
-      "id": "44f61163770f",
-      "date": "2026-08-31",
-      "title": "A milestone in expanding access to AI",
-      "titleZh": "A milestone in expanding access to AI",
-      "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
-      "summaryZh": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
-      "source": "OpenAI",
-      "sourceUrl": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
-      "tag": "Release",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 78,
-        "buzz": 86,
-        "utility": 58
-      },
-      "provenance": {
-        "layer": "Primary",
-        "scoreNotes": {
-          "impact": "Primary-source relevance heuristic; independent validation may still be needed.",
-          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
-          "utility": "No strong runnable-artifact cue was found in the feed text."
-        }
-      }
-    },
-    {
       "id": "49fa37f4538b",
       "date": "2026-09-03",
       "title": "Twin-photon generation in a silicon nitride microresonator",
@@ -884,14 +909,14 @@
       }
     },
     {
-      "id": "37bdb8805bde",
+      "id": "75afc6b7941c",
       "date": "2026-09-03",
-      "title": "Bridging Formal and Perceived Fairness: Development of an Interdisciplinary Framework in Algorithmic Decision-Making",
-      "titleZh": "Bridging Formal and Perceived Fairness: Development of an Interdisciplinary Framework in Algorithmic Decision-Making",
-      "summary": "While fairness has become a central concern in research on algorithmic systems, the field remains predominantly shaped by Computer Science, resulting in a strong emphasis on formal fairness metrics and bias mitigation strategies. Nevertheless, this focus may obscure a fundamental",
-      "summaryZh": "While fairness has become a central concern in research on algorithmic systems, the field remains predominantly shaped by Computer Science, resulting in a strong emphasis on formal fairness metrics and bias mitigation strategies. Nevertheless, this focus may obscure a fundamental",
-      "source": "arXiv · Social Science",
-      "sourceUrl": "https://arxiv.org/abs/2609.03853v1",
+      "title": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
+      "titleZh": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
+      "summary": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two ",
+      "summaryZh": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two ",
+      "source": "arXiv · AI & CS",
+      "sourceUrl": "https://arxiv.org/abs/2609.04198v1",
       "tag": "Research",
       "domain": "AI & CS",
       "scores": {
@@ -909,14 +934,14 @@
       }
     },
     {
-      "id": "75afc6b7941c",
+      "id": "37bdb8805bde",
       "date": "2026-09-03",
-      "title": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
-      "titleZh": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
-      "summary": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two ",
-      "summaryZh": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two ",
-      "source": "arXiv · AI & CS",
-      "sourceUrl": "https://arxiv.org/abs/2609.04198v1",
+      "title": "Bridging Formal and Perceived Fairness: Development of an Interdisciplinary Framework in Algorithmic Decision-Making",
+      "titleZh": "Bridging Formal and Perceived Fairness: Development of an Interdisciplinary Framework in Algorithmic Decision-Making",
+      "summary": "While fairness has become a central concern in research on algorithmic systems, the field remains predominantly shaped by Computer Science, resulting in a strong emphasis on formal fairness metrics and bias mitigation strategies. Nevertheless, this focus may obscure a fundamental",
+      "summaryZh": "While fairness has become a central concern in research on algorithmic systems, the field remains predominantly shaped by Computer Science, resulting in a strong emphasis on formal fairness metrics and bias mitigation strategies. Nevertheless, this focus may obscure a fundamental",
+      "source": "arXiv · Social Science",
+      "sourceUrl": "https://arxiv.org/abs/2609.03853v1",
       "tag": "Research",
       "domain": "AI & CS",
       "scores": {
@@ -955,34 +980,6 @@
           "impact": "Official Anthropic research or company announcement.",
           "buzz": "Recency-based estimate; no unverified social count is included.",
           "utility": "The title indicates a model, tool, standard or research workflow."
-        }
-      }
-    },
-    {
-      "id": "hf-2609.03430",
-      "date": "2026-09-02",
-      "title": "Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
-      "titleZh": "Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
-      "summary": "Large language models achieve superior performance on tasks that require extended reasoning, but long chains of thought make the KV cache a severe memory bottleneck. Existing KV cache compression methods share one paradigm: score each cached token by some estimate of how much it ",
-      "summaryZh": "Large language models achieve superior performance on tasks that require extended reasoning, but long chains of thought make the KV cache a severe memory bottleneck. Existing KV cache compression methods share one paradigm: score each cached token by some estimate of how much it ",
-      "source": "Hugging Face Papers",
-      "sourceUrl": "https://huggingface.co/papers/2609.03430",
-      "tag": "Research",
-      "domain": "AI & CS",
-      "scores": {
-        "impact": 70,
-        "buzz": 74,
-        "utility": 62
-      },
-      "signals": {
-        "huggingFaceUpvotes": 47
-      },
-      "provenance": {
-        "layer": "Structured discovery",
-        "scoreNotes": {
-          "impact": "Discovery score combines paper metadata with the separately displayed Hugging Face signal.",
-          "buzz": "Hugging Face Papers shows 47 upvotes at sync time; this is one platform signal, not total popularity.",
-          "utility": "No strong runnable-artifact cue was found in the metadata."
         }
       }
     },
@@ -1162,6 +1159,31 @@
       }
     },
     {
+      "id": "e83ff5faec70",
+      "date": "2026-08-30",
+      "title": "Improving our alignment and security efforts",
+      "titleZh": "Improving our alignment and security efforts",
+      "summary": "Research from Anthropic's official newsroom. Open the primary source for the full claim and evidence.",
+      "summaryZh": "来自 Anthropic 官方 Newsroom 的Research；请打开原始来源查看完整主张与证据。",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "tag": "Research",
+      "domain": "AI & CS",
+      "scores": {
+        "impact": 68,
+        "buzz": 82,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Primary",
+        "scoreNotes": {
+          "impact": "Official Anthropic research or company announcement.",
+          "buzz": "Recency-based estimate; no unverified social count is included.",
+          "utility": "No strong runnable-artifact cue was found in the listing."
+        }
+      }
+    },
+    {
       "id": "ab307ea18997",
       "date": "2026-09-02",
       "title": "Enhancer-promoter proximity predicts transcriptional competence but not transcriptional output in the Drosophila brain",
@@ -1170,6 +1192,31 @@
       "summaryZh": "How 3D genome architecture contributes to transcriptional specificity across neuronal cell types remains unclear. Here, we used multiplexed chromatin tracing to map chromatin architecture and cell identity at single-cell resolution in the adult Drosophila brain. We found that enh",
       "source": "arXiv · Bio",
       "sourceUrl": "https://arxiv.org/abs/2609.03058v1",
+      "tag": "Research",
+      "domain": "Bio & Medicine",
+      "scores": {
+        "impact": 66,
+        "buzz": 76,
+        "utility": 58
+      },
+      "provenance": {
+        "layer": "Structured discovery",
+        "scoreNotes": {
+          "impact": "Technical scope and likely downstream relevance inferred from the primary item.",
+          "buzz": "Recency-based estimate; no social metric is included unless separately displayed.",
+          "utility": "No strong runnable-artifact cue was found in the feed text."
+        }
+      }
+    },
+    {
+      "id": "4a63ea0d3b3e",
+      "date": "2026-09-02",
+      "title": "Advances in Machine Learning for Directed Evolution: A Five-Year Retrospective",
+      "titleZh": "Advances in Machine Learning for Directed Evolution: A Five-Year Retrospective",
+      "summary": "The last five-plus years have seen many protein engineering disciplines transformed by advances in machine learning (ML), but the same cannot be said for directed evolution. Reflecting on a previously co-authored perspective, I discuss why I believe this to be the case, arguing t",
+      "summaryZh": "The last five-plus years have seen many protein engineering disciplines transformed by advances in machine learning (ML), but the same cannot be said for directed evolution. Reflecting on a previously co-authored perspective, I discuss why I believe this to be the case, arguing t",
+      "source": "arXiv · Bio",
+      "sourceUrl": "https://arxiv.org/abs/2609.03046v1",
       "tag": "Research",
       "domain": "Bio & Medicine",
       "scores": {

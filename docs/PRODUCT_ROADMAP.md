@@ -73,6 +73,8 @@ Status: in progress
 - [x] Remove unverified seeded vote and reply counts from community prompts
 - [x] Add no-login `.ics` exports for filtered event sets, open deadlines, and 7-day / 1-day reminders
 - [x] Add a private, no-login “since your last review” delta across headlines, discussions, incidents, deadlines, and migrations
+- [x] Raise public refresh cadence to every 8 hours and the editorial inbox audit to daily
+- [x] Discover recent model uploads from seven selected Hugging Face organizations while labeling registry signals separately from launches
 - [ ] Unify the older `/daily` news data with the new Radar feed
 
 ## Editorial scoring

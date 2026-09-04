@@ -3,7 +3,7 @@ name: Curation Watch
 on:
   workflow_dispatch:
   schedule:
-    - cron: "23 2 * * 1,4"
+    - cron: "23 2 * * *"
 
 permissions:
   contents: read
@@ -12,6 +12,7 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 

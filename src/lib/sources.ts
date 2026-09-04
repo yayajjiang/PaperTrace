@@ -20,7 +20,7 @@ export interface SignalSource {
 export const signalSources: SignalSource[] = [
   {
     id: "official-ai-labs", name: "OpenAI · Anthropic · Google DeepMind", layer: "Primary",
-    domains: ["AI & CS"], region: "Global", cadence: "Daily", access: "RSS / newsroom",
+    domains: ["AI & CS"], region: "Global", cadence: "Every 8h", access: "RSS / newsroom",
     useFor: "Model launches, pricing, capabilities, safety reports and official lifecycle changes.",
     useForZh: "模型发布、价格、能力、安全报告与官方生命周期变化。",
     boundary: "Vendor claims stay labelled until independently reproduced.",
@@ -53,6 +53,15 @@ export const signalSources: SignalSource[] = [
     boundary: "Upvotes measure one community's attention, not scientific quality.",
     boundaryZh: "点赞只代表单个平台注意力，不代表科研质量。",
     href: "https://huggingface.co/papers/trending",
+  },
+  {
+    id: "huggingface-models", name: "Hugging Face Models · verified organizations", layer: "Index",
+    domains: ["AI & CS"], region: "Global", cadence: "Every 8h", access: "Public API",
+    useFor: "Fresh model-card and checkpoint signals from selected vendor and open-model organizations.",
+    useForZh: "发现选定厂商与开放模型组织新发布的模型卡和 checkpoint。",
+    boundary: "A registry upload is not a formal launch, benchmark result or safety review; verify the model card and vendor announcement.",
+    boundaryZh: "模型仓库上新不等于正式发布、基准结论或安全审查；需继续核验模型卡与厂商公告。",
+    href: "https://huggingface.co/models",
   },
   {
     id: "openalex", name: "OpenAlex", layer: "Index",
