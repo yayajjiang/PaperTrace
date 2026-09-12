@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-04T06:07:12.806Z",
+  "checkedAt": "2026-09-12T12:16:25.280Z",
   "total": 11,
   "providers": {
     "Anthropic": 3,
@@ -13,14 +13,14 @@
       "id": "anthropic-sonnet-4-5-boundary",
       "provider": "Anthropic",
       "actionAt": "2026-09-29",
-      "days": 25,
+      "days": 17,
       "status": "Watch"
     },
     {
       "id": "anthropic-haiku-4-5-boundary",
       "provider": "Anthropic",
       "actionAt": "2026-10-15",
-      "days": 41,
+      "days": 33,
       "status": "Watch"
     }
   ]
