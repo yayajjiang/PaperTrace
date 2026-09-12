@@ -59,6 +59,7 @@ function Header() {
     { href: "/skills", label: "Skills" },
     { href: "/daily", label: t("Research feed", "研究动态") },
     { href: "/timeline", label: t("Timeline", "时间线") },
+    { href: "/llm-guide", label: t("LLM Guide (Chinese)", "大模型指南（中文）") },
     { href: "/guide", label: t("Research guide", "科研指南") },
     { href: "/resources", label: t("Learning resources", "学习资源") },
     { href: "/interview", label: t("Internships & jobs", "实习与找工") },

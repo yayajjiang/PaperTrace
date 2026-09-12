@@ -12,13 +12,17 @@
     "status:sync": "node scripts/sync-provider-status.mjs",
     "events:check": "node scripts/check-events.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prebuild": "node scripts/prepare-llm-guide.mjs",
+    "predev": "node scripts/prepare-llm-guide.mjs"
   },
   "dependencies": {
     "katex": "^0.16.11",
     "next": "^14.2.0",
     "react": "^18.3.0",
-    "react-dom": "^18.3.0"
+    "react-dom": "^18.3.0",
+    "marked": "^18.0.5",
+    "pinyin": "^4.0.0"
   },
   "devDependencies": {
     "@types/katex": "^0.16.7",

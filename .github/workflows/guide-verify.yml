@@ -1,0 +1,36 @@
+name: Verify LLM Guide integration
+on:
+  push:
+    branches: [integrate/guide-20260912]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/public/llm-guide/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+      - name: Check published size and Guide routes
+        run: |
+          test -f out/llm-guide.html
+          test -f out/llm-guide/1-intro/1-intro.html
+          du -sh out
+          node -e "const fs=require('fs'); function size(p){return fs.readdirSync(p,{withFileTypes:true}).reduce((n,e)=>n+(e.isDirectory()?size(p+'/'+e.name):fs.statSync(p+'/'+e.name).size),0)}; const n=size('out'); if(n>=1e9)throw Error('Pages size limit exceeded: '+n); console.log('Export bytes:',n)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-guide-export
+          path: out
+          retention-days: 2
