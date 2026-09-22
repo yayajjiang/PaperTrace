@@ -28,6 +28,15 @@ export const signalSources: SignalSource[] = [
     href: "https://openai.com/news/",
   },
   {
+    id: "openai-codex-github", name: "OpenAI Codex · GitHub Releases", layer: "Primary",
+    domains: ["AI & CS"], region: "Global", cadence: "Every 8h", access: "Public GitHub API",
+    useFor: "Official Codex release notes and versioned change records, cross-checked against community links.",
+    useForZh: "Codex 官方 Release Notes 与版本化变更记录，并与社区外链交叉核验。",
+    boundary: "A community thread is verified only when it directly links to OpenAI or the openai/codex repository.",
+    boundaryZh: "社区讨论只有直接回链 OpenAI 或 openai/codex 仓库时才算已核验。",
+    href: "https://github.com/openai/codex/releases",
+  },
+  {
     id: "official-events", name: "Organizer & society calendars", layer: "Primary",
     domains: ["Multidisciplinary"], region: "Global", cadence: "Twice weekly", access: "Official pages",
     useFor: "Conference dates, submission deadlines, registration and venue changes.",
