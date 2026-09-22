@@ -5,6 +5,14 @@ const outputPath = "public/data/community-signals.json";
 const previous = await readFile(outputPath, "utf8").then((body) => JSON.parse(body)).catch(() => ({ items: [] }));
 const relevant = /(?:\bai\b|agent|gpt|claude|gemini|llm|model|paper|research|skill|mcp|robot|arxiv|科研|论文|模型|智能体|机器人|世界模型|具身|开源)/i;
 const now = new Date().toISOString();
+const isOfficialCodexUrl = (value) => {
+  try {
+    const url = new URL(value);
+    return url.hostname === "openai.com" || url.hostname.endsWith(".openai.com") || (url.hostname === "github.com" && url.pathname.startsWith("/openai/codex"));
+  } catch {
+    return false;
+  }
+};
 const curatedLinuxDoFallback = [
   {
     id: "linuxdo-1714405", platform: "LINUX DO",
@@ -116,13 +124,14 @@ async function fetchHackerNews() {
       title: story.title,
       url: "https://news.ycombinator.com/item?id=" + story.id,
       primaryUrl: story.url || null,
+      officialEvidence: isOfficialCodexUrl(story.url || ""),
       publishedAt: new Date(story.time * 1000).toISOString(),
       lastActivityAt: null,
       capturedAt: now,
       tags: [],
       metrics: { points: story.score, comments: story.descendants || 0 },
       platformScore: Math.round(story.score + (story.descendants || 0) * 1.5),
-      evidence: "Public story metadata; community attention only.",
+      evidence: isOfficialCodexUrl(story.url || "") ? "Public discussion links directly to an official OpenAI or openai/codex source." : "Public story metadata; community attention only.",
     }));
 }
 
