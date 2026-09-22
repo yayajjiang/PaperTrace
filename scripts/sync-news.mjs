@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 
 const feeds = [
   { name: "OpenAI", url: "https://openai.com/news/rss.xml", tag: "Release", domain: "AI & CS" },
+  { name: "OpenAI Codex · GitHub", url: "https://api.github.com/repos/openai/codex/releases?per_page=12", tag: "Release", domain: "AI & CS", format: "github-releases" },
   { name: "Anthropic", url: "https://www.anthropic.com/news", tag: "Release", domain: "AI & CS", format: "html" },
   { name: "Google DeepMind", url: "https://deepmind.google/blog/rss.xml", tag: "Research", domain: "AI & CS" },
 ];
@@ -211,6 +212,36 @@ function parseAnthropicNews(html, feed) {
   }).filter((item) => item.title).slice(0, 10);
 }
 
+function parseGitHubReleases(body, feed) {
+  const releases = JSON.parse(body);
+  if (!Array.isArray(releases)) return [];
+  return releases.filter((release) => !release.draft && !release.prerelease).slice(0, 10).map((release) => {
+    const date = new Date(release.published_at || release.created_at || Date.now()).toISOString().slice(0, 10);
+    const notes = decode(release.body || "").slice(0, 280);
+    return {
+      id: `codex-release-${release.id}`,
+      date,
+      title: `Codex ${release.name || release.tag_name}`,
+      titleZh: `Codex ${release.name || release.tag_name}`,
+      summary: notes || "Official release record from the openai/codex repository. Open the release notes for the complete change list.",
+      summaryZh: notes || "来自 openai/codex 官方仓库的发布记录；完整变更请查看 Release Notes。",
+      source: feed.name,
+      sourceUrl: release.html_url,
+      tag: "Release",
+      domain: feed.domain,
+      scores: { impact: 72, buzz: 68, utility: 86 },
+      provenance: {
+        layer: "Primary",
+        scoreNotes: {
+          impact: "Official release record for the openai/codex repository; downstream product effects require the linked notes.",
+          buzz: "Release recency only; community metrics are shown separately when a public discussion links back here.",
+          utility: "An official release artifact and changelog are available in the repository.",
+        },
+      },
+    };
+  });
+}
+
 async function fetchHuggingFacePapers() {
   const response = await fetch("https://huggingface.co/api/daily_papers?limit=20", {
     headers: { "user-agent": "PaperTrace/1.0 (+https://github.com/yayajjiang/PaperTrace)" },
@@ -312,7 +343,9 @@ const fetchFeed = async (feed) => {
     });
     if (!response.ok) throw new Error(`${feed.name}: ${response.status}`);
     const body = await response.text();
-    return feed.format === "html" ? parseAnthropicNews(body, feed) : parse(body, feed);
+    if (feed.format === "html") return parseAnthropicNews(body, feed);
+    if (feed.format === "github-releases") return parseGitHubReleases(body, feed);
+    return parse(body, feed);
 };
 
 const results = await Promise.allSettled(feeds.map(fetchFeed));
