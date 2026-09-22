@@ -3,6 +3,7 @@
 import { ResearchRadar } from "@/components/ResearchRadar";
 import { TopicPulse } from "@/components/TopicPulse";
 import { MomentumMap } from "@/components/MomentumMap";
+import { ResearchHeat } from "@/components/ResearchHeat";
 import { useLang } from "@/lib/i18n";
 
 export default function RadarPage() {
@@ -22,6 +23,13 @@ export default function RadarPage() {
           <span className="text-xs text-paper-800/40 dark:text-slate-500">{t("Editor-tracked · source-backed", "编辑追踪 · 来源可查")}</span>
         </div>
         <TopicPulse />
+      </section>
+      <section className="mt-16">
+        <div className="section-heading-row">
+          <div><div className="eyebrow mb-2">{t("Research heat", "研究热度")}</div><h2 className="text-2xl md:text-3xl font-bold dark:text-white">{t("Attention, sources and deadlines", "注意力、来源与截止日期")}</h2></div>
+          <span className="text-xs text-paper-800/40 dark:text-slate-500">arXiv · Hugging Face · official venues</span>
+        </div>
+        <ResearchHeat />
       </section>
       <section className="mt-16">
         <div className="section-heading-row">
