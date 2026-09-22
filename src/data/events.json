@@ -1,5 +1,25 @@
 [
   {
+    "id": "iclr-2027",
+    "title": "ICLR 2027",
+    "titleZh": "ICLR 2027 国际学习表征会议",
+    "type": "Conference",
+    "domains": ["AI & CS"],
+    "startsAt": "2027-04-26",
+    "endsAt": "2027-04-30",
+    "deadlineAt": "2026-09-25",
+    "deadlineLabel": "Full paper and supplementary-material deadline",
+    "deadlineLabelZh": "全文与补充材料截止",
+    "location": "California, US",
+    "locationZh": "美国·加州",
+    "format": "In person",
+    "summary": "The ICLR 2027 full-paper and supplementary-material deadline is September 25, 2026 at 11:59 PM Anywhere on Earth. The abstract deadline was September 18.",
+    "summaryZh": "ICLR 2027 全文与补充材料截止为 2026 年 9 月 25 日 23:59 AOE；摘要截止为 9 月 18 日。",
+    "organizer": "ICLR",
+    "href": "https://www.iclr.cc/Conferences/2027/CallForPapers",
+    "verifiedAt": "2026-09-22"
+  },
+  {
     "id": "inclusion-2026",
     "title": "Inclusion Conference 2026",
     "titleZh": "2026 Inclusion·外滩大会",
