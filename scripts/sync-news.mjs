@@ -215,16 +215,17 @@ function parseAnthropicNews(html, feed) {
 function parseGitHubReleases(body, feed) {
   const releases = JSON.parse(body);
   if (!Array.isArray(releases)) return [];
-  return releases.filter((release) => !release.draft && !release.prerelease).slice(0, 10).map((release) => {
+  return releases.filter((release) => !release.draft).slice(0, 10).map((release) => {
     const date = new Date(release.published_at || release.created_at || Date.now()).toISOString().slice(0, 10);
     const notes = decode(release.body || "").slice(0, 280);
+    const stage = release.prerelease ? "Preview release" : "Stable release";
     return {
       id: `codex-release-${release.id}`,
       date,
-      title: `Codex ${release.name || release.tag_name}`,
-      titleZh: `Codex ${release.name || release.tag_name}`,
-      summary: notes || "Official release record from the openai/codex repository. Open the release notes for the complete change list.",
-      summaryZh: notes || "来自 openai/codex 官方仓库的发布记录；完整变更请查看 Release Notes。",
+      title: `Codex ${release.name || release.tag_name}${release.prerelease ? " · Preview" : ""}`,
+      titleZh: `Codex ${release.name || release.tag_name}${release.prerelease ? " · 预发布" : ""}`,
+      summary: `${stage}. ${notes || "Official release record from the openai/codex repository. Open the release notes for the complete change list."}`,
+      summaryZh: `${release.prerelease ? "预发布版本。" : "稳定版本。"}${notes || "来自 openai/codex 官方仓库的发布记录；完整变更请查看 Release Notes。"}`,
       source: feed.name,
       sourceUrl: release.html_url,
       tag: "Release",
@@ -233,7 +234,7 @@ function parseGitHubReleases(body, feed) {
       provenance: {
         layer: "Primary",
         scoreNotes: {
-          impact: "Official release record for the openai/codex repository; downstream product effects require the linked notes.",
+          impact: `${stage} record for the openai/codex repository; downstream product effects require the linked notes.`,
           buzz: "Release recency only; community metrics are shown separately when a public discussion links back here.",
           utility: "An official release artifact and changelog are available in the repository.",
         },
