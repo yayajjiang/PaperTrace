@@ -710,3 +710,26 @@ html {
   @apply font-semibold;
 }
 
+/* Markdown knowledge gardens */
+.knowledge-content h4 {
+  @apply text-lg font-semibold mt-7 mb-3;
+}
+.knowledge-content a {
+  @apply text-blue-600 dark:text-blue-400 underline decoration-blue-300/60 underline-offset-2 hover:decoration-blue-500;
+}
+.knowledge-content pre {
+  @apply overflow-x-auto rounded-xl bg-slate-950 text-slate-100 px-5 py-4 my-6 text-sm leading-6;
+}
+.knowledge-content :not(pre) > code {
+  @apply rounded bg-paper-100 dark:bg-slate-800 px-1.5 py-0.5 text-[0.9em];
+}
+.knowledge-content hr {
+  @apply my-10 border-paper-200 dark:border-slate-700;
+}
+.knowledge-content .math-block,
+.knowledge-content table {
+  @apply overflow-x-auto;
+}
+.knowledge-content li > p {
+  @apply mb-1;
+}
