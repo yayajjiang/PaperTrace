@@ -38,6 +38,7 @@ Each paper gets a full breakdown with formula walkthroughs, interactive widgets,
 - `/skills` — Executable PaperTrace research workflows
 - `/community` — Research help, internships, collaborators, launches, WeChat, and GitHub co-building
 - `/daily` — Paper feed + News & Events (行业动态)
+- `/knowledge` — Seven focused Chinese knowledge gardens: AI Agents, DeepSeek, RAG, sparse attention, long-horizon tasks, recursive self-improvement, and continual learning
 - `/resources` — Curated learning resources: YouTube, Bilibili, newsletters, blogs, X/Twitter, tools
 - `/interview` — Job hunt hub: LeetCode resources, company job openings, ML interview Q&A (20 questions, 5 sections)
   - `/interview/notes` — "Notes on the Job Hunt / 写在找工路上"
